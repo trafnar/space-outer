@@ -53,3 +53,14 @@ export type QuestionPart = {
 export type Question = ManifestQuestion & {
   parts: QuestionPart[];
 };
+
+export type Test = {
+  slug: string;
+  manifest: Manifest;
+  questions: Question[];
+};
+
+export type TestSummary = {
+  slug: string;
+  manifest: Manifest;
+};
