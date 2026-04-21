@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
 import { Button } from "./ui/button";
@@ -12,6 +12,13 @@ import {
   SheetTitle,
 } from "./ui/sheet";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+
+const isTextEntryTarget = (target: EventTarget | null) => {
+  if (!(target instanceof HTMLElement)) return false;
+  if (target.isContentEditable) return true;
+  const tag = target.tagName;
+  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+};
 
 export function QuestionSheet({
   questions,
@@ -29,20 +36,34 @@ export function QuestionSheet({
     if (index >= 0 && index < questions.length) onIndexChange(index);
   };
 
+  // Keep latest values in a ref so the keydown listener stays stable for the
+  // lifetime of the sheet being open and never misses events between renders.
+  const stateRef = useRef({ activeIndex, total: questions.length, onIndexChange });
   useEffect(() => {
-    if (activeIndex === null) return;
+    stateRef.current = { activeIndex, total: questions.length, onIndexChange };
+  });
+
+  const isOpen = activeIndex !== null;
+  useEffect(() => {
+    if (!isOpen) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft" && activeIndex > 0) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (isTextEntryTarget(e.target)) return;
+      const { activeIndex: idx, total, onIndexChange: cb } = stateRef.current;
+      if (idx === null) return;
+      if (e.key === "ArrowLeft" && idx > 0) {
         e.preventDefault();
-        onIndexChange(activeIndex - 1);
-      } else if (e.key === "ArrowRight" && activeIndex < questions.length - 1) {
+        cb(idx - 1);
+      } else if (e.key === "ArrowRight" && idx < total - 1) {
         e.preventDefault();
-        onIndexChange(activeIndex + 1);
+        cb(idx + 1);
       }
     };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [activeIndex, questions.length, onIndexChange]);
+    window.addEventListener("keydown", handler, { capture: true });
+    return () =>
+      window.removeEventListener("keydown", handler, { capture: true });
+  }, [isOpen]);
 
   return (
     <Sheet
