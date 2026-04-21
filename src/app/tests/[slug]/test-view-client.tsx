@@ -1,6 +1,7 @@
 "use client";
 
 import { QuestionCard } from "@/components/QuestionCard";
+import { QuestionTable } from "@/components/QuestionTable";
 import type { Manifest, Question } from "@/data/types";
 
 export function TestViewClient({
@@ -16,14 +17,17 @@ export function TestViewClient({
         <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
       </header>
 
-      <div>
+      <QuestionTable questions={questions} standards={manifest.standards} />
+
+      {/* <div>
         Score: {manifest.score.earned}/{manifest.score.possible} (
         {manifest.score.percent}%)
       </div>
 
+
       {questions.map((q) => (
         <QuestionCard key={q.n} question={q} />
-      ))}
+      ))} */}
     </div>
   );
 }

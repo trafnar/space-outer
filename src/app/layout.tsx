@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { MotionProvider } from "@/components/motion-provider";
 
 const loraHeading = Lora({ subsets: ["latin"], variable: "--font-heading" });
 
@@ -30,7 +31,9 @@ export default function RootLayout({
         loraHeading.variable,
       )}
     >
-      <body className="bg-muted min-h-full flex flex-col p-8">{children}</body>
+      <body className="bg-muted min-h-full flex flex-col p-8">
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }

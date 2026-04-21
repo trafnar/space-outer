@@ -9,13 +9,18 @@
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Select the best term to complete the sentence." }
+        {
+          "type": "text",
+          "text": "Select the best term to complete the sentence."
+        }
       ]
     },
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "A square with a side length of one unit is the ______." }
+        { "type": "text", "text": "A square with a side length of one unit is the " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": "." }
       ]
     },
     {

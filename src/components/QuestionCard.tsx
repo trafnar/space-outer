@@ -5,44 +5,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import type {
-  Block,
-  Choice,
-  Inline,
-  Question,
-  Response,
-} from "@/data/types";
+import type { Block, Choice, Inline, Question, Response } from "@/data/types";
 
 export function QuestionCard({ question }: { question: Question }) {
   return (
-    <Card>
-      <CardHeader className="flex justify-between">
-        <CardTitle>
-          Question {question.n}
-          <span>
-            {question.points.earned} / {question.points.possible}
-          </span>
-        </CardTitle>
-      </CardHeader>
-
-      <CardContent className="flex flex-col gap-2">
-        {question.prompt.map((block, i) => (
-          <BlockView
-            key={i}
-            block={block}
-            response={question.userResponse}
-            correct={question.correct}
-          />
-        ))}
-      </CardContent>
-
-      <CardFooter>
-        <ResponseSummary
+    <div className="flex flex-col gap-2">
+      {question.prompt.map((block, i) => (
+        <BlockView
+          key={i}
+          block={block}
+          response={question.userResponse}
           correct={question.correct}
-          user={question.userResponse}
         />
-      </CardFooter>
-    </Card>
+      ))}
+    </div>
   );
 }
 
