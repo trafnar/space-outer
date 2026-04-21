@@ -1,0 +1,40 @@
+{
+  "n": 10,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame.<br><br>What is the length of each side of the picture frame?<div class=\"figure\"><svg width=\"220\" height=\"180\" viewBox=\"0 0 220 180\"><rect x=\"60\" y=\"40\" width=\"100\" height=\"100\" fill=\"none\" stroke=\"#7a4ab0\" stroke-width=\"2\"/><text x=\"110\" y=\"30\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">a</text><text x=\"48\" y=\"95\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">a</text><text x=\"172\" y=\"95\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">a</text><text x=\"110\" y=\"160\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">a</text></svg></div>Each side of the picture frame is <input type=\"text\" class=\"fill-in\" value=\"\"/> inches.",
+      "text": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame. What is the length of each side of the picture frame? Each side of the picture frame is ___ inches.",
+      "fields": [],
+      "images": [
+        { "src": "10.png", "alt": "Original", "width": null, "height": null, "localPath": "images/10_0a407d2d.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "8 inches",
+      "text": "8 inches",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "8" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "8",
+      "text": "8",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "8" }
+      ],
+      "images": []
+    }
+  ]
+}

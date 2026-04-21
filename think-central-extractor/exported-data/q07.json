@@ -1,0 +1,40 @@
+{
+  "n": 7,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.6"],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Find the area of the figure. Each unit square is 1 square meter.<div class=\"figure\"><svg width=\"260\" height=\"200\" viewBox=\"0 0 260 200\"><g fill=\"#d5e8f7\" stroke=\"#444\" stroke-width=\"1.5\"><rect x=\"40\" y=\"120\" width=\"30\" height=\"30\"/><rect x=\"70\" y=\"120\" width=\"30\" height=\"30\"/><rect x=\"100\" y=\"120\" width=\"30\" height=\"30\"/><rect x=\"130\" y=\"120\" width=\"30\" height=\"30\"/><rect x=\"160\" y=\"120\" width=\"30\" height=\"30\"/><rect x=\"40\" y=\"90\" width=\"30\" height=\"30\"/><rect x=\"70\" y=\"90\" width=\"30\" height=\"30\"/><rect x=\"100\" y=\"90\" width=\"30\" height=\"30\"/><rect x=\"130\" y=\"90\" width=\"30\" height=\"30\"/><rect x=\"160\" y=\"90\" width=\"30\" height=\"30\"/><rect x=\"40\" y=\"60\" width=\"30\" height=\"30\"/><rect x=\"100\" y=\"60\" width=\"30\" height=\"30\"/><rect x=\"160\" y=\"60\" width=\"30\" height=\"30\"/><rect x=\"100\" y=\"30\" width=\"30\" height=\"30\"/></g></svg></div>The area of the figure is <input type=\"text\" class=\"fill-in\" value=\"\"/> square meters.",
+      "text": "Find the area of the figure. Each unit square is 1 square meter. The area of the figure is ___ square meters.",
+      "fields": [],
+      "images": [
+        { "src": "7.png", "alt": "Original", "width": null, "height": null, "localPath": "images/7_c537f226.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "14 sq m",
+      "text": "14 sq m",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "14" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "14",
+      "text": "14",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "14" }
+      ],
+      "images": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "n": 13,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "A rectangle has two side lengths of 9 inches and two side lengths of 11 inches.<br><br>What is the perimeter of the rectangle?<br><br>The perimeter of the rectangle is <input type=\"text\" class=\"fill-in\" value=\"\"/> inches.",
+      "text": "A rectangle has two side lengths of 9 inches and two side lengths of 11 inches. What is the perimeter of the rectangle? The perimeter of the rectangle is ___ inches.",
+      "fields": [],
+      "images": [
+        { "src": "13.png", "alt": "Original", "width": null, "height": null, "localPath": "images/13_7cc7b56e.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "40 inches",
+      "text": "40 inches",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "40" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "40",
+      "text": "40",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "40" }
+      ],
+      "images": []
+    }
+  ]
+}

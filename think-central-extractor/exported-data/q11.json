@@ -1,0 +1,40 @@
+{
+  "n": 11,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.6"],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below.<br><br>What is the area of the floor?<div class=\"figure\"><svg width=\"360\" height=\"160\" viewBox=\"0 0 360 160\"><g fill=\"#d5e8f7\" stroke=\"#444\" stroke-width=\"1.5\"><rect x=\"30\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"55\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"80\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"30\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"55\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"80\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"30\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"55\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"80\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"205\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"230\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"255\" y=\"20\" width=\"25\" height=\"25\"/><rect x=\"205\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"230\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"255\" y=\"45\" width=\"25\" height=\"25\"/><rect x=\"205\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"230\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"255\" y=\"70\" width=\"25\" height=\"25\"/><rect x=\"30\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"55\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"80\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"105\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"130\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"155\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"180\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"205\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"230\" y=\"95\" width=\"25\" height=\"25\"/><rect x=\"255\" y=\"95\" width=\"25\" height=\"25\"/></g></svg></div>The area of the floor is <input type=\"text\" class=\"fill-in\" value=\"\"/> square units.",
+      "text": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below. What is the area of the floor? The area of the floor is ___ square units.",
+      "fields": [],
+      "images": [
+        { "src": "11.png", "alt": "Original", "width": null, "height": null, "localPath": "images/11_b51110ee.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "28 sq units",
+      "text": "28 sq units",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "28" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "28",
+      "text": "28",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "28" }
+      ],
+      "images": []
+    }
+  ]
+}

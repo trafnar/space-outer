@@ -2,37 +2,42 @@
   "n": 1,
   "url": null,
   "qid": null,
-  "type": "Fill-in",
+  "type": "Multiple Choice",
   "points": { "earned": 0, "possible": 1 },
-  "standards": [],
+  "standards": ["3.MD.5a"],
   "parts": [
     {
       "role": "Question",
       "index": 0,
-      "innerHTML": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters.<br><br>What is the area of the lid Ramona is making?<div class=\"figure\"><svg width=\"260\" height=\"140\" viewBox=\"0 0 260 140\"><text x=\"130\" y=\"14\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">9 cm</text><text x=\"12\" y=\"75\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">4 cm</text><g transform=\"translate(35,20)\"><rect x=\"0\" y=\"0\" width=\"180\" height=\"80\" fill=\"none\" stroke=\"#3a7\" stroke-width=\"2\"/><g stroke=\"#9cd\" stroke-width=\"1\"><line x1=\"20\" y1=\"0\" x2=\"20\" y2=\"80\"/><line x1=\"40\" y1=\"0\" x2=\"40\" y2=\"80\"/><line x1=\"60\" y1=\"0\" x2=\"60\" y2=\"80\"/><line x1=\"80\" y1=\"0\" x2=\"80\" y2=\"80\"/><line x1=\"100\" y1=\"0\" x2=\"100\" y2=\"80\"/><line x1=\"120\" y1=\"0\" x2=\"120\" y2=\"80\"/><line x1=\"140\" y1=\"0\" x2=\"140\" y2=\"80\"/><line x1=\"160\" y1=\"0\" x2=\"160\" y2=\"80\"/><line x1=\"0\" y1=\"20\" x2=\"180\" y2=\"20\"/><line x1=\"0\" y1=\"40\" x2=\"180\" y2=\"40\"/><line x1=\"0\" y1=\"60\" x2=\"180\" y2=\"60\"/></g></g></svg></div>The area of the lid is <input type=\"text\" class=\"fill-in\" value=\"\"/> square centimeters.",
-      "text": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters. What is the area of the lid Ramona is making? The area of the lid is ___ square centimeters.",
-      "fields": [],
+      "innerHTML": "Select the best term to complete the sentence.<br><br>A square with a side length of one unit is the ______.<div class=\"choices\"><span>○ perimeter</span><span>○ area</span><span>○ square unit</span><span>○ unit square</span></div>",
+      "text": "Select the best term to complete the sentence. A square with a side length of one unit is the ______.",
+      "fields": [
+        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": false },
+        { "kind": "radio", "id": "choice_B", "value": "area", "checked": false },
+        { "kind": "radio", "id": "choice_C", "value": "square unit", "checked": false },
+        { "kind": "radio", "id": "choice_D", "value": "unit square", "checked": false }
+      ],
       "images": [
-        { "src": "1.png", "alt": "Original", "width": null, "height": null, "localPath": "images/1_aac97653.png" }
+        { "src": "1.png", "alt": "Original", "width": null, "height": null, "localPath": "images/1_3ac617f6.png" }
       ]
     },
     {
       "role": "Correct Response",
       "index": 1,
-      "innerHTML": "36 square cm",
-      "text": "36 square cm",
+      "innerHTML": "square unit",
+      "text": "square unit",
       "fields": [
-        { "kind": "text", "id": "answer", "value": "36" }
+        { "kind": "radio", "id": "choice_C", "value": "square unit", "checked": true }
       ],
       "images": []
     },
     {
       "role": "Your Response",
       "index": 2,
-      "innerHTML": "26",
-      "text": "26",
+      "innerHTML": "perimeter",
+      "text": "perimeter",
       "fields": [
-        { "kind": "text", "id": "answer", "value": "26" }
+        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": true }
       ],
       "images": []
     }

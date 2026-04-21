@@ -4,7 +4,7 @@
   "qid": null,
   "type": "Fill-in",
   "points": { "earned": 0, "possible": 1 },
-  "standards": [],
+  "standards": ["3.MD.8"],
   "parts": [
     {
       "role": "Question",
@@ -13,7 +13,7 @@
       "text": "Find the perimeter of the figure. Each unit is 1 centimeter. The perimeter of the figure is ___ centimeters.",
       "fields": [],
       "images": [
-        { "src": "4.png", "alt": "Original", "width": null, "height": null, "localPath": "images/4_eb901551.png" }
+        { "src": "4.png", "alt": "Original", "width": null, "height": null, "localPath": "images/4_ac8f74b6.png" }
       ]
     },
     {

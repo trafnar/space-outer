@@ -1,0 +1,40 @@
+{
+  "n": 12,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Jeff is making a poster for a car wash for the Campout Club.<br><br>What is the perimeter of the poster?<div class=\"figure\"><svg width=\"300\" height=\"140\" viewBox=\"0 0 300 140\"><rect x=\"60\" y=\"30\" width=\"180\" height=\"60\" fill=\"#7ec4e8\" stroke=\"#3a7ab8\" stroke-width=\"2\"/><text x=\"150\" y=\"58\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\" font-weight=\"bold\" fill=\"#fff\">CAMPOUT CLUB</text><text x=\"150\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" font-weight=\"bold\" fill=\"#fff\">CAR WASH</text><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">9 ft</text><text x=\"42\" y=\"63\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">3 ft</text><text x=\"258\" y=\"63\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">3 ft</text><text x=\"150\" y=\"108\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">9 ft</text></svg></div>The perimeter of the poster is <input type=\"text\" class=\"fill-in\" value=\"\"/> feet.",
+      "text": "Jeff is making a poster for a car wash for the Campout Club. What is the perimeter of the poster? The perimeter of the poster is ___ feet.",
+      "fields": [],
+      "images": [
+        { "src": "12.png", "alt": "Original", "width": null, "height": null, "localPath": "images/12_7d82d018.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "24 feet",
+      "text": "24 feet",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "24" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "24",
+      "text": "24",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "24" }
+      ],
+      "images": []
+    }
+  ]
+}
