@@ -17,17 +17,26 @@ import {
   CardTitle,
 } from "./ui/card";
 import { QuestionCard } from "./QuestionCard";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
-import { IconChevronRight } from "@tabler/icons-react";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog";
 
 type RowAction = "expand" | "pop" | "none";
-const rowAction = "expand" as RowAction;
+const rowAction = "pop" as RowAction;
 const isExpandMode = rowAction === "expand";
+const isPopMode = rowAction === "pop";
+const isInteractive = isExpandMode || isPopMode;
 
 export function QuestionTable({
   questions,
@@ -39,6 +48,9 @@ export function QuestionTable({
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
+  const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
+  const poppedQuestion =
+    poppedIndex !== null ? (questions[poppedIndex] ?? null) : null;
 
   const toggleRow = (n: number) => {
     setExpandedRowIds((prev) => {
@@ -48,6 +60,31 @@ export function QuestionTable({
       return next;
     });
   };
+
+  const activateRow = (q: Question, index: number) => {
+    if (isExpandMode) toggleRow(q.n);
+    else if (isPopMode) setPoppedIndex(index);
+  };
+
+  const goToQuestion = (index: number) => {
+    if (index >= 0 && index < questions.length) setPoppedIndex(index);
+  };
+
+  useEffect(() => {
+    if (poppedIndex === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToQuestion(poppedIndex - 1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goToQuestion(poppedIndex + 1);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [poppedIndex, questions.length]);
 
   const toggleAllRows = () => {
     // if more than half of the rows are expanded, collapse them
@@ -81,18 +118,63 @@ export function QuestionTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {questions.map((q) => (
+            {questions.map((q, i) => (
               <QuestionTableRow
                 key={q.n}
                 question={q}
                 standards={standards}
                 isExpanded={expandedRowIds.has(q.n)}
-                onToggle={() => toggleRow(q.n)}
+                onActivate={() => activateRow(q, i)}
               />
             ))}
           </TableBody>
         </Table>
       </CardContent>
+      {isPopMode && (
+        <Dialog
+          open={poppedIndex !== null}
+          onOpenChange={(open) => {
+            if (!open) setPoppedIndex(null);
+          }}
+        >
+          <DialogContent className="max-w-2xl sm:max-w-2xl">
+            <DialogHeader>
+              <DialogTitle>Question {poppedQuestion?.n}</DialogTitle>
+            </DialogHeader>
+            {poppedQuestion && <QuestionCard question={poppedQuestion} />}
+            <DialogFooter className="flex-row items-center justify-between sm:justify-between">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() =>
+                  poppedIndex !== null && goToQuestion(poppedIndex - 1)
+                }
+                disabled={poppedIndex === null || poppedIndex === 0}
+              >
+                <IconChevronLeft />
+                Previous
+              </Button>
+              <div className="text-xs text-muted-foreground tabular-nums">
+                {poppedIndex !== null ? poppedIndex + 1 : 0} of{" "}
+                {questions.length}
+              </div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() =>
+                  poppedIndex !== null && goToQuestion(poppedIndex + 1)
+                }
+                disabled={
+                  poppedIndex === null || poppedIndex === questions.length - 1
+                }
+              >
+                Next
+                <IconChevronRight />
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      )}
     </Card>
   );
 }
@@ -101,12 +183,12 @@ function QuestionTableRow({
   question: q,
   standards,
   isExpanded,
-  onToggle,
+  onActivate,
 }: {
   question: Question;
   standards?: Record<string, string>;
   isExpanded: boolean;
-  onToggle: () => void;
+  onActivate: () => void;
 }) {
   const expanded = isExpandMode && isExpanded;
   const colCount = isExpandMode ? 4 : 3;
@@ -114,25 +196,27 @@ function QuestionTableRow({
   return (
     <React.Fragment>
       <TableRow
-        onClick={isExpandMode ? onToggle : undefined}
+        onClick={isInteractive ? onActivate : undefined}
         onKeyDown={
-          isExpandMode
+          isInteractive
             ? (e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
-                  onToggle();
+                  onActivate();
                 }
               }
             : undefined
         }
-        role={isExpandMode ? "button" : undefined}
-        tabIndex={isExpandMode ? 0 : undefined}
+        role={isInteractive ? "button" : undefined}
+        tabIndex={isInteractive ? 0 : undefined}
         aria-expanded={isExpandMode ? expanded : undefined}
+        aria-haspopup={isPopMode ? "dialog" : undefined}
         aria-controls={isExpandMode ? `question-${q.n}-details` : undefined}
         className={cn(
           "hover:bg-transparent",
-          isExpandMode &&
-            "cursor-pointer border-b-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          isInteractive &&
+            "cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          isExpandMode && "border-b-0",
         )}
       >
         {isExpandMode && (
