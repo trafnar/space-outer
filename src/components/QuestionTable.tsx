@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { Question } from "@/data/types";
+import type { Block, Question } from "@/data/types";
 import {
   Card,
   CardAction,
@@ -26,7 +26,7 @@ import { StandardsBadge } from "./StandardsBadge";
 import { IconChevronRight } from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
-const rowAction = "none" as RowAction;
+const rowAction = "expand" as RowAction;
 const isExpandMode = rowAction === "expand";
 
 export function QuestionTable({
@@ -59,7 +59,7 @@ export function QuestionTable({
   };
 
   return (
-    <Card className="px-0">
+    <Card className="px-0 pb-0 rounded-md">
       <CardHeader>
         <CardTitle>Questions</CardTitle>
         {isExpandMode && (
@@ -136,7 +136,7 @@ function QuestionTableRow({
         )}
       >
         {isExpandMode && (
-          <TableCell>
+          <TableCell className="pr-0">
             <Button variant="ghost" size="icon" tabIndex={-1}>
               <IconChevronRight
                 className={cn(
@@ -159,7 +159,7 @@ function QuestionTableRow({
                   "linear-gradient(to right, black calc(100% - 40px), transparent)",
               }}
             >
-              {q.questionText}
+              <QuestionPreview prompt={q.prompt} />
             </div>
           </div>
         </TableCell>
@@ -206,5 +206,28 @@ function QuestionTableRow({
         </TableRow>
       )}
     </React.Fragment>
+  );
+}
+
+function QuestionPreview({ prompt }: { prompt: Block[] }) {
+  const paragraphs = prompt.filter((b) => b.type === "paragraph");
+  return (
+    <>
+      {paragraphs.map((block, blockIdx) => (
+        <React.Fragment key={blockIdx}>
+          {blockIdx > 0 && " "}
+          {block.content.map((inline, inlineIdx) =>
+            inline.type === "text" ? (
+              <React.Fragment key={inlineIdx}>{inline.text}</React.Fragment>
+            ) : (
+              <span
+                key={inlineIdx}
+                className="inline-block align-bottom h-[1.1lh] rounded-[4px] border border-muted-foreground/15 bg-accent-foreground w-8"
+              ></span>
+            ),
+          )}
+        </React.Fragment>
+      ))}
+    </>
   );
 }

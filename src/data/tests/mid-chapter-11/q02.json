@@ -15,7 +15,9 @@
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "The measure of the number of unit squares needed to cover a figure with no gaps or overlaps is the ______." }
+        { "type": "text", "text": "The measure of the number of unit squares needed to cover a figure with no gaps or overlaps is the " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": "." }
       ]
     },
     {

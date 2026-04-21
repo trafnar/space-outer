@@ -46,7 +46,6 @@ export type Response =
 
 export type Question = ManifestQuestion & {
   prompt: Block[];
-  questionText: string;
   correct: Response;
   userResponse: Response;
 };
