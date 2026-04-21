@@ -1,31 +1,24 @@
-export default function Home() {
+import Link from "next/link";
+import { listTests } from "@/util/getTests";
+
+export default async function Home() {
+  const tests = await listTests();
+
   return (
-    <div>
-      <header>
-        <div>Perimeter & area</div>
-        <div>Chapter 11 Mid-Chapter Checkpoint</div>
-      </header>
-
-      <div>
-        <div>Korra’s Score</div>
-        <div>
-          <strong>12</strong> out of <strong>46</strong> points
-        </div>
-      </div>
-
-      <div>
-        {/* left side */}
-        <div>
-          <div>
-            <div>1</div>
-            <div>Select yes or no</div>
-            <div>x 0/2</div>
-          </div>
-        </div>
-
-        {/* right side */}
-        <div>Question 1</div>
-      </div>
+    <div className="p-8">
+      {tests.length === 0 ? (
+        <div>No tests yet.</div>
+      ) : (
+        tests.map(({ slug, manifest }) => (
+          <Link
+            className="text-teal-700 hover:underline"
+            href={`/tests/${slug}`}
+            key={slug}
+          >
+            {manifest.title}
+          </Link>
+        ))
+      )}
     </div>
   );
 }
