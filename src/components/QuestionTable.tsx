@@ -17,20 +17,14 @@ import {
   CardTitle,
 } from "./ui/card";
 import { QuestionCard } from "./QuestionCard";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-} from "./ui/sheet";
+import { QuestionSheet } from "./QuestionSheet";
+import { IconChevronRight } from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
 const rowAction = "pop" as RowAction;
@@ -49,8 +43,6 @@ export function QuestionTable({
     () => new Set(),
   );
   const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
-  const poppedQuestion =
-    poppedIndex !== null ? (questions[poppedIndex] ?? null) : null;
 
   const toggleRow = (n: number) => {
     setExpandedRowIds((prev) => {
@@ -65,26 +57,6 @@ export function QuestionTable({
     if (isExpandMode) toggleRow(q.n);
     else if (isPopMode) setPoppedIndex(index);
   };
-
-  const goToQuestion = (index: number) => {
-    if (index >= 0 && index < questions.length) setPoppedIndex(index);
-  };
-
-  useEffect(() => {
-    if (poppedIndex === null) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToQuestion(poppedIndex - 1);
-      } else if (e.key === "ArrowRight") {
-        e.preventDefault();
-        goToQuestion(poppedIndex + 1);
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [poppedIndex, questions.length]);
 
   const toggleAllRows = () => {
     // if more than half of the rows are expanded, collapse them
@@ -131,55 +103,11 @@ export function QuestionTable({
         </Table>
       </CardContent>
       {isPopMode && (
-        <Sheet
-          open={poppedIndex !== null}
-          onOpenChange={(open) => {
-            if (!open) setPoppedIndex(null);
-          }}
-          modal={false}
-        >
-          <SheetContent
-            side="right"
-            className="sm:max-w-lg data-[side=right]:sm:max-w-lg"
-          >
-            <SheetHeader>
-              <SheetTitle>Question {poppedQuestion?.n}</SheetTitle>
-            </SheetHeader>
-            <div className="flex-1 overflow-y-auto px-6">
-              {poppedQuestion && <QuestionCard question={poppedQuestion} />}
-            </div>
-            <SheetFooter className="flex-row items-center justify-between">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() =>
-                  poppedIndex !== null && goToQuestion(poppedIndex - 1)
-                }
-                disabled={poppedIndex === null || poppedIndex === 0}
-              >
-                <IconChevronLeft />
-                Previous
-              </Button>
-              <div className="text-xs text-muted-foreground tabular-nums">
-                {poppedIndex !== null ? poppedIndex + 1 : 0} of{" "}
-                {questions.length}
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() =>
-                  poppedIndex !== null && goToQuestion(poppedIndex + 1)
-                }
-                disabled={
-                  poppedIndex === null || poppedIndex === questions.length - 1
-                }
-              >
-                Next
-                <IconChevronRight />
-              </Button>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
+        <QuestionSheet
+          questions={questions}
+          activeIndex={poppedIndex}
+          onIndexChange={setPoppedIndex}
+        />
       )}
     </Card>
   );
