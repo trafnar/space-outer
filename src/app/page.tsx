@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listTests } from "@/util/getTests";
+import { listTests } from "@/lib/getTests";
 
 export default async function Home() {
   const tests = await listTests();

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTest } from "@/util/getTests";
+import { getTest } from "@/lib/getTests";
 import { TestsClient } from "./tests-client";
 
 export default async function Page({ params }: PageProps<"/tests/[slug]">) {
