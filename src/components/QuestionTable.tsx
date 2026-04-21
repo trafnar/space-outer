@@ -148,10 +148,10 @@ function QuestionTableRow({
           </TableCell>
         )}
         <TableCell className="max-w-0 whitespace-normal">
-          <div className="flex items-center gap-2 w-full">
+          <div className="flex items-center w-full">
             <div className="font-semibold">{q.n}</div>
             <div
-              className="text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1"
+              className="text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1 px-3"
               style={{
                 maskImage:
                   "linear-gradient(to right, black calc(100% - 40px), transparent)",
