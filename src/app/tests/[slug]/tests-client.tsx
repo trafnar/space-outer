@@ -17,7 +17,7 @@ export function TestsClient({
   questions: Question[];
 }) {
   return (
-    <div className="mx-auto max-w-4xl p-6 flex flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <header>
         <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
       </header>
@@ -55,7 +55,10 @@ function QuestionCard({ question }: { question: Question }) {
         ))}
       </div>
 
-      <ResponseSummary correct={question.correct} user={question.userResponse} />
+      <ResponseSummary
+        correct={question.correct}
+        user={question.userResponse}
+      />
     </article>
   );
 }
@@ -129,10 +132,8 @@ function BlankView({
   response: Response;
   correct: Response;
 }) {
-  const userVal =
-    response.type === "fillIn" ? response.values[id] : undefined;
-  const correctVal =
-    correct.type === "fillIn" ? correct.values[id] : undefined;
+  const userVal = response.type === "fillIn" ? response.values[id] : undefined;
+  const correctVal = correct.type === "fillIn" ? correct.values[id] : undefined;
   const isRight = userVal === correctVal;
 
   return (

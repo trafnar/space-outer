@@ -5,7 +5,7 @@ export default async function Home() {
   const tests = await listTests();
 
   return (
-    <div className="p-8">
+    <>
       {tests.length === 0 ? (
         <div>No tests yet.</div>
       ) : (
@@ -19,6 +19,6 @@ export default async function Home() {
           </Link>
         ))
       )}
-    </div>
+    </>
   );
 }

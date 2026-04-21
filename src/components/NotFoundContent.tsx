@@ -8,7 +8,7 @@ export function NotFoundContent({
   description: string;
 }) {
   return (
-    <main className="p-8">
+    <>
       <h1 className="text-2xl font-bold">{title}</h1>
       <p className="mt-2 opacity-60">{description}</p>
       <Link
@@ -17,6 +17,6 @@ export function NotFoundContent({
       >
         Back to tests
       </Link>
-    </main>
+    </>
   );
 }
