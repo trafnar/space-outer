@@ -1,0 +1,33 @@
+{
+  "n": 9,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 0, "possible": 1 },
+  "standards": ["3.MD.7a"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "What is the area of the lid Ramona is making?" }
+      ]
+    },
+    { "type": "diagram", "file": "q09-d1.svg", "alt": "A 9 cm by 4 cm rectangle divided into unit squares." },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The area of the lid is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " square centimeters." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "36" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "26" } }
+}

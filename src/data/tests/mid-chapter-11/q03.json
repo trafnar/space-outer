@@ -4,37 +4,24 @@
   "qid": null,
   "type": "Fill-in",
   "points": { "earned": 0, "possible": 1 },
-  "standards": [],
-  "parts": [
+  "standards": ["3.MD.8"],
+  "prompt": [
     {
-      "role": "Question",
-      "index": 0,
-      "innerHTML": "Find the unknown side length.<br>Perimeter = 38 centimeters<div class=\"figure\"><svg width=\"300\" height=\"170\" viewBox=\"0 0 300 170\"><polygon points=\"40,85 95,30 230,30 230,140 95,140\" fill=\"none\" stroke=\"#3a7\" stroke-width=\"2\"/><text x=\"55\" y=\"62\" font-family=\"Arial\" font-size=\"13\">5 cm</text><text x=\"162\" y=\"22\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">11 cm</text><text x=\"240\" y=\"90\" font-family=\"Arial\" font-size=\"13\">7 cm</text><text x=\"162\" y=\"158\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">11 cm</text><text x=\"58\" y=\"118\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">g</text></svg></div>g = <input type=\"text\" class=\"fill-in\" value=\"\"/> centimeters",
-      "text": "Find the unknown side length. Perimeter = 38 centimeters. g = ___ centimeters",
-      "fields": [],
-      "images": [
-        { "src": "3.png", "alt": "Original", "width": null, "height": null, "localPath": "images/3_570213b3.png" }
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Find the perimeter of the figure. Each unit is 1 centimeter." }
       ]
     },
+    { "type": "diagram", "file": "q03-d1.svg", "alt": "An irregular shape drawn on a grid." },
     {
-      "role": "Correct Response",
-      "index": 1,
-      "innerHTML": "g = 4 cm",
-      "text": "g = 4 cm",
-      "fields": [
-        { "kind": "text", "id": "answer", "value": "4" }
-      ],
-      "images": []
-    },
-    {
-      "role": "Your Response",
-      "index": 2,
-      "innerHTML": "17",
-      "text": "17",
-      "fields": [
-        { "kind": "text", "id": "answer", "value": "17" }
-      ],
-      "images": []
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The perimeter of the figure is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " centimeters." }
+      ]
     }
-  ]
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "16" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "12" } }
 }

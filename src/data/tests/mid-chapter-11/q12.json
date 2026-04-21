@@ -1,0 +1,33 @@
+{
+  "n": 12,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Jeff is making a poster for a car wash for the Campout Club." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "What is the perimeter of the poster?" }
+      ]
+    },
+    { "type": "diagram", "file": "q12-d1.svg", "alt": "A Campout Club Car Wash poster that is 9 ft wide and 3 ft tall." },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The perimeter of the poster is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " feet." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "24" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "24" } }
+}

@@ -1,0 +1,32 @@
+{
+  "n": 13,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "A rectangle has two side lengths of 9 inches and two side lengths of 11 inches." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "What is the perimeter of the rectangle?" }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The perimeter of the rectangle is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " inches." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "40" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "40" } }
+}

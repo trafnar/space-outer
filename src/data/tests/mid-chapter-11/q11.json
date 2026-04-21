@@ -1,0 +1,33 @@
+{
+  "n": 11,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.6"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "What is the area of the floor?" }
+      ]
+    },
+    { "type": "diagram", "file": "q11-d1.svg", "alt": "A room floor plan made up of unit squares." },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The area of the floor is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " square units." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "28" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "28" } }
+}

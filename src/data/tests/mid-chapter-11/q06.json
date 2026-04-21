@@ -2,44 +2,32 @@
   "n": 6,
   "url": null,
   "qid": null,
-  "type": "Multiple Choice",
+  "type": "Fill-in",
   "points": { "earned": 0, "possible": 1 },
-  "standards": [],
-  "parts": [
+  "standards": ["3.MD.8"],
+  "prompt": [
     {
-      "role": "Question",
-      "index": 0,
-      "innerHTML": "Select the best term to complete the sentence.<br><br>A square with a side length of one unit is the ______.<div class=\"choices\"><span>○ perimeter</span><span>○ area</span><span>○ square unit</span><span>○ unit square</span></div>",
-      "text": "Select the best term to complete the sentence. A square with a side length of one unit is the ______.",
-      "fields": [
-        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": false },
-        { "kind": "radio", "id": "choice_B", "value": "area", "checked": false },
-        { "kind": "radio", "id": "choice_C", "value": "square unit", "checked": false },
-        { "kind": "radio", "id": "choice_D", "value": "unit square", "checked": false }
-      ],
-      "images": [
-        { "src": "6.png", "alt": "Original", "width": null, "height": null, "localPath": "images/6_f44f4502.png" }
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Find the unknown side lengths." }
       ]
     },
     {
-      "role": "Correct Response",
-      "index": 1,
-      "innerHTML": "unit square",
-      "text": "unit square",
-      "fields": [
-        { "kind": "radio", "id": "choice_D", "value": "unit square", "checked": true }
-      ],
-      "images": []
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Perimeter = 36 feet" }
+      ]
     },
+    { "type": "diagram", "file": "q06-d1.svg", "alt": "A rectangle with top and bottom labeled 13 ft and left and right sides labeled k." },
     {
-      "role": "Your Response",
-      "index": 2,
-      "innerHTML": "perimeter",
-      "text": "perimeter",
-      "fields": [
-        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": true }
-      ],
-      "images": []
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "k = " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " feet" }
+      ]
     }
-  ]
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "5" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "9" } }
 }

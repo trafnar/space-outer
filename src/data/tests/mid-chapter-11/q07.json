@@ -1,0 +1,27 @@
+{
+  "n": 7,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.6"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Find the area of the figure. Each unit square is 1 square meter." }
+      ]
+    },
+    { "type": "diagram", "file": "q07-d1.svg", "alt": "An irregular figure made of unit squares." },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The area of the figure is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " square meters." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "14" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "14" } }
+}

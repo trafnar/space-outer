@@ -1,7 +1,3 @@
-// Initial pass at structuring test question data. This will likely need to
-// evolve as we discover more variations in test types and as we implement more
-// features around questions, answers, and scoring.
-
 export type Score = {
   percent: number;
   earned: number;
@@ -25,33 +21,33 @@ export type Manifest = {
   numQuestions: number;
   score: Score;
   questions: ManifestQuestion[];
+  standards?: Record<string, string>;
 };
 
-export type PartField =
-  | { kind: "text"; id: string; value: string }
-  | { kind: "radio"; id: string; value: string; checked: boolean };
+// Block-level nodes: stack vertically in a question prompt.
+export type Block =
+  | { type: "paragraph"; content: Inline[] }
+  | { type: "diagram"; file: string; alt?: string; svg?: string }
+  | { type: "choices"; options: Choice[] };
 
-export type PartImage = {
-  src: string;
-  alt: string | null;
-  width: number | null;
-  height: number | null;
-  localPath: string;
-};
+// Inline-level nodes: flow within a paragraph.
+export type Inline =
+  | { type: "text"; text: string }
+  | { type: "blank"; id: string };
 
-export type PartRole = "Question" | "Correct Response" | "Your Response";
-
-export type QuestionPart = {
-  role: PartRole | string;
-  index: number;
-  innerHTML: string;
+export type Choice = {
+  id: string;
   text: string;
-  fields: PartField[];
-  images: PartImage[];
 };
+
+export type Response =
+  | { type: "fillIn"; values: Record<string, string> }
+  | { type: "choice"; choiceId: string };
 
 export type Question = ManifestQuestion & {
-  parts: QuestionPart[];
+  prompt: Block[];
+  correct: Response;
+  userResponse: Response;
 };
 
 export type Test = {

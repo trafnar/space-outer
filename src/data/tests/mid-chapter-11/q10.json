@@ -1,0 +1,33 @@
+{
+  "n": 10,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": ["3.MD.8"],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "What is the length of each side of the picture frame?" }
+      ]
+    },
+    { "type": "diagram", "file": "q10-d1.svg", "alt": "A square with each side labeled a." },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Each side of the picture frame is " },
+        { "type": "blank", "id": "answer" },
+        { "type": "text", "text": " inches." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "8" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "8" } }
+}

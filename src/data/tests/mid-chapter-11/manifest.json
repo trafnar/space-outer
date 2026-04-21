@@ -1,16 +1,30 @@
 {
   "title": "Mid-Chapter 11 Quiz - Review",
-  "takenOn": null,
+  "takenOn": "2026-04-01",
   "student": "Manousos, Korra",
   "teacher": null,
-  "numQuestions": 6,
-  "score": { "percent": 0, "earned": 0, "possible": 6 },
+  "numQuestions": 13,
+  "score": { "percent": 54, "earned": 7, "possible": 13 },
   "questions": [
-    { "n": 1, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 1 }, "standards": [] },
-    { "n": 2, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 1 }, "standards": [] },
-    { "n": 3, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 1 }, "standards": [] },
-    { "n": 4, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 1 }, "standards": [] },
-    { "n": 5, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 1 }, "standards": [] },
-    { "n": 6, "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 0, "possible": 1 }, "standards": [] }
-  ]
+    { "n": 1,  "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.5a"] },
+    { "n": 2,  "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.5b"] },
+    { "n": 3,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 4,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 5,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 6,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 7,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.6"]  },
+    { "n": 8,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.7a"] },
+    { "n": 9,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 1 }, "standards": ["3.MD.7a"] },
+    { "n": 10, "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 11, "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.6"]  },
+    { "n": 12, "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.8"]  },
+    { "n": 13, "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.8"]  }
+  ],
+  "standards": {
+    "3.MD.5a": "A square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area, and can be used to measure area.",
+    "3.MD.5b": "A plane figure which can be covered without gaps or overlaps by n unit squares is said to have an area of n square units.",
+    "3.MD.6":  "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units).",
+    "3.MD.7a": "Find the area of a rectangle with whole-number side lengths by tiling it, and show that the area is the same as would be found by multiplying the side lengths.",
+    "3.MD.8":  "Solve real world and mathematical problems involving perimeters of polygons, including finding the perimeter given the side lengths, finding an unknown side length, and exhibiting rectangles with the same perimeter and different areas or with the same area and different perimeters."
+  }
 }

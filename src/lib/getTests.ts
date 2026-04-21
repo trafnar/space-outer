@@ -46,14 +46,28 @@ export async function getTest(slug: string): Promise<Test | null> {
   }
 
   const questions = await Promise.all(
-    manifest.questions.map((q) =>
-      readJson<Question>(
-        path.join(dir, `q${String(q.n).padStart(2, "0")}.json`),
-      ),
-    ),
+    manifest.questions.map(async (q) => {
+      const file = `q${String(q.n).padStart(2, "0")}.json`;
+      const question = await readJson<Question>(path.join(dir, file));
+      await inlineDiagramSvgs(question, dir);
+      return question;
+    }),
   );
 
   return { slug, manifest, questions };
+}
+
+async function inlineDiagramSvgs(
+  question: Question,
+  dir: string,
+): Promise<void> {
+  await Promise.all(
+    question.prompt.map(async (block) => {
+      if (block.type === "diagram") {
+        block.svg = await fs.readFile(path.join(dir, block.file), "utf8");
+      }
+    }),
+  );
 }
 
 export async function getAllTests(): Promise<Test[]> {
