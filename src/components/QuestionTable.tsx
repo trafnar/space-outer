@@ -25,12 +25,12 @@ import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
+  Sheet,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+} from "./ui/sheet";
 
 type RowAction = "expand" | "pop" | "none";
 const rowAction = "pop" as RowAction;
@@ -96,7 +96,7 @@ export function QuestionTable({
   };
 
   return (
-    <Card className="px-0 pb-0 rounded-md">
+    <Card className="px-0 pb-0 rounded-md max-w-3xl">
       <CardHeader>
         <CardTitle>Questions</CardTitle>
         {isExpandMode && (
@@ -131,18 +131,24 @@ export function QuestionTable({
         </Table>
       </CardContent>
       {isPopMode && (
-        <Dialog
+        <Sheet
           open={poppedIndex !== null}
           onOpenChange={(open) => {
             if (!open) setPoppedIndex(null);
           }}
+          modal={false}
         >
-          <DialogContent className="max-w-2xl sm:max-w-2xl">
-            <DialogHeader>
-              <DialogTitle>Question {poppedQuestion?.n}</DialogTitle>
-            </DialogHeader>
-            {poppedQuestion && <QuestionCard question={poppedQuestion} />}
-            <DialogFooter className="flex-row items-center justify-between sm:justify-between">
+          <SheetContent
+            side="right"
+            className="sm:max-w-lg data-[side=right]:sm:max-w-lg"
+          >
+            <SheetHeader>
+              <SheetTitle>Question {poppedQuestion?.n}</SheetTitle>
+            </SheetHeader>
+            <div className="flex-1 overflow-y-auto px-6">
+              {poppedQuestion && <QuestionCard question={poppedQuestion} />}
+            </div>
+            <SheetFooter className="flex-row items-center justify-between">
               <Button
                 variant="outline"
                 size="sm"
@@ -171,9 +177,9 @@ export function QuestionTable({
                 Next
                 <IconChevronRight />
               </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
       )}
     </Card>
   );
