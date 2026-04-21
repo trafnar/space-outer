@@ -30,7 +30,7 @@ export default function RootLayout({
         loraHeading.variable,
       )}
     >
-      <body className="min-h-full flex flex-col p-8 max-w-5xl">{children}</body>
+      <body className="bg-muted min-h-full flex flex-col p-8">{children}</body>
     </html>
   );
 }
