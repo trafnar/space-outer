@@ -42,6 +42,9 @@ export function QuestionTable({
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
+  // SHARED-SELECTION: this is the source of truth for the "active" row.
+  // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
+  // props (or a context/store hook) and remove this local state.
   const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
 
   const toggleRow = (n: number) => {
@@ -55,6 +58,8 @@ export function QuestionTable({
 
   const activateRow = (q: Question, index: number) => {
     if (isExpandMode) toggleRow(q.n);
+    // SHARED-SELECTION: when the selection is shared, swap `setPoppedIndex`
+    // for the lifted setter (e.g. `onSelectedIndexChange(index)`).
     else if (isPopMode) setPoppedIndex(index);
   };
 
@@ -96,6 +101,9 @@ export function QuestionTable({
                 question={q}
                 standards={standards}
                 isExpanded={expandedRowIds.has(q.n)}
+                // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
+                // (and accept it on QuestionTableRow) to render a highlight on
+                // the row that's currently open in the sheet.
                 onActivate={() => activateRow(q, i)}
               />
             ))}
@@ -103,6 +111,9 @@ export function QuestionTable({
         </Table>
       </CardContent>
       {isPopMode && (
+        // SHARED-SELECTION: the sheet already takes the selection as props;
+        // when the state is lifted, just forward the lifted value/setter here
+        // (or pull them from the same context/store).
         <QuestionSheet
           questions={questions}
           activeIndex={poppedIndex}
@@ -113,6 +124,10 @@ export function QuestionTable({
   );
 }
 
+// SHARED-SELECTION: add an `isSelected: boolean` prop here and use it below
+// to apply a "selected" style on the row (e.g. a `data-selected` attribute or
+// extra classes on <TableRow>). Also consider setting `aria-current="true"`
+// on the selected row for a11y.
 function QuestionTableRow({
   question: q,
   standards,
