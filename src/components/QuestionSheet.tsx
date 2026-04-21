@@ -32,18 +32,17 @@ export function QuestionSheet({
   useEffect(() => {
     if (activeIndex === null) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft" && activeIndex > 0) {
         e.preventDefault();
-        goToQuestion(activeIndex - 1);
-      } else if (e.key === "ArrowRight") {
+        onIndexChange(activeIndex - 1);
+      } else if (e.key === "ArrowRight" && activeIndex < questions.length - 1) {
         e.preventDefault();
-        goToQuestion(activeIndex + 1);
+        onIndexChange(activeIndex + 1);
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, questions.length]);
+  }, [activeIndex, questions.length, onIndexChange]);
 
   return (
     <Sheet
