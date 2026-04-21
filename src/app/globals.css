@@ -45,6 +45,10 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --color-correct-green: #4cc06b;
+  --color-correct-green-muted: #ebf7ed;
+  --color-wrong-red: #ec6353;
+  --color-wrong-red-muted: #fcedef;
 }
 
 body {
