@@ -56,7 +56,7 @@ function SheetContent({
         data-side={side}
         className={cn(
           "fixed z-50 flex flex-col bg-popover bg-clip-padding text-sm text-popover-foreground shadow-xl",
-          "transition duration-150 ease-in-out",
+          "transition duration-100 ease-in-out",
 
           "data-ending-style:opacity-0",
           "data-starting-style:opacity-0",
