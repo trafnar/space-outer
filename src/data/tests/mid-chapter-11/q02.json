@@ -1,0 +1,40 @@
+{
+  "n": 2,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 0, "possible": 1 },
+  "standards": [],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Find the unknown side lengths.<br>Perimeter = 36 feet<div class=\"figure\"><svg width=\"280\" height=\"140\" viewBox=\"0 0 280 140\"><text x=\"140\" y=\"14\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">13 ft</text><text x=\"22\" y=\"70\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">k</text><text x=\"258\" y=\"70\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" font-style=\"italic\">k</text><text x=\"140\" y=\"128\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"13\">13 ft</text><rect x=\"40\" y=\"22\" width=\"200\" height=\"90\" fill=\"none\" stroke=\"#3a7\" stroke-width=\"2\"/></svg></div>k = <input type=\"text\" class=\"fill-in\" value=\"\"/> feet",
+      "text": "Find the unknown side lengths. Perimeter = 36 feet. k = ___ feet",
+      "fields": [],
+      "images": [
+        { "src": "2.png", "alt": "Original", "width": null, "height": null, "localPath": "images/2_e3760b2f.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "k = 5 feet",
+      "text": "k = 5 feet",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "5" }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "9",
+      "text": "9",
+      "fields": [
+        { "kind": "text", "id": "answer", "value": "9" }
+      ],
+      "images": []
+    }
+  ]
+}

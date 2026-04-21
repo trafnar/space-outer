@@ -1,0 +1,45 @@
+{
+  "n": 6,
+  "url": null,
+  "qid": null,
+  "type": "Multiple Choice",
+  "points": { "earned": 0, "possible": 1 },
+  "standards": [],
+  "parts": [
+    {
+      "role": "Question",
+      "index": 0,
+      "innerHTML": "Select the best term to complete the sentence.<br><br>A square with a side length of one unit is the ______.<div class=\"choices\"><span>○ perimeter</span><span>○ area</span><span>○ square unit</span><span>○ unit square</span></div>",
+      "text": "Select the best term to complete the sentence. A square with a side length of one unit is the ______.",
+      "fields": [
+        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": false },
+        { "kind": "radio", "id": "choice_B", "value": "area", "checked": false },
+        { "kind": "radio", "id": "choice_C", "value": "square unit", "checked": false },
+        { "kind": "radio", "id": "choice_D", "value": "unit square", "checked": false }
+      ],
+      "images": [
+        { "src": "6.png", "alt": "Original", "width": null, "height": null, "localPath": "images/6_f44f4502.png" }
+      ]
+    },
+    {
+      "role": "Correct Response",
+      "index": 1,
+      "innerHTML": "unit square",
+      "text": "unit square",
+      "fields": [
+        { "kind": "radio", "id": "choice_D", "value": "unit square", "checked": true }
+      ],
+      "images": []
+    },
+    {
+      "role": "Your Response",
+      "index": 2,
+      "innerHTML": "perimeter",
+      "text": "perimeter",
+      "fields": [
+        { "kind": "radio", "id": "choice_A", "value": "perimeter", "checked": true }
+      ],
+      "images": []
+    }
+  ]
+}
