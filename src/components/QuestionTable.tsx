@@ -147,12 +147,24 @@ function QuestionTableRow({
             </Button>
           </TableCell>
         )}
-        <TableCell>{q.n}</TableCell>
+        <TableCell className="max-w-0 whitespace-normal">
+          <div className="flex items-center gap-2 w-full">
+            <div className="font-semibold">{q.n}</div>
+            <div
+              className="text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, black calc(100% - 40px), transparent)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, black calc(100% - 40px), transparent)",
+              }}
+            >
+              {q.questionText}
+            </div>
+          </div>
+        </TableCell>
         <TableCell>
-          <PointsBadge
-            earned={q.points.earned}
-            possible={q.points.possible}
-          />
+          <PointsBadge earned={q.points.earned} possible={q.points.possible} />
         </TableCell>
         <TableCell>
           <div className="flex flex-wrap gap-1">

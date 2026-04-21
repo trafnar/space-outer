@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import type {
+  Block,
   Manifest,
   Question,
   Test,
@@ -50,11 +51,25 @@ export async function getTest(slug: string): Promise<Test | null> {
       const file = `q${String(q.n).padStart(2, "0")}.json`;
       const question = await readJson<Question>(path.join(dir, file));
       await inlineDiagramSvgs(question, dir);
+      question.questionText = promptToText(question.prompt);
       return question;
     }),
   );
 
   return { slug, manifest, questions };
+}
+
+function promptToText(prompt: Block[]): string {
+  return prompt
+    .filter((block) => block.type === "paragraph")
+    .map((block) =>
+      block.content
+        .map((inline) => (inline.type === "text" ? inline.text : "___"))
+        .join(""),
+    )
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 async function inlineDiagramSvgs(
