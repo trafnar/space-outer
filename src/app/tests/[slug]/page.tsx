@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTest } from "@/lib/getTests";
-import { TestsClient } from "./tests-client";
+import { TestViewClient } from "./test-view-client";
 
 export default async function Page({ params }: PageProps<"/tests/[slug]">) {
   const { slug } = await params;
@@ -9,5 +9,7 @@ export default async function Page({ params }: PageProps<"/tests/[slug]">) {
     notFound();
   }
 
-  return <TestsClient manifest={test.manifest} questions={test.questions} />;
+  return (
+    <TestViewClient manifest={test.manifest} questions={test.questions} />
+  );
 }

@@ -1,50 +1,31 @@
-"use client";
-
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import type {
   Block,
   Choice,
   Inline,
-  Manifest,
   Question,
   Response,
 } from "@/data/types";
 
-export function TestsClient({
-  manifest,
-  questions,
-}: {
-  manifest: Manifest;
-  questions: Question[];
-}) {
+export function QuestionCard({ question }: { question: Question }) {
   return (
-    <div className="flex flex-col gap-6">
-      <header>
-        <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
-      </header>
+    <Card>
+      <CardHeader className="flex justify-between">
+        <CardTitle>
+          Question {question.n}
+          <span>
+            {question.points.earned} / {question.points.possible}
+          </span>
+        </CardTitle>
+      </CardHeader>
 
-      <div>
-        Score: {manifest.score.earned}/{manifest.score.possible} (
-        {manifest.score.percent}%)
-      </div>
-
-      {questions.map((q) => (
-        <QuestionCard key={q.n} question={q} />
-      ))}
-    </div>
-  );
-}
-
-function QuestionCard({ question }: { question: Question }) {
-  return (
-    <article className="border p-4 flex flex-col gap-3">
-      <div className="flex justify-between">
-        <h2 className="font-semibold">Question {question.n}</h2>
-        <span>
-          {question.points.earned} / {question.points.possible}
-        </span>
-      </div>
-
-      <div className="flex flex-col gap-2">
+      <CardContent className="flex flex-col gap-2">
         {question.prompt.map((block, i) => (
           <BlockView
             key={i}
@@ -53,13 +34,15 @@ function QuestionCard({ question }: { question: Question }) {
             correct={question.correct}
           />
         ))}
-      </div>
+      </CardContent>
 
-      <ResponseSummary
-        correct={question.correct}
-        user={question.userResponse}
-      />
-    </article>
+      <CardFooter>
+        <ResponseSummary
+          correct={question.correct}
+          user={question.userResponse}
+        />
+      </CardFooter>
+    </Card>
   );
 }
 
@@ -190,7 +173,7 @@ function ResponseSummary({
   user: Response;
 }) {
   return (
-    <div className="text-sm grid grid-cols-2 gap-4 pt-2 border-t">
+    <div className="text-sm grid grid-cols-2 gap-4 pt-2 border-t w-full">
       <div>
         <div className="opacity-60 text-xs uppercase tracking-wide">
           Correct
