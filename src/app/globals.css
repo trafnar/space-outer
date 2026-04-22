@@ -45,10 +45,26 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  --color-correct-green: #4cc06b;
-  --color-correct-green-muted: #ebf7ed;
-  --color-wrong-red: #ec6353;
-  --color-wrong-red-muted: #fcedef;
+  --color-correct-green: var(--correct-green);
+  --color-correct-green-muted: var(--correct-green-muted);
+  --color-wrong-red: var(--wrong-red);
+  --color-wrong-red-muted: var(--wrong-red-muted);
+}
+
+:root {
+  --wrong-red: rgb(99.974% 34.02% 29.07%);
+  --wrong-red-muted: rgb(100% 91.69% 92.852%);
+  --correct-green: rgb(0% 70.232% 22.61%);
+  --correct-green-muted: rgb(91.054% 97.054% 92.639%);
+}
+
+@supports (color: color(display-p3 0 0 0)) {
+  :root {
+    --wrong-red: color(display-p3 0.9255 0.3882 0.3255);
+    --wrong-red-muted: color(display-p3 1 0.9204 0.9293);
+    --correct-green: color(display-p3 0.0519 0.7039 0.2261);
+    --correct-green-muted: color(display-p3 0.9216 0.9686 0.9294);
+  }
 }
 
 body {

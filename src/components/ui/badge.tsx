@@ -15,8 +15,7 @@ const badgeVariants = cva(
           "ring ring-background bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80",
         red: "ring ring-background bg-wrong-red-muted text-wrong-red",
         destructive: "ring ring-background bg-wrong-red-muted text-wrong-red",
-        green:
-          "ring ring-background bg-correct-green-muted text-correct-green",
+        green: "ring ring-background bg-correct-green-muted text-correct-green",
         outline:
           "border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground",
         ghost:
