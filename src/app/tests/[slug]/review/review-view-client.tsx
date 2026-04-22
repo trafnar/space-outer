@@ -5,14 +5,16 @@ import { QuestionCard } from "@/components/QuestionCard";
 import { AnswerVisibilityToggle } from "@/components/AnswerVisibilityToggle";
 import { Button } from "@/components/ui/button";
 import { useReviewSheet } from "@/lib/reviewSheet";
+import { useShowReviewTitle } from "@/lib/settings";
 import type { Manifest, Question } from "@/data/types";
 import {
   IconArrowLeft,
   IconClipboardX,
+  IconEye,
+  IconEyeClosed,
   IconPrinter,
 } from "@tabler/icons-react";
-import React, { useEffect, useState } from "react";
-import { Separator } from "@/components/ui/separator";
+import { useEffect, useState } from "react";
 import {
   Empty,
   EmptyContent,
@@ -20,6 +22,9 @@ import {
   EmptyHeader,
   EmptyMedia,
 } from "@/components/ui/empty";
+
+// Matches the sticky header height used on the main test page.
+const stickyHeaderHeight = 96;
 
 export function ReviewViewClient({
   manifest,
@@ -32,6 +37,7 @@ export function ReviewViewClient({
 }) {
   const [reviewIds] = useReviewSheet(slug);
   const reviewQuestions = questions.filter((q) => reviewIds.has(q.n));
+  const [showTitle, setShowTitle] = useShowReviewTitle();
 
   // The review sheet lives in localStorage, which is only available
   // after the client hydrates. Don't commit to the "empty" state until
@@ -41,7 +47,7 @@ export function ReviewViewClient({
   useEffect(() => setHydrated(true), []);
 
   return (
-    <div className="mx-auto w-full max-w-[8in] flex flex-col gap-6 p-8 print:p-0">
+    <>
       <style>{`
         @page {
           margin: 0.2in;
@@ -57,8 +63,12 @@ export function ReviewViewClient({
           }
         }
       `}</style>
-      {reviewQuestions.length > 0 && (
-        <header className="flex items-center justify-between gap-4 print:hidden">
+
+      {hydrated && reviewQuestions.length > 0 && (
+        <header
+          style={{ height: stickyHeaderHeight }}
+          className="sticky top-0 z-10 bg-background border-b border-dashed flex items-center justify-between gap-4 px-6 print:hidden"
+        >
           <Button
             variant="outline"
             size="sm"
@@ -69,6 +79,19 @@ export function ReviewViewClient({
             Back to test
           </Button>
           <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              aria-label={showTitle ? "Hide title" : "Show title"}
+              onClick={() => setShowTitle(!showTitle)}
+            >
+              {showTitle ? (
+                <IconEye data-icon="inline-start" />
+              ) : (
+                <IconEyeClosed data-icon="inline-start" />
+              )}
+              Title
+            </Button>
             <AnswerVisibilityToggle size="sm" />
             <Button size="sm" onClick={() => window.print()}>
               <IconPrinter />
@@ -77,53 +100,54 @@ export function ReviewViewClient({
           </div>
         </header>
       )}
-      <header>
-        <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
-        <p className="text-sm text-muted-foreground">
-          Review sheet — {reviewQuestions.length}{" "}
-          {reviewQuestions.length === 1 ? "question" : "questions"}
-        </p>
-      </header>
 
-      {!hydrated ? null : reviewQuestions.length === 0 ? (
-        <Empty className="print:hidden">
-          <EmptyMedia>
-            <IconClipboardX />
-          </EmptyMedia>
-          <EmptyHeader>This review sheet is empty</EmptyHeader>
-          <EmptyDescription>
-            Add questions to the review sheet by marking them in the test view.
-          </EmptyDescription>
-          <EmptyContent>
-            <Button
-              variant="outline"
-              size="sm"
-              nativeButton={false}
-              render={<Link href={`/tests/${slug}`} />}
-            >
-              <IconArrowLeft />
-              Back to test
-            </Button>
-          </EmptyContent>
-        </Empty>
-      ) : (
-        <div className="flex flex-col gap-6">
-          {reviewQuestions.map((q) => (
-            <React.Fragment key={q.n}>
-              <div
-                data-question-card
-                className="break-inside-avoid flex flex-col gap-3"
+      <div className="mx-auto w-full max-w-[7.5in] flex flex-col gap-6 p-8 print:p-0">
+        {showTitle && (
+          <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
+        )}
+
+        {!hydrated ? null : reviewQuestions.length === 0 ? (
+          <Empty className="print:hidden">
+            <EmptyMedia>
+              <IconClipboardX />
+            </EmptyMedia>
+            <EmptyHeader>This review sheet is empty</EmptyHeader>
+            <EmptyDescription>
+              Add questions to the review sheet by marking them in the test
+              view.
+            </EmptyDescription>
+            <EmptyContent>
+              <Button
+                variant="outline"
+                size="sm"
+                nativeButton={false}
+                render={<Link href={`/tests/${slug}`} />}
               >
-                <h2 className="font-heading font-bold text-lg">
-                  Question {q.n}
-                </h2>
+                <IconArrowLeft />
+                Back to test
+              </Button>
+            </EmptyContent>
+          </Empty>
+        ) : (
+          <div className="flex flex-col gap-12">
+            {reviewQuestions.map((q) => (
+              <div
+                key={q.n}
+                data-question-card
+                className="break-inside-avoid relative"
+              >
+                <div
+                  aria-hidden
+                  className="absolute right-full top-0 pr-3 font-heading font-bold text-sm text-muted-foreground"
+                >
+                  {q.n}.
+                </div>
                 <QuestionCard question={q} />
               </div>
-              <Separator />
-            </React.Fragment>
-          ))}
-        </div>
-      )}
-    </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
