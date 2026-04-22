@@ -16,7 +16,7 @@ export function StandardsBadge({
   const buttonContent = (
     <Button
       variant="ghost"
-      size="icon"
+      size="icon-sm"
       disabled={!hasAnyStandards}
       className={cn(
         "font-medium uppercase text-muted-foreground cursor-default hover:bg-transparent",
@@ -25,7 +25,7 @@ export function StandardsBadge({
       )}
       onClick={(e) => e.stopPropagation()}
     >
-      <IconCertificate className="size-4" />
+      <IconCertificate className="stroke-[1.5px]" />
     </Button>
   );
 

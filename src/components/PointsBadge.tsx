@@ -20,7 +20,7 @@ export function PointsBadge({
       variant={score === 2 ? "green" : score === 1 ? "yellow" : "red"}
       className={cn("tabular-nums pl-0 gap-0.5 bg-transparent border-none")}
     >
-      <div className="pr-0.5">
+      <div className="pr-1">
         {score === 2 ? (
           <IconMoodHappy className="size-4.5 stroke-[1.5px] translate-x-[0.5px]" />
         ) : score === 1 ? (
@@ -29,9 +29,11 @@ export function PointsBadge({
           <IconMoodSadDizzy className="size-4.5 stroke-[1.5px] translate-x-[0.5px]" />
         )}
       </div>
-      {earned}
-      <span className="opacity-45">/</span>
-      {possible}
+      <span className="text-foreground contents">
+        {earned}
+        <span className="opacity-45">/</span>
+        {possible}
+      </span>
     </Badge>
   );
 }

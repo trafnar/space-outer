@@ -155,7 +155,6 @@ export function QuestionTable({
               size="xs"
               onClick={addIncorrectToReview}
             >
-              <IconClipboardPlus />
               Add {numberOfIncorrect} Incorrect
             </Button>
           </div>
@@ -274,7 +273,7 @@ function QuestionTableRow({
           <Button
             variant="ghost"
             className={cn(
-              "bg-muted rounded-lg",
+              "bg-muted rounded-md",
               // isMarked && "text-primary hover:text-primary",
 
               // filled blue style
@@ -285,7 +284,7 @@ function QuestionTableRow({
               isMarked &&
                 "text-background bg-foreground hover:bg-foreground hover:text-background",
             )}
-            size="icon"
+            size="icon-sm"
             aria-pressed={isMarked}
             onClick={handleMarkClick}
           >
@@ -298,7 +297,10 @@ function QuestionTableRow({
         </TableCell>
         <TableCell className="max-w-0 whitespace-normal">
           <div className="flex items-center w-full">
-            <div className="font-semibold">{q.n}</div>
+            <div className="font-semibold tabular-nums text-xs ">
+              <span className="opacity-45 pr-0.5 font-light">#</span>
+              {q.n}
+            </div>
             <div
               className="text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1 px-3"
               style={{
@@ -316,7 +318,13 @@ function QuestionTableRow({
           <StandardsBadge standards={q.standards} descriptions={standards} />
         </TableCell>
         <TableCell>
-          <PointsBadge earned={q.points.earned} possible={q.points.possible} />
+          {/* adjust for alignment with other text in cells */}
+          <div className="translate-y-0.5">
+            <PointsBadge
+              earned={q.points.earned}
+              possible={q.points.possible}
+            />
+          </div>
         </TableCell>
       </TableRow>
       {isExpandMode && (
