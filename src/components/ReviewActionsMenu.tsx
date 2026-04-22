@@ -29,7 +29,7 @@ export function ReviewActionsMenu({
       <DropdownMenuTrigger
         render={
           <button
-            className="h-full px-1 group/pad"
+            className="h-full px-1 group/pad bg-debug-red"
             aria-label="Review sheet actions"
           />
         }

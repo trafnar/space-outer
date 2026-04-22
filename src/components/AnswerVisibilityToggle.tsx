@@ -25,7 +25,7 @@ export function AnswerVisibilityToggle({
         setShowUserAnswer(next);
         setShowCorrectAnswer(next);
       }}
-      className="h-full px-1 group/pad"
+      className="h-full px-1 group/pad bg-debug-red"
       aria-label={showing ? "Hide answers" : "Show answers"}
     >
       <Button variant="outline" nativeButton={false} render={<div />} size={size}>

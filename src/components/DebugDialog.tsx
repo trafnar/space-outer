@@ -10,7 +10,12 @@ import {
 } from "./ui/dialog";
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Checkbox } from "./ui/checkbox";
-import { useRowAction, useShowHeaderRow, type RowAction } from "@/lib/settings";
+import {
+  useRowAction,
+  useShowHeaderRow,
+  useShowDebugRegions,
+  type RowAction,
+} from "@/lib/settings";
 import { Separator } from "./ui/separator";
 
 export function openDebugDialog() {
@@ -29,6 +34,14 @@ export function DebugDialog() {
   const [open, setOpen] = useState(false);
   const [rowAction, setRowAction] = useRowAction();
   const [showHeaderRow, setShowHeaderRow] = useShowHeaderRow();
+  const [showDebugRegions, setShowDebugRegions] = useShowDebugRegions();
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.documentElement.dataset.debugRegions = showDebugRegions
+      ? "true"
+      : "false";
+  }, [showDebugRegions]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -69,6 +82,17 @@ export function DebugDialog() {
           />
           <label htmlFor="debug-show-header-row" className="text-sm">
             Show table header row
+          </label>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Checkbox
+            id="debug-show-debug-regions"
+            checked={showDebugRegions}
+            onCheckedChange={(next) => setShowDebugRegions(Boolean(next))}
+          />
+          <label htmlFor="debug-show-debug-regions" className="text-sm">
+            Show debug regions
           </label>
         </div>
 

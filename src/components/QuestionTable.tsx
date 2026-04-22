@@ -128,7 +128,7 @@ export function QuestionTable({
             {isExpandMode && (
               <button
                 onClick={toggleAllRows}
-                className=" h-full px-1 group/pad"
+                className=" h-full px-1 group/pad bg-debug-red"
                 aria-label={
                   toggleAllWillCollapse ? "Collapse all" : "Expand all"
                 }
@@ -160,7 +160,7 @@ export function QuestionTable({
             <AnswerVisibilityToggle />
             <button
               onClick={openDebugDialog}
-              className="h-full px-1 group/pad"
+              className="h-full px-1 group/pad bg-debug-red"
               aria-label="Open debug settings"
             >
               <Button
@@ -294,7 +294,7 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <div className="group/pad h-full px-2 -ml-2 -mr-2 flex items-center">
+            <div className="group/pad h-full px-2 -ml-2 -mr-2 flex items-center bg-debug-red">
               <ExpandChevron
                 expanded={expanded}
                 tabIndex={-1}
@@ -308,7 +308,7 @@ function QuestionTableRow({
         <TableCell>
           <button
             onClick={handleMarkClick}
-            className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad"
+            className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red"
             aria-pressed={isMarked}
             aria-label={
               isMarked ? "Remove from review sheet" : "Add to review sheet"

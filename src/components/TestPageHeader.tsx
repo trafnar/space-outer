@@ -68,29 +68,34 @@ function ReviewButton({
 }) {
   const reviewEmpty = reviewSize === 0;
   return (
-    <Button
-      variant="default"
-      size="sm"
-      nativeButton={false}
-      disabled={reviewEmpty}
+    <Link
+      href={`/tests/${slug}/review`}
       className={cn(
-        reviewEmpty ? "opacity-50 pointer-events-none" : "",
-        "group",
+        "h-full pl-2 -ml-2 pr-6 -mr-6 group/pad bg-debug-red flex items-center",
+        reviewEmpty && "opacity-50 pointer-events-none",
       )}
-      render={<Link href={`/tests/${slug}/review`} />}
+      aria-disabled={reviewEmpty || undefined}
     >
-      <div>
-        <div
-          data-icon="inline-start"
-          className={cn(
-            "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
-            "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
-          )}
-        >
-          {reviewSize}
+      <Button
+        variant="default"
+        size="sm"
+        nativeButton={false}
+        render={<div />}
+        className="group"
+      >
+        <div>
+          <div
+            data-icon="inline-start"
+            className={cn(
+              "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
+              "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
+            )}
+          >
+            {reviewSize}
+          </div>
         </div>
-      </div>
-      Review
-    </Button>
+        Review
+      </Button>
+    </Link>
   );
 }

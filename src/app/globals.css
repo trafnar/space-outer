@@ -49,6 +49,7 @@
   --color-correct-green-muted: var(--correct-green-muted);
   --color-wrong-red: var(--wrong-red);
   --color-wrong-red-muted: var(--wrong-red-muted);
+  --color-debug-red: var(--debug-red);
 }
 
 :root {
@@ -56,6 +57,11 @@
   --wrong-red-muted: rgb(100% 91.69% 92.852%);
   --correct-green: rgb(0% 70.232% 22.61%);
   --correct-green-muted: rgb(91.054% 97.054% 92.639%);
+  --debug-red: transparent;
+}
+
+html[data-debug-regions="true"] {
+  --debug-red: rgb(255 0 0 / 0.25);
 }
 
 @supports (color: color(display-p3 0 0 0)) {

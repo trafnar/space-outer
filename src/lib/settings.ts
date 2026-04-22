@@ -5,6 +5,7 @@ const ROW_ACTION_KEY = `${KEY_PREFIX}rowAction`;
 const SHOW_USER_ANSWER_KEY = `${KEY_PREFIX}showUserAnswer`;
 const SHOW_CORRECT_ANSWER_KEY = `${KEY_PREFIX}showCorrectAnswer`;
 const SHOW_HEADER_ROW_KEY = `${KEY_PREFIX}showHeaderRow`;
+const SHOW_DEBUG_REGIONS_KEY = `${KEY_PREFIX}showDebugRegions`;
 
 const listeners = new Set<() => void>();
 
@@ -101,4 +102,10 @@ export function useAnswerVisibility(): AnswerVisibility {
 
 export function useShowHeaderRow() {
   return useSetting(SHOW_HEADER_ROW_KEY, parseBoolFalseDefault);
+}
+
+/* Show debug regions (debug) */
+
+export function useShowDebugRegions() {
+  return useSetting(SHOW_DEBUG_REGIONS_KEY, parseBoolFalseDefault);
 }
