@@ -1,6 +1,6 @@
 "use client";
 
-import { Toggle } from "./ui/toggle";
+import { Button } from "./ui/button";
 import { IconEye, IconEyeClosed } from "@tabler/icons-react";
 import { useAnswerVisibility } from "@/lib/settings";
 
@@ -14,11 +14,12 @@ export function AnswerVisibilityToggle() {
   const showing = showUserAnswer || showCorrectAnswer;
 
   return (
-    <Toggle
-      variant="ghost"
+    <Button
+      variant="outline"
       size="xs"
-      pressed={showing}
-      onPressedChange={(next) => {
+      aria-label={showing ? "Hide answers" : "Show answers"}
+      onClick={() => {
+        const next = !showing;
         setShowUserAnswer(next);
         setShowCorrectAnswer(next);
       }}
@@ -29,6 +30,6 @@ export function AnswerVisibilityToggle() {
         <IconEyeClosed data-icon="inline-start" />
       )}
       Answers
-    </Toggle>
+    </Button>
   );
 }

@@ -24,14 +24,22 @@ import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
-import { useRowAction } from "@/lib/settings";
-import { TestPageHeader } from "./QuestionTableHeader";
+import { useRowAction, useShowHeaderRow } from "@/lib/settings";
+import { TestPageHeader } from "./TestPageHeader";
+import { ReviewActionsMenu } from "./ReviewActionsMenu";
 import { ExpandChevron } from "./ExpandChevron";
+import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 import { QuestionPreview } from "./QuestionPreview";
 import {
+  IconAdjustments,
+  IconBug,
+  IconChevronRight,
   IconClipboardCheckFilled,
   IconClipboardPlus,
+  IconSettings,
+  IconSettings2,
 } from "@tabler/icons-react";
+import { openDebugDialog } from "./DebugDialog";
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
@@ -49,6 +57,7 @@ export function QuestionTable({
   slug: string;
 }) {
   const [rowAction] = useRowAction();
+  const [showHeaderRow] = useShowHeaderRow();
   const isExpandMode = rowAction === "expand";
   const isPopMode = rowAction === "pop";
   const isSheetMode = rowAction === "sheet";
@@ -62,11 +71,12 @@ export function QuestionTable({
   // props (or a context/store hook) and remove this local state.
   const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
 
-  const { scrollY } = useScroll();
-  const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
-    clamp: true,
-  });
-  const headerBoxShadow = useMotionTemplate`0 1px 5px 0 rgba(0, 0, 0, ${shadowAlpha})`;
+  // const { scrollY } = useScroll();
+  // const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
+  //   clamp: true,
+  // });
+  // const headerBoxShadow = useMotionTemplate`0 1px 5px 0 rgba(0, 0, 0, ${shadowAlpha})`;
+  const headerBoxShadow = "0 0.5px 0px 0 var(--border)";
 
   const toggleRow = (n: number) => {
     setExpandedRowIds((prev) => {
@@ -121,34 +131,58 @@ export function QuestionTable({
         title={title}
         slug={slug}
         reviewSize={reviewSheet.size}
-        numberOfIncorrect={numberOfIncorrect}
-        onAddIncorrect={addIncorrectToReview}
-        onClearReview={clearReview}
         height={stickyHeaderHeight}
+        toolbar={
+          <div className={cn("px-6 border-t flex items-center gap-2", "h-11")}>
+            {isExpandMode && (
+              <Button
+                variant="outline"
+                size="xs"
+                onClick={toggleAllRows}
+                aria-label={
+                  toggleAllWillCollapse ? "Collapse all" : "Expand all"
+                }
+              >
+                <IconChevronRight
+                  data-icon="inline-start"
+                  className={cn(
+                    "transition-transform",
+                    toggleAllWillCollapse && "rotate-90",
+                  )}
+                />
+                Toggle all
+              </Button>
+            )}
+            <ReviewActionsMenu
+              slug={slug}
+              reviewSize={reviewSheet.size}
+              numberOfIncorrect={numberOfIncorrect}
+              onAddIncorrect={addIncorrectToReview}
+              onClearReview={clearReview}
+            />
+            <AnswerVisibilityToggle />
+            <Button variant="outline" size="xs" onClick={openDebugDialog}>
+              <IconAdjustments data-icon="inline-start" />
+              Settings
+            </Button>
+          </div>
+        }
       />
       <Table>
-        <motion.thead
-          data-slot="table-header"
-          className="[&_tr]:border-b sticky bg-background z-10"
-          style={{ top: stickyHeaderHeight, boxShadow: headerBoxShadow }}
-        >
-          <TableRow className="hover:bg-transparent">
-            {isExpandMode && (
-              <TableHead className="pr-0">
-                <ExpandChevron
-                  expanded={toggleAllWillCollapse}
-                  onClick={toggleAllRows}
-                  aria-label={
-                    toggleAllWillCollapse ? "Collapse all" : "Expand all"
-                  }
-                />
-              </TableHead>
-            )}
-            <TableHead>Add</TableHead>
-            <TableHead className="w-full">Question</TableHead>
-            <TableHead>Points</TableHead>
-          </TableRow>
-        </motion.thead>
+        {showHeaderRow && (
+          <motion.thead
+            data-slot="table-header"
+            className="[&_tr]:border-b sticky bg-background z-10"
+            style={{ top: stickyHeaderHeight, boxShadow: headerBoxShadow }}
+          >
+            <TableRow className="hover:bg-transparent">
+              {isExpandMode && <TableHead />}
+              <TableHead>Add</TableHead>
+              <TableHead className="w-full">Question</TableHead>
+              <TableHead>Points</TableHead>
+            </TableRow>
+          </motion.thead>
+        )}
         <TableBody>
           {questions.map((q, i) => (
             <QuestionTableRow
@@ -277,7 +311,7 @@ function QuestionTableRow({
             )}
           </Button>
         </TableCell>
-        <TableCell className="max-w-0 whitespace-normal">
+        <TableCell className="w-full max-w-0 whitespace-normal">
           <div className="flex items-center w-full">
             <div className="font-semibold tabular-nums text-xs ">
               <span className="opacity-45 pr-0.5 font-light">#</span>

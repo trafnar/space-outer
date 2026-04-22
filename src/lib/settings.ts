@@ -4,6 +4,7 @@ const KEY_PREFIX = "spaceOuterSetting:";
 const ROW_ACTION_KEY = `${KEY_PREFIX}rowAction`;
 const SHOW_USER_ANSWER_KEY = `${KEY_PREFIX}showUserAnswer`;
 const SHOW_CORRECT_ANSWER_KEY = `${KEY_PREFIX}showCorrectAnswer`;
+const SHOW_HEADER_ROW_KEY = `${KEY_PREFIX}showHeaderRow`;
 
 const listeners = new Set<() => void>();
 
@@ -70,6 +71,7 @@ export function useRowAction() {
 /* Answer visibility */
 
 const parseBoolTrueDefault = (raw: string | null) => raw !== "false";
+const parseBoolFalseDefault = (raw: string | null) => raw === "true";
 
 export interface AnswerVisibility {
   showUserAnswer: boolean;
@@ -93,4 +95,10 @@ export function useAnswerVisibility(): AnswerVisibility {
     setShowUserAnswer,
     setShowCorrectAnswer,
   };
+}
+
+/* Show table header row (debug) */
+
+export function useShowHeaderRow() {
+  return useSetting(SHOW_HEADER_ROW_KEY, parseBoolFalseDefault);
 }

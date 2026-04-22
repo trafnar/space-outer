@@ -1,34 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import React from "react";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { IconArrowLeft, IconDots } from "@tabler/icons-react";
-import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
+import { IconArrowLeft } from "@tabler/icons-react";
 import { TypoH2 } from "./ui/typo";
 
 export function TestPageHeader({
   title,
   slug,
   reviewSize,
-  numberOfIncorrect,
-  onAddIncorrect,
-  onClearReview,
   height,
+  toolbar,
 }: {
   title?: string;
   slug: string;
   reviewSize: number;
-  numberOfIncorrect: number;
-  onAddIncorrect: () => void;
-  onClearReview: () => void;
   height: number;
+  toolbar?: React.ReactNode;
 }) {
   return (
     <div
@@ -45,22 +35,7 @@ export function TestPageHeader({
         </div>
         <ReviewButton slug={slug} reviewSize={reviewSize} />
       </div>
-
-      <div
-        className={cn(
-          "px-6 border-t flex items-center",
-          // matches height of table cells in table.tsx
-          "h-11",
-        )}
-      >
-        <AnswerVisibilityToggle />
-        <ReviewActionsMenu
-          reviewSize={reviewSize}
-          numberOfIncorrect={numberOfIncorrect}
-          onAddIncorrect={onAddIncorrect}
-          onClearReview={onClearReview}
-        />
-      </div>
+      {toolbar}
     </div>
   );
 }
@@ -84,50 +59,6 @@ function BackHomeButton() {
   );
 }
 
-function ReviewActionsMenu({
-  reviewSize,
-  numberOfIncorrect,
-  onAddIncorrect,
-  onClearReview,
-}: {
-  reviewSize: number;
-  numberOfIncorrect: number;
-  onAddIncorrect: () => void;
-  onClearReview: () => void;
-}) {
-  const reviewEmpty = reviewSize === 0;
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger
-        render={
-          <Button
-            variant="outline"
-            size="xs"
-            aria-label="Review sheet actions"
-            className="text-muted-foreground"
-          >
-            <IconDots />
-          </Button>
-        }
-      />
-      <DropdownMenuContent className="w-64" align="end">
-        <DropdownMenuItem
-          onClick={onAddIncorrect}
-          disabled={numberOfIncorrect === 0}
-        >
-          Add {numberOfIncorrect} incorrect item
-          {numberOfIncorrect === 1 ? "" : "s"} to review
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={onClearReview} disabled={reviewEmpty}>
-          {reviewSize === 0
-            ? "Clear all review items"
-            : `Clear all ${reviewSize} review item${reviewSize === 1 ? "" : "s"}`}
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-
 function ReviewButton({
   slug,
   reviewSize,
@@ -142,7 +73,10 @@ function ReviewButton({
       size="sm"
       nativeButton={false}
       disabled={reviewEmpty}
-      className={cn(reviewEmpty ? "opacity-50 pointer-events-none" : "")}
+      className={cn(
+        reviewEmpty ? "opacity-50 pointer-events-none" : "",
+        "group",
+      )}
       render={<Link href={`/tests/${slug}/review`} />}
     >
       <div>
@@ -150,7 +84,7 @@ function ReviewButton({
           data-icon="inline-start"
           className={cn(
             "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
-            "text-foreground flex items-center justify-center -translate-x-0.5",
+            "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
           )}
         >
           {reviewSize}
