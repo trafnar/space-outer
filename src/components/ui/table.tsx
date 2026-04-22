@@ -70,7 +70,8 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
       data-slot="table-head"
       className={cn(
         cellPadding,
-        "h-12 text-left align-middle font-medium text-xs whitespace-nowrap text-muted-foreground [&:has([role=checkbox])]:pr-0",
+        "h-8 text-left align-middle font-medium text-xs whitespace-nowrap",
+        "text-muted-foreground [&:has([role=checkbox])]:pr-0",
         className,
       )}
       {...props}

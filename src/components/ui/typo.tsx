@@ -7,7 +7,7 @@ function TypoH1({ className, ...props }: React.ComponentProps<"h1">) {
     <h1
       data-slot="typo-h1"
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        "scroll-m-20 text-2xl! font-heading font-bold tracking-tight",
         className,
       )}
       {...props}

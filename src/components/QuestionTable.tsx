@@ -5,14 +5,18 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import type { Question } from "@/data/types";
-import { Card, CardContent } from "./ui/card";
 import { QuestionCard } from "./QuestionCard";
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
@@ -31,7 +35,7 @@ import {
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
-const stickyHeaderHeight = 80;
+const stickyHeaderHeight = 64;
 
 export function QuestionTable({
   questions,
@@ -57,6 +61,12 @@ export function QuestionTable({
   // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
   // props (or a context/store hook) and remove this local state.
   const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
+
+  const { scrollY } = useScroll();
+  const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
+    clamp: true,
+  });
+  const headerBoxShadow = useMotionTemplate`0 1px 5px 0 rgba(0, 0, 0, ${shadowAlpha})`;
 
   const toggleRow = (n: number) => {
     setExpandedRowIds((prev) => {
@@ -106,7 +116,7 @@ export function QuestionTable({
   ).length;
 
   return (
-    <Card className="px-0 py-0 rounded-none overflow-visible">
+    <div>
       <QuestionTableHeader
         title={title}
         slug={slug}
@@ -116,54 +126,50 @@ export function QuestionTable({
         onClearReview={clearReview}
         height={stickyHeaderHeight}
       />
-      <CardContent className="p-0">
-        <Table>
-          <TableHeader
-            className="sticky bg-background z-10"
-            style={{
-              top: stickyHeaderHeight,
-              boxShadow: "0 0.5px 0 0 var(--border)",
-            }}
-          >
-            <TableRow className="hover:bg-transparent">
-              {isExpandMode && (
-                <TableHead className="pr-0">
-                  <ExpandChevron
-                    expanded={toggleAllWillCollapse}
-                    onClick={toggleAllRows}
-                    aria-label={
-                      toggleAllWillCollapse ? "Collapse all" : "Expand all"
-                    }
-                  />
-                </TableHead>
-              )}
-              <TableHead>Add</TableHead>
-              <TableHead className="w-full">Question</TableHead>
-              <TableHead>Standards</TableHead>
-              <TableHead>Points</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {questions.map((q, i) => (
-              <QuestionTableRow
-                key={q.n}
-                question={q}
-                standards={standards}
-                isExpanded={expandedRowIds.has(q.n)}
-                isMarked={reviewSheet.has(q.n)}
-                isExpandMode={isExpandMode}
-                isPopMode={isPopMode}
-                isInteractive={isInteractive}
-                onToggleMark={() => toggleInReviewSheet(q.n)}
-                // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
-                // (and accept it on QuestionTableRow) to render a highlight on
-                // the row that's currently open in the sheet.
-                onActivate={() => activateRow(q, i)}
-              />
-            ))}
-          </TableBody>
-        </Table>
-      </CardContent>
+      <Table>
+        <motion.thead
+          data-slot="table-header"
+          className="[&_tr]:border-b sticky bg-background z-10"
+          style={{ top: stickyHeaderHeight, boxShadow: headerBoxShadow }}
+        >
+          <TableRow className="hover:bg-transparent">
+            {isExpandMode && (
+              <TableHead className="pr-0">
+                <ExpandChevron
+                  expanded={toggleAllWillCollapse}
+                  onClick={toggleAllRows}
+                  aria-label={
+                    toggleAllWillCollapse ? "Collapse all" : "Expand all"
+                  }
+                />
+              </TableHead>
+            )}
+            <TableHead>Add</TableHead>
+            <TableHead className="w-full">Question</TableHead>
+            <TableHead>Standards</TableHead>
+            <TableHead>Points</TableHead>
+          </TableRow>
+        </motion.thead>
+        <TableBody>
+          {questions.map((q, i) => (
+            <QuestionTableRow
+              key={q.n}
+              question={q}
+              standards={standards}
+              isExpanded={expandedRowIds.has(q.n)}
+              isMarked={reviewSheet.has(q.n)}
+              isExpandMode={isExpandMode}
+              isPopMode={isPopMode}
+              isInteractive={isInteractive}
+              onToggleMark={() => toggleInReviewSheet(q.n)}
+              // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
+              // (and accept it on QuestionTableRow) to render a highlight on
+              // the row that's currently open in the sheet.
+              onActivate={() => activateRow(q, i)}
+            />
+          ))}
+        </TableBody>
+      </Table>
       {isSheetMode && (
         // SHARED-SELECTION: the sheet already takes the selection as props;
         // when the state is lifted, just forward the lifted value/setter here
@@ -181,7 +187,7 @@ export function QuestionTable({
           onIndexChange={setPoppedIndex}
         />
       )}
-    </Card>
+    </div>
   );
 }
 
