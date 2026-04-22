@@ -2,6 +2,7 @@ import { IconCertificate } from "@tabler/icons-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { TypoH3, TypoMuted } from "./ui/typo";
 
 export function StandardsBadge({
   standards,
@@ -23,8 +24,6 @@ export function StandardsBadge({
       }
       className={cn(
         "font-medium uppercase text-muted-foreground cursor-default hover:bg-transparent",
-        // optical adjustment if aligned left
-        "-ml-2",
       )}
       onClick={(e) => e.stopPropagation()}
     >
@@ -37,19 +36,17 @@ export function StandardsBadge({
       <HoverCardTrigger delay={0} closeDelay={0} render={buttonContent} />
       <HoverCardContent
         side="right"
-        className="leading-snug w-82 flex flex-col gap-3"
+        className="leading-snug w-82 flex flex-col gap-1"
         onClick={(e) => e.stopPropagation()}
       >
+        <TypoMuted className="text-xs">Standards Assessed</TypoMuted>
         {standards.map((s) => (
           <div key={s}>
-            <h2
-              className={cn(
-                "font-bold uppercase font-heading",
-                hasAnyDescription ? "mb-1" : "mb-0",
-              )}
+            <TypoH3
+              className={cn("uppercase", hasAnyDescription ? "mb-1" : "mb-0")}
             >
               {s}
-            </h2>
+            </TypoH3>
             {descriptions?.[s] ? (
               <div>{descriptions[s]}</div>
             ) : (

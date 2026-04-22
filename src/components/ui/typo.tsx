@@ -33,7 +33,20 @@ function TypoH3({ className, ...props }: React.ComponentProps<"h3">) {
     <h3
       data-slot="typo-h3"
       className={cn(
-        "scroll-m-20 text-2xl font-semibold tracking-tight",
+        "scroll-m-20 text-lg font-heading font-semibold tracking-tight",
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+
+export function TypoH4({ className, ...props }: React.ComponentProps<"h4">) {
+  return (
+    <h4
+      data-slot="typo-h4"
+      className={cn(
+        "scroll-m-20 text-md font-heading font-semibold tracking-tight",
         className,
       )}
       {...props}

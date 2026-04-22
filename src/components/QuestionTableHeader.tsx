@@ -36,7 +36,7 @@ export function TestPageHeader({
       className={cn(
         "sticky top-0 z-10 bg-background border-b",
         "px-6",
-        "flex items-center justify-between",
+        "flex flex-col items-start justify-between",
       )}
     >
       <div className="flex items-center gap-2 min-w-0">

@@ -279,7 +279,6 @@ function QuestionTableRow({
         </TableCell>
         <TableCell className="max-w-0 whitespace-normal">
           <div className="flex items-center w-full">
-            <StandardsBadge standards={q.standards} descriptions={standards} />
             <div className="font-semibold tabular-nums text-xs ">
               <span className="opacity-45 pr-0.5 font-light">#</span>
               {q.n}
@@ -298,6 +297,12 @@ function QuestionTableRow({
               }}
             >
               <QuestionPreview prompt={q.prompt} />
+            </div>
+            <div className="-mr-2">
+              <StandardsBadge
+                standards={q.standards}
+                descriptions={standards}
+              />
             </div>
           </div>
         </TableCell>
