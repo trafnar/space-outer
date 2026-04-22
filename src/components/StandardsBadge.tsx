@@ -21,7 +21,7 @@ export function StandardsBadge({
       className={cn(
         "font-medium uppercase text-muted-foreground cursor-default hover:bg-transparent",
         // optical adjustment if aligned left
-        "-ml-2.5",
+        "-ml-2",
       )}
       onClick={(e) => e.stopPropagation()}
     >

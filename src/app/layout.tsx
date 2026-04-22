@@ -33,7 +33,7 @@ export default function RootLayout({
     >
       <body
         className={cn(
-          "bg-muted min-h-full flex flex-col",
+          "bg-background min-h-full flex flex-col",
           // "p-8"
         )}
       >
