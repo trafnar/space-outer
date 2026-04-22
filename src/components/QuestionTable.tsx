@@ -24,10 +24,14 @@ import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
+import { useReviewSheet } from "@/lib/reviewSheet";
+import Link from "next/link";
 import {
   IconChevronRight,
+  IconClipboard,
   IconClipboardCheckFilled,
   IconClipboardPlus,
+  IconPrinter,
 } from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
@@ -40,17 +44,17 @@ export function QuestionTable({
   questions,
   standards,
   title,
+  slug,
 }: {
   questions: Question[];
   standards?: Record<string, string>;
   title?: string;
+  slug: string;
 }) {
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
-  const [markedRowIds, setMarkedRowIds] = useState<Set<number>>(
-    () => new Set(),
-  );
+  const [reviewSheet, setReviewSheet] = useReviewSheet(slug);
   // SHARED-SELECTION: this is the source of truth for the "active" row.
   // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
   // props (or a context/store hook) and remove this local state.
@@ -65,8 +69,8 @@ export function QuestionTable({
     });
   };
 
-  const toggleMark = (n: number) => {
-    setMarkedRowIds((prev) => {
+  const toggleInReviewSheet = (n: number) => {
+    setReviewSheet((prev) => {
       const next = new Set(prev);
       if (next.has(n)) next.delete(n);
       else next.add(n);
@@ -90,6 +94,17 @@ export function QuestionTable({
     }
   };
 
+  const addIncorrectToReview = () => {
+    const incorrect = questions.filter(
+      (q) => q.points.earned < q.points.possible,
+    );
+    setReviewSheet(
+      (prev) => new Set([...prev, ...incorrect.map((q) => q.n)]),
+    );
+  };
+
+  const clearReview = () => setReviewSheet(new Set());
+
   return (
     <Card className="px-0 pb-0 rounded-none">
       <CardHeader>
@@ -103,6 +118,41 @@ export function QuestionTable({
         )}
       </CardHeader>
       <CardContent className="p-0">
+        <div className="flex items-center justify-between gap-3 px-6 py-3 border-b border-t bg-muted/40">
+          <div className="flex items-center gap-2">
+            <IconClipboard className="size-4 text-muted-foreground" />
+            <span className="font-medium">Review sheet</span>
+            <span className="text-xs text-muted-foreground tabular-nums">
+              {reviewSheet.size} {reviewSheet.size === 1 ? "item" : "items"}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={addIncorrectToReview}
+            >
+              Add incorrect to review
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={clearReview}
+              disabled={reviewSheet.size === 0}
+            >
+              Clear review
+            </Button>
+            <Button
+              size="sm"
+              nativeButton={false}
+              disabled={reviewSheet.size === 0}
+              render={<Link href={`/tests/${slug}/review`} />}
+            >
+              <IconPrinter />
+              Print review sheet
+            </Button>
+          </div>
+        </div>
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent">
@@ -120,8 +170,8 @@ export function QuestionTable({
                 question={q}
                 standards={standards}
                 isExpanded={expandedRowIds.has(q.n)}
-                isMarked={markedRowIds.has(q.n)}
-                onToggleMark={() => toggleMark(q.n)}
+                isMarked={reviewSheet.has(q.n)}
+                onToggleMark={() => toggleInReviewSheet(q.n)}
                 // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
                 // (and accept it on QuestionTableRow) to render a highlight on
                 // the row that's currently open in the sheet.
