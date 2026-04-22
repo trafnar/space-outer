@@ -13,27 +13,11 @@ export function TestViewClient({
   slug: string;
 }) {
   return (
-    <div className="flex flex-col gap-6">
-      {/* <header className="p-8">
-        <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
-      </header> */}
-
-      <QuestionTable
-        questions={questions}
-        standards={manifest.standards}
-        title={manifest.title}
-        slug={slug}
-      />
-
-      {/* <div>
-        Score: {manifest.score.earned}/{manifest.score.possible} (
-        {manifest.score.percent}%)
-      </div>
-
-
-      {questions.map((q) => (
-        <QuestionCard key={q.n} question={q} />
-      ))} */}
-    </div>
+    <QuestionTable
+      questions={questions}
+      standards={manifest.standards}
+      title={manifest.title}
+      slug={slug}
+    />
   );
 }

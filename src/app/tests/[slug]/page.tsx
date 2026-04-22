@@ -10,10 +10,12 @@ export default async function Page({ params }: PageProps<"/tests/[slug]">) {
   }
 
   return (
-    <TestViewClient
-      manifest={test.manifest}
-      questions={test.questions}
-      slug={slug}
-    />
+    <div className="flex flex-col gap-6 pb-[50vh]">
+      <TestViewClient
+        manifest={test.manifest}
+        questions={test.questions}
+        slug={slug}
+      />
+    </div>
   );
 }
