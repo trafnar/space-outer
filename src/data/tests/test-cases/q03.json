@@ -1,15 +1,15 @@
 {
-  "n": 102,
+  "n": 3,
   "url": null,
   "qid": null,
   "type": "Fill-in",
-  "points": { "earned": 0, "possible": 0 },
+  "points": { "earned": 1, "possible": 1 },
   "standards": [],
   "prompt": [
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Test 0 points." }
+        { "type": "text", "text": "Test no standards." }
       ]
     }
   ],

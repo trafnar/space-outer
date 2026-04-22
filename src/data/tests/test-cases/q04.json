@@ -1,15 +1,15 @@
 {
-  "n": 103,
+  "n": 4,
   "url": null,
   "qid": null,
   "type": "Fill-in",
-  "points": { "earned": 2, "possible": 4 },
+  "points": { "earned": 0, "possible": 0 },
   "standards": [],
   "prompt": [
     {
       "type": "paragraph",
       "content": [
-        { "type": "text", "text": "Test partial credit (2/4)." }
+        { "type": "text", "text": "Test 0 points." }
       ]
     }
   ],
