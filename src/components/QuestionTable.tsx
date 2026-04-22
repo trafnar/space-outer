@@ -27,16 +27,12 @@ import { QuestionSheet } from "./QuestionSheet";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import Link from "next/link";
 import {
-  IconArrowBackUp,
   IconArrowRight,
   IconChevronRight,
   IconClipboard,
   IconClipboardCheckFilled,
   IconClipboardPlus,
-  IconClipboardX,
-  IconPrinter,
   IconX,
-  IconXMark,
 } from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
@@ -113,58 +109,59 @@ export function QuestionTable({
   ).length;
 
   return (
-    <Card className="px-0 pb-0 rounded-none">
-      <CardHeader>
-        <CardTitle className="text-xl font-bold">{title}</CardTitle>
-        {isExpandMode && (
-          <CardAction>
-            <Button variant="outline" size="sm" onClick={toggleAllRows}>
-              Toggle All
-            </Button>
-          </CardAction>
-        )}
-      </CardHeader>
-      <CardContent className="p-0">
-        <div
-          className={cn(
-            "flex items-center justify-between gap-3 px-6 py-3 border-b border-t bg-muted/40",
-            "max-md:flex-col",
+    <Card className="px-0 py-0 rounded-none overflow-visible">
+      <div className="sticky top-0 z-10 bg-background border-b">
+        <CardHeader className="py-6">
+          <CardTitle className="text-xl font-bold">{title}</CardTitle>
+          {isExpandMode && (
+            <CardAction>
+              <Button variant="outline" size="sm" onClick={toggleAllRows}>
+                Toggle All
+              </Button>
+            </CardAction>
           )}
-        >
-          <div className="flex items-center gap-2">
-            <Button
-              variant="default"
-              nativeButton={false}
-              disabled={reviewSheet.size === 0}
-              render={<Link href={`/tests/${slug}/review`} />}
-            >
-              <IconClipboard />
-              <span className="font-medium truncate">Review sheet</span>
-            </Button>{" "}
+        </CardHeader>
+        <div className={cn("gap-3 px-6 py-2 border-t flex justify-between")}>
+          <Button
+            variant="ghost"
+            nativeButton={false}
+            disabled={reviewSheet.size === 0}
+            className="-ml-3.5 text-foreground"
+            render={<Link href={`/tests/${slug}/review`} />}
+          >
+            <IconClipboard />
+            <span className="font-medium truncate">Review sheet</span>
+
             <span className="text-xs text-muted-foreground tabular-nums truncate">
               {reviewSheet.size} item
               <span className={cn(reviewSheet.size === 1 ? "invisible" : "")}>
                 s
               </span>
             </span>
-          </div>
+            <IconArrowRight className="text-muted-foreground/75" />
+          </Button>
           <div className="flex items-center gap-2">
             <Button
-              variant="link"
+              variant="secondary"
               size="xs"
               onClick={clearReview}
               disabled={reviewSheet.size === 0}
-              className="text-muted-foreground"
             >
               <IconX />
               Clear
             </Button>
-            <Button variant="link" size="xs" onClick={addIncorrectToReview}>
+            <Button
+              variant="secondary"
+              size="xs"
+              onClick={addIncorrectToReview}
+            >
               <IconClipboardPlus />
               Add {numberOfIncorrect} Incorrect
             </Button>
           </div>
         </div>
+      </div>
+      <CardContent className="p-0">
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent">
@@ -273,13 +270,20 @@ function QuestionTableRow({
             </Button>
           </TableCell>
         )}
-        <TableCell className="flex items-center justify-center">
+        <TableCell>
           <Button
             variant="ghost"
             className={cn(
+              "bg-muted rounded-lg",
               // isMarked && "text-primary hover:text-primary",
+
+              // filled blue style
+              // isMarked &&
+              //   "text-primary-foreground bg-primary hover:bg-primary hover:text-primary-foreground",
+
+              // filled black style
               isMarked &&
-                "text-primary-foreground bg-primary hover:bg-primary hover:text-primary-foreground",
+                "text-background bg-foreground hover:bg-foreground hover:text-background",
             )}
             size="icon"
             aria-pressed={isMarked}
@@ -309,9 +313,7 @@ function QuestionTableRow({
           </div>
         </TableCell>
         <TableCell>
-          <div className="flex items-center justify-center">
-            <StandardsBadge standards={q.standards} descriptions={standards} />
-          </div>
+          <StandardsBadge standards={q.standards} descriptions={standards} />
         </TableCell>
         <TableCell>
           <PointsBadge earned={q.points.earned} possible={q.points.possible} />
