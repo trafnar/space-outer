@@ -200,7 +200,7 @@ export function QuestionTable({
                   </Button>
                 </TableHead>
               )}
-              <TableHead>Review</TableHead>
+              <TableHead>Add</TableHead>
               <TableHead className="w-full">Question</TableHead>
               <TableHead>Standards</TableHead>
               <TableHead>Points</TableHead>
@@ -258,7 +258,7 @@ function QuestionTableRow({
   onActivate: () => void;
 }) {
   const expanded = isExpandMode && isExpanded;
-  const colCount = isExpandMode ? 4 : 3;
+  const colCount = isExpandMode ? 5 : 4;
 
   const handleMarkClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
@@ -330,7 +330,11 @@ function QuestionTableRow({
               {q.n}
             </div>
             <div
-              className="text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1 px-3"
+              className={cn(
+                "text-xs text-muted-foreground overflow-hidden whitespace-nowrap min-w-0 flex-1 px-3",
+                "transition-opacity duration-200 ease-in-out reduce-motion:transition-none",
+                isExpandMode && isExpanded && "opacity-0",
+              )}
               style={{
                 maskImage:
                   "linear-gradient(to right, black calc(100% - 40px), transparent)",
@@ -347,7 +351,7 @@ function QuestionTableRow({
         </TableCell>
         <TableCell>
           {/* adjust for alignment with other text in cells */}
-          <div className="translate-y-0.5">
+          <div className="flex justify-center">
             <PointsBadge
               earned={q.points.earned}
               possible={q.points.possible}
@@ -357,7 +361,7 @@ function QuestionTableRow({
       </TableRow>
       {isExpandMode && (
         <TableRow aria-hidden={!expanded} className="hover:bg-transparent">
-          <TableCell colSpan={colCount} className="p-0">
+          <TableCell colSpan={colCount} className="p-0 whitespace-normal">
             <AnimatePresence initial={false}>
               {expanded && (
                 <motion.div
@@ -372,7 +376,7 @@ function QuestionTableRow({
                     id={`question-${q.n}-details`}
                     role="region"
                     aria-label={`Question ${q.n} details`}
-                    className="px-3 pt-1 pb-4"
+                    className="px-3 pt-1.5 pb-6"
                   >
                     <QuestionCard question={q} />
                   </div>
