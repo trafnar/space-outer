@@ -7,7 +7,7 @@ export function PointsBadge({
   earned: number;
   possible: number;
 }) {
-  const correct = earned === possible;
+  const correct = earned === possible && possible > 0;
   return (
     <Badge variant={correct ? "green" : "red"} className="tabular-nums">
       {earned}
