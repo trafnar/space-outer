@@ -20,7 +20,7 @@ import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
-import { useRowAction } from "@/lib/debugSettings";
+import { useRowAction } from "@/lib/settings";
 import { QuestionTableHeader } from "./QuestionTableHeader";
 import { ExpandChevron } from "./ExpandChevron";
 import { QuestionPreview } from "./QuestionPreview";

@@ -10,7 +10,8 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { IconArrowLeft, IconChevronDown, IconDots } from "@tabler/icons-react";
+import { IconArrowLeft, IconDots } from "@tabler/icons-react";
+import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 
 export function QuestionTableHeader({
   title,
@@ -53,6 +54,7 @@ export function QuestionTableHeader({
         </div>
         <CardAction>
           <div className="flex items-center gap-1">
+            <AnswerVisibilityToggle />
             <DropdownMenu>
               <DropdownMenuTrigger
                 render={
