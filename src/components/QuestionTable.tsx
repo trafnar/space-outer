@@ -125,18 +125,30 @@ export function QuestionTable({
         )}
       </CardHeader>
       <CardContent className="p-0">
-        <div className="flex items-center justify-between gap-3 px-6 py-3 border-b border-t bg-muted/40">
+        <div
+          className={cn(
+            "flex items-center justify-between gap-3 px-6 py-3 border-b border-t bg-muted/40",
+            "max-md:flex-col",
+          )}
+        >
           <div className="flex items-center gap-2">
-            <div>
-              <IconClipboard className="size-4 text-muted-foreground" />
-            </div>
-            <span className="font-medium">Review sheet</span>
-            <span className="text-xs text-muted-foreground tabular-nums">
+            <Button
+              variant="default"
+              nativeButton={false}
+              disabled={reviewSheet.size === 0}
+              render={<Link href={`/tests/${slug}/review`} />}
+            >
+              <IconClipboard />
+              <span className="font-medium truncate">Review sheet</span>
+            </Button>{" "}
+            <span className="text-xs text-muted-foreground tabular-nums truncate">
               {reviewSheet.size} item
               <span className={cn(reviewSheet.size === 1 ? "invisible" : "")}>
                 s
               </span>
             </span>
+          </div>
+          <div className="flex items-center gap-2">
             <Button
               variant="link"
               size="xs"
@@ -147,20 +159,9 @@ export function QuestionTable({
               <IconX />
               Clear
             </Button>
-          </div>
-          <div className="flex items-center gap-2">
             <Button variant="link" size="xs" onClick={addIncorrectToReview}>
               <IconClipboardPlus />
               Add {numberOfIncorrect} Incorrect
-            </Button>
-            <Button
-              size="xs"
-              nativeButton={false}
-              disabled={reviewSheet.size === 0}
-              render={<Link href={`/tests/${slug}/review`} />}
-            >
-              Review Sheet
-              <IconArrowRight />
             </Button>
           </div>
         </div>
