@@ -25,7 +25,7 @@ import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import { useRowAction } from "@/lib/settings";
-import { QuestionTableHeader } from "./QuestionTableHeader";
+import { TestPageHeader } from "./QuestionTableHeader";
 import { ExpandChevron } from "./ExpandChevron";
 import { QuestionPreview } from "./QuestionPreview";
 import {
@@ -117,7 +117,7 @@ export function QuestionTable({
 
   return (
     <div>
-      <QuestionTableHeader
+      <TestPageHeader
         title={title}
         slug={slug}
         reviewSize={reviewSheet.size}
@@ -146,7 +146,6 @@ export function QuestionTable({
             )}
             <TableHead>Add</TableHead>
             <TableHead className="w-full">Question</TableHead>
-            <TableHead>Standards</TableHead>
             <TableHead>Points</TableHead>
           </TableRow>
         </motion.thead>
@@ -280,6 +279,7 @@ function QuestionTableRow({
         </TableCell>
         <TableCell className="max-w-0 whitespace-normal">
           <div className="flex items-center w-full">
+            <StandardsBadge standards={q.standards} descriptions={standards} />
             <div className="font-semibold tabular-nums text-xs ">
               <span className="opacity-45 pr-0.5 font-light">#</span>
               {q.n}
@@ -300,9 +300,6 @@ function QuestionTableRow({
               <QuestionPreview prompt={q.prompt} />
             </div>
           </div>
-        </TableCell>
-        <TableCell>
-          <StandardsBadge standards={q.standards} descriptions={standards} />
         </TableCell>
         <TableCell>
           {/* adjust for alignment with other text in cells */}

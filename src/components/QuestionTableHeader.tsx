@@ -13,7 +13,7 @@ import { IconArrowLeft, IconDots } from "@tabler/icons-react";
 import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 import { TypoH2 } from "./ui/typo";
 
-export function QuestionTableHeader({
+export function TestPageHeader({
   title,
   slug,
   reviewSize,
@@ -65,7 +65,11 @@ function BackHomeButton() {
     <Button
       variant="ghost"
       size="icon-sm"
-      className="text-muted-foreground"
+      className={cn(
+        "text-muted-foreground",
+        // optical adjustment
+        "-ml-2",
+      )}
       nativeButton={false}
       aria-label="Back to home"
       render={<Link href="/" />}
