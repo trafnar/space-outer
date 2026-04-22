@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { QuestionCard } from "@/components/QuestionCard";
+import { AnswerVisibilityToggle } from "@/components/AnswerVisibilityToggle";
 import { Button } from "@/components/ui/button";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import type { Manifest, Question } from "@/data/types";
@@ -45,10 +46,13 @@ export function ReviewViewClient({
             <IconArrowLeft />
             Back to test
           </Button>
-          <Button size="sm" onClick={() => window.print()}>
-            <IconPrinter />
-            Print
-          </Button>
+          <div className="flex items-center gap-2">
+            <AnswerVisibilityToggle />
+            <Button size="sm" onClick={() => window.print()}>
+              <IconPrinter />
+              Print
+            </Button>
+          </div>
         </header>
       )}
       <header>

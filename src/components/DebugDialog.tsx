@@ -10,7 +10,7 @@ import {
 } from "./ui/dialog";
 import { ButtonGroup } from "./ui/button-group";
 import { Button } from "./ui/button";
-import { useRowAction, type RowAction } from "@/lib/debugSettings";
+import { useRowAction, type RowAction } from "@/lib/settings";
 
 const ROW_ACTIONS: { value: RowAction; label: string }[] = [
   { value: "expand", label: "Expand" },

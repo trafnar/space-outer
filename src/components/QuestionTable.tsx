@@ -26,7 +26,8 @@ import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
-import { useRowAction } from "@/lib/debugSettings";
+import { useRowAction } from "@/lib/settings";
+import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 import Link from "next/link";
 import {
   IconChevronDown,
@@ -122,6 +123,7 @@ export function QuestionTable({
           </CardTitle>
           <CardAction>
             <div className="flex items-center gap-1">
+              <AnswerVisibilityToggle />
               <Button
                 variant="default"
                 size="sm"
