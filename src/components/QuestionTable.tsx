@@ -27,11 +27,16 @@ import { QuestionSheet } from "./QuestionSheet";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import Link from "next/link";
 import {
+  IconArrowBackUp,
+  IconArrowRight,
   IconChevronRight,
   IconClipboard,
   IconClipboardCheckFilled,
   IconClipboardPlus,
+  IconClipboardX,
   IconPrinter,
+  IconX,
+  IconXMark,
 } from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
@@ -98,12 +103,14 @@ export function QuestionTable({
     const incorrect = questions.filter(
       (q) => q.points.earned < q.points.possible,
     );
-    setReviewSheet(
-      (prev) => new Set([...prev, ...incorrect.map((q) => q.n)]),
-    );
+    setReviewSheet((prev) => new Set([...prev, ...incorrect.map((q) => q.n)]));
   };
 
   const clearReview = () => setReviewSheet(new Set());
+
+  const numberOfIncorrect = questions.filter(
+    (q) => q.points.earned < q.points.possible,
+  ).length;
 
   return (
     <Card className="px-0 pb-0 rounded-none">
@@ -123,33 +130,35 @@ export function QuestionTable({
             <IconClipboard className="size-4 text-muted-foreground" />
             <span className="font-medium">Review sheet</span>
             <span className="text-xs text-muted-foreground tabular-nums">
-              {reviewSheet.size} {reviewSheet.size === 1 ? "item" : "items"}
+              {reviewSheet.size} item
+              <span className={cn(reviewSheet.size === 1 ? "invisible" : "")}>
+                s
+              </span>
             </span>
-          </div>
-          <div className="flex items-center gap-2">
             <Button
-              variant="outline"
-              size="sm"
-              onClick={addIncorrectToReview}
-            >
-              Add incorrect to review
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
+              variant="link"
+              size="xs"
               onClick={clearReview}
               disabled={reviewSheet.size === 0}
+              className="text-muted-foreground"
             >
-              Clear review
+              <IconX />
+              Clear
+            </Button>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button variant="link" size="xs" onClick={addIncorrectToReview}>
+              <IconClipboardPlus />
+              Add {numberOfIncorrect} Incorrect
             </Button>
             <Button
-              size="sm"
+              size="xs"
               nativeButton={false}
               disabled={reviewSheet.size === 0}
               render={<Link href={`/tests/${slug}/review`} />}
             >
-              <IconPrinter />
-              Print review sheet
+              Review Sheet
+              <IconArrowRight />
             </Button>
           </div>
         </div>
