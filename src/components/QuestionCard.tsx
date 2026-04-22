@@ -16,11 +16,11 @@ export function QuestionCard({ question }: { question: Question }) {
     if (block.type === "choices") choicesById.set(block.id, block.options);
   }
 
-  // Label bound blanks/choices with letters (a, b, c, ...) in the
+  // Label bound blanks/choices with numbers (1, 2, 3, ...) in the
   // order blanks appear in the prompt. Standalone choices (no matching
   // blank) are not labeled.
   const labelById = new Map<string, string>();
-  let letterIdx = 0;
+  let labelIdx = 0;
   for (const block of question.prompt) {
     if (block.type !== "paragraph") continue;
     for (const inline of block.content) {
@@ -29,8 +29,8 @@ export function QuestionCard({ question }: { question: Question }) {
         choicesById.has(inline.id) &&
         !labelById.has(inline.id)
       ) {
-        labelById.set(inline.id, String.fromCharCode(65 + letterIdx));
-        letterIdx += 1;
+        labelById.set(inline.id, String(labelIdx + 1));
+        labelIdx += 1;
       }
     }
   }
