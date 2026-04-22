@@ -24,7 +24,12 @@ import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
-import { IconChevronRight } from "@tabler/icons-react";
+import {
+  IconChevronRight,
+  IconClipboardCheck,
+  IconClipboardCheckFilled,
+  IconClipboardPlus,
+} from "@tabler/icons-react";
 
 type RowAction = "expand" | "pop" | "none";
 const rowAction = "pop" as RowAction;
@@ -42,6 +47,9 @@ export function QuestionTable({
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
+  const [markedRowIds, setMarkedRowIds] = useState<Set<number>>(
+    () => new Set(),
+  );
   // SHARED-SELECTION: this is the source of truth for the "active" row.
   // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
   // props (or a context/store hook) and remove this local state.
@@ -49,6 +57,15 @@ export function QuestionTable({
 
   const toggleRow = (n: number) => {
     setExpandedRowIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(n)) next.delete(n);
+      else next.add(n);
+      return next;
+    });
+  };
+
+  const toggleMark = (n: number) => {
+    setMarkedRowIds((prev) => {
       const next = new Set(prev);
       if (next.has(n)) next.delete(n);
       else next.add(n);
@@ -89,9 +106,10 @@ export function QuestionTable({
           <TableHeader>
             <TableRow className="hover:bg-transparent">
               {isExpandMode && <TableHead />}
+              <TableHead>Review</TableHead>
               <TableHead className="w-full">Question</TableHead>
-              <TableHead>Points</TableHead>
               <TableHead>Standards</TableHead>
+              <TableHead>Points</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -101,6 +119,8 @@ export function QuestionTable({
                 question={q}
                 standards={standards}
                 isExpanded={expandedRowIds.has(q.n)}
+                isMarked={markedRowIds.has(q.n)}
+                onToggleMark={() => toggleMark(q.n)}
                 // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
                 // (and accept it on QuestionTableRow) to render a highlight on
                 // the row that's currently open in the sheet.
@@ -132,15 +152,25 @@ function QuestionTableRow({
   question: q,
   standards,
   isExpanded,
+  isMarked,
+  onToggleMark,
   onActivate,
 }: {
   question: Question;
   standards?: Record<string, string>;
   isExpanded: boolean;
+  isMarked: boolean;
+  onToggleMark: () => void;
   onActivate: () => void;
 }) {
   const expanded = isExpandMode && isExpanded;
   const colCount = isExpandMode ? 4 : 3;
+
+  const handleMarkClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    e.preventDefault();
+    onToggleMark();
+  };
 
   return (
     <React.Fragment>
@@ -180,6 +210,25 @@ function QuestionTableRow({
             </Button>
           </TableCell>
         )}
+        <TableCell>
+          <Button
+            variant="ghost"
+            className={cn(
+              // isMarked && "text-primary hover:text-primary",
+              isMarked &&
+                "text-primary-foreground bg-primary hover:bg-primary hover:text-primary-foreground",
+            )}
+            size="icon"
+            aria-pressed={isMarked}
+            onClick={handleMarkClick}
+          >
+            {isMarked ? (
+              <IconClipboardCheckFilled className="size-4.5" />
+            ) : (
+              <IconClipboardPlus className="size-4.5 text-muted-foreground" />
+            )}
+          </Button>
+        </TableCell>
         <TableCell className="max-w-0 whitespace-normal">
           <div className="flex items-center w-full">
             <div className="font-semibold">{q.n}</div>
@@ -197,18 +246,12 @@ function QuestionTableRow({
           </div>
         </TableCell>
         <TableCell>
-          <PointsBadge earned={q.points.earned} possible={q.points.possible} />
+          <div className="flex items-center justify-center">
+            <StandardsBadge standards={q.standards} descriptions={standards} />
+          </div>
         </TableCell>
         <TableCell>
-          <div className="flex flex-wrap gap-1">
-            {q.standards.map((s) => (
-              <StandardsBadge
-                key={s}
-                standard={s}
-                description={standards?.[s]}
-              />
-            ))}
-          </div>
+          <PointsBadge earned={q.points.earned} possible={q.points.possible} />
         </TableCell>
       </TableRow>
       {isExpandMode && (
