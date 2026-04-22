@@ -44,7 +44,7 @@ import {
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
-const STICKY_HEADER_HEIGHT = 80;
+const stickyHeaderHeight = 80;
 
 export function QuestionTable({
   questions,
@@ -122,7 +122,7 @@ export function QuestionTable({
     <Card className="px-0 py-0 rounded-none overflow-visible">
       <div
         className="sticky top-0 z-10 bg-background border-b"
-        style={{ height: STICKY_HEADER_HEIGHT }}
+        style={{ height: stickyHeaderHeight }}
       >
         <CardHeader className="py-6">
           <div className="flex items-center gap-2">
@@ -203,8 +203,11 @@ export function QuestionTable({
       <CardContent className="p-0">
         <Table>
           <TableHeader
-            className="sticky bg-background z-10 shadow-[0_1px_0_0_var(--border)]"
-            style={{ top: STICKY_HEADER_HEIGHT }}
+            className="sticky bg-background z-10"
+            style={{
+              top: stickyHeaderHeight,
+              boxShadow: "0 0.5px 0 0 var(--border)",
+            }}
           >
             <TableRow className="hover:bg-transparent">
               {isExpandMode && (
