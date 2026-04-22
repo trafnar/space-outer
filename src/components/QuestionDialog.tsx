@@ -4,14 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
 import { Button } from "./ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 
 const isTextEntryTarget = (target: EventTarget | null) => {
   if (!(target instanceof HTMLElement)) return false;
@@ -88,34 +81,31 @@ export function QuestionDialog({
         if (!open) onIndexChange(null);
       }}
     >
-      <DialogContent className="top-12 translate-y-0 sm:max-w-lg">
-        <DialogHeader>
+      <DialogContent className="top-12 translate-y-0 sm:max-w-2xl max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <DialogHeader className="gap-0">
+          <div className="flex items-center gap-0 -ml-1 text-muted-foreground">
+            <Button
+              variant="link"
+              size="xs"
+              className="text-muted-foreground px-1"
+              onClick={() => displayed && goToQuestion(displayed.index - 1)}
+              disabled={!displayed || displayed.index === 0}
+            >
+              Previous
+            </Button>
+            <Button
+              variant="link"
+              size="xs"
+              className="text-muted-foreground px-1"
+              onClick={() => displayed && goToQuestion(displayed.index + 1)}
+              disabled={!displayed || displayed.index === questions.length - 1}
+            >
+              Next
+            </Button>
+          </div>
           <DialogTitle>Question {displayed?.question.n}</DialogTitle>
         </DialogHeader>
         {displayed && <QuestionCard question={displayed.question} />}
-        <DialogFooter className="flex-row items-center justify-between sm:justify-between">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => displayed && goToQuestion(displayed.index - 1)}
-            disabled={!displayed || displayed.index === 0}
-          >
-            <IconChevronLeft />
-            Previous
-          </Button>
-          <div className="text-xs text-muted-foreground tabular-nums">
-            {displayed ? displayed.index + 1 : 0} of {questions.length}
-          </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => displayed && goToQuestion(displayed.index + 1)}
-            disabled={!displayed || displayed.index === questions.length - 1}
-          >
-            Next
-            <IconChevronRight />
-          </Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

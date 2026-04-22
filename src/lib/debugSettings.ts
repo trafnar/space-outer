@@ -3,7 +3,7 @@ import { useCallback, useSyncExternalStore } from "react";
 export type RowAction = "expand" | "pop" | "sheet" | "none";
 
 const ROW_ACTION_KEY = "debug:rowAction";
-const DEFAULT_ROW_ACTION: RowAction = "expand";
+const DEFAULT_ROW_ACTION: RowAction = "pop";
 
 const listeners = new Set<() => void>();
 

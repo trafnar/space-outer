@@ -188,7 +188,7 @@ export function QuestionTable({
                 <TableHead className="pr-0">
                   <Button
                     variant="ghost"
-                    size="icon-sm"
+                    size="icon-xs"
                     onClick={toggleAllRows}
                     aria-label={
                       toggleAllWillCollapse ? "Collapse all" : "Expand all"
@@ -313,10 +313,15 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <Button variant="ghost" size="icon-sm" tabIndex={-1}>
+            <Button
+              variant="ghost"
+              size="icon-xs"
+              tabIndex={-1}
+              aria-hidden
+            >
               <IconChevronRight
                 className={cn(
-                  "transition-transform duration-200 ease-in-out reduce-motion:transition-none",
+                  "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
                   expanded ? "rotate-90" : "",
                 )}
               />
@@ -395,7 +400,7 @@ function QuestionTableRow({
                     id={`question-${q.n}-details`}
                     role="region"
                     aria-label={`Question ${q.n} details`}
-                    className="px-3 pt-1.5 pb-6"
+                    className="px-1.5 pt-1 pb-6"
                   >
                     <QuestionCard question={q} />
                   </div>
