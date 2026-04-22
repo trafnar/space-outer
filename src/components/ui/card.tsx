@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { TypoH2 } from "@/components/ui/typo";
 
 function Card({
   className,
@@ -33,14 +34,8 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card-title"
-      className={cn("font-heading text-base font-medium", className)}
-      {...props}
-    />
-  );
+function CardTitle({ className, ...props }: React.ComponentProps<"h2">) {
+  return <TypoH2 data-slot="card-title" className={className} {...props} />;
 }
 
 function CardDescription({ className, ...props }: React.ComponentProps<"div">) {

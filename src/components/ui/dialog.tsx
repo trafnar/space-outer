@@ -5,6 +5,7 @@ import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { TypoH2 } from "@/components/ui/typo";
 import { IconX } from "@tabler/icons-react";
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {
@@ -120,10 +121,8 @@ function DialogTitle({ className, ...props }: DialogPrimitive.Title.Props) {
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn(
-        "font-heading text-base leading-none font-medium",
-        className,
-      )}
+      render={<TypoH2 />}
+      className={className}
       {...props}
     />
   );

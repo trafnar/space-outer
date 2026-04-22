@@ -20,7 +20,7 @@ function TypoH2({ className, ...props }: React.ComponentProps<"h2">) {
     <h2
       data-slot="typo-h2"
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        "scroll-m-20 font-heading text-xl font-bold tracking-tight first:mt-0",
         className,
       )}
       {...props}
@@ -75,7 +75,7 @@ function TypoLarge({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="typo-large"
-      className={cn("text-lg font-semibold", className)}
+      className={cn("text-lg leading-snug font-medium", className)}
       {...props}
     />
   );
