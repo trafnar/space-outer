@@ -4,8 +4,10 @@ import Link from "next/link";
 import { QuestionCard } from "@/components/QuestionCard";
 import { AnswerVisibilityToggle } from "@/components/AnswerVisibilityToggle";
 import { Button } from "@/components/ui/button";
+import { TypoH2 } from "@/components/ui/typo";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import { useShowReviewTitle } from "@/lib/settings";
+import { cn } from "@/lib/utils";
 import type { Manifest, Question } from "@/data/types";
 import {
   IconArrowLeft,
@@ -24,7 +26,7 @@ import {
 } from "@/components/ui/empty";
 
 // Matches the sticky header height used on the main test page.
-const stickyHeaderHeight = 96;
+const stickyHeaderHeight = 108;
 
 export function ReviewViewClient({
   manifest,
@@ -50,7 +52,7 @@ export function ReviewViewClient({
     <>
       <style>{`
         @page {
-          margin: 0.2in;
+          margin: 0.5in;
         }
         @media print {
           * {
@@ -65,43 +67,75 @@ export function ReviewViewClient({
       `}</style>
 
       {hydrated && reviewQuestions.length > 0 && (
-        <header
+        <div
           style={{ height: stickyHeaderHeight }}
-          className="sticky top-0 z-10 bg-background border-b border-dashed flex items-center justify-between gap-4 px-6 print:hidden"
+          className="sticky top-0 z-10 bg-background border-b border-dashed flex flex-col justify-between print:hidden"
         >
-          <Button
-            variant="outline"
-            size="sm"
-            nativeButton={false}
-            render={<Link href={`/tests/${slug}`} />}
-          >
-            <IconArrowLeft />
-            Back to test
-          </Button>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              aria-label={showTitle ? "Hide title" : "Show title"}
-              onClick={() => setShowTitle(!showTitle)}
+          <div className="h-[52px] flex justify-between px-6 items-center">
+            <div className="flex items-center gap-2 min-w-0 grow">
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                className={cn(
+                  "text-muted-foreground",
+                  // optical adjustment
+                  "-ml-2",
+                )}
+                nativeButton={false}
+                aria-label="Back to test"
+                render={<Link href={`/tests/${slug}`} />}
+              >
+                <IconArrowLeft />
+              </Button>
+              <div className="relative min-w-0 grow">
+                <TypoH2 className="truncate">Review Worksheet</TypoH2>
+                <div className="absolute top-full left-0 right-0 -mt-[1px] text-xs text-muted-foreground truncate">
+                  {manifest.title}
+                </div>
+              </div>
+            </div>
+            <button
+              onClick={() => window.print()}
+              className="h-full pl-2 -ml-2 pr-6 -mr-6 group/pad bg-debug-red flex items-center"
+              aria-label="Print"
             >
-              {showTitle ? (
-                <IconEye data-icon="inline-start" />
-              ) : (
-                <IconEyeClosed data-icon="inline-start" />
-              )}
-              Title
-            </Button>
-            <AnswerVisibilityToggle size="sm" />
-            <Button size="sm" onClick={() => window.print()}>
-              <IconPrinter />
-              Print
-            </Button>
+              <Button
+                variant="default"
+                size="sm"
+                nativeButton={false}
+                render={<div />}
+              >
+                <IconPrinter data-icon="inline-start" />
+                Print Worksheet
+              </Button>
+            </button>
           </div>
-        </header>
+          <div className={cn("px-6 flex items-center -ml-1", "h-11")}>
+            <button
+              onClick={() => setShowTitle(!showTitle)}
+              className="h-full px-1 group/pad bg-debug-red"
+              aria-label={showTitle ? "Hide title" : "Show title"}
+            >
+              <Button
+                variant="outline"
+                nativeButton={false}
+                render={<div />}
+                size="xs"
+              >
+                {showTitle ? (
+                  <IconEye data-icon="inline-start" />
+                ) : (
+                  <IconEyeClosed data-icon="inline-start" />
+                )}
+                Title
+              </Button>
+            </button>
+            <AnswerVisibilityToggle />
+          </div>
+        </div>
       )}
 
-      <div className="mx-auto w-full max-w-[7.5in] flex flex-col gap-6 p-8 print:p-0">
+      <div className="mx-auto w-full max-w-[8.5in] flex flex-col gap-6 px-[0.5in] py-12 mt-8 border print:border-0 print:p-0 print:m-0">
         {showTitle && (
           <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
         )}
@@ -134,11 +168,11 @@ export function ReviewViewClient({
               <div
                 key={q.n}
                 data-question-card
-                className="break-inside-avoid relative"
+                className="break-inside-avoid relative pl-8"
               >
                 <div
                   aria-hidden
-                  className="absolute right-full top-0 pr-3 font-heading font-bold text-sm text-muted-foreground"
+                  className="absolute left-0 top-0 font-heading font-bold"
                 >
                   {q.n}.
                 </div>

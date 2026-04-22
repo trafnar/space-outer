@@ -9,12 +9,14 @@ import { TypoH2 } from "./ui/typo";
 
 export function TestPageHeader({
   title,
+  subtitle,
   slug,
   reviewSize,
   height,
   toolbar,
 }: {
   title?: string;
+  subtitle?: React.ReactNode;
   slug: string;
   reviewSize: number;
   height: number;
@@ -25,13 +27,20 @@ export function TestPageHeader({
       style={{ height }}
       className={cn(
         "sticky top-0 z-15 bg-background border-b",
-        "flex flex-col",
+        "flex flex-col justify-between",
       )}
     >
-      <div className="grow flex justify-between px-6 items-center">
+      <div className="h-[52px] flex justify-between px-6 items-center">
         <div className="flex items-center gap-2 min-w-0 grow">
           <BackHomeButton />
-          <TypoH2 className="truncate min-w-0">{title}</TypoH2>
+          <div className="relative min-w-0 grow">
+            <TypoH2 className="truncate">{title}</TypoH2>
+            {subtitle && (
+              <div className="absolute top-full left-0 right-0 -mt-[1px] text-xs text-muted-foreground truncate">
+                {subtitle}
+              </div>
+            )}
+          </div>
         </div>
         <ReviewButton slug={slug} reviewSize={reviewSize} />
       </div>
@@ -94,7 +103,7 @@ function ReviewButton({
             {reviewSize}
           </div>
         </div>
-        Review
+        Review Worksheet
       </Button>
     </Link>
   );

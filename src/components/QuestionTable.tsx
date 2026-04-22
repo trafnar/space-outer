@@ -34,17 +34,19 @@ import { openDebugDialog } from "./DebugDialog";
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
-const stickyHeaderHeight = 96;
+const stickyHeaderHeight = 108;
 
 export function QuestionTable({
   questions,
   standards,
   title,
+  subtitle,
   slug,
 }: {
   questions: Question[];
   standards?: Record<string, string>;
   title?: string;
+  subtitle?: React.ReactNode;
   slug: string;
 }) {
   const [rowAction] = useRowAction();
@@ -120,6 +122,7 @@ export function QuestionTable({
     <div>
       <TestPageHeader
         title={title}
+        subtitle={subtitle}
         slug={slug}
         reviewSize={reviewSheet.size}
         height={stickyHeaderHeight}
