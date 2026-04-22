@@ -111,25 +111,39 @@ export function QuestionSheet({
           {displayed && <QuestionCard question={displayed.question} />}
         </div>
         <SheetFooter className="flex-row items-center justify-between">
-          <Button
-            variant="link"
-            size="xs"
+          <button
             onClick={() => displayed && goToQuestion(displayed.index - 1)}
             disabled={!displayed || displayed.index === 0}
+            className="py-1 -my-1 px-2 -mx-2 group/pad bg-debug-red disabled:pointer-events-none disabled:opacity-50"
+            aria-label="Previous question"
           >
-            Previous
-          </Button>
+            <Button
+              variant="link"
+              size="xs"
+              nativeButton={false}
+              render={<div />}
+            >
+              Previous
+            </Button>
+          </button>
           <div className="text-xs text-muted-foreground tabular-nums">
             {displayed ? displayed.index + 1 : 0} of {questions.length}
           </div>
-          <Button
-            variant="link"
-            size="xs"
+          <button
             onClick={() => displayed && goToQuestion(displayed.index + 1)}
             disabled={!displayed || displayed.index === questions.length - 1}
+            className="py-1 -my-1 px-2 -mr-2 group/pad bg-debug-red disabled:pointer-events-none disabled:opacity-50"
+            aria-label="Next question"
           >
-            Next
-          </Button>
+            <Button
+              variant="link"
+              size="xs"
+              nativeButton={false}
+              render={<div />}
+            >
+              Next
+            </Button>
+          </button>
         </SheetFooter>
       </SheetContent>
     </Sheet>
