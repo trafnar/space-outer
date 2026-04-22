@@ -1,0 +1,18 @@
+{
+  "n": 101,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Test no standards." }
+      ]
+    }
+  ],
+  "correct": { "type": "fillIn", "values": { "answer": "ok" } },
+  "userResponse": { "type": "fillIn", "values": { "answer": "ok" } }
+}
