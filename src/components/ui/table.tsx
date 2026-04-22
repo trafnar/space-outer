@@ -64,7 +64,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
 }
 
 const cellClassName = cn(
-  "first:pl-6 last:pr-6 py-2 px-3",
+  "first:pl-6 last:pr-6 px-3 h-11",
   // "border-x"
 );
 
@@ -74,7 +74,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
       data-slot="table-head"
       className={cn(
         cellClassName,
-        "h-8 text-left align-middle font-medium text-xs whitespace-nowrap",
+        "text-left align-middle font-medium text-xs whitespace-nowrap",
         "text-muted-foreground [&:has([role=checkbox])]:pr-0",
         className,
       )}

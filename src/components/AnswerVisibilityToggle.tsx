@@ -15,15 +15,19 @@ export function AnswerVisibilityToggle() {
 
   return (
     <Toggle
-      variant="outline"
-      size="sm"
+      variant="ghost"
+      size="xs"
       pressed={showing}
       onPressedChange={(next) => {
         setShowUserAnswer(next);
         setShowCorrectAnswer(next);
       }}
     >
-      {showing ? <IconEye /> : <IconEyeClosed />}
+      {showing ? (
+        <IconEye data-icon="inline-start" />
+      ) : (
+        <IconEyeClosed data-icon="inline-start" />
+      )}
       Answers
     </Toggle>
   );

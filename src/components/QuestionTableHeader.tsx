@@ -34,27 +34,32 @@ export function TestPageHeader({
     <div
       style={{ height }}
       className={cn(
-        "sticky top-0 z-10 bg-background border-b",
-        "px-6",
-        "flex flex-col items-start justify-between",
+        "sticky top-0 z-15 bg-background border-b",
+        "flex flex-col",
       )}
     >
-      <div className="flex items-center gap-2 min-w-0">
-        <BackHomeButton />
-        <TypoH2 className="truncate min-w-0">{title}</TypoH2>
+      <div className="grow flex justify-between px-6 items-center">
+        <div className="flex items-center gap-2 min-w-0 grow">
+          <BackHomeButton />
+          <TypoH2 className="truncate min-w-0">{title}</TypoH2>
+        </div>
+        <ReviewButton slug={slug} reviewSize={reviewSize} />
       </div>
 
-      <div>
-        <div className="flex items-center gap-1">
-          <AnswerVisibilityToggle />
-          <ReviewActionsMenu
-            reviewSize={reviewSize}
-            numberOfIncorrect={numberOfIncorrect}
-            onAddIncorrect={onAddIncorrect}
-            onClearReview={onClearReview}
-          />
-          <ReviewButton slug={slug} reviewSize={reviewSize} />
-        </div>
+      <div
+        className={cn(
+          "px-6 border-t flex items-center",
+          // matches height of table cells in table.tsx
+          "h-11",
+        )}
+      >
+        <AnswerVisibilityToggle />
+        <ReviewActionsMenu
+          reviewSize={reviewSize}
+          numberOfIncorrect={numberOfIncorrect}
+          onAddIncorrect={onAddIncorrect}
+          onClearReview={onClearReview}
+        />
       </div>
     </div>
   );
@@ -96,8 +101,8 @@ function ReviewActionsMenu({
       <DropdownMenuTrigger
         render={
           <Button
-            variant="ghost"
-            size="icon-sm"
+            variant="outline"
+            size="xs"
             aria-label="Review sheet actions"
             className="text-muted-foreground"
           >

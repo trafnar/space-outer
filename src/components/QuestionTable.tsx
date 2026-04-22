@@ -35,7 +35,7 @@ import {
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
-const stickyHeaderHeight = 64;
+const stickyHeaderHeight = 96;
 
 export function QuestionTable({
   questions,
@@ -317,8 +317,14 @@ function QuestionTableRow({
         </TableCell>
       </TableRow>
       {isExpandMode && (
-        <TableRow aria-hidden={!expanded} className="hover:bg-transparent">
-          <TableCell colSpan={colCount} className="p-0 whitespace-normal">
+        <TableRow
+          aria-hidden={!expanded}
+          className="hover:bg-transparent h-auto"
+        >
+          <TableCell
+            colSpan={colCount}
+            className="p-0 whitespace-normal h-auto!"
+          >
             <AnimatePresence initial={false}>
               {expanded && (
                 <motion.div
