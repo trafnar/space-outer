@@ -10,13 +10,7 @@ import {
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
 import React, { useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useMotionTemplate,
-  useScroll,
-  useTransform,
-} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
@@ -32,12 +26,9 @@ import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 import { QuestionPreview } from "./QuestionPreview";
 import {
   IconAdjustments,
-  IconBug,
   IconChevronRight,
   IconClipboardCheckFilled,
   IconClipboardPlus,
-  IconSettings,
-  IconSettings2,
 } from "@tabler/icons-react";
 import { openDebugDialog } from "./DebugDialog";
 
@@ -133,25 +124,31 @@ export function QuestionTable({
         reviewSize={reviewSheet.size}
         height={stickyHeaderHeight}
         toolbar={
-          <div className={cn("px-6 border-t flex items-center gap-2", "h-11")}>
+          <div className={cn("px-6 border-t flex items-center -ml-1", "h-11")}>
             {isExpandMode && (
-              <Button
-                variant="outline"
-                size="xs"
+              <button
                 onClick={toggleAllRows}
+                className=" h-full px-1 group/pad"
                 aria-label={
                   toggleAllWillCollapse ? "Collapse all" : "Expand all"
                 }
               >
-                <IconChevronRight
-                  data-icon="inline-start"
-                  className={cn(
-                    "transition-transform",
-                    toggleAllWillCollapse && "rotate-90",
-                  )}
-                />
-                Toggle all
-              </Button>
+                <Button
+                  variant="outline"
+                  nativeButton={false}
+                  render={<div />}
+                  size="xs"
+                >
+                  <IconChevronRight
+                    data-icon="inline-start"
+                    className={cn(
+                      "transition-transform",
+                      toggleAllWillCollapse && "rotate-90",
+                    )}
+                  />
+                  Toggle all
+                </Button>
+              </button>
             )}
             <ReviewActionsMenu
               slug={slug}
@@ -161,10 +158,21 @@ export function QuestionTable({
               onClearReview={clearReview}
             />
             <AnswerVisibilityToggle />
-            <Button variant="outline" size="xs" onClick={openDebugDialog}>
-              <IconAdjustments data-icon="inline-start" />
-              Settings
-            </Button>
+            <button
+              onClick={openDebugDialog}
+              className="h-full px-1 group/pad"
+              aria-label="Open debug settings"
+            >
+              <Button
+                variant="outline"
+                nativeButton={false}
+                render={<div />}
+                size="xs"
+              >
+                <IconAdjustments data-icon="inline-start" />
+                Settings
+              </Button>
+            </button>
           </div>
         }
       />
@@ -286,30 +294,44 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <ExpandChevron expanded={expanded} tabIndex={-1} aria-hidden />
+            <div className="group/pad h-full px-2 -ml-2 -mr-2 flex items-center">
+              <ExpandChevron
+                expanded={expanded}
+                tabIndex={-1}
+                aria-hidden
+                nativeButton={false}
+                render={<div />}
+              />
+            </div>
           </TableCell>
         )}
         <TableCell>
-          <Button
-            variant={isMarked ? "default" : "secondary"}
-            // className={cn(
-            //   "text-muted-foreground hover:text-foreground",
-            //   isMarked &&
-            //     "text-background bg-foreground hover:bg-foreground hover:text-background",
-            // )}
-            size="icon-sm"
+          <button
+            onClick={handleMarkClick}
+            className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad"
             aria-pressed={isMarked}
             aria-label={
               isMarked ? "Remove from review sheet" : "Add to review sheet"
             }
-            onClick={handleMarkClick}
           >
-            {isMarked ? (
-              <IconClipboardCheckFilled className="size-4.5" />
-            ) : (
-              <IconClipboardPlus className="size-4.5" />
-            )}
-          </Button>
+            <Button
+              variant={isMarked ? "default" : "outline"}
+              className={cn(
+                "text-muted-foreground hover:text-foreground group-hover/pad:text-foreground",
+                isMarked &&
+                  "text-background bg-foreground hover:bg-foreground hover:text-background group-hover/pad:bg-foreground group-hover/pad:text-background",
+              )}
+              size="icon-sm"
+              nativeButton={false}
+              render={<div />}
+            >
+              {isMarked ? (
+                <IconClipboardCheckFilled className="size-4.5" />
+              ) : (
+                <IconClipboardPlus className="size-4.5" />
+              )}
+            </Button>
+          </button>
         </TableCell>
         <TableCell className="w-full max-w-0 whitespace-normal">
           <div className="flex items-center w-full">

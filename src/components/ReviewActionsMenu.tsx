@@ -28,12 +28,22 @@ export function ReviewActionsMenu({
     <DropdownMenu>
       <DropdownMenuTrigger
         render={
-          <Button variant="outline" size="xs" aria-label="Review sheet actions">
-            Review
-            <IconChevronDown data-icon="inline-end" />
-          </Button>
+          <button
+            className="h-full px-1 group/pad"
+            aria-label="Review sheet actions"
+          />
         }
-      />
+      >
+        <Button
+          variant="outline"
+          nativeButton={false}
+          render={<div />}
+          size="xs"
+        >
+          Review
+          <IconChevronDown data-icon="inline-end" />
+        </Button>
+      </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuItem
           disabled={reviewEmpty}

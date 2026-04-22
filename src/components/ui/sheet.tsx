@@ -5,6 +5,7 @@ import { Dialog as SheetPrimitive } from "@base-ui/react/dialog";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { TypoH2 } from "@/components/ui/typo";
 import { IconX } from "@tabler/icons-react";
 
 function Sheet({ ...props }: SheetPrimitive.Root.Props) {
@@ -57,7 +58,7 @@ function SheetContent({
         data-slot="sheet-content"
         data-side={side}
         className={cn(
-          "fixed z-50 flex flex-col bg-popover bg-clip-padding text-sm text-popover-foreground shadow-xl",
+          "fixed z-50 flex flex-col bg-popover bg-clip-padding text-sm text-popover-foreground shadow-2xl",
           "transition duration-100 ease-in-out",
 
           "data-ending-style:opacity-0",
@@ -121,7 +122,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-header"
-      className={cn("flex flex-col gap-1.5 p-6", className)}
+      className={cn("flex flex-col gap-1.5 p-6 pt-3 pb-4", className)}
       {...props}
     />
   );
@@ -141,10 +142,8 @@ function SheetTitle({ className, ...props }: SheetPrimitive.Title.Props) {
   return (
     <SheetPrimitive.Title
       data-slot="sheet-title"
-      className={cn(
-        "font-heading text-base font-medium text-foreground",
-        className,
-      )}
+      render={<TypoH2 />}
+      className={className}
       {...props}
     />
   );

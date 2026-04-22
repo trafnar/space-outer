@@ -11,7 +11,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "./ui/sheet";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 const isTextEntryTarget = (target: EventTarget | null) => {
   if (!(target instanceof HTMLElement)) return false;
@@ -113,25 +112,23 @@ export function QuestionSheet({
         </div>
         <SheetFooter className="flex-row items-center justify-between">
           <Button
-            variant="outline"
-            size="sm"
+            variant="link"
+            size="xs"
             onClick={() => displayed && goToQuestion(displayed.index - 1)}
             disabled={!displayed || displayed.index === 0}
           >
-            <IconChevronLeft />
             Previous
           </Button>
           <div className="text-xs text-muted-foreground tabular-nums">
             {displayed ? displayed.index + 1 : 0} of {questions.length}
           </div>
           <Button
-            variant="outline"
-            size="sm"
+            variant="link"
+            size="xs"
             onClick={() => displayed && goToQuestion(displayed.index + 1)}
             disabled={!displayed || displayed.index === questions.length - 1}
           >
             Next
-            <IconChevronRight />
           </Button>
         </SheetFooter>
       </SheetContent>

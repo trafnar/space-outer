@@ -47,7 +47,7 @@ export function ReviewViewClient({
             Back to test
           </Button>
           <div className="flex items-center gap-2">
-            <AnswerVisibilityToggle />
+            <AnswerVisibilityToggle size="sm" />
             <Button size="sm" onClick={() => window.print()}>
               <IconPrinter />
               Print
