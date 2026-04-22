@@ -332,7 +332,7 @@ function QuestionTableRow({
             >
               <QuestionPreview prompt={q.prompt} />
             </div>
-            <div className="-mr-2">
+            <div className="-mr-2.5">
               <StandardsBadge
                 standards={q.standards}
                 descriptions={standards}
