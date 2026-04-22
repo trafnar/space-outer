@@ -28,7 +28,7 @@ function SheetOverlay({ className, ...props }: SheetPrimitive.Backdrop.Props) {
     <SheetPrimitive.Backdrop
       data-slot="sheet-overlay"
       className={cn(
-        "fixed inset-0 z-50 bg-background/80",
+        "fixed inset-0 z-50 bg-neutral-900/70",
         "transition-opacity duration-100 data-ending-style:opacity-0",
         "data-starting-style:opacity-0",
         className,
@@ -50,7 +50,7 @@ function SheetContent({
 }) {
   return (
     <SheetPortal>
-      <SheetOverlay />
+      {/* <SheetOverlay /> */}
       <SheetPrimitive.Popup
         data-slot="sheet-content"
         data-side={side}
