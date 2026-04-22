@@ -81,7 +81,7 @@ export function QuestionDialog({
         if (!open) onIndexChange(null);
       }}
     >
-      <DialogContent className="top-12 translate-y-0 sm:max-w-2xl max-h-[calc(100vh-6rem)] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <DialogContent className="top-[20%] translate-y-0 sm:max-w-2xl max-h-[calc(100vh-40%)] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <DialogHeader className="gap-0">
           <div className="flex items-center gap-0 -ml-1 text-muted-foreground">
             <Button
