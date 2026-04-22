@@ -8,14 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { Block, Question } from "@/data/types";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import type { Question } from "@/data/types";
+import { Card, CardContent } from "./ui/card";
 import { QuestionCard } from "./QuestionCard";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -27,20 +21,17 @@ import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import { useRowAction } from "@/lib/debugSettings";
-import Link from "next/link";
+import { QuestionTableHeader } from "./QuestionTableHeader";
+import { ExpandChevron } from "./ExpandChevron";
+import { QuestionPreview } from "./QuestionPreview";
 import {
-  IconArrowLeft,
-  IconChevronDown,
-  IconChevronRight,
   IconClipboardCheckFilled,
   IconClipboardPlus,
 } from "@tabler/icons-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+
+// Height of the sticky card-header wrapper. Used both as its fixed
+// height and as the top offset for the sticky thead so they line up.
+const stickyHeaderHeight = 80;
 
 export function QuestionTable({
   questions,
@@ -116,104 +107,34 @@ export function QuestionTable({
 
   return (
     <Card className="px-0 py-0 rounded-none overflow-visible">
-      <div className="sticky top-0 z-10 bg-background border-b">
-        <CardHeader className="py-6">
-          <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon-sm"
-              className="text-muted-foreground"
-              nativeButton={false}
-              aria-label="Back to home"
-              render={<Link href="/" />}
-            >
-              <IconArrowLeft />
-            </Button>
-            <CardTitle className="text-xl font-bold text-balance">
-              {title}
-            </CardTitle>
-          </div>
-          <CardAction>
-            <div className="flex items-center gap-1">
-              <Button
-                variant="default"
-                size="sm"
-                nativeButton={false}
-                disabled={reviewSheet.size === 0}
-                className={cn(
-                  reviewSheet.size === 0
-                    ? "opacity-50 pointer-events-none"
-                    : "",
-                )}
-                render={<Link href={`/tests/${slug}/review`} />}
-              >
-                <div>
-                  <div
-                    data-icon="inline-start"
-                    className={cn(
-                      "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
-                      "text-foreground flex items-center justify-center -translate-x-0.5",
-                    )}
-                  >
-                    {reviewSheet.size}
-                  </div>
-                </div>
-                Start Review
-              </Button>
-              <DropdownMenu>
-                <DropdownMenuTrigger
-                  render={
-                    <Button
-                      variant="outline"
-                      size="icon-sm"
-                      aria-label="Review sheet actions"
-                    >
-                      <IconChevronDown />
-                    </Button>
-                  }
-                />
-                <DropdownMenuContent className="w-64" align="end">
-                  <DropdownMenuItem
-                    onClick={addIncorrectToReview}
-                    disabled={numberOfIncorrect === 0}
-                  >
-                    Add {numberOfIncorrect} incorrect item
-                    {numberOfIncorrect === 1 ? "" : "s"} to review
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onClick={clearReview}
-                    disabled={reviewSheet.size === 0}
-                  >
-                    Clear all {reviewSheet.size} review item
-                    {reviewSheet.size === 1 ? "" : "s"}
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          </CardAction>
-        </CardHeader>
-      </div>
+      <QuestionTableHeader
+        title={title}
+        slug={slug}
+        reviewSize={reviewSheet.size}
+        numberOfIncorrect={numberOfIncorrect}
+        onAddIncorrect={addIncorrectToReview}
+        onClearReview={clearReview}
+        height={stickyHeaderHeight}
+      />
       <CardContent className="p-0">
         <Table>
-          <TableHeader>
+          <TableHeader
+            className="sticky bg-background z-10"
+            style={{
+              top: stickyHeaderHeight,
+              boxShadow: "0 0.5px 0 0 var(--border)",
+            }}
+          >
             <TableRow className="hover:bg-transparent">
               {isExpandMode && (
                 <TableHead className="pr-0">
-                  <Button
-                    variant="ghost"
-                    size="icon-xs"
+                  <ExpandChevron
+                    expanded={toggleAllWillCollapse}
                     onClick={toggleAllRows}
                     aria-label={
                       toggleAllWillCollapse ? "Collapse all" : "Expand all"
                     }
-                  >
-                    <IconChevronRight
-                      className={cn(
-                        "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
-                        toggleAllWillCollapse ? "rotate-90" : "",
-                      )}
-                    />
-                  </Button>
+                  />
                 </TableHead>
               )}
               <TableHead>Add</TableHead>
@@ -326,14 +247,7 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <Button variant="ghost" size="icon-xs" tabIndex={-1} aria-hidden>
-              <IconChevronRight
-                className={cn(
-                  "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
-                  expanded ? "rotate-90" : "",
-                )}
-              />
-            </Button>
+            <ExpandChevron expanded={expanded} tabIndex={-1} aria-hidden />
           </TableCell>
         )}
         <TableCell>
@@ -422,28 +336,5 @@ function QuestionTableRow({
         </TableRow>
       )}
     </React.Fragment>
-  );
-}
-
-function QuestionPreview({ prompt }: { prompt: Block[] }) {
-  const paragraphs = prompt.filter((b) => b.type === "paragraph");
-  return (
-    <>
-      {paragraphs.map((block, blockIdx) => (
-        <React.Fragment key={blockIdx}>
-          {blockIdx > 0 && " "}
-          {block.content.map((inline, inlineIdx) =>
-            inline.type === "text" ? (
-              <React.Fragment key={inlineIdx}>{inline.text}</React.Fragment>
-            ) : (
-              <span
-                key={inlineIdx}
-                className="inline-block align-bottom h-[1.1lh] border-b border-muted-foreground/25 bg-accent-foreground w-8"
-              ></span>
-            ),
-          )}
-        </React.Fragment>
-      ))}
-    </>
   );
 }
