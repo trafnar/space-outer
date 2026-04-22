@@ -16,8 +16,27 @@ export function QuestionCard({ question }: { question: Question }) {
     if (block.type === "choices") choicesById.set(block.id, block.options);
   }
 
+  // Label bound blanks/choices with letters (a, b, c, ...) in the
+  // order blanks appear in the prompt. Standalone choices (no matching
+  // blank) are not labeled.
+  const labelById = new Map<string, string>();
+  let letterIdx = 0;
+  for (const block of question.prompt) {
+    if (block.type !== "paragraph") continue;
+    for (const inline of block.content) {
+      if (
+        inline.type === "blank" &&
+        choicesById.has(inline.id) &&
+        !labelById.has(inline.id)
+      ) {
+        labelById.set(inline.id, String.fromCharCode(65 + letterIdx));
+        letterIdx += 1;
+      }
+    }
+  }
+
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       {question.prompt.map((block, i) => (
         <BlockView
           key={i}
@@ -25,6 +44,7 @@ export function QuestionCard({ question }: { question: Question }) {
           response={question.userResponse}
           correct={question.correct}
           choicesById={choicesById}
+          labelById={labelById}
           showUserAnswer={showUserAnswer}
           showCorrectAnswer={showCorrectAnswer}
         />
@@ -33,11 +53,20 @@ export function QuestionCard({ question }: { question: Question }) {
   );
 }
 
+const blankLabelClassName = cn(
+  "text-[0.7em] text-muted-foreground font-bold font-heading inline-flex",
+  "after:content-['.'] pl-0.5 pr-0.5",
+  // "rounded-full",
+  // "size-3 ring-1 ring-muted-foreground/40",
+  // "items-center justify-center",
+);
+
 function BlockView({
   block,
   response,
   correct,
   choicesById,
+  labelById,
   showUserAnswer,
   showCorrectAnswer,
 }: {
@@ -45,6 +74,7 @@ function BlockView({
   response: Response;
   correct: Response;
   choicesById: Map<string, Choice[]>;
+  labelById: Map<string, string>;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -58,6 +88,7 @@ function BlockView({
             response={response}
             correct={correct}
             choicesById={choicesById}
+            labelById={labelById}
             showUserAnswer={showUserAnswer}
             showCorrectAnswer={showCorrectAnswer}
           />
@@ -82,6 +113,7 @@ function BlockView({
         options={block.options}
         response={response}
         correct={correct}
+        label={labelById.get(block.id)}
         showUserAnswer={showUserAnswer}
         showCorrectAnswer={showCorrectAnswer}
       />
@@ -95,6 +127,7 @@ function InlineView({
   response,
   correct,
   choicesById,
+  labelById,
   showUserAnswer,
   showCorrectAnswer,
 }: {
@@ -102,6 +135,7 @@ function InlineView({
   response: Response;
   correct: Response;
   choicesById: Map<string, Choice[]>;
+  labelById: Map<string, string>;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -113,6 +147,7 @@ function InlineView({
         response={response}
         correct={correct}
         boundOptions={choicesById.get(inline.id)}
+        label={labelById.get(inline.id)}
         showUserAnswer={showUserAnswer}
         showCorrectAnswer={showCorrectAnswer}
       />
@@ -125,6 +160,7 @@ function BlankView({
   response,
   correct,
   boundOptions,
+  label,
   showUserAnswer,
   showCorrectAnswer,
 }: {
@@ -132,6 +168,7 @@ function BlankView({
   response: Response;
   correct: Response;
   boundOptions?: Choice[];
+  label?: string;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -147,22 +184,25 @@ function BlankView({
     : userVal;
 
   return (
-    <span
-      className={cn("inline-block min-w-[3.5ch] mx-0.5 text-center relative")}
-    >
-      {showUserAnswer ? (displayText ?? " ") : " "}
-      <div
-        className={cn(
-          "w-full h-[2.5px] translate-y-px bg-current rounded-full",
+    <>
+      {label && <span className={blankLabelClassName}>{label}</span>}
+      <span
+        className={cn("inline-block min-w-[3.5ch] mx-0.5 text-center relative")}
+      >
+        {showUserAnswer ? (displayText ?? " ") : " "}
+        <div
+          className={cn(
+            "w-full h-[2.5px] translate-y-px bg-current rounded-full",
 
-          showIndicator
-            ? isRight
-              ? "border-correct-green text-correct-green"
-              : "border-wrong-red text-wrong-red line-through"
-            : "border-current",
-        )}
-      />
-    </span>
+            showIndicator
+              ? isRight
+                ? "border-correct-green text-correct-green"
+                : "border-wrong-red text-wrong-red line-through"
+              : "border-current",
+          )}
+        />
+      </span>
+    </>
   );
 }
 
@@ -171,6 +211,7 @@ function ChoicesView({
   options,
   response,
   correct,
+  label,
   showUserAnswer,
   showCorrectAnswer,
 }: {
@@ -178,6 +219,7 @@ function ChoicesView({
   options: Choice[];
   response: Response;
   correct: Response;
+  label?: string;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -185,31 +227,34 @@ function ChoicesView({
   const correctId = correct.values[id];
 
   return (
-    <ul className="flex flex-col gap-1">
-      {options.map((opt) => {
-        const picked = opt.id === userId;
-        const isCorrect = opt.id === correctId;
-        const showPicked = showUserAnswer && picked;
-        return (
-          <li
-            key={opt.id}
-            className={cn(
-              "flex items-center gap-2",
-              showCorrectAnswer && isCorrect && "text-correct-green",
-              showUserAnswer &&
-                showCorrectAnswer &&
-                picked &&
-                !isCorrect &&
-                "text-wrong-red line-through",
-            )}
-          >
-            <span aria-hidden>
-              {showPicked ? <IconCircleCheck /> : <IconCircle />}
-            </span>
-            <span>{opt.text}</span>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="flex flex-col gap-1">
+      {label && <div className={blankLabelClassName}>{label}</div>}
+      <ul className="flex flex-col gap-1">
+        {options.map((opt) => {
+          const picked = opt.id === userId;
+          const isCorrect = opt.id === correctId;
+          const showPicked = showUserAnswer && picked;
+          return (
+            <li
+              key={opt.id}
+              className={cn(
+                "flex items-center gap-2",
+                showCorrectAnswer && isCorrect && "text-correct-green",
+                showUserAnswer &&
+                  showCorrectAnswer &&
+                  picked &&
+                  !isCorrect &&
+                  "text-wrong-red line-through",
+              )}
+            >
+              <span aria-hidden>
+                {showPicked ? <IconCircleCheck /> : <IconCircle />}
+              </span>
+              <span>{opt.text}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }

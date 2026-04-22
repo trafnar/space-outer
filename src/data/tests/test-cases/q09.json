@@ -1,0 +1,47 @@
+{
+  "n": 9,
+  "url": null,
+  "qid": null,
+  "type": "Multiple Choice",
+  "points": { "earned": 1, "possible": 2 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Two blanks, each bound to its own choices block."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The " },
+        { "type": "blank", "id": "subject" },
+        { "type": "text", "text": " is " },
+        { "type": "blank", "id": "comparator" },
+        { "type": "text", "text": " than the moon." }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "subject",
+      "options": [
+        { "id": "A", "text": "sun" },
+        { "id": "B", "text": "earth" }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "comparator",
+      "options": [
+        { "id": "A", "text": "bigger" },
+        { "id": "B", "text": "smaller" }
+      ]
+    }
+  ],
+  "correct": { "values": { "subject": "A", "comparator": "A" } },
+  "userResponse": { "values": { "subject": "A", "comparator": "B" } }
+}

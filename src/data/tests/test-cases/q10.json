@@ -1,0 +1,37 @@
+{
+  "n": 10,
+  "url": null,
+  "qid": null,
+  "type": "Multiple Choice",
+  "points": { "earned": 0, "possible": 1 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Standalone choices block with no blank in the sentence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Which is the largest ocean?" }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "ocean",
+      "options": [
+        { "id": "A", "text": "Atlantic" },
+        { "id": "B", "text": "Pacific" },
+        { "id": "C", "text": "Indian" },
+        { "id": "D", "text": "Arctic" }
+      ]
+    }
+  ],
+  "correct": { "values": { "ocean": "B" } },
+  "userResponse": { "values": { "ocean": "A" } }
+}

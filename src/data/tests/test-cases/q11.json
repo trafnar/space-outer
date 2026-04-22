@@ -1,0 +1,47 @@
+{
+  "n": 11,
+  "url": null,
+  "qid": null,
+  "type": "Multiple Choice",
+  "points": { "earned": 2, "possible": 2 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Back-to-back standalone choices blocks in one question."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [{ "type": "text", "text": "Part A: What is 2 + 2?" }]
+    },
+    {
+      "type": "choices",
+      "id": "partA",
+      "options": [
+        { "id": "A", "text": "3" },
+        { "id": "B", "text": "4" },
+        { "id": "C", "text": "5" }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [{ "type": "text", "text": "Part B: What is 3 + 3?" }]
+    },
+    {
+      "type": "choices",
+      "id": "partB",
+      "options": [
+        { "id": "A", "text": "5" },
+        { "id": "B", "text": "6" },
+        { "id": "C", "text": "7" }
+      ]
+    }
+  ],
+  "correct": { "values": { "partA": "B", "partB": "B" } },
+  "userResponse": { "values": { "partA": "B", "partB": "B" } }
+}

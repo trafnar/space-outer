@@ -1,0 +1,40 @@
+{
+  "n": 8,
+  "url": null,
+  "qid": null,
+  "type": "Mixed",
+  "points": { "earned": 2, "possible": 2 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mixed: one blank is bound to choices, the other is fill-in."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "A " },
+        { "type": "blank", "id": "animal" },
+        { "type": "text", "text": " has " },
+        { "type": "blank", "id": "legs" },
+        { "type": "text", "text": " legs." }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "animal",
+      "options": [
+        { "id": "A", "text": "dog" },
+        { "id": "B", "text": "spider" },
+        { "id": "C", "text": "snake" }
+      ]
+    }
+  ],
+  "correct": { "values": { "animal": "B", "legs": "8" } },
+  "userResponse": { "values": { "animal": "B", "legs": "8" } }
+}

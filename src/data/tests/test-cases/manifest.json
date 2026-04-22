@@ -3,14 +3,20 @@
   "takenOn": "2026-04-21",
   "student": "Manousos, Korra",
   "teacher": null,
-  "numQuestions": 5,
-  "score": { "percent": 71, "earned": 5, "possible": 7 },
+  "numQuestions": 11,
+  "score": { "percent": 71, "earned": 12, "possible": 17 },
   "questions": [
-    { "n": 1, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.5a", "3.MD.7a"] },
-    { "n": 2, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 1, "possible": 1 }, "standards": ["X.Y.Z"] },
-    { "n": 3, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 1, "possible": 1 }, "standards": [] },
-    { "n": 4, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 0, "possible": 0 }, "standards": [] },
-    { "n": 5, "url": null, "qid": null, "type": "Fill-in", "points": { "earned": 2, "possible": 4 }, "standards": [] }
+    { "n": 1,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["3.MD.5a", "3.MD.7a"] },
+    { "n": 2,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": ["X.Y.Z"] },
+    { "n": 3,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 1 }, "standards": [] },
+    { "n": 4,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 0, "possible": 0 }, "standards": [] },
+    { "n": 5,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 2, "possible": 4 }, "standards": [] },
+    { "n": 6,  "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 1, "possible": 1 }, "standards": [] },
+    { "n": 7,  "url": null, "qid": null, "type": "Fill-in",         "points": { "earned": 1, "possible": 2 }, "standards": [] },
+    { "n": 8,  "url": null, "qid": null, "type": "Mixed",           "points": { "earned": 2, "possible": 2 }, "standards": [] },
+    { "n": 9,  "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 1, "possible": 2 }, "standards": [] },
+    { "n": 10, "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 0, "possible": 1 }, "standards": [] },
+    { "n": 11, "url": null, "qid": null, "type": "Multiple Choice", "points": { "earned": 2, "possible": 2 }, "standards": [] }
   ],
   "standards": {
     "3.MD.5a": "A square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area, and can be used to measure area.",

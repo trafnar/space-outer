@@ -1,0 +1,28 @@
+{
+  "n": 7,
+  "url": null,
+  "qid": null,
+  "type": "Fill-in",
+  "points": { "earned": 1, "possible": 2 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Multiple fill-in blanks in one sentence." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "2 + 2 = " },
+        { "type": "blank", "id": "sum1" },
+        { "type": "text", "text": " and 3 + 3 = " },
+        { "type": "blank", "id": "sum2" },
+        { "type": "text", "text": "." }
+      ]
+    }
+  ],
+  "correct": { "values": { "sum1": "4", "sum2": "6" } },
+  "userResponse": { "values": { "sum1": "4", "sum2": "7" } }
+}

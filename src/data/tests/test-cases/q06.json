@@ -1,0 +1,36 @@
+{
+  "n": 6,
+  "url": null,
+  "qid": null,
+  "type": "Multiple Choice",
+  "points": { "earned": 1, "possible": 1 },
+  "standards": [],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "Single blank bound to a choices block." }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        { "type": "text", "text": "The capital of France is " },
+        { "type": "blank", "id": "capital" },
+        { "type": "text", "text": "." }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "capital",
+      "options": [
+        { "id": "A", "text": "London" },
+        { "id": "B", "text": "Paris" },
+        { "id": "C", "text": "Madrid" },
+        { "id": "D", "text": "Berlin" }
+      ]
+    }
+  ],
+  "correct": { "values": { "capital": "B" } },
+  "userResponse": { "values": { "capital": "B" } }
+}
