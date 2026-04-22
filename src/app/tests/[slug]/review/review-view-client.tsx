@@ -11,7 +11,7 @@ import {
   IconClipboardX,
   IconPrinter,
 } from "@tabler/icons-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import {
   Empty,
@@ -33,8 +33,30 @@ export function ReviewViewClient({
   const [reviewIds] = useReviewSheet(slug);
   const reviewQuestions = questions.filter((q) => reviewIds.has(q.n));
 
+  // The review sheet lives in localStorage, which is only available
+  // after the client hydrates. Don't commit to the "empty" state until
+  // we're sure — otherwise the Empty component flashes before the
+  // questions load.
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
+
   return (
-    <div className="mx-auto max-w-3xl flex flex-col gap-6 p-8 print:p-0 print:max-w-none">
+    <div className="mx-auto w-full max-w-[8in] flex flex-col gap-6 p-8 print:p-0">
+      <style>{`
+        @page {
+          margin: 0.2in;
+        }
+        @media print {
+          * {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+          }
+          [data-question-card] {
+            break-inside: avoid;
+            page-break-inside: avoid;
+          }
+        }
+      `}</style>
       {reviewQuestions.length > 0 && (
         <header className="flex items-center justify-between gap-4 print:hidden">
           <Button
@@ -63,7 +85,7 @@ export function ReviewViewClient({
         </p>
       </header>
 
-      {reviewQuestions.length === 0 ? (
+      {!hydrated ? null : reviewQuestions.length === 0 ? (
         <Empty className="print:hidden">
           <EmptyMedia>
             <IconClipboardX />
@@ -88,7 +110,13 @@ export function ReviewViewClient({
         <div className="flex flex-col gap-6">
           {reviewQuestions.map((q) => (
             <React.Fragment key={q.n}>
-              <div className="break-inside-avoid">
+              <div
+                data-question-card
+                className="break-inside-avoid flex flex-col gap-3"
+              >
+                <h2 className="font-heading font-bold text-lg">
+                  Question {q.n}
+                </h2>
                 <QuestionCard question={q} />
               </div>
               <Separator />

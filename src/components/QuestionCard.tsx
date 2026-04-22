@@ -192,7 +192,7 @@ function BlankView({
         {showUserAnswer ? (displayText ?? " ") : " "}
         <div
           className={cn(
-            "w-full h-[2.5px] translate-y-px bg-current rounded-full",
+            "w-full h-[2.5px] print:h-[1.5px] translate-y-px bg-current rounded-full",
 
             showIndicator
               ? isRight
