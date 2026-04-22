@@ -27,16 +27,20 @@ import { QuestionSheet } from "./QuestionSheet";
 import { useReviewSheet } from "@/lib/reviewSheet";
 import Link from "next/link";
 import {
-  IconArrowRight,
+  IconChevronDown,
   IconChevronRight,
-  IconClipboard,
   IconClipboardCheckFilled,
   IconClipboardPlus,
-  IconX,
 } from "@tabler/icons-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 type RowAction = "expand" | "pop" | "none";
-const rowAction = "pop" as RowAction;
+const rowAction = "expand" as RowAction;
 const isExpandMode = rowAction === "expand";
 const isPopMode = rowAction === "pop";
 const isInteractive = isExpandMode || isPopMode;
@@ -86,9 +90,9 @@ export function QuestionTable({
     else if (isPopMode) setPoppedIndex(index);
   };
 
+  const toggleAllWillCollapse = expandedRowIds.size > questions.length / 2;
   const toggleAllRows = () => {
-    // if more than half of the rows are expanded, collapse them
-    if (expandedRowIds.size > questions.length / 2) {
+    if (toggleAllWillCollapse) {
       setExpandedRowIds(new Set());
     } else {
       setExpandedRowIds(new Set(questions.map((q) => q.n)));
@@ -113,61 +117,89 @@ export function QuestionTable({
       <div className="sticky top-0 z-10 bg-background border-b">
         <CardHeader className="py-6">
           <CardTitle className="text-xl font-bold">{title}</CardTitle>
-          {isExpandMode && (
-            <CardAction>
-              <Button variant="outline" size="sm" onClick={toggleAllRows}>
-                Toggle All
+          <CardAction>
+            <div className="flex items-center gap-1">
+              <Button
+                variant="default"
+                size="sm"
+                nativeButton={false}
+                disabled={reviewSheet.size === 0}
+                className={cn(
+                  reviewSheet.size === 0
+                    ? "opacity-50 pointer-events-none"
+                    : "",
+                )}
+                render={<Link href={`/tests/${slug}/review`} />}
+              >
+                <div>
+                  <div
+                    data-icon="inline-start"
+                    className={cn(
+                      "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
+                      "text-foreground flex items-center justify-center -translate-x-0.5",
+                    )}
+                  >
+                    {reviewSheet.size}
+                  </div>
+                </div>
+                Start Review
               </Button>
-            </CardAction>
-          )}
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  render={
+                    <Button
+                      variant="outline"
+                      size="icon-sm"
+                      aria-label="Review sheet actions"
+                    >
+                      <IconChevronDown />
+                    </Button>
+                  }
+                />
+                <DropdownMenuContent className="w-64" align="end">
+                  <DropdownMenuItem
+                    onClick={addIncorrectToReview}
+                    disabled={numberOfIncorrect === 0}
+                  >
+                    Add {numberOfIncorrect} incorrect item
+                    {numberOfIncorrect === 1 ? "" : "s"} to review
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={clearReview}
+                    disabled={reviewSheet.size === 0}
+                  >
+                    Clear all {reviewSheet.size} review item
+                    {reviewSheet.size === 1 ? "" : "s"}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </CardAction>
         </CardHeader>
-        <div className={cn("gap-3 px-6 py-2 border-t flex justify-between")}>
-          <Button
-            variant="ghost"
-            nativeButton={false}
-            disabled={reviewSheet.size === 0}
-            className={cn(
-              "-ml-3.5 text-foreground",
-              reviewSheet.size === 0 ? "opacity-50 pointer-events-none" : "",
-            )}
-            render={<Link href={`/tests/${slug}/review`} />}
-          >
-            <IconClipboard />
-            <span className="font-medium truncate">Review sheet</span>
-
-            <span className="text-xs text-muted-foreground tabular-nums truncate">
-              {reviewSheet.size} item
-              <span className={cn(reviewSheet.size === 1 ? "invisible" : "")}>
-                s
-              </span>
-            </span>
-            <IconArrowRight className="text-muted-foreground/75" />
-          </Button>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="secondary"
-              size="xs"
-              onClick={clearReview}
-              disabled={reviewSheet.size === 0}
-            >
-              <IconX />
-              Clear
-            </Button>
-            <Button
-              variant="secondary"
-              size="xs"
-              onClick={addIncorrectToReview}
-            >
-              Add {numberOfIncorrect} Incorrect
-            </Button>
-          </div>
-        </div>
       </div>
       <CardContent className="p-0">
         <Table>
           <TableHeader>
             <TableRow className="hover:bg-transparent">
-              {isExpandMode && <TableHead />}
+              {isExpandMode && (
+                <TableHead className="pr-0">
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={toggleAllRows}
+                    aria-label={
+                      toggleAllWillCollapse ? "Collapse all" : "Expand all"
+                    }
+                  >
+                    <IconChevronRight
+                      className={cn(
+                        "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
+                        toggleAllWillCollapse ? "rotate-90" : "",
+                      )}
+                    />
+                  </Button>
+                </TableHead>
+              )}
               <TableHead>Review</TableHead>
               <TableHead className="w-full">Question</TableHead>
               <TableHead>Standards</TableHead>
@@ -262,10 +294,10 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <Button variant="ghost" size="icon" tabIndex={-1}>
+            <Button variant="ghost" size="icon-sm" tabIndex={-1}>
               <IconChevronRight
                 className={cn(
-                  "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
+                  "transition-transform duration-200 ease-in-out reduce-motion:transition-none",
                   expanded ? "rotate-90" : "",
                 )}
               />
@@ -274,19 +306,12 @@ function QuestionTableRow({
         )}
         <TableCell>
           <Button
-            variant="ghost"
-            className={cn(
-              "bg-muted rounded-md",
-              // isMarked && "text-primary hover:text-primary",
-
-              // filled blue style
-              // isMarked &&
-              //   "text-primary-foreground bg-primary hover:bg-primary hover:text-primary-foreground",
-
-              // filled black style
-              isMarked &&
-                "text-background bg-foreground hover:bg-foreground hover:text-background",
-            )}
+            variant={isMarked ? "default" : "secondary"}
+            // className={cn(
+            //   "text-muted-foreground hover:text-foreground",
+            //   isMarked &&
+            //     "text-background bg-foreground hover:bg-foreground hover:text-background",
+            // )}
             size="icon-sm"
             aria-pressed={isMarked}
             onClick={handleMarkClick}
@@ -294,7 +319,7 @@ function QuestionTableRow({
             {isMarked ? (
               <IconClipboardCheckFilled className="size-4.5" />
             ) : (
-              <IconClipboardPlus className="size-4.5 text-muted-foreground" />
+              <IconClipboardPlus className="size-4.5" />
             )}
           </Button>
         </TableCell>
@@ -347,7 +372,7 @@ function QuestionTableRow({
                     id={`question-${q.n}-details`}
                     role="region"
                     aria-label={`Question ${q.n} details`}
-                    className="p-3"
+                    className="px-3 pt-1 pb-4"
                   >
                     <QuestionCard question={q} />
                   </div>
