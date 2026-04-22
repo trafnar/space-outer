@@ -1,11 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import type { Block, Choice, Inline, Question, Response } from "@/data/types";
+import { TypoLarge } from "./ui/typo";
+import { IconCircle, IconCircleCheck } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 
 export function QuestionCard({ question }: { question: Question }) {
   return (
@@ -33,7 +29,7 @@ function BlockView({
 }) {
   if (block.type === "paragraph") {
     return (
-      <p>
+      <TypoLarge>
         {block.content.map((inline, i) => (
           <InlineView
             key={i}
@@ -42,7 +38,7 @@ function BlockView({
             correct={correct}
           />
         ))}
-      </p>
+      </TypoLarge>
     );
   }
   if (block.type === "diagram") {
@@ -99,8 +95,8 @@ function BlankView({
     <span
       className={`inline-block min-w-[2.5ch] px-1 mx-0.5 border-b-2 text-center ${
         isRight
-          ? "border-green-600 text-green-700"
-          : "border-red-600 text-red-700 line-through"
+          ? "border-correct-green text-correct-green"
+          : "border-wrong-red text-wrong-red line-through"
       }`}
     >
       {userVal ?? " "}
@@ -128,11 +124,15 @@ function ChoicesView({
         return (
           <li
             key={opt.id}
-            className={`flex items-center gap-2 ${
-              isCorrect ? "text-green-700 font-medium" : ""
-            } ${picked && !isCorrect ? "text-red-700 line-through" : ""}`}
+            className={cn(
+              "flex items-center gap-2",
+              isCorrect && "text-correct-green",
+              picked && !isCorrect && "text-wrong-red line-through",
+            )}
           >
-            <span aria-hidden>{picked ? "●" : "○"}</span>
+            <span aria-hidden>
+              {picked ? <IconCircleCheck /> : <IconCircle />}
+            </span>
             <span>{opt.text}</span>
           </li>
         );
