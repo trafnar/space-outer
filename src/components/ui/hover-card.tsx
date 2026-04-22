@@ -39,7 +39,7 @@ function HoverCardContent({
           data-slot="hover-card-content"
           className={cn(
             "z-50 w-72 origin-(--transform-origin) rounded-3xl bg-popover p-4",
-            "text-sm text-popover-foreground shadow-xl shadow-black/3 ring-1 ring-foreground/3",
+            "text-sm text-popover-foreground shadow-xl shadow-black/10 ring-1 ring-foreground/3",
             "border-2 border-background outline-hidden duration-100",
             // "data-[side=bottom]:slide-in-from-top-1",
             // "data-[side=inline-end]:slide-in-from-left-1",
