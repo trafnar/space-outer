@@ -47,7 +47,13 @@ export function StandardsBadge({
             >
               {s}
             </h2>
-            {descriptions?.[s] && <div>{descriptions[s]}</div>}
+            {descriptions?.[s] ? (
+              <div>{descriptions[s]}</div>
+            ) : (
+              <div className="text-muted-foreground">
+                No description available
+              </div>
+            )}
           </div>
         ))}
       </HoverCardContent>

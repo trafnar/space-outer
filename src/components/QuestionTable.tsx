@@ -126,7 +126,10 @@ export function QuestionTable({
             variant="ghost"
             nativeButton={false}
             disabled={reviewSheet.size === 0}
-            className="-ml-3.5 text-foreground"
+            className={cn(
+              "-ml-3.5 text-foreground",
+              reviewSheet.size === 0 ? "opacity-50 pointer-events-none" : "",
+            )}
             render={<Link href={`/tests/${slug}/review`} />}
           >
             <IconClipboard />
@@ -371,7 +374,7 @@ function QuestionPreview({ prompt }: { prompt: Block[] }) {
             ) : (
               <span
                 key={inlineIdx}
-                className="inline-block align-bottom h-[1.1lh] rounded-[4px] border border-muted-foreground/15 bg-accent-foreground w-8"
+                className="inline-block align-bottom h-[1.1lh] border-b border-muted-foreground/25 bg-accent-foreground w-8"
               ></span>
             ),
           )}
