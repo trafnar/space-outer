@@ -127,7 +127,9 @@ export function QuestionTable({
       <CardContent className="p-0">
         <div className="flex items-center justify-between gap-3 px-6 py-3 border-b border-t bg-muted/40">
           <div className="flex items-center gap-2">
-            <IconClipboard className="size-4 text-muted-foreground" />
+            <div>
+              <IconClipboard className="size-4 text-muted-foreground" />
+            </div>
             <span className="font-medium">Review sheet</span>
             <span className="text-xs text-muted-foreground tabular-nums">
               {reviewSheet.size} item

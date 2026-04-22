@@ -1,7 +1,6 @@
 "use client";
 
 import { QuestionTable } from "@/components/QuestionTable";
-import { TypoH1 } from "@/components/ui/typo";
 import type { Manifest, Question } from "@/data/types";
 
 export function TestViewClient({
