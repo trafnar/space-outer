@@ -28,6 +28,6 @@
       ]
     }
   ],
-  "correct": { "type": "fillIn", "values": { "answer": "8" } },
-  "userResponse": { "type": "fillIn", "values": { "answer": "8" } }
+  "correct": { "values": { "answer": "8" } },
+  "userResponse": { "values": { "answer": "8" } }
 }

@@ -25,6 +25,7 @@
     },
     {
       "type": "choices",
+      "id": "answer",
       "options": [
         { "id": "A", "text": "perimeter" },
         { "id": "B", "text": "area" },
@@ -33,6 +34,6 @@
       ]
     }
   ],
-  "correct": { "type": "choice", "choiceId": "C" },
-  "userResponse": { "type": "choice", "choiceId": "A" }
+  "correct": { "values": { "answer": "C" } },
+  "userResponse": { "values": { "answer": "A" } }
 }

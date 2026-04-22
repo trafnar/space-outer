@@ -9,6 +9,13 @@ import { useAnswerVisibility } from "@/lib/settings";
 export function QuestionCard({ question }: { question: Question }) {
   const { showUserAnswer, showCorrectAnswer } = useAnswerVisibility();
 
+  // Map of choices-block id -> options, so a blank with a matching id
+  // can render the selected option's text in the sentence.
+  const choicesById = new Map<string, Choice[]>();
+  for (const block of question.prompt) {
+    if (block.type === "choices") choicesById.set(block.id, block.options);
+  }
+
   return (
     <div className="flex flex-col gap-2">
       {question.prompt.map((block, i) => (
@@ -17,6 +24,7 @@ export function QuestionCard({ question }: { question: Question }) {
           block={block}
           response={question.userResponse}
           correct={question.correct}
+          choicesById={choicesById}
           showUserAnswer={showUserAnswer}
           showCorrectAnswer={showCorrectAnswer}
         />
@@ -29,12 +37,14 @@ function BlockView({
   block,
   response,
   correct,
+  choicesById,
   showUserAnswer,
   showCorrectAnswer,
 }: {
   block: Block;
   response: Response;
   correct: Response;
+  choicesById: Map<string, Choice[]>;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -47,6 +57,7 @@ function BlockView({
             inline={inline}
             response={response}
             correct={correct}
+            choicesById={choicesById}
             showUserAnswer={showUserAnswer}
             showCorrectAnswer={showCorrectAnswer}
           />
@@ -67,6 +78,7 @@ function BlockView({
   if (block.type === "choices") {
     return (
       <ChoicesView
+        id={block.id}
         options={block.options}
         response={response}
         correct={correct}
@@ -82,12 +94,14 @@ function InlineView({
   inline,
   response,
   correct,
+  choicesById,
   showUserAnswer,
   showCorrectAnswer,
 }: {
   inline: Inline;
   response: Response;
   correct: Response;
+  choicesById: Map<string, Choice[]>;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
@@ -98,6 +112,7 @@ function InlineView({
         id={inline.id}
         response={response}
         correct={correct}
+        boundOptions={choicesById.get(inline.id)}
         showUserAnswer={showUserAnswer}
         showCorrectAnswer={showCorrectAnswer}
       />
@@ -109,51 +124,65 @@ function BlankView({
   id,
   response,
   correct,
+  boundOptions,
   showUserAnswer,
   showCorrectAnswer,
 }: {
   id: string;
   response: Response;
   correct: Response;
+  boundOptions?: Choice[];
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
-  const userVal = response.type === "fillIn" ? response.values[id] : undefined;
-  const correctVal = correct.type === "fillIn" ? correct.values[id] : undefined;
-  const isRight = userVal === correctVal;
+  const userVal = response.values[id];
+  const correctVal = correct.values[id];
+  const isRight = userVal !== undefined && userVal === correctVal;
   const showIndicator = showUserAnswer && showCorrectAnswer;
+
+  // If the blank is bound to a choices block, resolve the choice id to
+  // its visible text so the sentence reads naturally.
+  const displayText = boundOptions
+    ? (boundOptions.find((o) => o.id === userVal)?.text ?? userVal)
+    : userVal;
 
   return (
     <span
-      className={cn(
-        "inline-block min-w-[2.5ch] px-1 mx-0.5 border-b-2 text-center",
-        showIndicator
-          ? isRight
-            ? "border-correct-green text-correct-green"
-            : "border-wrong-red text-wrong-red line-through"
-          : "border-muted-foreground/40",
-      )}
+      className={cn("inline-block min-w-[3.5ch] mx-0.5 text-center relative")}
     >
-      {showUserAnswer ? (userVal ?? " ") : " "}
+      {showUserAnswer ? (displayText ?? " ") : " "}
+      <div
+        className={cn(
+          "w-full h-[2.5px] translate-y-px bg-current rounded-full",
+
+          showIndicator
+            ? isRight
+              ? "border-correct-green text-correct-green"
+              : "border-wrong-red text-wrong-red line-through"
+            : "border-current",
+        )}
+      />
     </span>
   );
 }
 
 function ChoicesView({
+  id,
   options,
   response,
   correct,
   showUserAnswer,
   showCorrectAnswer,
 }: {
+  id: string;
   options: Choice[];
   response: Response;
   correct: Response;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
-  const userId = response.type === "choice" ? response.choiceId : null;
-  const correctId = correct.type === "choice" ? correct.choiceId : null;
+  const userId = response.values[id];
+  const correctId = correct.values[id];
 
   return (
     <ul className="flex flex-col gap-1">

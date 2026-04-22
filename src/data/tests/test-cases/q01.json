@@ -13,6 +13,6 @@
       ]
     }
   ],
-  "correct": { "type": "fillIn", "values": { "answer": "12" } },
-  "userResponse": { "type": "fillIn", "values": { "answer": "12" } }
+  "correct": { "values": { "answer": "12" } },
+  "userResponse": { "values": { "answer": "12" } }
 }

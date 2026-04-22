@@ -22,6 +22,6 @@
       ]
     }
   ],
-  "correct": { "type": "fillIn", "values": { "answer": "30" } },
-  "userResponse": { "type": "fillIn", "values": { "answer": "30" } }
+  "correct": { "values": { "answer": "30" } },
+  "userResponse": { "values": { "answer": "30" } }
 }

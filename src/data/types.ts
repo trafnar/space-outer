@@ -28,7 +28,7 @@ export type Manifest = {
 export type Block =
   | { type: "paragraph"; content: Inline[] }
   | { type: "diagram"; file: string; alt?: string; svg?: string }
-  | { type: "choices"; options: Choice[] };
+  | { type: "choices"; id: string; options: Choice[] };
 
 // Inline-level nodes: flow within a paragraph.
 export type Inline =
@@ -40,9 +40,14 @@ export type Choice = {
   text: string;
 };
 
-export type Response =
-  | { type: "fillIn"; values: Record<string, string> }
-  | { type: "choice"; choiceId: string };
+// Unified response. `values` maps a blank id or choices-block id to its
+// answer. For a fill-in blank, the value is the typed text. For a
+// choices block (standalone or matching a blank), the value is the id
+// of the chosen option. No discriminant: the prompt determines how each
+// entry is interpreted.
+export type Response = {
+  values: Record<string, string>;
+};
 
 export type Question = ManifestQuestion & {
   prompt: Block[];
