@@ -24,7 +24,9 @@ import { Button } from "./ui/button";
 import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
+import { QuestionDialog } from "./QuestionDialog";
 import { useReviewSheet } from "@/lib/reviewSheet";
+import { useRowAction } from "@/lib/debugSettings";
 import Link from "next/link";
 import {
   IconChevronDown,
@@ -39,12 +41,6 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-type RowAction = "expand" | "pop" | "none";
-const rowAction = "expand" as RowAction;
-const isExpandMode = rowAction === "expand";
-const isPopMode = rowAction === "pop";
-const isInteractive = isExpandMode || isPopMode;
-
 export function QuestionTable({
   questions,
   standards,
@@ -56,6 +52,11 @@ export function QuestionTable({
   title?: string;
   slug: string;
 }) {
+  const [rowAction] = useRowAction();
+  const isExpandMode = rowAction === "expand";
+  const isPopMode = rowAction === "pop";
+  const isSheetMode = rowAction === "sheet";
+  const isInteractive = isExpandMode || isPopMode || isSheetMode;
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
@@ -87,7 +88,7 @@ export function QuestionTable({
     if (isExpandMode) toggleRow(q.n);
     // SHARED-SELECTION: when the selection is shared, swap `setPoppedIndex`
     // for the lifted setter (e.g. `onSelectedIndexChange(index)`).
-    else if (isPopMode) setPoppedIndex(index);
+    else if (isPopMode || isSheetMode) setPoppedIndex(index);
   };
 
   const toggleAllWillCollapse = expandedRowIds.size > questions.length / 2;
@@ -116,7 +117,9 @@ export function QuestionTable({
     <Card className="px-0 py-0 rounded-none overflow-visible">
       <div className="sticky top-0 z-10 bg-background border-b">
         <CardHeader className="py-6">
-          <CardTitle className="text-xl font-bold">{title}</CardTitle>
+          <CardTitle className="text-xl font-bold text-balance">
+            {title}
+          </CardTitle>
           <CardAction>
             <div className="flex items-center gap-1">
               <Button
@@ -214,6 +217,9 @@ export function QuestionTable({
                 standards={standards}
                 isExpanded={expandedRowIds.has(q.n)}
                 isMarked={reviewSheet.has(q.n)}
+                isExpandMode={isExpandMode}
+                isPopMode={isPopMode}
+                isInteractive={isInteractive}
                 onToggleMark={() => toggleInReviewSheet(q.n)}
                 // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
                 // (and accept it on QuestionTableRow) to render a highlight on
@@ -224,11 +230,18 @@ export function QuestionTable({
           </TableBody>
         </Table>
       </CardContent>
-      {isPopMode && (
+      {isSheetMode && (
         // SHARED-SELECTION: the sheet already takes the selection as props;
         // when the state is lifted, just forward the lifted value/setter here
         // (or pull them from the same context/store).
         <QuestionSheet
+          questions={questions}
+          activeIndex={poppedIndex}
+          onIndexChange={setPoppedIndex}
+        />
+      )}
+      {isPopMode && (
+        <QuestionDialog
           questions={questions}
           activeIndex={poppedIndex}
           onIndexChange={setPoppedIndex}
@@ -247,6 +260,9 @@ function QuestionTableRow({
   standards,
   isExpanded,
   isMarked,
+  isExpandMode,
+  isPopMode,
+  isInteractive,
   onToggleMark,
   onActivate,
 }: {
@@ -254,6 +270,9 @@ function QuestionTableRow({
   standards?: Record<string, string>;
   isExpanded: boolean;
   isMarked: boolean;
+  isExpandMode: boolean;
+  isPopMode: boolean;
+  isInteractive: boolean;
   onToggleMark: () => void;
   onActivate: () => void;
 }) {
