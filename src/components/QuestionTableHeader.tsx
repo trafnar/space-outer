@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { IconArrowLeft, IconChevronDown } from "@tabler/icons-react";
+import { IconArrowLeft, IconChevronDown, IconDots } from "@tabler/icons-react";
 
 export function QuestionTableHeader({
   title,
@@ -36,7 +36,7 @@ export function QuestionTableHeader({
       style={{ height }}
     >
       <CardHeader className="py-6">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 min-w-0">
           <Button
             variant="ghost"
             size="icon-sm"
@@ -47,12 +47,43 @@ export function QuestionTableHeader({
           >
             <IconArrowLeft />
           </Button>
-          <CardTitle className="text-xl font-bold text-balance">
+          <CardTitle className="text-xl font-bold truncate min-w-0">
             {title}
           </CardTitle>
         </div>
         <CardAction>
           <div className="flex items-center gap-1">
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                render={
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    aria-label="Review sheet actions"
+                    className="text-muted-foreground"
+                  >
+                    <IconDots />
+                  </Button>
+                }
+              />
+              <DropdownMenuContent className="w-64" align="end">
+                <DropdownMenuItem
+                  onClick={onAddIncorrect}
+                  disabled={numberOfIncorrect === 0}
+                >
+                  Add {numberOfIncorrect} incorrect item
+                  {numberOfIncorrect === 1 ? "" : "s"} to review
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={onClearReview}
+                  disabled={reviewEmpty}
+                >
+                  {reviewSize === 0
+                    ? "Clear all review items"
+                    : `Clear all ${reviewSize} review item${reviewSize === 1 ? "" : "s"}`}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button
               variant="default"
               size="sm"
@@ -74,34 +105,8 @@ export function QuestionTableHeader({
                   {reviewSize}
                 </div>
               </div>
-              Start Review
+              Review
             </Button>
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button
-                    variant="outline"
-                    size="icon-sm"
-                    aria-label="Review sheet actions"
-                  >
-                    <IconChevronDown />
-                  </Button>
-                }
-              />
-              <DropdownMenuContent className="w-64" align="end">
-                <DropdownMenuItem
-                  onClick={onAddIncorrect}
-                  disabled={numberOfIncorrect === 0}
-                >
-                  Add {numberOfIncorrect} incorrect item
-                  {numberOfIncorrect === 1 ? "" : "s"} to review
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={onClearReview} disabled={reviewEmpty}>
-                  Clear all {reviewSize} review item
-                  {reviewSize === 1 ? "" : "s"}
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </div>
         </CardAction>
       </CardHeader>
