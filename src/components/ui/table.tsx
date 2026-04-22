@@ -65,7 +65,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   );
 }
 
-const cellPadding = "first:pl-5 last:pr-5 py-3 px-3";
+const cellPadding = "first:pl-6 last:pr-6 py-3 px-3";
 
 function TableHead({ className, ...props }: React.ComponentProps<"th">) {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import { QuestionCard } from "@/components/QuestionCard";
 import { QuestionTable } from "@/components/QuestionTable";
+import { TypoH1 } from "@/components/ui/typo";
 import type { Manifest, Question } from "@/data/types";
 
 export function TestViewClient({
@@ -13,11 +13,15 @@ export function TestViewClient({
 }) {
   return (
     <div className="flex flex-col gap-6">
-      <header>
+      {/* <header className="p-8">
         <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
-      </header>
+      </header> */}
 
-      <QuestionTable questions={questions} standards={manifest.standards} />
+      <QuestionTable
+        questions={questions}
+        standards={manifest.standards}
+        title={manifest.title}
+      />
 
       {/* <div>
         Score: {manifest.score.earned}/{manifest.score.possible} (

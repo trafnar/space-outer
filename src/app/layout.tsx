@@ -31,7 +31,12 @@ export default function RootLayout({
         loraHeading.variable,
       )}
     >
-      <body className="bg-muted min-h-full flex flex-col p-8">
+      <body
+        className={cn(
+          "bg-muted min-h-full flex flex-col",
+          // "p-8"
+        )}
+      >
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

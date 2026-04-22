@@ -26,7 +26,6 @@ import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import {
   IconChevronRight,
-  IconClipboardCheck,
   IconClipboardCheckFilled,
   IconClipboardPlus,
 } from "@tabler/icons-react";
@@ -40,9 +39,11 @@ const isInteractive = isExpandMode || isPopMode;
 export function QuestionTable({
   questions,
   standards,
+  title,
 }: {
   questions: Question[];
   standards?: Record<string, string>;
+  title?: string;
 }) {
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
@@ -90,9 +91,9 @@ export function QuestionTable({
   };
 
   return (
-    <Card className="px-0 pb-0 rounded-md max-w-3xl">
+    <Card className="px-0 pb-0 rounded-none">
       <CardHeader>
-        <CardTitle>Questions</CardTitle>
+        <CardTitle className="text-xl font-bold">{title}</CardTitle>
         {isExpandMode && (
           <CardAction>
             <Button variant="outline" size="sm" onClick={toggleAllRows}>
@@ -210,7 +211,7 @@ function QuestionTableRow({
             </Button>
           </TableCell>
         )}
-        <TableCell>
+        <TableCell className="flex items-center justify-center">
           <Button
             variant="ghost"
             className={cn(
