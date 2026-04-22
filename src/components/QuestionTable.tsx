@@ -29,6 +29,7 @@ import { useReviewSheet } from "@/lib/reviewSheet";
 import { useRowAction } from "@/lib/debugSettings";
 import Link from "next/link";
 import {
+  IconArrowLeft,
   IconChevronDown,
   IconChevronRight,
   IconClipboardCheckFilled,
@@ -117,9 +118,21 @@ export function QuestionTable({
     <Card className="px-0 py-0 rounded-none overflow-visible">
       <div className="sticky top-0 z-10 bg-background border-b">
         <CardHeader className="py-6">
-          <CardTitle className="text-xl font-bold text-balance">
-            {title}
-          </CardTitle>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              className="text-muted-foreground"
+              nativeButton={false}
+              aria-label="Back to home"
+              render={<Link href="/" />}
+            >
+              <IconArrowLeft />
+            </Button>
+            <CardTitle className="text-xl font-bold text-balance">
+              {title}
+            </CardTitle>
+          </div>
           <CardAction>
             <div className="flex items-center gap-1">
               <Button
@@ -313,12 +326,7 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <Button
-              variant="ghost"
-              size="icon-xs"
-              tabIndex={-1}
-              aria-hidden
-            >
+            <Button variant="ghost" size="icon-xs" tabIndex={-1} aria-hidden>
               <IconChevronRight
                 className={cn(
                   "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
@@ -338,6 +346,9 @@ function QuestionTableRow({
             // )}
             size="icon-sm"
             aria-pressed={isMarked}
+            aria-label={
+              isMarked ? "Remove from review sheet" : "Add to review sheet"
+            }
             onClick={handleMarkClick}
           >
             {isMarked ? (

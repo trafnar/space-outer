@@ -18,6 +18,9 @@ export function StandardsBadge({
       variant="ghost"
       size="icon-sm"
       disabled={!hasAnyStandards}
+      aria-label={
+        hasAnyStandards ? "Show standards" : "No standards for this question"
+      }
       className={cn(
         "font-medium uppercase text-muted-foreground cursor-default hover:bg-transparent",
         // optical adjustment if aligned left
