@@ -339,7 +339,13 @@ function QuestionTableRow({
       >
         {isExpandMode && (
           <TableCell className="pr-0">
-            <Button variant="ghost" size="icon-xs" tabIndex={-1} aria-hidden>
+            <Button
+              variant="ghost"
+              className="text-muted-foreground"
+              size="icon-xs"
+              tabIndex={-1}
+              aria-hidden
+            >
               <IconChevronRight
                 className={cn(
                   "size-4 transition-transform duration-200 ease-in-out reduce-motion:transition-none",
