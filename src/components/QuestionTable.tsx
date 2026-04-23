@@ -18,6 +18,7 @@ import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
 import { useWorksheet } from "@/lib/worksheet";
+import { useBrushSelect } from "@/lib/useBrushSelect";
 import { useRowAction, useShowHeaderRow } from "@/lib/settings";
 import { TestPageHeader } from "./TestPageHeader";
 import { WorksheetActionsMenu } from "./WorksheetActionsMenu";
@@ -89,6 +90,13 @@ export function QuestionTable({
       return next;
     });
   };
+
+  const handleMarkPointerDown = useBrushSelect<number>({
+    current: worksheet,
+    setState: setWorksheet,
+    selector: "[data-question-n]",
+    parseId: (el) => Number(el.dataset.questionN),
+  });
 
   const activateRow = (q: Question, index: number) => {
     setSelectedIndex(index);
@@ -300,6 +308,9 @@ export function QuestionTable({
               isPopMode={isPopMode}
               isInteractive={isInteractive}
               onToggleMark={() => toggleInWorksheet(q.n)}
+              onMarkPointerDown={(e) =>
+                handleMarkPointerDown(e, q.n, worksheet.has(q.n))
+              }
               onActivate={() => activateRow(q, i)}
               onFocusRow={() => setSelectedIndex(i)}
             />
@@ -340,6 +351,7 @@ function QuestionTableRow({
   isPopMode,
   isInteractive,
   onToggleMark,
+  onMarkPointerDown,
   onActivate,
   onFocusRow,
 }: {
@@ -354,6 +366,7 @@ function QuestionTableRow({
   isPopMode: boolean;
   isInteractive: boolean;
   onToggleMark: () => void;
+  onMarkPointerDown: (e: React.PointerEvent<HTMLElement>) => void;
   onActivate: () => void;
   onFocusRow: () => void;
 }) {
@@ -370,6 +383,7 @@ function QuestionTableRow({
     <React.Fragment>
       <TableRow
         data-row-index={index}
+        data-question-n={q.n}
         data-state={isSelected ? "selected" : undefined}
         aria-current={isSelected ? "true" : undefined}
         style={{ scrollMarginTop: stickyHeaderHeight - 1 }}
@@ -411,8 +425,9 @@ function QuestionTableRow({
         )}
         <TableCell>
           <button
+            onPointerDown={onMarkPointerDown}
             onClick={handleMarkClick}
-            className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red"
+            className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red touch-none select-none"
             aria-pressed={isMarked}
             aria-label={
               isMarked ? "Remove from worksheet" : "Add to worksheet"
