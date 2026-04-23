@@ -190,19 +190,23 @@ function BlankView({
       )}
       <span
         className={cn(
-          "inline-block min-w-[3.5ch] mx-0.5 text-center relative font-cursive text-[1.2em] leading-[0.8] text-foreground/75",
+          "inline-block min-w-[3.5ch] min-h-[1lh] mx-0.5 text-center relative font-cursive text-[1.2em] leading-[0.95]",
         )}
       >
-        {showUserAnswer ? (displayText ?? " ") : " "}
+        <span
+          className={cn(
+            "text-foreground/75",
+            showIndicator &&
+              (isRight
+                ? "text-correct-green"
+                : "text-wrong-red"),
+          )}
+        >
+        {showUserAnswer ? (displayText ?? " ") : " "}
+        </span>
         <div
           className={cn(
-            "w-full h-[2.5px] print:h-[1.5px] -translate-y-0.5 bg-current rounded-full",
-
-            showIndicator
-              ? isRight
-                ? "border-correct-green text-correct-green"
-                : "border-wrong-red text-wrong-red line-through"
-              : "border-current",
+            "w-full h-[2.5px] print:h-[1.5px] -translate-y-0.5 rounded-full bg-foreground/75",
           )}
         />
       </span>
