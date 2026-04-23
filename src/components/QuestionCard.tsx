@@ -1,12 +1,13 @@
 "use client";
 
-import type { Block, Choice, Inline, Question, Response } from "@/data/types";
+import type { Block, Choice, Inline, Response } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { TypoLarge } from "./ui/typo";
 import { IconCircle, IconCircleCheck } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { useAnswerVisibility } from "@/lib/settings";
 
-export function QuestionCard({ question }: { question: Question }) {
+export function QuestionCard({ question }: { question: ViewQuestion }) {
   const { showUserAnswer, showCorrectAnswer } = useAnswerVisibility();
 
   // Map of choices-block id -> options, so a blank with a matching id

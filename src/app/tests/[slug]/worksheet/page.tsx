@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTest, listTestSlugs } from "@/lib/getTests";
+import { toWorksheetViewData } from "@/lib/testViewData";
 import { WorksheetViewClient } from "./worksheet-view-client";
 
 export const dynamicParams = false;
@@ -20,8 +21,7 @@ export default async function Page({
 
   return (
     <WorksheetViewClient
-      manifest={test.manifest}
-      questions={test.questions}
+      worksheet={toWorksheetViewData(test)}
       slug={slug}
     />
   );

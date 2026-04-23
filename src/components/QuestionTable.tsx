@@ -7,7 +7,7 @@ import {
   TableHead,
   TableRow,
 } from "@/components/ui/table";
-import type { Question } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
 import React, { useEffect, useEffectEvent, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -51,7 +51,7 @@ export function QuestionTable({
   subtitle,
   slug,
 }: {
-  questions: Question[];
+  questions: ViewQuestion[];
   standards?: Record<string, string>;
   title?: string;
   subtitle?: React.ReactNode;
@@ -106,7 +106,7 @@ export function QuestionTable({
     parseId: (el) => Number(el.dataset.questionN),
   });
 
-  const activateRow = (q: Question, index: number) => {
+  const activateRow = (q: ViewQuestion, index: number) => {
     setSelectedIndex(index);
     if (isExpandMode) toggleRow(q.n);
     else if (isPopMode || isSheetMode) setIsModalOpen(true);
@@ -351,7 +351,7 @@ function QuestionTableRow({
   onFocusRow,
 }: {
   index: number;
-  question: Question;
+  question: ViewQuestion;
   standards?: Record<string, string>;
   isExpanded: boolean;
   isMarked: boolean;

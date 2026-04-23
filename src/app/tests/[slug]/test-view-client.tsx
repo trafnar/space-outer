@@ -1,34 +1,32 @@
 "use client";
 
 import { QuestionTable } from "@/components/QuestionTable";
-import type { Manifest, Question } from "@/data/types";
+import type { TestViewData } from "@/lib/testViewData";
 import {
   AnswerVisibilityProvider,
   useScopedAnswerVisibility,
 } from "@/lib/settings";
 
 export function TestViewClient({
-  manifest,
-  questions,
+  test,
   slug,
 }: {
-  manifest: Manifest;
-  questions: Question[];
+  test: TestViewData;
   slug: string;
 }) {
   const visibility = useScopedAnswerVisibility(`test:${slug}`, true);
-  const { earned, possible, percent } = manifest.score;
+  const { earned, possible, percent } = test.score;
   const subtitle = (
     <>
-      {earned}/{possible} ({percent}%) · {manifest.student}
+      {earned}/{possible} ({percent}%) · {test.student}
     </>
   );
   return (
     <AnswerVisibilityProvider value={visibility}>
       <QuestionTable
-        questions={questions}
-        standards={manifest.standards}
-        title={manifest.title}
+        questions={test.questions}
+        standards={test.standards}
+        title={test.title}
         subtitle={subtitle}
         slug={slug}
       />
