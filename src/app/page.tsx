@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PointsBadge, type PointsIndicator } from "@/components/PointsBadge";
-import { HomeReviewButton } from "@/components/HomeReviewButton";
+import { HomeWorksheetButton } from "@/components/HomeWorksheetButton";
 
 function indicatorForPercent(percent: number): PointsIndicator {
   if (percent >= 75) return "correct";
@@ -93,7 +93,7 @@ export default async function Home() {
                     <span className="opacity-45 pointer-events-none">%</span>
                   </TableCell>
                   <TableCell>
-                    <HomeReviewButton slug={slug} />
+                    <HomeWorksheetButton slug={slug} />
                   </TableCell>
                 </TableRow>
               ))}

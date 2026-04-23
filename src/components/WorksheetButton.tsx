@@ -3,27 +3,27 @@ import React from "react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
-export function ReviewButton({
+export function WorksheetButton({
   slug,
-  reviewSize,
-  label = "Review Worksheet",
+  worksheetSize,
+  label = "Worksheet",
   className,
 }: {
   slug: string;
-  reviewSize: number;
+  worksheetSize: number;
   label?: React.ReactNode;
   className?: string;
 }) {
-  const reviewEmpty = reviewSize === 0;
+  const worksheetEmpty = worksheetSize === 0;
   return (
     <Link
-      href={`/tests/${slug}/review`}
+      href={`/tests/${slug}/worksheet`}
       className={cn(
         "group/pad bg-debug-red flex items-center",
-        reviewEmpty && "opacity-50 pointer-events-none",
+        worksheetEmpty && "opacity-50 pointer-events-none",
         className,
       )}
-      aria-disabled={reviewEmpty || undefined}
+      aria-disabled={worksheetEmpty || undefined}
     >
       <Button
         variant="default"
@@ -40,7 +40,7 @@ export function ReviewButton({
               "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
             )}
           >
-            <span className="translate-x-[-0.5px]">{reviewSize}</span>
+            <span className="translate-x-[-0.5px]">{worksheetSize}</span>
           </div>
         </div>
         {label}

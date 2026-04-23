@@ -5,8 +5,8 @@ import { QuestionCard } from "@/components/QuestionCard";
 import { AnswerVisibilityToggle } from "@/components/AnswerVisibilityToggle";
 import { Button } from "@/components/ui/button";
 import { TypoH2 } from "@/components/ui/typo";
-import { useReviewSheet } from "@/lib/reviewSheet";
-import { useShowReviewTitle } from "@/lib/settings";
+import { useWorksheet } from "@/lib/worksheet";
+import { useShowWorksheetTitle } from "@/lib/settings";
 import { cn } from "@/lib/utils";
 import type { Manifest, Question } from "@/data/types";
 import {
@@ -28,7 +28,7 @@ import {
 // Matches the sticky header height used on the main test page.
 const stickyHeaderHeight = 108;
 
-export function ReviewViewClient({
+export function WorksheetViewClient({
   manifest,
   questions,
   slug,
@@ -37,11 +37,11 @@ export function ReviewViewClient({
   questions: Question[];
   slug: string;
 }) {
-  const [reviewIds] = useReviewSheet(slug);
-  const reviewQuestions = questions.filter((q) => reviewIds.has(q.n));
-  const [showTitle, setShowTitle] = useShowReviewTitle();
+  const [worksheetIds] = useWorksheet(slug);
+  const worksheetQuestions = questions.filter((q) => worksheetIds.has(q.n));
+  const [showTitle, setShowTitle] = useShowWorksheetTitle();
 
-  // The review sheet lives in localStorage, which is only available
+  // The worksheet lives in localStorage, which is only available
   // after the client hydrates. Don't commit to the "empty" state until
   // we're sure — otherwise the Empty component flashes before the
   // questions load.
@@ -66,7 +66,7 @@ export function ReviewViewClient({
         }
       `}</style>
 
-      {hydrated && reviewQuestions.length > 0 && (
+      {hydrated && worksheetQuestions.length > 0 && (
         <div
           style={{ height: stickyHeaderHeight }}
           className="sticky top-0 z-10 bg-background border-b border-dashed flex flex-col justify-between print:hidden"
@@ -88,7 +88,7 @@ export function ReviewViewClient({
                 <IconArrowLeft />
               </Button>
               <div className="relative min-w-0 grow">
-                <TypoH2 className="truncate">Review Worksheet</TypoH2>
+                <TypoH2 className="truncate">Worksheet</TypoH2>
                 <div className="absolute top-full left-0 right-0 -mt-[1px] text-xs text-muted-foreground truncate">
                   {manifest.title}
                 </div>
@@ -140,15 +140,14 @@ export function ReviewViewClient({
           <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
         )}
 
-        {!hydrated ? null : reviewQuestions.length === 0 ? (
+        {!hydrated ? null : worksheetQuestions.length === 0 ? (
           <Empty className="print:hidden">
             <EmptyMedia>
               <IconClipboardX />
             </EmptyMedia>
-            <EmptyHeader>This review sheet is empty</EmptyHeader>
+            <EmptyHeader>This worksheet is empty</EmptyHeader>
             <EmptyDescription>
-              Add questions to the review sheet by marking them in the test
-              view.
+              Add questions to the worksheet by marking them in the test view.
             </EmptyDescription>
             <EmptyContent>
               <Button
@@ -164,7 +163,7 @@ export function ReviewViewClient({
           </Empty>
         ) : (
           <div className="flex flex-col gap-12">
-            {reviewQuestions.map((q) => (
+            {worksheetQuestions.map((q) => (
               <div
                 key={q.n}
                 data-question-card

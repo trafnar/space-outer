@@ -17,10 +17,10 @@ import { PointsBadge } from "./PointsBadge";
 import { StandardsBadge } from "./StandardsBadge";
 import { QuestionSheet } from "./QuestionSheet";
 import { QuestionDialog } from "./QuestionDialog";
-import { useReviewSheet } from "@/lib/reviewSheet";
+import { useWorksheet } from "@/lib/worksheet";
 import { useRowAction, useShowHeaderRow } from "@/lib/settings";
 import { TestPageHeader } from "./TestPageHeader";
-import { ReviewActionsMenu } from "./ReviewActionsMenu";
+import { WorksheetActionsMenu } from "./WorksheetActionsMenu";
 import { ExpandChevron } from "./ExpandChevron";
 import { AnswerVisibilityToggle } from "./AnswerVisibilityToggle";
 import { QuestionPreview } from "./QuestionPreview";
@@ -58,7 +58,7 @@ export function QuestionTable({
   const [expandedRowIds, setExpandedRowIds] = useState<Set<number>>(
     () => new Set(),
   );
-  const [reviewSheet, setReviewSheet] = useReviewSheet(slug);
+  const [worksheet, setWorksheet] = useWorksheet(slug);
   // SHARED-SELECTION: this is the source of truth for the "active" row.
   // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
   // props (or a context/store hook) and remove this local state.
@@ -80,8 +80,8 @@ export function QuestionTable({
     });
   };
 
-  const toggleInReviewSheet = (n: number) => {
-    setReviewSheet((prev) => {
+  const toggleInWorksheet = (n: number) => {
+    setWorksheet((prev) => {
       const next = new Set(prev);
       if (next.has(n)) next.delete(n);
       else next.add(n);
@@ -105,14 +105,14 @@ export function QuestionTable({
     }
   };
 
-  const addIncorrectToReview = () => {
+  const addIncorrectToWorksheet = () => {
     const incorrect = questions.filter(
       (q) => q.points.earned < q.points.possible,
     );
-    setReviewSheet((prev) => new Set([...prev, ...incorrect.map((q) => q.n)]));
+    setWorksheet((prev) => new Set([...prev, ...incorrect.map((q) => q.n)]));
   };
 
-  const clearReview = () => setReviewSheet(new Set());
+  const clearWorksheet = () => setWorksheet(new Set());
 
   const numberOfIncorrect = questions.filter(
     (q) => q.points.earned < q.points.possible,
@@ -124,7 +124,7 @@ export function QuestionTable({
         title={title}
         subtitle={subtitle}
         slug={slug}
-        reviewSize={reviewSheet.size}
+        worksheetSize={worksheet.size}
         height={stickyHeaderHeight}
         toolbar={
           <div className={cn("px-6 border-t flex items-center -ml-1", "h-11")}>
@@ -153,12 +153,12 @@ export function QuestionTable({
                 </Button>
               </button>
             )}
-            <ReviewActionsMenu
+            <WorksheetActionsMenu
               slug={slug}
-              reviewSize={reviewSheet.size}
+              worksheetSize={worksheet.size}
               numberOfIncorrect={numberOfIncorrect}
-              onAddIncorrect={addIncorrectToReview}
-              onClearReview={clearReview}
+              onAddIncorrect={addIncorrectToWorksheet}
+              onClearWorksheet={clearWorksheet}
             />
             <AnswerVisibilityToggle />
             <button
@@ -201,11 +201,11 @@ export function QuestionTable({
               question={q}
               standards={standards}
               isExpanded={expandedRowIds.has(q.n)}
-              isMarked={reviewSheet.has(q.n)}
+              isMarked={worksheet.has(q.n)}
               isExpandMode={isExpandMode}
               isPopMode={isPopMode}
               isInteractive={isInteractive}
-              onToggleMark={() => toggleInReviewSheet(q.n)}
+              onToggleMark={() => toggleInWorksheet(q.n)}
               // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
               // (and accept it on QuestionTableRow) to render a highlight on
               // the row that's currently open in the sheet.
@@ -314,7 +314,7 @@ function QuestionTableRow({
             className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red"
             aria-pressed={isMarked}
             aria-label={
-              isMarked ? "Remove from review sheet" : "Add to review sheet"
+              isMarked ? "Remove from worksheet" : "Add to worksheet"
             }
           >
             <Button

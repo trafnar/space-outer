@@ -10,27 +10,27 @@ import {
 } from "./ui/dropdown-menu";
 import { IconChevronDown } from "@tabler/icons-react";
 
-export function ReviewActionsMenu({
+export function WorksheetActionsMenu({
   slug,
-  reviewSize,
+  worksheetSize,
   numberOfIncorrect,
   onAddIncorrect,
-  onClearReview,
+  onClearWorksheet,
 }: {
   slug: string;
-  reviewSize: number;
+  worksheetSize: number;
   numberOfIncorrect: number;
   onAddIncorrect: () => void;
-  onClearReview: () => void;
+  onClearWorksheet: () => void;
 }) {
-  const reviewEmpty = reviewSize === 0;
+  const worksheetEmpty = worksheetSize === 0;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         render={
           <button
             className="h-full px-1 group/pad bg-debug-red"
-            aria-label="Review sheet actions"
+            aria-label="Worksheet actions"
           />
         }
       >
@@ -40,28 +40,28 @@ export function ReviewActionsMenu({
           render={<div />}
           size="xs"
         >
-          Review
+          Worksheet
           <IconChevronDown data-icon="inline-end" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-64">
         <DropdownMenuItem
-          disabled={reviewEmpty}
-          render={<Link href={`/tests/${slug}/review`} />}
+          disabled={worksheetEmpty}
+          render={<Link href={`/tests/${slug}/worksheet`} />}
         >
-          Go to review
+          Go to worksheet
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={onAddIncorrect}
           disabled={numberOfIncorrect === 0}
         >
           Add {numberOfIncorrect} incorrect item
-          {numberOfIncorrect === 1 ? "" : "s"} to review
+          {numberOfIncorrect === 1 ? "" : "s"} to worksheet
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={onClearReview} disabled={reviewEmpty}>
-          {reviewSize === 0
-            ? "Clear all review items"
-            : `Clear all ${reviewSize} review item${reviewSize === 1 ? "" : "s"}`}
+        <DropdownMenuItem onClick={onClearWorksheet} disabled={worksheetEmpty}>
+          {worksheetSize === 0
+            ? "Clear all worksheet items"
+            : `Clear all ${worksheetSize} worksheet item${worksheetSize === 1 ? "" : "s"}`}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

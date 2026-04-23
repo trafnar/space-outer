@@ -6,7 +6,7 @@ const SHOW_USER_ANSWER_KEY = `${KEY_PREFIX}showUserAnswer`;
 const SHOW_CORRECT_ANSWER_KEY = `${KEY_PREFIX}showCorrectAnswer`;
 const SHOW_HEADER_ROW_KEY = `${KEY_PREFIX}showHeaderRow`;
 const SHOW_DEBUG_REGIONS_KEY = `${KEY_PREFIX}showDebugRegions`;
-const SHOW_REVIEW_TITLE_KEY = `${KEY_PREFIX}showReviewTitle`;
+const SHOW_WORKSHEET_TITLE_KEY = `${KEY_PREFIX}showWorksheetTitle`;
 
 const listeners = new Set<() => void>();
 
@@ -111,8 +111,8 @@ export function useShowDebugRegions() {
   return useSetting(SHOW_DEBUG_REGIONS_KEY, parseBoolFalseDefault);
 }
 
-/* Review page title visibility */
+/* Worksheet page title visibility */
 
-export function useShowReviewTitle() {
-  return useSetting(SHOW_REVIEW_TITLE_KEY, parseBoolTrueDefault);
+export function useShowWorksheetTitle() {
+  return useSetting(SHOW_WORKSHEET_TITLE_KEY, parseBoolTrueDefault);
 }

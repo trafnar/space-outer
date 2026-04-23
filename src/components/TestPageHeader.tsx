@@ -6,20 +6,20 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { TypoH2 } from "./ui/typo";
-import { ReviewButton } from "./ReviewButton";
+import { WorksheetButton } from "./WorksheetButton";
 
 export function TestPageHeader({
   title,
   subtitle,
   slug,
-  reviewSize,
+  worksheetSize,
   height,
   toolbar,
 }: {
   title?: string;
   subtitle?: React.ReactNode;
   slug: string;
-  reviewSize: number;
+  worksheetSize: number;
   height: number;
   toolbar?: React.ReactNode;
 }) {
@@ -43,9 +43,9 @@ export function TestPageHeader({
             )}
           </div>
         </div>
-        <ReviewButton
+        <WorksheetButton
           slug={slug}
-          reviewSize={reviewSize}
+          worksheetSize={worksheetSize}
           className="h-full pl-2 -ml-2 pr-6 -mr-6"
         />
       </div>

@@ -1,7 +1,11 @@
 import { useCallback, useMemo, useSyncExternalStore } from "react";
 
-export function reviewSheetKey(slug: string) {
-  return `reviewSheet:${slug}`;
+// Keep the legacy "reviewSheet:" localStorage prefix so existing saved
+// selections survive the rename from "review sheet" to "worksheet".
+const STORAGE_PREFIX = "reviewSheet:";
+
+export function worksheetKey(slug: string) {
+  return `${STORAGE_PREFIX}${slug}`;
 }
 
 const listeners = new Set<() => void>();
@@ -9,7 +13,7 @@ const listeners = new Set<() => void>();
 function subscribe(callback: () => void) {
   listeners.add(callback);
   const onStorage = (e: StorageEvent) => {
-    if (e.key === null || e.key.startsWith("reviewSheet:")) callback();
+    if (e.key === null || e.key.startsWith(STORAGE_PREFIX)) callback();
   };
   window.addEventListener("storage", onStorage);
   return () => {
@@ -35,10 +39,10 @@ function parse(raw: string | null): Set<number> {
 
 type Updater = (prev: Set<number>) => Set<number>;
 
-export function useReviewSheet(
+export function useWorksheet(
   slug: string,
 ): [Set<number>, (updater: Updater | Set<number>) => void] {
-  const key = reviewSheetKey(slug);
+  const key = worksheetKey(slug);
 
   const getSnapshot = useCallback(() => {
     if (typeof window === "undefined") return null;

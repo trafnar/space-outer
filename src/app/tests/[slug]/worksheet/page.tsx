@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { getTest } from "@/lib/getTests";
-import { ReviewViewClient } from "./review-view-client";
+import { WorksheetViewClient } from "./worksheet-view-client";
 
 export default async function Page({
   params,
-}: PageProps<"/tests/[slug]/review">) {
+}: PageProps<"/tests/[slug]/worksheet">) {
   const { slug } = await params;
   const test = await getTest(slug);
   if (!test) {
@@ -12,7 +12,7 @@ export default async function Page({
   }
 
   return (
-    <ReviewViewClient
+    <WorksheetViewClient
       manifest={test.manifest}
       questions={test.questions}
       slug={slug}
