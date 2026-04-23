@@ -44,6 +44,26 @@ function writeRaw(prefix: string, key: string, value: string) {
   notifyPrefix(prefix);
 }
 
+function subscribeHydration() {
+  return () => {};
+}
+
+function getHydratedSnapshot() {
+  return true;
+}
+
+function getServerHydratedSnapshot() {
+  return false;
+}
+
+export function useHasHydrated(): boolean {
+  return useSyncExternalStore(
+    subscribeHydration,
+    getHydratedSnapshot,
+    getServerHydratedSnapshot,
+  );
+}
+
 export function useLocalStorageStore<T>({
   key,
   prefix,

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useEffectEvent, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -36,6 +36,13 @@ import { openDebugDialog } from "./DebugDialog";
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
 const stickyHeaderHeight = 108;
+
+function isTextEntryTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false;
+  if (target.isContentEditable) return true;
+  const tag = target.tagName;
+  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+}
 
 export function QuestionTable({
   questions,
@@ -107,36 +114,34 @@ export function QuestionTable({
   // Global keyboard nav: Up/Down move the cursor, x toggles worksheet.
   // Enter is handled at the row level so it always runs exactly once
   // through `activateRow` in whichever mode is current.
+  const handleGlobalKeyDown = useEffectEvent((e: KeyboardEvent) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (isTextEntryTarget(e.target)) return;
+    const isDown = e.key === "ArrowDown" || e.key === "j";
+    const isUp = e.key === "ArrowUp" || e.key === "k";
+    if (isDown || isUp) {
+      e.preventDefault();
+      setSelectedIndex((prev) => {
+        if (prev === null) return 0;
+        const delta = isDown ? 1 : -1;
+        return Math.max(0, Math.min(questions.length - 1, prev + delta));
+      });
+    } else if (e.key === "x") {
+      if (selectedIndex === null) return;
+      e.preventDefault();
+      toggleInWorksheet(questions[selectedIndex].n);
+    }
+  });
+
   useEffect(() => {
     if (!isInteractive) return;
-    const isTextEntryTarget = (target: EventTarget | null) => {
-      if (!(target instanceof HTMLElement)) return false;
-      if (target.isContentEditable) return true;
-      const tag = target.tagName;
-      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
-    };
     const handler = (e: KeyboardEvent) => {
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (isTextEntryTarget(e.target)) return;
-      const isDown = e.key === "ArrowDown" || e.key === "j";
-      const isUp = e.key === "ArrowUp" || e.key === "k";
-      if (isDown || isUp) {
-        e.preventDefault();
-        setSelectedIndex((prev) => {
-          if (prev === null) return 0;
-          const delta = isDown ? 1 : -1;
-          return Math.max(0, Math.min(questions.length - 1, prev + delta));
-        });
-      } else if (e.key === "x") {
-        if (selectedIndex === null) return;
-        e.preventDefault();
-        toggleInWorksheet(questions[selectedIndex].n);
-      }
+      handleGlobalKeyDown(e);
     };
     window.addEventListener("keydown", handler, { capture: true });
     return () =>
       window.removeEventListener("keydown", handler, { capture: true });
-  }, [isInteractive, questions, selectedIndex]);
+  }, [isInteractive]);
 
   // Keep focus + viewport aligned with the cursor. Moving the cursor
   // moves DOM focus to the same row so "focused" and "selected" are
