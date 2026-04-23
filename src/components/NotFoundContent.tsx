@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { IconArrowLeft, IconFileSearch } from "@tabler/icons-react";
+import { Button } from "@/components/ui/button";
+import {
+  Empty,
+  EmptyContent,
+  EmptyDescription,
+  EmptyHeader,
+  EmptyMedia,
+} from "@/components/ui/empty";
 
 export function NotFoundContent({
   title,
@@ -8,15 +17,25 @@ export function NotFoundContent({
   description: string;
 }) {
   return (
-    <>
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <p className="mt-2 opacity-60">{description}</p>
-      <Link
-        href="/"
-        className="mt-4 inline-block text-teal-700 hover:underline"
-      >
-        Back to tests
-      </Link>
-    </>
+    <div className="flex flex-1 items-center justify-center p-6 pb-16">
+      <Empty>
+        <EmptyMedia>
+          <IconFileSearch />
+        </EmptyMedia>
+        <EmptyHeader>{title}</EmptyHeader>
+        <EmptyDescription>{description}</EmptyDescription>
+        <EmptyContent>
+          <Button
+            variant="outline"
+            size="sm"
+            nativeButton={false}
+            render={<Link href="/" />}
+          >
+            <IconArrowLeft />
+            Back to tests
+          </Button>
+        </EmptyContent>
+      </Empty>
+    </div>
   );
 }
