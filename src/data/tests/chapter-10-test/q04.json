@@ -1,0 +1,64 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-7.0QD4HGQ&qtxt=x5cfpdqe10cj00&qres=zzniud1fbdlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-7.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Rita's class begins social studies at thirty minutes before one in the afternoon. At what time does Rita's class begin social studies? Select a time that makes the sentence true. Rita's class begins social studies at "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:30 A.M."
+        },
+        {
+          "id": "B",
+          "text": "1:30 P.M."
+        },
+        {
+          "id": "C",
+          "text": "12:30 A.M."
+        },
+        {
+          "id": "D",
+          "text": "12:30 P.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

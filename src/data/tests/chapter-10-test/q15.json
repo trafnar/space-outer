@@ -1,0 +1,76 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-31.0QD4HGQ&qtxt=x4clnq1e10cj00&qres=zzrh8hcfldneotwe7xgjk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-31.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Park takes the 9:33 A.M. train to the city. The trip takes 3 hours and 10 minutes. What time does Mrs. Park arrive in the city? Mrs. Park arrives in the city at "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "A.M"
+        },
+        {
+          "id": "B",
+          "text": "P.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "12",
+      "b2": "43",
+      "b3": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "12",
+      "b2": "43",
+      "b3": "B"
+    }
+  }
+}

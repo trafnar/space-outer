@@ -1,0 +1,140 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-1.0QD4HGQ&qtxt=x4cr54je10cj00&qres=zzhc0fpf1e7b2ghddyp80ht7701ddyofkht5pa8dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-1.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Yul and Sarah's art class started at 11:20 A.M. The class lasted 30 minutes. Yul left when the class was done. Sarah stayed an extra 10 minutes to talk with the teacher and then left. Enter the time that each student left. Complete the explanation of how you found each time. Yul left when class was done. So, add the "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " minutes to the time class started to find when Yul left. Yul left at "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": ". The time when Sarah left class is the time class ended plus "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " minutes. Sarah left at "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b8"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "A.M."
+        },
+        {
+          "id": "B",
+          "text": "P.M."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b8",
+      "options": [
+        {
+          "id": "A",
+          "text": "A.M."
+        },
+        {
+          "id": "B",
+          "text": "P.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "30",
+      "b2": "11",
+      "b3": "50",
+      "b4": "A",
+      "b5": "10",
+      "b6": "12",
+      "b7": "00",
+      "b8": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "30",
+      "b2": "10",
+      "b3": "50",
+      "b4": "B",
+      "b5": "10",
+      "b6": "10",
+      "b7": "00",
+      "b8": "B"
+    }
+  }
+}

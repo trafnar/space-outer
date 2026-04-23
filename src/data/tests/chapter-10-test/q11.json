@@ -1,0 +1,57 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-22.0QD4HGQ&qtxt=x4co2kpe10cj00&qres=zzbat6gdddd6l9oe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-22.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the items that would be best measured in grams. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "lettuce leaf"
+        },
+        {
+          "id": "B",
+          "text": "watermelon"
+        },
+        {
+          "id": "C",
+          "text": "garlic clove"
+        },
+        {
+          "id": "D",
+          "text": "cherry"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,C,D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,C,D"
+    }
+  }
+}

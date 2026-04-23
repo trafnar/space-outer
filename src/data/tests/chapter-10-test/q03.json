@@ -1,0 +1,42 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-6.0QD4HGQ&qtxt=x4daf50e10cj00&qres=zzb9e0jfbehiqkg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-6.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dina started swimming at 3:35 P.M. She swam until 4:11 P.M. How long did Dina swim? Dina swam for "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " minutes."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "36"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "46"
+    }
+  }
+}

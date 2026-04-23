@@ -1,0 +1,71 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-15.0QD4HGQ&qtxt=x4dcw4ue10cj00&qres=zzxif5ff1dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-15.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tran checked the time on his watch after he finished his daily run."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d1.png",
+      "alt": "redclock2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the time that Tran finished running. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "eight forty-seven"
+        },
+        {
+          "id": "B",
+          "text": "nine forty-seven"
+        },
+        {
+          "id": "C",
+          "text": "quarter to nine"
+        },
+        {
+          "id": "D",
+          "text": "13 minutes before nine"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

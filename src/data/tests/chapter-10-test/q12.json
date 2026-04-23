@@ -1,0 +1,212 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-23.0QD4HGQ&qtxt=x3cc7q2e10cj00&qres=zzdknxyf1e7xglcehx268dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-23.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Samir made a list of what he did on Tuesday. Select the letter for each activity next to the time he did it. A.Get out of bed. "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "8:05 A.M.B.Walk to school. "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "6:45 P.M.C.Eat lunch. "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "3:50 P.M.D.Go to guitar lesson after school. "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": "11:43 A.M.E.Eat dinner at home. "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": "6:20 A.M."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "D"
+        },
+        {
+          "id": "E",
+          "text": "E"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "D"
+        },
+        {
+          "id": "E",
+          "text": "E"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "D"
+        },
+        {
+          "id": "E",
+          "text": "E"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "D"
+        },
+        {
+          "id": "E",
+          "text": "E"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b5",
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "B"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "D"
+        },
+        {
+          "id": "E",
+          "text": "E"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "E",
+      "b3": "D",
+      "b4": "C",
+      "b5": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "D",
+      "b2": "B",
+      "b3": "E",
+      "b4": "C",
+      "b5": "A"
+    }
+  }
+}

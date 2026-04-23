@@ -1,0 +1,71 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-33.0QD4HGQ&qtxt=x6dgr12e10s300&qres=yzdkn5hdddlokscub741osd9xyydxs8kmh9nd65h7jiuygfn8shgfn8sbgfn8sbgfvo6zi3kt2zgfn8shgfvo75gfvo6zi3kilv1o94rxh9asmeh97z1ugp67umgp698e&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-33.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1 Ashley measures the shells she collects. She records the measurements in a chart. Ashley found a razor clam shell this long."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q17-d1.png",
+      "alt": "rectangle1"
+    },
+    {
+      "type": "diagram",
+      "file": "q17-d2.png",
+      "alt": "ruler11"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the measurement in the chart. Number of ShellsLength in Inches 11 2212 3112 12 "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "AP 2 Part 2 Complete the line plot to show the data in the chart. Drag and drop an X to mark each data point. Place the first X for each length closest to the line. How many shells are longer than 2 inches? Complete the explanation on how you know. 0 12 1 112 2 212 3 312 4 Length of Shells Measured to the Nearest Half Inch X X X X X X X X X X There is/are "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " shells that are longer than 2 inches. I counted the number of Xs above 212 and AP 5 ."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "1",
+      "b2": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "1",
+      "b2": "3"
+    }
+  }
+}

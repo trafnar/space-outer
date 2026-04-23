@@ -1,0 +1,86 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-28.0QD4HGQ&qtxt=x3e3ms8e10cj00&qres=zzdovnaf1flvfi0htct9s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-28.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Amy has 26 grams of flour. She puts 3 grams of flour in each pot of chowder that she makes. She puts 5 grams of flour in each pot of potato soup that she makes. She makes 4 pots of chowder. Does Amy have enough flour left over to make 3 pots of potato soup? Complete the explanation. First, you found how much flour she used, "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " grams; then you found how much flour was left, "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " grams, and compared it to what she needed to make 3 pots of soup, "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " grams. Amy "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " have enough flour left over to make 3 pots of potato soup."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "does not"
+        },
+        {
+          "id": "B",
+          "text": "does"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "12",
+      "b2": "14",
+      "b3": "15",
+      "b4": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8",
+      "b2": "18",
+      "b3": "5",
+      "b4": "A"
+    }
+  }
+}

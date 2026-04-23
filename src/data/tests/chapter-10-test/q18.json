@@ -1,0 +1,84 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-35.0QD4HGQ&qtxt=x4dnbh3e10cj00&qres=zzhj12perdny9z4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-35.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lucy fills a bathroom sink with water. Is the amount of water more than 1 liter, about 1 liter, or less than 1 liter? Complete the explanation. A liter is only about the amount in a medium bottle of water. That amount would "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " a sink, so the full sink has "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " 1 liter."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "fill"
+        },
+        {
+          "id": "B",
+          "text": "not fill"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "more than"
+        },
+        {
+          "id": "B",
+          "text": "less than"
+        },
+        {
+          "id": "C",
+          "text": "about"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "C"
+    }
+  }
+}
