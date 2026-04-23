@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__find",
+      "Bash(railway logs *)",
+      "Bash(railway variables *)",
+      "Bash(git ls-tree *)",
+      "Bash(pnpm tsc)"
+    ]
+  }
+}
