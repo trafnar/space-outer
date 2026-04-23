@@ -1,0 +1,57 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-6.0LEFJDO&qtxt=x2bpadge10cj00&qres=zzhet68dddn66m8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-6.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dan and Miguel are working on the same homework assignment. Dan has finished 18 of the assignment. Miguel has finished 78 of the assignment. Which statements are correct? Mark all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "Miguel has completed the entire assignment."
+        },
+        {
+          "id": "B",
+          "text": "Dan has not completed the entire assignment."
+        },
+        {
+          "id": "C",
+          "text": "Miguel has finished more of the assignment than Dan."
+        },
+        {
+          "id": "D",
+          "text": "Dan and Miguel have completed equal parts of the assignment."
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,C"
+    }
+  }
+}

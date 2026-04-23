@@ -1,0 +1,102 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-7.3VOT5DV&qtxt=x3dob8be10cj00&qres=zzxier8fvdxxv5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-7.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tomas drew two rectangles on grid paper. Select the words that make the sentence true."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "3recx"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Rectangle A has an area that is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " the area of Rectangle B and a perimeter that is "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " the perimeter of Rectangle B."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "less than"
+        },
+        {
+          "id": "B",
+          "text": "greater than"
+        },
+        {
+          "id": "C",
+          "text": "the same as"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "greater than"
+        },
+        {
+          "id": "B",
+          "text": "less than"
+        },
+        {
+          "id": "C",
+          "text": "the same as"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C",
+      "b2": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "C",
+      "b2": "B"
+    }
+  }
+}

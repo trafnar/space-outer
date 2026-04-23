@@ -1,0 +1,56 @@
+{
+  "n": 20,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-28.0LEFJDO&qtxt=x4d0stde10cj00&qres=zzdougldndvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-28.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sam went for a ride on a sailboat. The ride lasted 13 hour."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q20-d1.gif",
+      "alt": "2of666"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What fraction is equivalent to 13? 13 is equivalent to "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "6."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2"
+    }
+  }
+}

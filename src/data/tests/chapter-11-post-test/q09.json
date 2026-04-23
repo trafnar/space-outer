@@ -1,0 +1,56 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-9.3VOT5DV&qtxt=x3cjdsre10cj00&qres=zznd73merdncxkw&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-9.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.6"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the area of the figure shown? Each unit square is 1 square meter."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q09-d1.png",
+      "alt": "rec3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " square meters."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "11"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "11"
+    }
+  }
+}

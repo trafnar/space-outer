@@ -1,0 +1,60 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-14.0LEFJDO&qtxt=x3df3wccv3jd00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-14.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jenna painted 13 of one side of a fence. Mark painted 12 of the other side of the same fence. Use >, =, or < to compare the parts that they painted. 13 "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " 12"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "<"
+        },
+        {
+          "id": "B",
+          "text": ">"
+        },
+        {
+          "id": "C",
+          "text": "="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

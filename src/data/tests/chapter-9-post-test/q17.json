@@ -1,0 +1,112 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-25.0LEFJDO&qtxt=x3c889me10cj00&qres=zz1e0c0erddyon4dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-25.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cora measures the heights of three plants. For each height, select the word that describes its place in the order of heights. 26foot"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " 22foot"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " 24foot"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "least"
+        },
+        {
+          "id": "B",
+          "text": "between"
+        },
+        {
+          "id": "C",
+          "text": "greatest"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "least"
+        },
+        {
+          "id": "B",
+          "text": "between"
+        },
+        {
+          "id": "C",
+          "text": "greatest"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "least"
+        },
+        {
+          "id": "B",
+          "text": "between"
+        },
+        {
+          "id": "C",
+          "text": "greatest"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "C",
+      "b3": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "C",
+      "b3": "B"
+    }
+  }
+}

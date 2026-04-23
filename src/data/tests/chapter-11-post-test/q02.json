@@ -1,0 +1,56 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-2.3VOT5DV&qtxt=x3ddcrqe10cj00&qres=zzl8yesdne7diww&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-2.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Kim wants to put trim around a picture she drew. Each side is 8 centimeters in length. How many centimeters of trim does Kim need for the perimeter of the picture?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "flowers"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Kim needs "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " centimeters of trim."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "32"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "32"
+    }
+  }
+}

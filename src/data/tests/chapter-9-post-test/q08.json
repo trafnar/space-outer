@@ -1,0 +1,61 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-12.0LEFJDO&qtxt=x4ddsjie10cj00&qres=zzdougldndvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-12.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tom rode his horse 48 mile. Liz rode her horse an equal distance. Complete the equivalent fraction that describes how far Liz rode."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d1.png",
+      "alt": "48"
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d2.png",
+      "alt": "b"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "48="
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "4"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2"
+    }
+  }
+}

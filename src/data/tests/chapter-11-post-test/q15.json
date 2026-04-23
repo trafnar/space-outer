@@ -1,0 +1,82 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-19.3VOT5DV&qtxt=x6br1s8e10cj00&qres=zzdng34f1ehx2dcdneottdvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-19.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.7a"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Keisha draws a sketch of her living room on grid paper. Each unit square is 1 square meter. Enter a multiplication equation that can be used to find the area of the living room in square meters."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q15-d1.png",
+      "alt": "rec3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " × "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " So, the area of the living room is "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " square meters."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "4",
+      "b3": "12",
+      "b4": "12"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4",
+      "b2": "3",
+      "b3": "12",
+      "b4": "12"
+    }
+  }
+}

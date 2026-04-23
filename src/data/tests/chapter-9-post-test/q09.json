@@ -1,0 +1,52 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-13.0LEFJDO&qtxt=x4bw2omcv3jd00&qres=zz1jmexe7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-13.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Avery prepares 2 equal-size oranges for the bats at the zoo. One dish has 18 of an orange. Another dish has 14 of an orange. Select the true statement about which dish has more orange."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "The dish with 1 8 of an orange has more orange."
+        },
+        {
+          "id": "B",
+          "text": "The dish with 1 4 of an orange has more orange."
+        },
+        {
+          "id": "C",
+          "text": "The two dishes have the same amount of orange."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B"
+    }
+  }
+}

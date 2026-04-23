@@ -1,0 +1,115 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-17.3VOT5DV&qtxt=x4c0h33e10s300&qres=zzdc7xufbdnyalsht8itcdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-17.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Anthony wants to make two different rectangular flowerbeds, each with an area of 24 square feet. He will build a wooden frame around each flowerbed. The flowerbeds will have side lengths that are whole numbers. Flowerbed 1 is shown below."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q14-d1.png",
+      "alt": "a24x1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1 Each unit square is 1 square foot. Select another possible flowerbed that has an area of 24 square feet. Part 2 Which of the flowerbeds will take more wood to frame? Complete the explanation. Flowerbed 1 has a perimeter of "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " feet. Flowerbed 2 has a perimeter of "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " feet. So, Flowerbed "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " will take more wood to frame."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q14-d2.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q14-d3.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q14-d4.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q14-d5.png]"
+        }
+      ],
+      "multiple": true
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B",
+      "b1": "50",
+      "b2": "22",
+      "b3": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B",
+      "b1": "50",
+      "b2": "22",
+      "b3": "A"
+    }
+  }
+}

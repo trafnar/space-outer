@@ -1,0 +1,57 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-16.3VOT5DV&qtxt=x5c0iare10cj00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-16.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Marcus bought some postcards. Each postcard had a perimeter of 18 inches. Which could be one of the postcards Marcus bought? Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q13-d1.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q13-d2.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q13-d3.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q13-d4.png]"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

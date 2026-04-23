@@ -1,0 +1,105 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-10.0LEFJDO&qtxt=x6ce55ve10s300&qres=zzdngaedde7xgzkefevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-10.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Reed baked four pans of lasagna for a family party. Part 1 Select the model that represents how Mrs. Reed could cut one pan of lasagna into thirds, one into fourths, one into sixths, and one into eighths. Part 2 At the end of the party, equivalent amounts of lasagna were left in two sets of pans. Use the models to find equivalent amounts of lasagna that might have been left over. Then complete the two pairs of equivalent fractions."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "screenhunter51sep2311191"
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d2.png",
+      "alt": "screenhunter52sep2311191"
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d3.png",
+      "alt": "screenhunter53sep23111911"
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d4.png",
+      "alt": "screenhunter54sep23112011"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "13 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "6 24 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "8"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q07-d5.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q07-d5.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q07-d5.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q07-d5.png]"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "D",
+      "b1": "2",
+      "b2": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "D",
+      "b1": "3",
+      "b2": "4"
+    }
+  }
+}

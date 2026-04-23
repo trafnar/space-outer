@@ -1,0 +1,76 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-20.3VOT5DV&qtxt=x4d38sfe10cj00&qres=zzbdlpwdxflvgvlhtgz5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-20.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.7d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mr. Wicks designs houses. He uses grid paper to plan a new house design. The kitchen will have an area between 70 square feet and 90 square feet. The pantry will have an area between 4 square feet and 15 square feet. The diagram shows what Mr. Wicks could design."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d1.png",
+      "alt": "kitchen2"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how to find the total area. First, you find the area of each piece. The area of the pantry is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " square feet. The area of the kitchen is "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " square feet. Then, you add the areas to find the total area. The total area is "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " square feet."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8",
+      "b2": "81",
+      "b3": "89"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8",
+      "b2": "81",
+      "b3": "87"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-10.3VOT5DV&qtxt=x3d26oee10cj00&qres=zzniud1fbe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-10.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Shawn drew a rectangle that was 2 units wide and 6 units long. Select a different rectangle that has the same perimeter but different area."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q10-d1.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q10-d2.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q10-d3.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q10-d4.png]"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "D"
+    }
+  }
+}

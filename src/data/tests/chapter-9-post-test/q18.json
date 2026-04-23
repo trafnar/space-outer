@@ -1,0 +1,56 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-26.0LEFJDO&qtxt=x4d3grge10cj00&qres=zzdougldndvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-26.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Danielle drew a model to show equivalent fractions."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q18-d1.png",
+      "alt": "img151111"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the model to complete the number sentence. 12 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "4"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2"
+    }
+  }
+}

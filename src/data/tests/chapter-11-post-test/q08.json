@@ -1,0 +1,56 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-8.3VOT5DV&qtxt=x3crpfse10cj00&qres=zzb9df9dddxi58g&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-8.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Yuji drew this figure on grid paper. What is the perimeter of the figure?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d1.png",
+      "alt": "figure5"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The perimeter is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " units."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "24"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "25"
+    }
+  }
+}

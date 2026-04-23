@@ -1,0 +1,108 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-7.0LEFJDO&qtxt=x4e64dme10cj00&qres=zzvbdpvfldxxv7kdlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-7.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Bryan cut two peaches that were the same size for lunch. He cut one peach into thirds and the other into sixths. Bryan ate 23 of the first peach. His brother ate 56 of the second peach. Who ate more peach? Complete the explanation of a strategy you could use to solve the problem. The problem could be solved using the "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " strategy. A "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " piece remains from his brother's peach, so "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " ate more."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "same numerator"
+        },
+        {
+          "id": "B",
+          "text": "same denominator"
+        },
+        {
+          "id": "C",
+          "text": "missing pieces"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "smaller"
+        },
+        {
+          "id": "B",
+          "text": "larger"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bryan"
+        },
+        {
+          "id": "B",
+          "text": "his brother"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C",
+      "b2": "A",
+      "b3": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "C",
+      "b2": "B",
+      "b3": "B"
+    }
+  }
+}

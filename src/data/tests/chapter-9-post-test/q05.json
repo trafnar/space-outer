@@ -1,0 +1,80 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-8.0LEFJDO&qtxt=x3cf358e10cj00&qres=zzbc6rafvdny9s0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-8.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A nature center offers 2 guided walks. The morning walk is 34 mile. The evening walk is 48 mile. Which walk is shorter? Use the model to find the answer. 141414141818181818181818 Complete the explanation. The length of the model for 48 is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " than the length of the model for 34. So, the "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " walk is shorter."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "less"
+        },
+        {
+          "id": "B",
+          "text": "greater"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "morning"
+        },
+        {
+          "id": "B",
+          "text": "evening"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "B"
+    }
+  }
+}

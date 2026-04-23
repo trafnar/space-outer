@@ -1,0 +1,124 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-12.3VOT5DV&qtxt=x3dk8bfe10cj00&qres=zzlisl3e7dny9modny9kw&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-12.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.7b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Elizabeth has two gardens in her yard. The first garden is 6 feet long and 4 feet wide. The second garden is double the width of the first garden. The area of the second garden is double the area of the first garden. Select True or False for each sentence. The area of the first garden is 24 square feet. "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " The area of the second garden is 48 square feet. "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " The length of the second garden is 12 feet. "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " The length of the second garden is 6 feet. "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "A",
+      "b3": "B",
+      "b4": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "A",
+      "b3": "B",
+      "b4": "A"
+    }
+  }
+}

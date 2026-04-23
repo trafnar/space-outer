@@ -1,0 +1,79 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-4.3VOT5DV&qtxt=x4bwjloe10cj00&qres=zzhet68dddn66m8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-4.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The drawing shows Seth's plan for a fort in his backyard. Each unit square is 1 square foot."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "rec1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which equations can Seth use to find the area of the fort? Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "7 + 4 + 7 + 4 = 22"
+        },
+        {
+          "id": "B",
+          "text": "7 + 7 + 7 + 7 = 28"
+        },
+        {
+          "id": "C",
+          "text": "4 × 7 = 28"
+        },
+        {
+          "id": "D",
+          "text": "7 × 7= 49"
+        },
+        {
+          "id": "E",
+          "text": "4 + 4 + 7 + 4 = 16"
+        },
+        {
+          "id": "F",
+          "text": "4 × 4 = 16"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,C"
+    }
+  }
+}

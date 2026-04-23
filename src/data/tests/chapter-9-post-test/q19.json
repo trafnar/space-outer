@@ -1,0 +1,128 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-27.0LEFJDO&qtxt=x4ct92fe10cj00&qres=zzvgz05fbddyptsehx1s0dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-27.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Floyd caught a fish that weighed 78 pound. Kira caught a fish that weighed 34 pound. Whose fish weighed more? Complete the explanation. "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " fish weighed more. The missing piece from the whole, 88 is 1"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": ", and the missing piece from the whole, 44 is 1"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": ". The fraction with the "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " missing piece is greater, so 78 "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " 34."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Floyd's"
+        },
+        {
+          "id": "B",
+          "text": "Kira's"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "smaller"
+        },
+        {
+          "id": "B",
+          "text": "larger"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b5",
+      "options": [
+        {
+          "id": "A",
+          "text": "<"
+        },
+        {
+          "id": "B",
+          "text": ">"
+        },
+        {
+          "id": "C",
+          "text": "="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "8",
+      "b3": "4",
+      "b4": "A",
+      "b5": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "8",
+      "b3": "4",
+      "b4": "A",
+      "b5": "B"
+    }
+  }
+}

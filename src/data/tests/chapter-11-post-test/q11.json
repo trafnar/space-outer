@@ -1,0 +1,56 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-12-11.3VOT5DV&qtxt=x6c5rk3e10cj00&qres=zzbhstwfbdnjyf4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-12-11.3VOT5DV",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Rios put a wallpaper border around the room shown below. She used 72 feet of wallpaper border. What is the unknown side length?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "rec12"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The unknown side length is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " feet."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "16"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "16"
+    }
+  }
+}

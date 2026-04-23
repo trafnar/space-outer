@@ -1,0 +1,65 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-21.0LEFJDO&qtxt=x5db72qe10cj00&qres=zzhj035fvdd6l2kefevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-21.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ming needs 12 pint of red paint for an art project. He has 6 jars that have the following amounts of red paint in them. He wants to use only 1 jar of paint. Select all of the jars of paint that Ming could use. The jars that Ming could use are:"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 3 pint"
+        },
+        {
+          "id": "B",
+          "text": "1 4 pint"
+        },
+        {
+          "id": "C",
+          "text": "2 6 pint"
+        },
+        {
+          "id": "D",
+          "text": "3 4 pint"
+        },
+        {
+          "id": "E",
+          "text": "5 8 pint"
+        },
+        {
+          "id": "F",
+          "text": "4 6 pint"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "D,E,F"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,B,E"
+    }
+  }
+}

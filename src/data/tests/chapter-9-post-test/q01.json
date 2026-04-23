@@ -1,0 +1,120 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-1.0LEFJDO&qtxt=x3btt24e10cj00&qres=zzrk0txfbf1w9c0ehx2yoddyoe8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-1.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alexa and Rose read books that have the same number of pages. Alexa's book is divided into 6 equal chapters. Rose's book is divided into 4 equal chapters. Each girl has read 3 chapters of her book. Complete each fraction to describe what part of the book each girl read. Then tell who read more pages. Complete the explanation. Alexa read 3"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " of her book. Rose read 3"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " of her book. 3"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " > 3"
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": ", so "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " read more pages. Since the denominators are different, the book with "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " chapters will have more pages per chapter."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b5",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rose"
+        },
+        {
+          "id": "B",
+          "text": "Alexa"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b6",
+      "options": [
+        {
+          "id": "A",
+          "text": "greater"
+        },
+        {
+          "id": "B",
+          "text": "fewer"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6",
+      "b2": "4",
+      "b3": "4",
+      "b4": "6",
+      "b5": "A",
+      "b6": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "4",
+      "b3": "4",
+      "b4": "6",
+      "b5": "A",
+      "b6": "B"
+    }
+  }
+}

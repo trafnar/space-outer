@@ -1,0 +1,200 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-9-19.0LEFJDO&qtxt=x3bp65se10s300&qres=zzlbsj7dxddyog0dny9modny9tsdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-9-19.0LEFJDO",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jorge, Lynne, and Crosby meet at the playground. Jorge lives 78 mile from the playground. Lynne lives 68 mile from the playground. Crosby lives 34 mile from the playground. Part 1 Who lives closer to the playground, Jorge or Lynne? Complete the explanation. "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " lives closer to the playground. I can use the same denominator strategy. 7 "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " 6, so 78 is "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " 68. Part 2 Who lives closer to the playground, Jorge or Crosby? Complete the explanation. "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " lives closer to the playground. I can use the missing pieces strategy. Since 18 "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " 14, 78 will have a "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " piece missing from the whole than 34. So 78 is "
+        },
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": " 34."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jorge"
+        },
+        {
+          "id": "B",
+          "text": "Lynne"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "<"
+        },
+        {
+          "id": "B",
+          "text": ">"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "less than"
+        },
+        {
+          "id": "B",
+          "text": "greater than"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jorge"
+        },
+        {
+          "id": "B",
+          "text": "Crosby"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b5",
+      "options": [
+        {
+          "id": "A",
+          "text": ">"
+        },
+        {
+          "id": "B",
+          "text": "<"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b6",
+      "options": [
+        {
+          "id": "A",
+          "text": "smaller"
+        },
+        {
+          "id": "B",
+          "text": "larger"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b7",
+      "options": [
+        {
+          "id": "A",
+          "text": "less than"
+        },
+        {
+          "id": "B",
+          "text": "greater than"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "B",
+      "b3": "B",
+      "b4": "B",
+      "b5": "B",
+      "b6": "A",
+      "b7": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "B",
+      "b3": "B",
+      "b4": "A",
+      "b5": "B",
+      "b6": "B",
+      "b7": "A"
+    }
+  }
+}
