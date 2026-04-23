@@ -4,7 +4,6 @@ import {
   IconMoodHappy,
   IconMoodSadDizzy,
 } from "@tabler/icons-react";
-import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 
 export type PointsIndicator = "wrong" | "partial" | "correct";
@@ -30,10 +29,12 @@ export function PointsBadge({
   const score: 0 | 1 | 2 =
     indicator === "correct" ? 2 : indicator === "partial" ? 1 : 0;
   return (
-    <Badge
-      variant={score === 2 ? "green" : score === 1 ? "yellow" : "red"}
+    <div
       className={cn(
-        "flex tabular-nums pl-0 gap-0.5 bg-transparent border-none ring-0 pointer-events-none",
+        "inline-flex w-fit shrink-0 items-center gap-0.5 overflow-hidden text-xs font-semibold whitespace-nowrap tabular-nums pointer-events-none",
+        score === 2 && "text-correct-green",
+        score === 1 && "text-amber-600",
+        score === 0 && "text-wrong-red",
       )}
     >
       <div className="pr-1">
@@ -54,6 +55,6 @@ export function PointsBadge({
           </>
         )}
       </span>
-    </Badge>
+    </div>
   );
 }

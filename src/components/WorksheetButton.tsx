@@ -37,7 +37,7 @@ export function WorksheetButton({
             data-icon="inline-start"
             className={cn(
               "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
-              "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
+              "text-primary group-hover:text-primary/80 group-hover/pad:text-primary/80 flex items-center justify-center -translate-x-0.5",
             )}
           >
             <span className="translate-x-[-0.5px]">{worksheetSize}</span>
