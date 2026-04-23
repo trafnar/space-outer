@@ -1,9 +1,5 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useSyncExternalStore,
-} from "react";
+import { createContext, useCallback, useContext } from "react";
+import { useLocalStorageStore } from "@/lib/useLocalStorageStore";
 
 const KEY_PREFIX = "spaceOuterSetting:";
 const ROW_ACTION_KEY = `${KEY_PREFIX}rowAction`;
@@ -13,47 +9,19 @@ const SHOW_HEADER_ROW_KEY = `${KEY_PREFIX}showHeaderRow`;
 const SHOW_DEBUG_REGIONS_KEY = `${KEY_PREFIX}showDebugRegions`;
 const SHOW_WORKSHEET_TITLE_KEY = `${KEY_PREFIX}showWorksheetTitle`;
 
-const listeners = new Set<() => void>();
-
-function subscribe(callback: () => void) {
-  listeners.add(callback);
-  const onStorage = (e: StorageEvent) => {
-    if (e.key === null || e.key.startsWith(KEY_PREFIX)) callback();
-  };
-  window.addEventListener("storage", onStorage);
-  return () => {
-    listeners.delete(callback);
-    window.removeEventListener("storage", onStorage);
-  };
-}
-
-function notifyAll() {
-  listeners.forEach((l) => l());
-}
-
-function readRaw(key: string): string | null {
-  if (typeof window === "undefined") return null;
-  return window.localStorage.getItem(key);
-}
-
-function writeRaw(key: string, value: string) {
-  if (typeof window === "undefined") return;
-  window.localStorage.setItem(key, value);
-  notifyAll();
-}
-
 function useSetting<T>(
   key: string,
   parse: (raw: string | null) => T,
 ): [T, (value: T) => void] {
-  const getSnapshot = useCallback(() => readRaw(key), [key]);
-  const raw = useSyncExternalStore(subscribe, getSnapshot, () => null);
-  const value = parse(raw);
-
-  const setValue = useCallback(
-    (next: T) => writeRaw(key, String(next)),
-    [key],
-  );
+  const [value, setStoredValue] = useLocalStorageStore({
+    key,
+    prefix: KEY_PREFIX,
+    parse,
+    serialize: String,
+  });
+  const setValue = useCallback((next: T) => setStoredValue(next), [
+    setStoredValue,
+  ]);
 
   return [value, setValue];
 }
