@@ -104,9 +104,9 @@ export function QuestionTable({
     else if (isPopMode || isSheetMode) setIsModalOpen(true);
   };
 
-  // Global keyboard nav: Up/Down move the cursor, Enter opens / toggles.
-  // Active only in interactive modes (expand / pop / sheet). Works whether
-  // the modal is open or not — the modal's content is driven by selection.
+  // Global keyboard nav: Up/Down move the cursor, x toggles worksheet.
+  // Enter is handled at the row level so it always runs exactly once
+  // through `activateRow` in whichever mode is current.
   useEffect(() => {
     if (!isInteractive) return;
     const isTextEntryTarget = (target: EventTarget | null) => {
@@ -127,11 +127,6 @@ export function QuestionTable({
           const delta = isDown ? 1 : -1;
           return Math.max(0, Math.min(questions.length - 1, prev + delta));
         });
-      } else if (e.key === "Enter") {
-        if (selectedIndex === null) return;
-        e.preventDefault();
-        if (isExpandMode) toggleRow(questions[selectedIndex].n);
-        else if (isPopMode || isSheetMode) setIsModalOpen(true);
       } else if (e.key === "x") {
         if (selectedIndex === null) return;
         e.preventDefault();
@@ -141,14 +136,7 @@ export function QuestionTable({
     window.addEventListener("keydown", handler, { capture: true });
     return () =>
       window.removeEventListener("keydown", handler, { capture: true });
-  }, [
-    isInteractive,
-    isExpandMode,
-    isPopMode,
-    isSheetMode,
-    questions,
-    selectedIndex,
-  ]);
+  }, [isInteractive, questions, selectedIndex]);
 
   // Keep focus + viewport aligned with the cursor. Moving the cursor
   // moves DOM focus to the same row so "focused" and "selected" are
