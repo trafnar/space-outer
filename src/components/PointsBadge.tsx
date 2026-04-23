@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import {
   IconMoodAnnoyed,
   IconMoodHappy,
@@ -12,10 +13,12 @@ export function PointsBadge({
   earned,
   possible,
   forceIndicator,
+  customText,
 }: {
   earned: number;
   possible: number;
   forceIndicator?: PointsIndicator;
+  customText?: ReactNode;
 }) {
   const indicator: PointsIndicator =
     forceIndicator ??
@@ -43,9 +46,13 @@ export function PointsBadge({
         )}
       </div>
       <span className="text-foreground contents">
-        {earned}
-        <span className="opacity-45">/</span>
-        {possible}
+        {customText ?? (
+          <>
+            {earned}
+            <span className="opacity-45">/</span>
+            {possible}
+          </>
+        )}
       </span>
     </Badge>
   );

@@ -34,32 +34,32 @@ export default async function Home() {
   const tests = await listTests();
 
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-16 flex flex-col items-center">
-      <Image
-        src="/logo.svg"
-        alt="Space Outer"
-        width={64}
-        height={64}
-        className="size-16"
-        priority
-      />
-      <TypoH1 className="mt-6 text-center text-4xl!">Space Outer</TypoH1>
-      <TypoMuted className="mt-2 text-center">
-        Review test scores and make printable worksheets
-      </TypoMuted>
+    <main className="w-full py-16 flex flex-col items-center">
+      <div className="mx-auto w-full max-w-[60rem] px-6 flex flex-col items-center">
+        <Image
+          src="/logo.svg"
+          alt="Space Outer"
+          width={64}
+          height={64}
+          className="size-16"
+          priority
+        />
+        <TypoH1 className="mt-6 text-center text-4xl!">Space Outer</TypoH1>
+        <TypoMuted className="mt-2 text-center">
+          Review test scores and make printable worksheets
+        </TypoMuted>
+      </div>
 
-      <div className="mt-12 w-full">
+      <div className="mt-12 w-full max-w-[50rem] mx-auto overflow-x-auto overflow-y-clip">
         {tests.length === 0 ? (
           <TypoMuted className="text-center">No tests yet.</TypoMuted>
         ) : (
-          <Table className="[&_:is(th,td):first-child]:pl-3 [&_:is(th,td):last-child]:pr-3">
+          <Table className="min-w-[640px]">
             <TableHeader>
               <TableRow className="hover:bg-transparent">
                 <TableHead className="w-full">Test</TableHead>
-                <TableHead>Taken</TableHead>
                 <TableHead>Score</TableHead>
-                <TableHead />
-                <TableHead />
+                <TableHead>Taken</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -69,15 +69,17 @@ export default async function Home() {
                   className="relative cursor-pointer hover:bg-transparent"
                 >
                   <TableCell className="w-full max-w-0">
-                    <Link
-                      href={`/tests/${slug}`}
-                      className="block truncate font-semibold underline-offset-4 hover:underline after:absolute after:inset-x-0 after:top-0 after:-bottom-px after:bg-debug-red focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring"
-                    >
-                      {manifest.title}
-                    </Link>
-                  </TableCell>
-                  <TableCell className="text-muted-foreground">
-                    {formatDate(manifest.takenOn)}
+                    <div className="flex items-center gap-2 min-w-0">
+                      <Link
+                        href={`/tests/${slug}`}
+                        className="min-w-0 flex-1 truncate text-xs font-semibold underline-offset-2 hover:underline after:absolute after:inset-x-0 after:top-0 after:-bottom-px after:bg-debug-red focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring"
+                      >
+                        {manifest.title}
+                      </Link>
+                      <div className="relative shrink-0">
+                        <HomeWorksheetButton slug={slug} />
+                      </div>
+                    </div>
                   </TableCell>
                   <TableCell>
                     <PointsBadge
@@ -86,14 +88,18 @@ export default async function Home() {
                       forceIndicator={indicatorForPercent(
                         manifest.score.percent,
                       )}
+                      customText={
+                        <span className="tabular-nums text-xs font-semibold">
+                          {manifest.score.percent}
+                          <span className="opacity-45 pointer-events-none">
+                            %
+                          </span>
+                        </span>
+                      }
                     />
                   </TableCell>
-                  <TableCell className="tabular-nums text-xs font-semibold">
-                    {manifest.score.percent}
-                    <span className="opacity-45 pointer-events-none">%</span>
-                  </TableCell>
-                  <TableCell>
-                    <HomeWorksheetButton slug={slug} />
+                  <TableCell className="text-xs text-muted-foreground">
+                    {formatDate(manifest.takenOn)}
                   </TableCell>
                 </TableRow>
               ))}
