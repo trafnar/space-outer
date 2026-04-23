@@ -85,6 +85,9 @@ button {
   --texttrim-start: trim-start;
   --texttrim-end: trim-end;
 }
+@utility font-cursive {
+  font-family: var(--font-cursive);
+}
 @utility text-trim-* {
   text-box-trim: --value(--texttrim-*, "none");
 }

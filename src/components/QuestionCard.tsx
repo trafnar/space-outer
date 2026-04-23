@@ -56,9 +56,6 @@ export function QuestionCard({ question }: { question: Question }) {
 const blankLabelClassName = cn(
   "text-[0.7em] text-muted-foreground font-bold font-heading inline-flex",
   "after:content-['.']",
-  // "rounded-full",
-  // "size-3 ring-1 ring-muted-foreground/40",
-  // "items-center justify-center",
 );
 
 function BlockView({
@@ -193,7 +190,7 @@ function BlankView({
       )}
       <span
         className={cn(
-          "inline-block min-w-[3.5ch] mx-0.5 text-center relative text-muted-foreground",
+          "inline-block min-w-[3.5ch] mx-0.5 text-center relative font-cursive text-[1.2em] leading-[0.8] text-foreground/75",
         )}
       >
         {showUserAnswer ? (displayText ?? " ") : " "}
