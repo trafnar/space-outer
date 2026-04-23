@@ -11,6 +11,10 @@ import type {
 const TESTS_ROOT = path.join(process.cwd(), "src/data/tests");
 const SLUG_RE = /^[a-z0-9-]+$/;
 
+function testAssetSrc(slug: string, file: string): string {
+  return `/test-assets/${encodeURIComponent(slug)}/${encodeURIComponent(file)}`;
+}
+
 async function readJson<T>(filePath: string): Promise<T> {
   return JSON.parse(await fs.readFile(filePath, "utf8")) as T;
 }
@@ -64,8 +68,8 @@ export const getTest = cache(async function getTest(
     manifest.questions.map(async (q) => {
       const file = `q${String(q.n).padStart(2, "0")}.json`;
       const question = await readJson<Question>(path.join(dir, file));
-      await inlineDiagrams(question, dir);
-      await inlineChoiceImages(question, dir);
+      inlineDiagrams(question, slug);
+      inlineChoiceImages(question, slug);
       return question;
     }),
   );
@@ -73,72 +77,27 @@ export const getTest = cache(async function getTest(
   return { slug, manifest, questions };
 });
 
-async function inlineDiagrams(question: Question, dir: string): Promise<void> {
-  await Promise.all(
-    question.prompt.map(async (block) => {
-      if (block.type !== "diagram") return;
-      block.svg = await loadInlineImageHtml(
-        path.join(dir, block.file),
-        block.alt,
-      );
-    }),
-  );
+function inlineDiagrams(question: Question, slug: string): void {
+  for (const block of question.prompt) {
+    if (block.type !== "diagram") continue;
+    block.imageSrc = testAssetSrc(slug, block.file);
+  }
 }
 
-async function inlineChoiceImages(
+function inlineChoiceImages(
   question: Question,
-  dir: string,
-): Promise<void> {
-  const tasks: Promise<void>[] = [];
+  slug: string,
+): void {
   for (const block of question.prompt) {
     if (block.type !== "choices") continue;
     for (const opt of block.options) {
       const match = opt.text.match(/^\[image:(.+)\]$/);
       if (!match) continue;
       const file = match[1];
-      tasks.push(
-        (async () => {
-          opt.imageSrc = await loadAsDataUrl(path.join(dir, file));
-          opt.text = "";
-        })(),
-      );
+      opt.imageSrc = testAssetSrc(slug, file);
+      opt.text = "";
     }
   }
-  await Promise.all(tasks);
-}
-
-async function loadInlineImageHtml(
-  filePath: string,
-  alt?: string,
-): Promise<string> {
-  if (filePath.toLowerCase().endsWith(".svg")) {
-    return fs.readFile(filePath, "utf8");
-  }
-  const src = await loadAsDataUrl(filePath);
-  const altAttr = alt ? ` alt="${escapeAttr(alt)}"` : ' alt=""';
-  return `<img src="${src}"${altAttr} />`;
-}
-
-async function loadAsDataUrl(filePath: string): Promise<string> {
-  const ext = path.extname(filePath).toLowerCase();
-  const mime =
-    ext === ".svg"
-      ? "image/svg+xml"
-      : ext === ".jpg" || ext === ".jpeg"
-        ? "image/jpeg"
-        : ext === ".gif"
-          ? "image/gif"
-          : "image/png";
-  const buf = await fs.readFile(filePath);
-  return `data:${mime};base64,${buf.toString("base64")}`;
-}
-
-function escapeAttr(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/"/g, "&quot;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
 }
 
 export async function getAllTests(): Promise<Test[]> {

@@ -94,13 +94,11 @@ function BlockView({
     );
   }
   if (block.type === "diagram") {
-    return block.svg ? (
-      <div
-        aria-label={block.alt}
-        role="img"
-        className="my-2"
-        dangerouslySetInnerHTML={{ __html: block.svg }}
-      />
+    return block.imageSrc ? (
+      <div role="img" aria-label={block.alt} className="my-2">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={block.imageSrc} alt={block.alt ?? ""} />
+      </div>
     ) : null;
   }
   if (block.type === "choices") {

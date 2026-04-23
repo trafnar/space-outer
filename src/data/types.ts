@@ -27,7 +27,7 @@ export type Manifest = {
 // Block-level nodes: stack vertically in a question prompt.
 export type Block =
   | { type: "paragraph"; content: Inline[] }
-  | { type: "diagram"; file: string; alt?: string; svg?: string }
+  | { type: "diagram"; file: string; alt?: string; imageSrc?: string }
   | {
       type: "choices";
       id: string;
