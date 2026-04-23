@@ -1,0 +1,57 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-8.0QD4HGQ&qtxt=x4ck3dje10cj00&qres=zz1kzzoe7dd6l8g&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-8.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the objects with a mass greater than 1 kilogram. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "scooter"
+        },
+        {
+          "id": "B",
+          "text": "crayon"
+        },
+        {
+          "id": "C",
+          "text": "bicycle"
+        },
+        {
+          "id": "D",
+          "text": "protractor"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,C"
+    }
+  }
+}

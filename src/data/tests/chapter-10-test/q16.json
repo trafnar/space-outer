@@ -1,0 +1,57 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-32.0QD4HGQ&qtxt=x3bojk9e10cj00&qres=zzhet68dddn66m8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-32.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hector buys two bags of gravel for his driveway. He buys a total of 31 kilograms of gravel. Select the bags he buys."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "13 kg"
+        },
+        {
+          "id": "B",
+          "text": "15 kg"
+        },
+        {
+          "id": "C",
+          "text": "16 kg"
+        },
+        {
+          "id": "D",
+          "text": "17 kg"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,C"
+    }
+  }
+}

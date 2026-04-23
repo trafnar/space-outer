@@ -1,0 +1,74 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-16.0QD4HGQ&qtxt=x2cd78rcv3jd00&qres=zzdougldndbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-16.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cara uses a balance scale to compare mass. Select a symbol that makes the comparison true."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q09-d1.png",
+      "alt": "pcagr3ch10chrevprob9"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The mass of the blocks "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " the mass of the erasers."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "<"
+        },
+        {
+          "id": "B",
+          "text": ">"
+        },
+        {
+          "id": "C",
+          "text": "="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-29.0QD4HGQ&qtxt=x4cv13se10cj00&qres=yzhbzn5eh2a9mpqdnsy0udnpv0cd5gj7gd5qd52dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-29.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use an inch ruler to measure. What is the length of the leaf to the nearest fourth-inch?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q14-d1.png",
+      "alt": "leaf"
+    },
+    {
+      "type": "diagram",
+      "file": "q14-d2.png",
+      "alt": "ruler11"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The length of the leaf is AP 1 inch(es). What happens if you line up the left side of the object with the 1 on the ruler. Complete the explanation. You will get the wrong answer. The leaf will measure 1 inch "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " than it really is."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "longer"
+        },
+        {
+          "id": "B",
+          "text": "shorter"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

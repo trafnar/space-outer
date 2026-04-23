@@ -1,0 +1,106 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-13.0QD4HGQ&qtxt=x4db5e0e10cj00&qres=zzlis6pdddny9tchtbdc0ehnay9htbda8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-13.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Anthony's family went out to dinner. They left at the time shown on the clock. They returned home at 6:54 P.M."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "pcagr3ch10chrevprob71"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How long was Anthony's family gone? Complete the explanation of how the answer can be found. To find the answer, count "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " hour(s) from 5:05 to 6:05. Then count "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " minutes to 6:35. Then count "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " minutes to 6:45 and "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " minutes to 6:54. I add them all up to get that the Anthony's family was gone "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " hour(s) and "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " minutes."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "1",
+      "b2": "30",
+      "b3": "10",
+      "b4": "9",
+      "b5": "1",
+      "b6": "49"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "1",
+      "b2": "10",
+      "b3": "49",
+      "b4": "49",
+      "b5": "1",
+      "b6": "49"
+    }
+  }
+}

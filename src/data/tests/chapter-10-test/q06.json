@@ -1,0 +1,124 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-9.0QD4HGQ&qtxt=x5ecer8e10cj00&qres=zzvjs54dxdny9tsddyoe8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-9.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A chicken dish needs to bake in the oven for 35 minutes. The dish needs to cool for at least 7 minutes before serving. Scott puts the chicken dish in the oven at 5:12 P.M. Select True or False for each statement. Scott can serve the dish at 5:52 P.M."
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " Scott can serve the dish at 5:55 P.M."
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " Scott should take the dish out of the oven at 5:47 P.M."
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " Scott should take the dish out of the oven at 5:45 A.M."
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "A",
+      "b3": "A",
+      "b4": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "B",
+      "b3": "A",
+      "b4": "B"
+    }
+  }
+}

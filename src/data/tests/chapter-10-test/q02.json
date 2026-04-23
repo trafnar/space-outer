@@ -1,0 +1,100 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-11-2.0QD4HGQ&qtxt=x4cmm7ce10cj00&qres=zzvcsomdxddyo8wddyoe8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-11-2.0QD4HGQ",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Julio measured an object that he found. It was about 34 inch wide. Select Yes or No to tell whether each of the following objects could be the one Julio measured."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "sharpener"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d2.png",
+      "alt": "stamp"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A YesB No"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d3.png",
+      "alt": "finger"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A YesB No"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d4.png",
+      "alt": "bandaid"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A YesB No"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d5.png",
+      "alt": "ruler21"
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}
