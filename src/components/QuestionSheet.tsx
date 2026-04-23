@@ -89,6 +89,7 @@ export function QuestionSheet({
       modal={false}
     >
       <SheetContent
+        initialFocus={false}
         side="right"
         className="w-[clamp(25rem,50vw,32rem)] max-w-none data-[side=right]:w-[clamp(25rem,50vw,32rem)] data-[side=right]:max-w-none data-[side=right]:sm:max-w-none"
       >

@@ -107,9 +107,18 @@ export function QuestionTable({
   });
 
   const activateRow = (q: ViewQuestion, index: number) => {
-    setSelectedIndex(index);
-    if (isExpandMode) toggleRow(q.n);
-    else if (isPopMode || isSheetMode) setIsModalOpen(true);
+    if (isExpandMode) {
+      setSelectedIndex(index);
+      toggleRow(q.n);
+    } else if (isPopMode || isSheetMode) {
+      const sameRow = index === selectedIndex;
+      if (isModalOpen && sameRow) {
+        setIsModalOpen(false);
+      } else {
+        setSelectedIndex(index);
+        setIsModalOpen(true);
+      }
+    }
   };
 
   // Global keyboard nav: Up/Down move the cursor, x toggles worksheet.
@@ -131,6 +140,15 @@ export function QuestionTable({
       if (selectedIndex === null) return;
       e.preventDefault();
       toggleInWorksheet(questions[selectedIndex].n);
+    } else if (e.key === "Escape") {
+      if (isModalOpen) return;
+      if (selectedIndex === null) return;
+      e.preventDefault();
+      const el = document.querySelector<HTMLElement>(
+        `[data-row-index="${selectedIndex}"]`,
+      );
+      el?.blur();
+      setSelectedIndex(null);
     }
   });
 
@@ -146,9 +164,11 @@ export function QuestionTable({
 
   // Keep focus + viewport aligned with the cursor. Moving the cursor
   // moves DOM focus to the same row so "focused" and "selected" are
-  // always the same thing. Skip focus() while the modal is open so
-  // the modal's focus trap isn't fighting us (Sheet is non-modal but
-  // Dialog isn't).
+  // always the same thing — this keeps Space/Enter activating the row
+  // the user just arrowed to rather than whichever row they last clicked.
+  // Skip focus() only when the modal Dialog (pop mode) is open, since
+  // its focus trap would yank focus back. Sheet is non-modal, so syncing
+  // focus while it's open is fine.
   useEffect(() => {
     if (selectedIndex === null) return;
     const el = document.querySelector<HTMLElement>(
@@ -156,8 +176,9 @@ export function QuestionTable({
     );
     if (!el) return;
     el.scrollIntoView({ block: "nearest" });
-    if (!isModalOpen) el.focus({ preventScroll: true });
-  }, [selectedIndex, isModalOpen]);
+    const dialogOpen = isPopMode && isModalOpen;
+    if (!dialogOpen) el.focus({ preventScroll: true });
+  }, [selectedIndex, isModalOpen, isPopMode]);
 
   const toggleAllWillCollapse = expandedRowIds.size > questions.length / 2;
   const toggleAllRows = () => {

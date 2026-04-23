@@ -30,7 +30,7 @@ function useSetting<T>(
 
 export type RowAction = "expand" | "pop" | "sheet" | "none";
 
-const DEFAULT_ROW_ACTION: RowAction = "pop";
+const DEFAULT_ROW_ACTION: RowAction = "sheet";
 
 function parseRowAction(raw: string | null): RowAction {
   if (raw === "expand" || raw === "pop" || raw === "sheet" || raw === "none") {
