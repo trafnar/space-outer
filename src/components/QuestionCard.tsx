@@ -36,7 +36,7 @@ export function QuestionCard({ question }: { question: Question }) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-8">
       {question.prompt.map((block, i) => (
         <BlockView
           key={i}
@@ -55,7 +55,7 @@ export function QuestionCard({ question }: { question: Question }) {
 
 const blankLabelClassName = cn(
   "text-[0.7em] text-muted-foreground font-bold font-heading inline-flex",
-  "after:content-['.'] pl-0.5 pr-0.5",
+  "after:content-['.']",
   // "rounded-full",
   // "size-3 ring-1 ring-muted-foreground/40",
   // "items-center justify-center",
@@ -186,14 +186,20 @@ function BlankView({
 
   return (
     <span className="whitespace-nowrap">
-      {label && <span className={blankLabelClassName}>{label}</span>}
+      {label && (
+        <span className={cn(blankLabelClassName, "translate-x-0.75 pl-1 pr-0")}>
+          {label}
+        </span>
+      )}
       <span
-        className={cn("inline-block min-w-[3.5ch] mx-0.5 text-center relative")}
+        className={cn(
+          "inline-block min-w-[3.5ch] mx-0.5 text-center relative text-muted-foreground",
+        )}
       >
         {showUserAnswer ? (displayText ?? " ") : " "}
         <div
           className={cn(
-            "w-full h-[2.5px] print:h-[1.5px] translate-y-px bg-current rounded-full",
+            "w-full h-[2.5px] print:h-[1.5px] -translate-y-0.5 bg-current rounded-full",
 
             showIndicator
               ? isRight
@@ -246,7 +252,7 @@ function ChoicesView({
   return (
     <div className="flex flex-col gap-1">
       {label && <div className={blankLabelClassName}>{label}</div>}
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col">
         {options.map((opt) => {
           const picked = userIds.has(opt.id);
           const isCorrect = correctIds.has(opt.id);
@@ -255,7 +261,7 @@ function ChoicesView({
             <li
               key={opt.id}
               className={cn(
-                "flex items-center gap-2",
+                "flex items-center gap-2 py-2 border-y-2 border-dotted border-border -mb-0.5",
                 showCorrectAnswer && isCorrect && "text-correct-green",
                 showUserAnswer &&
                   showCorrectAnswer &&
