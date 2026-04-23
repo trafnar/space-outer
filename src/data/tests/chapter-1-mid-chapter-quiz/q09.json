@@ -1,0 +1,65 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-13-9.2AT9RS3&qtxt=x3dpjoacv3jd00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-13-9.2AT9RS3",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use mental math to find the sum."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "62 + 18 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "80"
+        },
+        {
+          "id": "B",
+          "text": "60"
+        },
+        {
+          "id": "C",
+          "text": "18"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

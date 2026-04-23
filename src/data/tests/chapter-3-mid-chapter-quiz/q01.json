@@ -1,0 +1,73 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-1.3C1OJK8&qtxt=x3duqthe10cj00&qres=zz1jmexe7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-1.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the best term from the box."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "When you combine equal groups, you can "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " to find how many in all."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "equal groups"
+        },
+        {
+          "id": "B",
+          "text": "multiply"
+        },
+        {
+          "id": "C",
+          "text": "factors"
+        },
+        {
+          "id": "D",
+          "text": "product"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

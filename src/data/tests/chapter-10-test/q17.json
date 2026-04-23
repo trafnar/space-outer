@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Part 1 Ashley measures the shells she collects. She records the measurements in a chart. Ashley found a razor clam shell this long."
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ashley measures the shells she collects. She records the measurements in a chart."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ashley found a razor clam shell this long."
         }
       ]
     },
@@ -35,7 +53,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Enter the measurement in the chart. Number of ShellsLength in Inches 11 2212 3112 12 "
+          "text": "Enter the measurement in the chart."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Number of ShellsLength in Inches 11 2212 3112 12 "
         },
         {
           "type": "blank",
@@ -43,7 +70,61 @@
         },
         {
           "type": "text",
-          "text": "AP 2 Part 2 Complete the line plot to show the data in the chart. Drag and drop an X to mark each data point. Place the first X for each length closest to the line. How many shells are longer than 2 inches? Complete the explanation on how you know. 0 12 1 112 2 212 3 312 4 Length of Shells Measured to the Nearest Half Inch X X X X X X X X X X There is/are "
+          "text": "AP 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the line plot to show the data in the chart. Drag and drop an X to mark each data point. Place the first X for each length closest to the line."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many shells are longer than 2 inches? Complete the explanation on how you know."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "0 12 1 112 2 212 3 312 4 Length of Shells Measured to the Nearest Half Inch"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "X X X X X X X X X X"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There is/are "
         },
         {
           "type": "blank",
@@ -51,7 +132,16 @@
         },
         {
           "type": "text",
-          "text": " shells that are longer than 2 inches. I counted the number of Xs above 212 and AP 5 ."
+          "text": " shells that are longer than 2 inches. I counted the number of Xs above"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "212 and AP 5 ."
         }
       ]
     }

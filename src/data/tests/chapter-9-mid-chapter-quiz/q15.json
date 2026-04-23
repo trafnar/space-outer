@@ -1,0 +1,78 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-8-15.3RGGQGD&qtxt=x4dpcqncv3jd00&qres=zzhkgfne7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-8-15.3RGGQGD",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Matthew ran 26 mile during track practice. Pablo ran 23 mile."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the symbol to show who runs farther."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "26 "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " 23"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "<"
+        },
+        {
+          "id": "B",
+          "text": ">"
+        },
+        {
+          "id": "C",
+          "text": "="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

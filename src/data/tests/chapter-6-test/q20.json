@@ -1,0 +1,60 @@
+{
+  "n": 20,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-30.1AJSU4E&qtxt=x3ds7bge10cj00&qres=zzvcshde7eze2o0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-30.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tyrone took 24 pennies from his bank and put them in 4 equal stacks."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many pennies did Tyrone put in each stack?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tyrone put "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pennies in each stack."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6"
+    }
+  }
+}

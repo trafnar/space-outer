@@ -1,0 +1,66 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-1.3GRM7GT&qtxt=x3c1r30e10cj00&qres=zzhet68dddn66m8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-1.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Each shape is divided into equal parts. Select the shapes that show fourths."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q01-d1.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q01-d2.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q01-d3.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q01-d4.png]"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,C"
+    }
+  }
+}

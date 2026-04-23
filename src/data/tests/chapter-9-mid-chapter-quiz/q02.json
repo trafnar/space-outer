@@ -1,0 +1,89 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-8-2.3RGGQGD&qtxt=x3dbu67e10cj00&qres=zzv8jznf1ddyoe8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-8-2.3RGGQGD",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "When two fractions refer to the same whole and have the same denominators, why can you compare only the numerators? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "When the denominators are the same, the whole is divided into "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pieces. So, you can compare the numerators to find which fraction has "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " pieces and is greater."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "same-size"
+        },
+        {
+          "id": "B",
+          "text": "different-size"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "more"
+        },
+        {
+          "id": "B",
+          "text": "less"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "B"
+    }
+  }
+}

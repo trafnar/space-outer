@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Alexa and Rose read books that have the same number of pages. Alexa's book is divided into 6 equal chapters. Rose's book is divided into 4 equal chapters. Each girl has read 3 chapters of her book. Complete each fraction to describe what part of the book each girl read. Then tell who read more pages. Complete the explanation. Alexa read 3"
+          "text": "Alexa and Rose read books that have the same number of pages. Alexa's book is divided into 6 equal chapters. Rose's book is divided into 4 equal chapters. Each girl has read 3 chapters of her book."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete each fraction to describe what part of the book each girl read. Then tell who read more pages. Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alexa read 3"
         },
         {
           "type": "blank",
@@ -24,7 +42,16 @@
         },
         {
           "type": "text",
-          "text": " of her book. Rose read 3"
+          "text": " of her book."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Rose read 3"
         },
         {
           "type": "blank",
@@ -32,7 +59,16 @@
         },
         {
           "type": "text",
-          "text": " of her book. 3"
+          "text": " of her book."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3"
         },
         {
           "type": "blank",
@@ -56,7 +92,16 @@
         },
         {
           "type": "text",
-          "text": " read more pages. Since the denominators are different, the book with "
+          "text": " read more pages."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Since the denominators are different, the book with "
         },
         {
           "type": "blank",

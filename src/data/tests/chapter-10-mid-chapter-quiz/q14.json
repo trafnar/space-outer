@@ -1,0 +1,70 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-14.3KJRODF&qtxt=x5cjhhqe10cj00&qres=zzlelvde7f1w8j4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-14.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Brenda's train leaves at 7:45 A.M. She needs to arrive 10 minutes early to buy her ticket. It takes her 5 minutes to get to the train station."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "At what time should Brenda leave her house?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Brenda should leave her house at "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " A.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "7",
+      "b2": "30"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "00"
+    }
+  }
+}

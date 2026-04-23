@@ -1,0 +1,95 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-6.3KJRODF&qtxt=x3d01hce10cj00&qres=zz7b0vme7dnda9hddyoe8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-6.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the time for the activity. Select A.M. or P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sleep."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q06-d1.png",
+      "alt": "clock21151"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The time for the activity is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "A.M."
+        },
+        {
+          "id": "B",
+          "text": "P.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "11",
+      "b2": "51",
+      "b3": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "11",
+      "b2": "50",
+      "b3": "B"
+    }
+  }
+}

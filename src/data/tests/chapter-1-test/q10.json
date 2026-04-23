@@ -1,0 +1,65 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-16.143MI1M&qtxt=x4cadsce10cj00&qres=zzxjuwidnfv8jk0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-16.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The table shows the number of sweaters sold online in three months."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Susie's Sweater Shop Month Number of Sweaters Sold January 504 February 396 March 173"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many sweaters were sold in January and February?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " sweaters were sold in January and February."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "900"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "900"
+    }
+  }
+}

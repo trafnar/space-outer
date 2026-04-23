@@ -1,0 +1,60 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-20.19PNQ22&qtxt=x8e8cfae10cj00&qres=zzrft4kf1fbbwg0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-20.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Luke is making 6 first-aid kits. He wants to put 3 large and 4 small bandages in each kit."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many bandages does he need for the kits?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Luke needs "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " bandages for the first-aid kits."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "42"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "72"
+    }
+  }
+}

@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Yuji drew this figure on grid paper. What is the perimeter of the figure?"
+          "text": "Yuji drew this figure on grid paper."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the perimeter of the figure?"
         }
       ]
     },

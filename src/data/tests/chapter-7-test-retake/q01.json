@@ -1,0 +1,83 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-1.2F65APB&qtxt=x5e36dve10cj00&qres=zz1jmexe7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-1.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ming divided 35 marbles among 7 different friends. Each friend received the same number of marbles."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many marbles did Ming give to each friend?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "35 ÷ 7 = a"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "7 × a = 35"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "5"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-13.02V7Q9T&qtxt=x4cve9he10cj00&qres=zzb9df9ddfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-13.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Josh has 3 dogs. Each dog gets 4 dog biscuits every day."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many biscuits will Josh need for all of his dogs for Saturday and Sunday?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Josh needs "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " biscuits for all of his dogs for Saturday and Sunday."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "24"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}

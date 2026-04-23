@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Tom rode his horse 48 mile. Liz rode her horse an equal distance. Complete the equivalent fraction that describes how far Liz rode."
+          "text": "Tom rode his horse 48 mile. Liz rode her horse an equal distance."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the equivalent fraction that describes how far Liz rode."
         }
       ]
     },

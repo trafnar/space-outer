@@ -1,0 +1,96 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-25.39QK2H0&qtxt=x7d1wt0cv3jd00&qres=zzhkgfne7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-25.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ruben is collecting cans for the recycling contest at school. He makes two plans to try to collect the most cans."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which plan should Ruben choose?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Plan A: Collect 50 cans each week for 9 weeks."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Plan B: Collect 20 cans each week for 6 weeks."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ruben should choose "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plan A"
+        },
+        {
+          "id": "B",
+          "text": "Plan B"
+        },
+        {
+          "id": "C",
+          "text": "any plan"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

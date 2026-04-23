@@ -1,0 +1,70 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-11.3KJRODF&qtxt=x3bp2j2e10cj00&qres=zzhbzuadxfbvub7&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-11.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veronica started walking to school at 7:45 A.M. She arrived at school 22 minutes later."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "At what time did Veronica arrive at school?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Veronica arrived at school at "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " A.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8",
+      "b2": "07"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "7",
+      "b2": "23"
+    }
+  }
+}

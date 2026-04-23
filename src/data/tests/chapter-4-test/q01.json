@@ -1,0 +1,84 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-1.19PNQ22&qtxt=x2dbvhre10cj00&qres=zzrefcjflddyofp&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-1.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Ruiz sorted spools of thread into 3 boxes. Each box holds 5 spools."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many spools of thread does Mrs. Ruiz have? Select the model of the problem. Then solve."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Ruiz has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " spools of thread."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q01-d1.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q01-d2.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q01-d1.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q01-d2.png]"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A",
+      "b1": "15"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A",
+      "b1": "15"
+    }
+  }
+}

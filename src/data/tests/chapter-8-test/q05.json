@@ -1,0 +1,82 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-5.3GRM7GT&qtxt=x4cug27e10cj00&qres=zz1jmexe7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-5.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jamal folded this piece of paper into equal parts."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the word that makes the sentence true."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The paper is folded into "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "fourths"
+        },
+        {
+          "id": "B",
+          "text": "halves"
+        },
+        {
+          "id": "C",
+          "text": "sixths"
+        },
+        {
+          "id": "D",
+          "text": "thirds"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

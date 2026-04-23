@@ -1,0 +1,65 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-13.39QK2H0&qtxt=x5d1i74e10cj00&qres=zzxh0z7dxdnelmo&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-13.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A train can carry 20 cars."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the number line to find how many cars 7 trains can carry."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "numberline"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "7 trains can carry "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " cars."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "140"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "120"
+    }
+  }
+}

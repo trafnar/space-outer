@@ -1,0 +1,150 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-2.2F65APB&qtxt=x4cj06me10cj00&qres=zzrlf74fbdny9z4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-2.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Conner has 16 shoes."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "diagram",
+      "file": "q02-d1.png",
+      "alt": "shoes"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select one number from each column to show the division equation represented by the picture."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "DivisorQuotient 11 24 48 1616 16÷"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "="
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "16"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "C"
+    }
+  }
+}

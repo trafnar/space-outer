@@ -1,0 +1,75 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-10.1AJSU4E&qtxt=x4e3ucge10cj00&qres=zzlk7jmfle7xgxs&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-10.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Eduardo visited his cousin for 21 days over the summer. There are 7 days in each week."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How long, in weeks, was Eduardo's visit? Use the number line to complete the division equation."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "linealone"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Since 21 ÷ 7 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ", his visit was "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " weeks long."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3",
+      "b2": "3"
+    }
+  }
+}

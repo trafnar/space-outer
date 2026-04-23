@@ -16,31 +16,64 @@
       "content": [
         {
           "type": "text",
-          "text": "Bill used 14 cup of raisins and 34 cup of banana chips to make a snack. For a-d, select True or False for each comparison. a.14 > 34"
+          "text": "Bill used 14 cup of raisins and 34 cup of banana chips to make a snack."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "For a-d, select True or False for each comparison."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "a.14 > 34"
         },
         {
           "type": "blank",
           "id": "b1"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " b.34 = 14"
+          "text": "b.34 = 14"
         },
         {
           "type": "blank",
           "id": "b2"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " c.14 < 34"
+          "text": "c.14 < 34"
         },
         {
           "type": "blank",
           "id": "b3"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " d.34 > 14"
+          "text": "d.34 > 14"
         },
         {
           "type": "blank",

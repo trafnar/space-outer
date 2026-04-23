@@ -30,7 +30,16 @@
       "content": [
         {
           "type": "text",
-          "text": "What fraction is equivalent to 13? 13 is equivalent to "
+          "text": "What fraction is equivalent to 13?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "13 is equivalent to "
         },
         {
           "type": "blank",

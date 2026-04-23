@@ -16,31 +16,64 @@
       "content": [
         {
           "type": "text",
-          "text": "David, Maria, and Simone are shading same-sized index cards for a science project. David shaded 34 of his index card. Maria shaded 38 of her index card and Simone shaded 36 of her index card. Select Yes or No to indicate whether the comparisons are correct. 34 > 38"
+          "text": "David, Maria, and Simone are shading same-sized index cards for a science project. David shaded 34 of his index card. Maria shaded 38 of her index card and Simone shaded 36 of her index card."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select Yes or No to indicate whether the comparisons are correct."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "34 > 38"
         },
         {
           "type": "blank",
           "id": "b1"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " 38 > 36"
+          "text": "38 > 36"
         },
         {
           "type": "blank",
           "id": "b2"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " 36 < 34"
+          "text": "36 < 34"
         },
         {
           "type": "blank",
           "id": "b3"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " 38 = 34"
+          "text": "38 = 34"
         },
         {
           "type": "blank",

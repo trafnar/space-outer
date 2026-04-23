@@ -1,0 +1,71 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-7.3C1OJK8&qtxt=x2ckbkce10cj00&qres=zzbge9gerdneottdvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-7.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the related addition and multiplication sentences."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3 groups of 4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "4 + 4 + 4 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3 × 4 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "12",
+      "b2": "12"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "12",
+      "b2": "12"
+    }
+  }
+}

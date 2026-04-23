@@ -1,0 +1,39 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-8.143MI1M&qtxt=x5burmpe10cj00&qres=zzlityvehdnpxkcidkg18iv8e0w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-8.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Determine whether 600 or 700 is a better estimate of each sum by dragging and dropping each number sentence into the correct box. Please use each answer only once."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "600700 305 + 331 = 355 + 328 = 482 + 214 = 395 + 226 = 305 + 331 = 305 + 331 = 395 + 226 = 395 + 226 = 482 + 214 = 482 + 214 = 355 + 328 = 355 + 328 ="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

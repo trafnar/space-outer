@@ -1,0 +1,53 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-10-12.0U59ED8&qtxt=x2e140oe10cj00&qres=zznhf74eh2a9mpqgrb96eg5jfvzsda04vub6txc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-10-12.0U59ED8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jessica ordered a pizza."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What fraction of the pizza has mushrooms?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "pizza6"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction of the pizza that has mushrooms is AP 1 ."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

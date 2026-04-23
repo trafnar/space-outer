@@ -1,0 +1,107 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-25.143MI1M&qtxt=x4e50pne10cj00&qres=zzrleltdxflvgw0dnbu9s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-25.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Luke solves this problem. He says that the difference is 119."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "238 −129"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of the mistake Luke made."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Luke regrouped 3 tens 8 ones as "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " ten(s) 18 ones. He should have regrouped 3 tens 8 ones as "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " ten(s) 18 ones."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the correct difference?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The correct difference is "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "2",
+      "b3": "109"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8",
+      "b2": "8",
+      "b3": "109"
+    }
+  }
+}

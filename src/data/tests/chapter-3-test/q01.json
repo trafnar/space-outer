@@ -1,0 +1,90 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-1.02V7Q9T&qtxt=x5cvvw9e10cj00&qres=zzxl8onfbdxxvlihti2v4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-1.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are 4 boats on the lake. Nine people ride in each boat."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many people ride in the boats? Select the correct model and complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " people ride in the boats. Multiply 4 × "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "[image:q01-d1.png]"
+        },
+        {
+          "id": "B",
+          "text": "[image:q01-d2.png]"
+        },
+        {
+          "id": "C",
+          "text": "[image:q01-d1.png]"
+        },
+        {
+          "id": "D",
+          "text": "[image:q01-d2.png]"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "C",
+      "b1": "36",
+      "b2": "9"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "C",
+      "b1": "36",
+      "b2": "9"
+    }
+  }
+}

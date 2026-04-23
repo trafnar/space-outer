@@ -1,0 +1,73 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-19.1AJSU4E&qtxt=x3dovqle10cj00&qres=zz7du0hfbfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-19.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Edwards made a total of 40 fingers on some gloves she knitted."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many gloves did Mrs. Edwards knit?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5540 fingers"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Edwards knitted "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " gloves."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}

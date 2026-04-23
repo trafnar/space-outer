@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Rita's class begins social studies at thirty minutes before one in the afternoon. At what time does Rita's class begin social studies? Select a time that makes the sentence true. Rita's class begins social studies at "
+          "text": "Rita's class begins social studies at thirty minutes before one in the afternoon."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "At what time does Rita's class begin social studies? Select a time that makes the sentence true."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Rita's class begins social studies at "
         },
         {
           "type": "blank",

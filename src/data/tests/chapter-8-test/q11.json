@@ -1,0 +1,178 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-11.3GRM7GT&qtxt=x3c174be10cj00&qres=zz1jn00dxdny9modxxv5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-11.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Together, Amy and Thea make up 14 of the midfielders on the soccer team."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation to determine how many midfielders are on the team."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Since "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " midfielders are 14 of all the midfielders, there are "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " groups of "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " midfielders. By adding the midfielders in each group, I know the total number of midfielders on the team is "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "4"
+        },
+        {
+          "id": "D",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "2"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "C",
+      "b3": "D",
+      "b4": "D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "A",
+      "b3": "C",
+      "b4": "B"
+    }
+  }
+}

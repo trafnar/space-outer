@@ -1,0 +1,65 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-22.3GRM7GT&qtxt=x3duqike10cj00&qres=zzdougldne5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-22.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.2b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tara ran 3 laps around her neighborhood for a total of 1 mile yesterday. Today she wants to run 23 of a mile."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the number of laps she will need to run around her neighborhood."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q17-d1.png",
+      "alt": "tiff3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tara will need to run "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " lap(s) around her neighborhood."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3"
+    }
+  }
+}

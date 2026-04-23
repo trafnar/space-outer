@@ -1,0 +1,60 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-18.19PNQ22&qtxt=x2ccgcfe10cj00&qres=zzdgg8jerfbbwg0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-18.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Etta buys some ribbon and cuts it into 8 pieces that are the same length. Each piece is 9 inches long."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How long was the ribbon that Etta bought?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The ribbon that Etta bought was "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " inches long."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "72"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "72"
+    }
+  }
+}

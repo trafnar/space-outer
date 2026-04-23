@@ -16,15 +16,56 @@
       "content": [
         {
           "type": "text",
-          "text": "Jorge, Lynne, and Crosby meet at the playground. Jorge lives 78 mile from the playground. Lynne lives 68 mile from the playground. Crosby lives 34 mile from the playground. Part 1 Who lives closer to the playground, Jorge or Lynne? Complete the explanation. "
-        },
+          "text": "Jorge, Lynne, and Crosby meet at the playground. Jorge lives 78 mile from the playground. Lynne lives 68 mile from the playground. Crosby lives 34 mile from the playground."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who lives closer to the playground, Jorge or Lynne? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "blank",
           "id": "b1"
         },
         {
           "type": "text",
-          "text": " lives closer to the playground. I can use the same denominator strategy. 7 "
+          "text": " lives closer to the playground."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I can use the same denominator strategy."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "7 "
         },
         {
           "type": "blank",
@@ -40,15 +81,47 @@
         },
         {
           "type": "text",
-          "text": " 68. Part 2 Who lives closer to the playground, Jorge or Crosby? Complete the explanation. "
-        },
+          "text": " 68."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who lives closer to the playground, Jorge or Crosby? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "blank",
           "id": "b4"
         },
         {
           "type": "text",
-          "text": " lives closer to the playground. I can use the missing pieces strategy. Since 18 "
+          "text": " lives closer to the playground."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I can use the missing pieces strategy. Since 18 "
         },
         {
           "type": "blank",

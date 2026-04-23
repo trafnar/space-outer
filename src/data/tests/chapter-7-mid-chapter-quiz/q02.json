@@ -1,0 +1,81 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-2.11OQ34U&qtxt=x2chadfe10cj00&qres=zzbm14gerdxh3cmhtbepg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-2.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how to find 24 ÷ 6 by making equal groups."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Draw "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " counters. Make as many groups of "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " as you can. Then count the number of groups. There are "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " groups, so 24 ÷ 6 = "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "24",
+      "b2": "6",
+      "b3": "4",
+      "b4": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "24",
+      "b2": "6",
+      "b3": "4",
+      "b4": "4"
+    }
+  }
+}

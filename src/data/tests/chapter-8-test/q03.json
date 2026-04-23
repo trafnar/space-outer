@@ -1,0 +1,113 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-3.3GRM7GT&qtxt=x3d361ke10cj00&qres=yzl8zzofl2a9mpqgrb96bg5jfvzsda04vub6v5k1px8hf1q483k&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-3.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Omar shaded a model to show the part of the lawn that he finished mowing."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "3eighth"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the fraction that names the shaded part."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction that names the shaded part is AP 1 ."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " equal parts and "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " parts are shaded, so I write "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " on top and "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " on the bottom."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8",
+      "b2": "3",
+      "b3": "3",
+      "b4": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8",
+      "b2": "3",
+      "b3": "3",
+      "b4": "8"
+    }
+  }
+}

@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters. What is the area of the lid Ramona is making?"
+          "text": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the area of the lid Ramona is making?"
         }
       ]
     },

@@ -1,0 +1,177 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-7.2F65APB&qtxt=x3c21v5e10cj00&qres=zzvcsvkfvddyog0dny9modlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-7.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "For a-e, select True or False for each equation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "a.12 ÷ 6=2"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "b.24 ÷ 6=3"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "c.30 ÷ 6=6"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "d.42 ÷ 6=7"
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "e.48 ÷ 6=8"
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b5",
+      "options": [
+        {
+          "id": "A",
+          "text": "True"
+        },
+        {
+          "id": "B",
+          "text": "False"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "B",
+      "b3": "B",
+      "b4": "A",
+      "b5": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "B",
+      "b3": "B",
+      "b4": "A",
+      "b5": "B"
+    }
+  }
+}

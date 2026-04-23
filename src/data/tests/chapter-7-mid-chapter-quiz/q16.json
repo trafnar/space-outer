@@ -1,0 +1,60 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-16.11OQ34U&qtxt=x3bm3pue10cj00&qres=zzniud1fbdvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-16.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Gabriella made 5 waffles for breakfast. She has 10 strawberries and 5 blueberries to put on top of the waffles. She will put an equal number of berries on each waffle."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many berries will Gabriella put on each waffle?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Gabriella will put "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " berries on each waffle."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2"
+    }
+  }
+}

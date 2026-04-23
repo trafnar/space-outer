@@ -1,0 +1,207 @@
+{
+  "n": 20,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-33.2F65APB&qtxt=x2d12lme10s300&qres=zz7nn7bfvdnn48hflvfowhtbepeht8itcdxea7mdvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-33.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Emily is buying a pet rabbit. She needs to buy items for her rabbit at the pet store."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Emily buys a cage and 2 bowls for $58. The cage costs $40. Each bowl costs the same amount."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the price of 1 bowl? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I subtracted $58 − 40 to get $"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ". Then, I divided that difference by 2. So, each bowl cost $"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Emily also buys food and toys for her rabbit. She buys a bag of food for $20. She buys 2 toys for $4 each."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the equation which describes the total amount Emily spends on food and toys."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " + 2 × "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " = n"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how to use the order of operations to solve the equation. Let n represent the unknown value."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "First, I multiply 2 × 4 to get "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": ". Then I add 20 to get "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": ". n = "
+        },
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Emily spends $"
+        },
+        {
+          "type": "blank",
+          "id": "b8"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "18",
+      "b2": "9",
+      "b3": "20",
+      "b4": "4",
+      "b5": "8",
+      "b6": "28",
+      "b7": "28",
+      "b8": "28"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "18",
+      "b2": "18",
+      "b3": "20",
+      "b4": "4",
+      "b5": "2",
+      "b6": "22",
+      "b7": "22",
+      "b8": "22"
+    }
+  }
+}

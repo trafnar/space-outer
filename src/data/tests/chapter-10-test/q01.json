@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Yul and Sarah's art class started at 11:20 A.M. The class lasted 30 minutes. Yul left when the class was done. Sarah stayed an extra 10 minutes to talk with the teacher and then left. Enter the time that each student left. Complete the explanation of how you found each time. Yul left when class was done. So, add the "
+          "text": "Yul and Sarah's art class started at 11:20 A.M. The class lasted 30 minutes. Yul left when the class was done. Sarah stayed an extra 10 minutes to talk with the teacher and then left."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the time that each student left. Complete the explanation of how you found each time."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Yul left when class was done. So, add the "
         },
         {
           "type": "blank",
@@ -48,7 +66,16 @@
         },
         {
           "type": "text",
-          "text": ". The time when Sarah left class is the time class ended plus "
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The time when Sarah left class is the time class ended plus "
         },
         {
           "type": "blank",

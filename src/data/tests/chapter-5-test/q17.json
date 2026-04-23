@@ -1,0 +1,65 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-23.39QK2H0&qtxt=x4csvhbe10cj00&qres=zz1jmexe7dvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-23.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Cody saves all his nickels. Today he is getting them out of his piggy bank and wrapping them to take to the bank. He finds he has 150 nickels. It takes 50 nickels to fill each paper wrapper and make a roll."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many wrappers does he need?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 wrappers"
+        },
+        {
+          "id": "B",
+          "text": "3 wrappers"
+        },
+        {
+          "id": "C",
+          "text": "20 wrappers"
+        },
+        {
+          "id": "D",
+          "text": "2 wrappers"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "C"
+    }
+  }
+}

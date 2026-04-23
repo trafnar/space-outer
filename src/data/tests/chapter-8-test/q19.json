@@ -1,0 +1,117 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-24.3GRM7GT&qtxt=x6c96rte10cj00&qres=zzhdeexdndnkb3mht8lkg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-24.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3c"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Angelo rode his bike around a bike trail that was 18 of a mile long. He rode his bike around the trail 16 times. Angelo says he rode a total of 168 miles. Teresa says he is wrong and that he actually rode 2 miles."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who is correct?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The distance around the trail is 18 mile, so if Angelo rode around it 16 times, that is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "8. I can draw a circle, divide it in eighths and shade it 88. I can then draw another circle and shade it the same to show a total of 168. My drawings show that 168 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": ", so Angelo rode "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " miles. "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " correct."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "Both people are"
+        },
+        {
+          "id": "B",
+          "text": "Angelo is"
+        },
+        {
+          "id": "C",
+          "text": "Teresa is"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "16",
+      "b2": "2",
+      "b3": "2",
+      "b4": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "16",
+      "b2": "2",
+      "b3": "2",
+      "b4": "A"
+    }
+  }
+}

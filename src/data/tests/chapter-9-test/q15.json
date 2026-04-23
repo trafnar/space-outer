@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Mavis mixed 24 quart of apple juice with 12 quart of cranberry juice. Compare the fractions. Choose the symbol that makes the statement true. 24 "
+          "text": "Mavis mixed 24 quart of apple juice with 12 quart of cranberry juice."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Compare the fractions. Choose the symbol that makes the statement true."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "24 "
         },
         {
           "type": "blank",

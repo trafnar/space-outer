@@ -1,0 +1,60 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-5.1AJSU4E&qtxt=x3cjtsbe10cj00&qres=zzlisz4ehepeha8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-5.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Elizabeth has 15 horses on her farm. She puts an equal number of horses in each of 3 pens."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many horses are in each pen?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " horses in each pen."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5"
+    }
+  }
+}

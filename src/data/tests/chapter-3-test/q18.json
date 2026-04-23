@@ -1,0 +1,70 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-27.02V7Q9T&qtxt=x5djrn1e10cj00&qres=zzxju41e7dd6l2kdvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-27.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lucy and her mother made tacos. They put 2 tacos on each of 3 plates."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the number sentences that show all the tacos Lucy and her mother made. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 × 3 = 6"
+        },
+        {
+          "id": "B",
+          "text": "2 + 2 + 2 = 6"
+        },
+        {
+          "id": "C",
+          "text": "3 + 3 = 6"
+        },
+        {
+          "id": "D",
+          "text": "2 + 4 = 6"
+        },
+        {
+          "id": "E",
+          "text": "2 + 3 = 5"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,B,C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,B,C"
+    }
+  }
+}

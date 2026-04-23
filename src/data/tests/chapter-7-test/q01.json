@@ -1,0 +1,83 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-1.2F65APB&qtxt=x5ccthde10cj00&qres=zz1jmexe7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-1.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ming divided 72 marbles among 8 different friends. Each friend received the same number of marbles."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many marbles did Ming give to each friend?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "72 ÷ 8 = a"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "8 × a = 72"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "8"
+        },
+        {
+          "id": "B",
+          "text": "9"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        },
+        {
+          "id": "D",
+          "text": "11"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B"
+    }
+  }
+}

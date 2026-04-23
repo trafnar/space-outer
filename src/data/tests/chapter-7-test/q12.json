@@ -1,0 +1,98 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-16.2F65APB&qtxt=x4e44v6e10cj00&qres=zzxbepefvf1w9q8eze2o0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-16.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Finn bought 2 packs of stickers. Each pack had the same number of stickers. A friend gave him 8 more stickers. Now he has 20 stickers in all."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many stickers were in each pack?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There were "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " stickers in each pack."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how you could have solved the problem."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I drew 20 counters and crossed out 8 to show the stickers Finn's friend gave him. That left "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " stickers, which I divided into 2 equal groups of "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6",
+      "b2": "12",
+      "b3": "6"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "6",
+      "b3": "6"
+    }
+  }
+}

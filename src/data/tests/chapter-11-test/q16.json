@@ -30,7 +30,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Complete the explanation of how to find the total area. First, you find the area of each piece. The area of the pantry is "
+          "text": "Complete the explanation of how to find the total area."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "First, you find the area of each piece."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the pantry is "
         },
         {
           "type": "blank",
@@ -38,7 +56,16 @@
         },
         {
           "type": "text",
-          "text": " square feet. The area of the kitchen is "
+          "text": " square feet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the kitchen is "
         },
         {
           "type": "blank",
@@ -46,7 +73,25 @@
         },
         {
           "type": "text",
-          "text": " square feet. Then, you add the areas to find the total area. The total area is "
+          "text": " square feet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Then, you add the areas to find the total area."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The total area is "
         },
         {
           "type": "blank",

@@ -1,0 +1,47 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-11-10.32HIVHG&qtxt=x3ds5b2e10cj00&qres=zzvgzzofvdxi58g&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-11-10.32HIVHG",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the product."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5 ×5 "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "25"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "25"
+    }
+  }
+}

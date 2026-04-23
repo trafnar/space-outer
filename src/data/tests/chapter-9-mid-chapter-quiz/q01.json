@@ -1,0 +1,89 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-90-8-1.3RGGQGD&qtxt=x3cvkq2e10cj00&qres=zz7jfw5ddddyo74&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-90-8-1.3RGGQGD",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3d"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "When two fractions refer to the same whole, why does the fraction with a lesser denominator have larger pieces than the fraction with a greater denominator? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction with a lesser denominator has larger pieces because the whole is divided into "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pieces. The fraction with a greater denominator has smaller pieces because the whole is divided into "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " pieces."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "more"
+        },
+        {
+          "id": "B",
+          "text": "fewer"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "fewer"
+        },
+        {
+          "id": "B",
+          "text": "more"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "A"
+    }
+  }
+}

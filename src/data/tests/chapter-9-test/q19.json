@@ -16,15 +16,38 @@
       "content": [
         {
           "type": "text",
-          "text": "Floyd caught a fish that weighed 78 pound. Kira caught a fish that weighed 34 pound. Whose fish weighed more? Complete the explanation. "
-        },
+          "text": "Floyd caught a fish that weighed 78 pound. Kira caught a fish that weighed 34 pound."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Whose fish weighed more? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "blank",
           "id": "b1"
         },
         {
           "type": "text",
-          "text": " fish weighed more. The missing piece from the whole, 88 is 1"
+          "text": " fish weighed more."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The missing piece from the whole, 88 is 1"
         },
         {
           "type": "blank",
@@ -40,7 +63,16 @@
         },
         {
           "type": "text",
-          "text": ". The fraction with the "
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction with the "
         },
         {
           "type": "blank",

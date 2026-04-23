@@ -1,0 +1,88 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-17.19PNQ22&qtxt=x6dc5wle10cj00&qres=zzvidrsdndnn48hfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-17.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A carpenter builds stools that have 3 legs each."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many legs does the carpenter use to build 6 stools? Use the array to explain how you know your answer is correct."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I circled 3 rows of 6, 3 × 6 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Then I counted by sixes to check."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The carpenter uses "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " legs to build 6 stools."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "18",
+      "b2": "18"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "18",
+      "b2": "18"
+    }
+  }
+}

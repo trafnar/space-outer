@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Find the area of the figure. Each unit square is 1 square meter. The area of the figure is "
+          "text": "Find the area of the figure. Each unit square is 1 square meter."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the figure is "
         },
         {
           "type": "blank",

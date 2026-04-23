@@ -1,0 +1,175 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-10.19PNQ22&qtxt=x4cdvdme10s300&qres=zzxjupddxe7xglcdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-10.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lisa completed the table to describe the product of a mystery one-digit factor and each number."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "×12 3 4 5 ?even eveneven even even"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter all of the possible numbers that could be Lisa's mystery one-digit factor."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "All of the possible numbers are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how you know that you have entered all of the correct possibilities."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Because the products all are even, the mystery factor must be an "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " number. I have entered all of the "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " one-digit numbers."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "2,4,6,8,10"
+        },
+        {
+          "id": "B",
+          "text": "0,2,4,7,8"
+        },
+        {
+          "id": "C",
+          "text": "0,1,2,4,6,8"
+        },
+        {
+          "id": "D",
+          "text": "0,2,4,6,8"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "odd"
+        },
+        {
+          "id": "B",
+          "text": "even"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "even"
+        },
+        {
+          "id": "B",
+          "text": "odd"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "D",
+      "b2": "B",
+      "b3": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "D",
+      "b2": "B",
+      "b3": "A"
+    }
+  }
+}

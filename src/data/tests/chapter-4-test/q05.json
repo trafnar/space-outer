@@ -1,0 +1,70 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-9.19PNQ22&qtxt=x2duttme10cj00&qres=zzbat6gdddd6l9oe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-9.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dale keeps all of his pairs of shoes in his closet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the number of shoes that Dale could have in his closet. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "7"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        },
+        {
+          "id": "E",
+          "text": "5"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,C,D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,C,D"
+    }
+  }
+}

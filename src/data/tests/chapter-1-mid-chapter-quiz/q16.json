@@ -1,0 +1,78 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-13-16.2AT9RS3&qtxt=x3cm9ggcv3jd00&qres=zzdougldndbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-13-16.2AT9RS3",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nancy planted 77 daisies, 49 roses and 38 tulips."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "About how many more roses and tulips did she plant than daisies?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "She planted about "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " more roses and tulips than daisies."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "164"
+        },
+        {
+          "id": "B",
+          "text": "77"
+        },
+        {
+          "id": "C",
+          "text": "10"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-7.24D3NPR&qtxt=x3dbgr8e10cj00&qres=zzrlg6pflf1w8w0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-7.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the division equation to describe the model."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "12− 21010− 288− 266− 244− 222− 20"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "12 ÷ "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2",
+      "b2": "6"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "2"
+    }
+  }
+}

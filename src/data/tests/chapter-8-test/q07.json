@@ -1,0 +1,75 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-7.3GRM7GT&qtxt=x6eb7w3e10cj00&qres=zz1jmexe7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-7.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Six teachers share 4 packs of paper equally."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How much paper does each teacher get? Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "4"
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 sixths of a pack"
+        },
+        {
+          "id": "B",
+          "text": "4 sixths of a pack"
+        },
+        {
+          "id": "C",
+          "text": "1 third of a pack"
+        },
+        {
+          "id": "D",
+          "text": "3 fourths of a pack"
+        },
+        {
+          "id": "E",
+          "text": "4 halves of a pack"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

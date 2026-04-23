@@ -1,0 +1,119 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-14.143MI1M&qtxt=x3d4jl2e10cj00&qres=zzddmbaerdnhhypehx2d3ht8j0ge7kwfrf9do1s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-14.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Janna buys 2 bags of dog food for her dogs. One bag weighs 37 pounds. The other bag weighs 14 pounds."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many pounds do both bags weigh? Complete the explanation of how you might solve the problem."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I added "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " to 37 to make the friendly number of 40. Since I added "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " to 37, I need to subtract "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " from 14. The difference is "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": ". So, the two bags weigh"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "40 + "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " pounds altogether."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "3",
+      "b3": "3",
+      "b4": "11",
+      "b5": "11",
+      "b6": "51"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "14",
+      "b2": "14",
+      "b3": "37",
+      "b4": "23",
+      "b5": "37",
+      "b6": "77"
+    }
+  }
+}

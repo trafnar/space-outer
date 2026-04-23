@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Avery prepares 2 equal-size oranges for the bats at the zoo. One dish has 18 of an orange. Another dish has 14 of an orange. Select the true statement about which dish has more orange."
+          "text": "Avery prepares 2 equal-size oranges for the bats at the zoo. One dish has 18 of an orange. Another dish has 14 of an orange."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the true statement about which dish has more orange."
         }
       ]
     },
@@ -26,11 +35,11 @@
       "options": [
         {
           "id": "A",
-          "text": "The dish with 1 8 of an orange has more orange."
+          "text": "The dish with 18 of an orange has more orange."
         },
         {
           "id": "B",
-          "text": "The dish with 1 4 of an orange has more orange."
+          "text": "The dish with 14 of an orange has more orange."
         },
         {
           "id": "C",

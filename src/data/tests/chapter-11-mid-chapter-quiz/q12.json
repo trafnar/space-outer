@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Jeff is making a poster for a car wash for the Campout Club. What is the perimeter of the poster?"
+          "text": "Jeff is making a poster for a car wash for the Campout Club."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the perimeter of the poster?"
         }
       ]
     },

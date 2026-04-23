@@ -30,7 +30,16 @@
       "content": [
         {
           "type": "text",
-          "text": "How long was Anthony's family gone? Complete the explanation of how the answer can be found. To find the answer, count "
+          "text": "How long was Anthony's family gone? Complete the explanation of how the answer can be found."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "To find the answer, count "
         },
         {
           "type": "blank",
@@ -62,7 +71,16 @@
         },
         {
           "type": "text",
-          "text": " minutes to 6:54. I add them all up to get that the Anthony's family was gone "
+          "text": " minutes to 6:54."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I add them all up to get that the Anthony's family was gone "
         },
         {
           "type": "blank",

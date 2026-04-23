@@ -1,0 +1,60 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-13.3C1OJK8&qtxt=x4d8oj3e10cj00&qres=zzhhlpyfvdxjjsw&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-13.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lindsey has 16 inches of ribbon. She buys another 2 lengths of ribbon, each 5 inches long."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How much ribbon does she have now?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "She has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " inches of ribbon now."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "26"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "26"
+    }
+  }
+}

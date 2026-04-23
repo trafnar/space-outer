@@ -1,0 +1,125 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-22.39QK2H0&qtxt=x7d88fne10cj00&qres=zzllmwiehdnpxrvink18bink18bi3rry2ixjn0bixqkhc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-22.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A bookstore has 7 shelves of books about animals. There are 30 books on each shelf."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many books about animals does the bookstore have? Drag and drop the numbers and symbols into the boxes to illustrate the Distributive Property. Then, drag and drop the shaded areas into the boxes to show how you can use the Distributive Property to find the number of books about animals."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "- 10 7 + 8 7 7 10 10 + + - - 8 8 10 10 +"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d1.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d2.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d3.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d4.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d1.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d1.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d3.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d3.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d4.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d4.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d2.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d2.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d2.png"
+    },
+    {
+      "type": "diagram",
+      "file": "q16-d2.png"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " animal books."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "210"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "30"
+    }
+  }
+}

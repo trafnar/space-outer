@@ -1,0 +1,65 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-6.2F65APB&qtxt=x3dn5vre10cj00&qres=zzrin91ddf1w9xcflvh1c&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-6.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the table."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "÷18274536 9"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2",
+      "b2": "3",
+      "b3": "5",
+      "b4": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "7",
+      "b3": "8",
+      "b4": "9"
+    }
+  }
+}

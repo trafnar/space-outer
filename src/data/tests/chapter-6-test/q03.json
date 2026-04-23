@@ -1,0 +1,60 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-6.1AJSU4E&qtxt=x8cpt0he10cj00&qres=zz7du0hfbfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-6.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Chris plants 64 pumpkins seeds in 8 equal rows."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many seeds does Chris plant in each row? Using an array to represent the problem may help."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Chris plants "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " seeds in each row."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}

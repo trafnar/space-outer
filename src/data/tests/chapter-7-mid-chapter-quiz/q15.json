@@ -1,0 +1,60 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-15.11OQ34U&qtxt=x4djhece10cj00&qres=zzxbepjf1efevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-15.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Carter has 12 new books. He plans to read 3 of them each week."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many weeks will it take Carter to read all of his new books?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "It will take Carter "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " weeks."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4"
+    }
+  }
+}

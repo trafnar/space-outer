@@ -1,0 +1,92 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-21.39QK2H0&qtxt=x6ccs52e10cj00&qres=zzrk1tidndny9s0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-21.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Devon has 24 books to pack in boxes. She packs 8 books in each box."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many boxes does she need? Select an equation and use the letter n to stand for the unknown factor."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A) She needs"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "B) The equation is:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A n × 24 = 8B 24 × 8 = nC n × 8 = 24"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "3 boxes"
+        },
+        {
+          "id": "B",
+          "text": "24 boxes"
+        },
+        {
+          "id": "C",
+          "text": "1 box"
+        },
+        {
+          "id": "D",
+          "text": "8 boxes"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B"
+    }
+  }
+}

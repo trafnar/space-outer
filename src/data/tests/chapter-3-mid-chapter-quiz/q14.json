@@ -1,0 +1,99 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-14.3C1OJK8&qtxt=x6bsud1e10cj00&qres=zzvl6pidxe7b2gmhtct9vdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-14.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jack's birthday is in 6 weeks."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many days is it until Jack's birthday? Complete the explanation on how you could use a number line to solve."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jack's birthday is in "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " days."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "I would draw "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " equal jumps of "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " beginning at 0 on the number line. The jumps end at "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "42",
+      "b2": "6",
+      "b3": "7",
+      "b4": "42"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "30",
+      "b2": "6",
+      "b3": "5",
+      "b4": "30"
+    }
+  }
+}

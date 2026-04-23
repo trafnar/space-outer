@@ -1,0 +1,60 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-13.2F65APB&qtxt=x3c94jne10cj00&qres=zzxbepjf1efevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-13.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Keith arranged 24 toy cars in 6 equal rows."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many toy cars are in each row?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " toy cars in each row."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4"
+    }
+  }
+}

@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Marcus bought some postcards. Each postcard had a perimeter of 18 inches. Which could be one of the postcards Marcus bought? Select all that apply."
+          "text": "Marcus bought some postcards. Each postcard had a perimeter of 18 inches."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which could be one of the postcards Marcus bought? Select all that apply."
         }
       ]
     },

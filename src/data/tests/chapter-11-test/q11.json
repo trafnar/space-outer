@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Mrs. Rios put a wallpaper border around the room shown below. She used 72 feet of wallpaper border. What is the unknown side length?"
+          "text": "Mrs. Rios put a wallpaper border around the room shown below. She used 72 feet of wallpaper border."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the unknown side length?"
         }
       ]
     },

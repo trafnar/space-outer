@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below. What is the area of the floor?"
+          "text": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the area of the floor?"
         }
       ]
     },

@@ -1,0 +1,56 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-15.3KJRODF&qtxt=x3eaowje10cj00&qres=zzniud1fbdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-15.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "On average, what time do most middle school students get home from school?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "9:30 A.M."
+        },
+        {
+          "id": "B",
+          "text": "9:00 P.M."
+        },
+        {
+          "id": "C",
+          "text": "3:30 A.M."
+        },
+        {
+          "id": "D",
+          "text": "4:30 P.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

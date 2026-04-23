@@ -1,0 +1,71 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-3.02V7Q9T&qtxt=x3ebgn3e10cj00&qres=zzlk8j4e7erwncg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-3.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lindsay went hiking for two days in Yellowstone National Park. The first jump on the number line shows how many birds she saw the first day. She saw the same number of birds the next day."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "grade303090024"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the multiplication sentence that the number line shows."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "2 × "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5",
+      "b2": "10"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5",
+      "b2": "10"
+    }
+  }
+}

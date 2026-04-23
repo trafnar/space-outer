@@ -1,0 +1,60 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-30.19PNQ22&qtxt=x2do7n8e10cj00&qres=zzbge9fdddnmrk0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-30.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Chloe bought 3 movie tickets. Each ticket cost $6."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What was the total cost of the movie tickets?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The total cost of the movie tickets was $"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "18"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "18"
+    }
+  }
+}

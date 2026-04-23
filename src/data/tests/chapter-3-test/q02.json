@@ -1,0 +1,74 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-2.02V7Q9T&qtxt=x2bvekne10cj00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-2.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nadia has 7 sheets of stickers. There are 6 stickers on each sheet. She wrote this number sentence to represent the total number of stickers."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "7 × 6 = 42"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is a related number sentence that also represents the total number of stickers she has?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 × 7"
+        },
+        {
+          "id": "B",
+          "text": "6 × 6"
+        },
+        {
+          "id": "C",
+          "text": "7 + 7 + 7 + 7"
+        },
+        {
+          "id": "D",
+          "text": "6 + 7"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

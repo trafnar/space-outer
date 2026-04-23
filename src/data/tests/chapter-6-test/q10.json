@@ -1,0 +1,74 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-17.1AJSU4E&qtxt=x4cc5jje10cj00&qres=zzxh06sdddd6l9oefevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-17.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Stefan has 18 photos to display on some posters."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select ways that he could display the photos in equal groups on the posters. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "6 photos on each of 3 posters"
+        },
+        {
+          "id": "B",
+          "text": "7 photos on each of 2 posters"
+        },
+        {
+          "id": "C",
+          "text": "3 photos on each of 6 posters"
+        },
+        {
+          "id": "D",
+          "text": "5 photos on each of 4 posters"
+        },
+        {
+          "id": "E",
+          "text": "2 photos on each of 9 posters"
+        },
+        {
+          "id": "F",
+          "text": "7 photos on each of 3 posters"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,C,E"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,C,E"
+    }
+  }
+}

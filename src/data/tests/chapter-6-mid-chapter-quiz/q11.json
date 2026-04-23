@@ -1,0 +1,72 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-11.24D3NPR&qtxt=x3cdvwbe10cj00&qres=zzbj7e8ehf1w934&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-11.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jayden modeled a division equation with some counters."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the division equation that describes the model."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "cross3dot1circle"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "cross3dot1circle"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " ÷ 2 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6",
+      "b2": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "3"
+    }
+  }
+}

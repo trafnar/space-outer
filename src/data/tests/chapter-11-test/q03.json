@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Sophia drew this rectangle on dot paper. What is the area of the rectangle?"
+          "text": "Sophia drew this rectangle on dot paper."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the area of the rectangle?"
         }
       ]
     },

@@ -1,0 +1,230 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-14.02V7Q9T&qtxt=x5ch0d9e10cj00&qres=zz1jm7nfvdd6l2kefevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-14.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jorge displayed 32 cans of paint on a shelf in his store."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "go3ch3914"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select other ways Jorge could arrange the same number of cans. Mark all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 row of 32"
+        },
+        {
+          "id": "B",
+          "text": "2 rows of 16"
+        },
+        {
+          "id": "C",
+          "text": "4 rows of 3"
+        },
+        {
+          "id": "D",
+          "text": "8 rows of 3"
+        },
+        {
+          "id": "E",
+          "text": "8 rows of 4"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,B,E"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,B,E"
+    }
+  }
+}

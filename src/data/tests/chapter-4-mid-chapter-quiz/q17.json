@@ -1,0 +1,60 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-11-17.32HIVHG&qtxt=x3d11qie10cj00&qres=zzxmo1gfvehab5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-11-17.32HIVHG",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Shelly can paint 5 pictures in a day."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many pictures can she paint in 8 days?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "She can paint "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pictures in 8 days."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "40"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "40"
+    }
+  }
+}

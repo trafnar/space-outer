@@ -1,0 +1,87 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-17.11OQ34U&qtxt=x5dewske10cj00&qres=zzladkgehfb9fzlddypmof9do1s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-17.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are 70 people at the fair waiting in line for a ride. Each car in the ride can hold 10 people."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Write an equation that could be used to find the number of cars needed to hold all 70 people."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " ÷ "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " cars are needed to hold all 70 people."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "70",
+      "b2": "10",
+      "b3": "7",
+      "b4": "7"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "70",
+      "b2": "10",
+      "b3": "7",
+      "b4": "7"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-18.3GRM7GT&qtxt=x4dsdl0e10cj00&qres=zzrbm0jfb2a9mpqgrb96fg5jfvzsda04vub6txc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-18.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alex has 8 baseballs. He brings 7 baseballs to school."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the fraction of baseballs that Alex brings to school."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alex brings AP 1 of his baseballs to school."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

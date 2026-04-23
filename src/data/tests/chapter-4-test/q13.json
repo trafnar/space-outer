@@ -1,0 +1,92 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-19.19PNQ22&qtxt=x3d80cqe10cj00&qres=zz7b0hgfbe7xgz4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-19.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Antoine and 3 friends divide some pennies evenly among themselves. Each friend separates his pennies into 2 equal stacks with 5 pennies in each stack."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the multiplication sentence that shows the total number of pennies."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The multiplication sentence is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 × (2 × 5)"
+        },
+        {
+          "id": "B",
+          "text": "4 × (2 × 2)"
+        },
+        {
+          "id": "C",
+          "text": "4 + (2 × 5)"
+        },
+        {
+          "id": "D",
+          "text": "3 × (2 × 5)"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "40"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "D",
+      "b2": "30"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-31.19PNQ22&qtxt=x5e4rpde10cj00&qres=zzbdlbkfldnpxkridkg8ridkg1nj7j8qo&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-31.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Drag and drop each number and symbol into the correct box to complete the multiplication sentence that uses the following numbers and symbols."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A multiplication sentence that uses these numbers and symbols is"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "× = 6 2 5 60 6 6 × × 5 5 2 2 = = 60 60 ×"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

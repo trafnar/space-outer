@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame. What is the length of each side of the picture frame?"
+          "text": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the length of each side of the picture frame?"
         }
       ]
     },

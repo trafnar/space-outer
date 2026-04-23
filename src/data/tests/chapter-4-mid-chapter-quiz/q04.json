@@ -1,0 +1,57 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-11-4.32HIVHG&qtxt=x6ecfrve10cj00&qres=zz7m8tuehe7xgl1&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-11-4.32HIVHG",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the given way to break apart the array. Then find the product."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3 × ("
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " + 2) = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4",
+      "b2": "18"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3",
+      "b2": "15"
+    }
+  }
+}

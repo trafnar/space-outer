@@ -1,0 +1,61 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-6.143MI1M&qtxt=x4ck3p7e10cj00&qres=zzbhs8pfldn66nge5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-6.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the numbers that round to 300 when rounded to the nearest hundred. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "242"
+        },
+        {
+          "id": "B",
+          "text": "303"
+        },
+        {
+          "id": "C",
+          "text": "266"
+        },
+        {
+          "id": "D",
+          "text": "250"
+        },
+        {
+          "id": "E",
+          "text": "393"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B,C,D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,C,D"
+    }
+  }
+}

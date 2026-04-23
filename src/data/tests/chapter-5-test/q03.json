@@ -1,0 +1,60 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-3.39QK2H0&qtxt=x4dgf25e10cj00&qres=zzxbepjf1fjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-3.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the number that makes the sentence true."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A library has 36 shelves of fiction books. There are 9 shelves in each cabinet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " cabinets of fiction books in the library."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}

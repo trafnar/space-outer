@@ -1,0 +1,66 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-29.143MI1M&qtxt=x4cakkle10cj00&qres=zzxl8abdndd6l8g&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-29.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alia used 82 + 32 = 114 to check her subtraction."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which math problems could she be checking? Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "114 + 32 ="
+        },
+        {
+          "id": "B",
+          "text": "82 − 32 ="
+        },
+        {
+          "id": "C",
+          "text": "114 − 32 ="
+        },
+        {
+          "id": "D",
+          "text": "114 − 82 ="
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "C,D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A,C"
+    }
+  }
+}

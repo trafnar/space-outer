@@ -1,0 +1,44 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-4.3GRM7GT&qtxt=x4cn4dfe10cj00&qres=zzhdelwer2a9mpqgrb969g5gmr3sda04vub6txc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-4.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.2b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the fraction that names point A on the number line."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "cagm15g3801141"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction that names point A on the number line is AP 1 ."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

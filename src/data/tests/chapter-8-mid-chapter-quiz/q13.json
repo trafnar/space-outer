@@ -1,0 +1,44 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-10-13.0U59ED8&qtxt=x3ebop9e10cj00&qres=zzrbm0jfb2a9mpqgrb96fg5jfvzsda04vub6txc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-10-13.0U59ED8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which fraction names the shaded part?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q13-d1.png",
+      "alt": "seveneighths1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction ofAP 1 names the shaded part."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

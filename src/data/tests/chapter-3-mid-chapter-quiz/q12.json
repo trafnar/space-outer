@@ -1,0 +1,86 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-12.3C1OJK8&qtxt=x4e94c4e10cj00&qres=zzbaregddflvfw2&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-12.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Matt made 4 equal groups of marbles."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter a multiplication sentence to show the total number of marbles."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "img16312"
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "img16312"
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "img16312"
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "img16312"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "4 × "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8",
+      "b2": "32"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8",
+      "b2": "32"
+    }
+  }
+}

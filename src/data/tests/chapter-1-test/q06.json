@@ -1,0 +1,104 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-9.143MI1M&qtxt=x4edr8le10cj00&qres=zzhhmwmf1dnya7kddyotsddypf4dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-9.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Diana sold 336 muffins at the bake sale. Bob sold 286 muffins. Bob estimates that he sold 50 fewer muffins than Diana."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How did he estimate? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "He rounded to the nearest "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ". 336 rounds to "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " and 286 rounds to "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": ". The difference of these rounded numbers is "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "hundred"
+        },
+        {
+          "id": "B",
+          "text": "ten"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "340",
+      "b3": "290",
+      "b4": "50"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "300",
+      "b3": "300",
+      "b4": "600"
+    }
+  }
+}

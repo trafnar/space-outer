@@ -1,0 +1,118 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-23.143MI1M&qtxt=x3d04p9e10cj00&qres=zznog8odndnd8w0dnbubkfvl9vcfvur5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-23.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alexandra has 87 emails in her inbox. She deletes 55 emails."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many emails are left in her inbox?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Label the number line to show your thinking."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "+ 10 + 10 + 10 + 2 "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " 87"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alexandra has "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " emails left in her inbox."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "55",
+      "b2": "65",
+      "b3": "75",
+      "b4": "85",
+      "b5": "32"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "119",
+      "b2": "109",
+      "b3": "99",
+      "b4": "89",
+      "b5": ""
+    }
+  }
+}

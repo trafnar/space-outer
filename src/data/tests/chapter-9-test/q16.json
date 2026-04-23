@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Pat has three pieces of fabric that measure 26, 36, and 46 yards long. Enter the lengths in order from least to greatest. The lengths in order from least to greatest are: "
+          "text": "Pat has three pieces of fabric that measure 26, 36, and 46 yards long."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the lengths in order from least to greatest."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The lengths in order from least to greatest are: "
         },
         {
           "type": "blank",

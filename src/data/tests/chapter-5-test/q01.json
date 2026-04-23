@@ -1,0 +1,56 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-1.39QK2H0&qtxt=x5d2p9ae10cj00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-1.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.4"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The camping club wants to rent rafts. Each raft can hold 6 people. Which equation could be used to find how many rafts are needed for 36 people?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "× 6 = 36"
+        },
+        {
+          "id": "B",
+          "text": "36 × = 6"
+        },
+        {
+          "id": "C",
+          "text": "36 × 6 ="
+        },
+        {
+          "id": "D",
+          "text": "6 × 36 ="
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

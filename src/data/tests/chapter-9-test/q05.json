@@ -16,7 +16,43 @@
       "content": [
         {
           "type": "text",
-          "text": "A nature center offers 2 guided walks. The morning walk is 34 mile. The evening walk is 48 mile. Which walk is shorter? Use the model to find the answer. 141414141818181818181818 Complete the explanation. The length of the model for 48 is "
+          "text": "A nature center offers 2 guided walks. The morning walk is 34 mile. The evening walk"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "is 48 mile. Which walk is shorter? Use the model to find the answer."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "141414141818181818181818"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The length of the model for 48 is "
         },
         {
           "type": "blank",

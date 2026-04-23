@@ -1,0 +1,57 @@
+{
+  "n": 2,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-5.143MI1M&qtxt=x4dof9ue10cj00&qres=zzdf1vce7dn66tc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-5.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the sentences that show the Commutative Property of Addition. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "(5 + 9) + 8 = (9 + 5) + 8"
+        },
+        {
+          "id": "B",
+          "text": "8 + 14 = 14 + 8"
+        },
+        {
+          "id": "C",
+          "text": "8 + (13 + 1) = (8 + 13) + 1"
+        },
+        {
+          "id": "D",
+          "text": "8 + 14 = 22"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A,B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B,D"
+    }
+  }
+}

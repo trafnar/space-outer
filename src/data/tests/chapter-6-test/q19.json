@@ -1,0 +1,137 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-29.1AJSU4E&qtxt=x9cela2e10cj00&qres=zzdf12wdnf1w9bshtbd4wf1w9q8flvg3chtdv5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-29.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the numbers to complete these related multiplication and division facts."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "8486"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "8 × "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " ÷ 8 = "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " × "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " = 48"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": " ÷ "
+        },
+        {
+          "type": "blank",
+          "id": "b8"
+        },
+        {
+          "type": "text",
+          "text": " = 8"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6",
+      "b2": "48",
+      "b3": "48",
+      "b4": "6",
+      "b5": "6",
+      "b6": "8",
+      "b7": "48",
+      "b8": "6"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "48",
+      "b3": "48",
+      "b4": "6",
+      "b5": "6",
+      "b6": "8",
+      "b7": "48",
+      "b8": "6"
+    }
+  }
+}

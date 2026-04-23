@@ -1,0 +1,93 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-4.3C1OJK8&qtxt=x3cuhg0e10cj00&qres=zznhgl0dderwnr4dnijuo&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-4.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Count equal groups to find how many."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "img16304"
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "img16304"
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "img16304"
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "img16304"
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "img16304"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " groups of "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " in all"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5",
+      "b2": "3",
+      "b3": "15"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5",
+      "b2": "3",
+      "b3": "15"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-12.1AJSU4E&qtxt=x4ctnobe10cj00&qres=zz7du0hfbfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-12.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A workbook is 64 pages long."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "If each chapter is 8 pages long, how many chapters are there?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " chapters."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}

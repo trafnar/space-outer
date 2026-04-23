@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Select the best term to complete the sentence. A square with a side length of one unit is the "
+          "text": "Select the best term to complete the sentence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A square with a side length of one unit is the "
         },
         {
           "type": "blank",

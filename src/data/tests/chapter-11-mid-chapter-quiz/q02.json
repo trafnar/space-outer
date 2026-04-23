@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Select the best term to complete the sentence. The measure of the number of unit squares needed to cover a figure with no gaps or overlaps is the "
+          "text": "Select the best term to complete the sentence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The measure of the number of unit squares needed to cover a figure with no gaps or overlaps is the "
         },
         {
           "type": "blank",

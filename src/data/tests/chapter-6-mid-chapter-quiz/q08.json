@@ -1,0 +1,52 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-8.24D3NPR&qtxt=x3bvpp7e10cj00&qres=zzxbepjf1efevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-8.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the number line to complete the division equation."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d1.png",
+      "alt": "basislinealone"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "12 ÷ 3 = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4"
+    }
+  }
+}

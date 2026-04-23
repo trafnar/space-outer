@@ -1,0 +1,62 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-8.39QK2H0&qtxt=x4ccewde10cj00&qres=zzdougldndbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-8.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alya planted 70 trays of flowers. Each tray held 4 flowers. Javon planted 270 flowers."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Did Alya plant more flowers than Javon, the same number of flowers as Javon, or fewer flowers than Javon?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "She planted fewer flowers than Javon."
+        },
+        {
+          "id": "B",
+          "text": "She planted the exact same number of flowers as Javon."
+        },
+        {
+          "id": "C",
+          "text": "She planted more flowers than Javon."
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

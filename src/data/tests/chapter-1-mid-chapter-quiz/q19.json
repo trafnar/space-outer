@@ -1,0 +1,74 @@
+{
+  "n": 19,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-13-19.2AT9RS3&qtxt=x4blm7ucv3jd00&qres=zzdougldndbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-13-19.2AT9RS3",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "On Monday, 72 students played soccer. On Tuesday, 74 students played soccer. On Wednesday, 76 students played soccer."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many more students played soccer on Tuesday and Wednesday combined than on Monday?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " more students played soccer on Tuesday and Wednesday combined than on Monday."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "222"
+        },
+        {
+          "id": "B",
+          "text": "150"
+        },
+        {
+          "id": "C",
+          "text": "78"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A"
+    }
+  }
+}

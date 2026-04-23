@@ -1,0 +1,43 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-14.19PNQ22&qtxt=x4cwni6e10cj00&qres=zzhess3erdnpsmpctd16fdnhf07dxfmszdxmmnmeh4ylqera7g8ermtdgehkfn7erh8a4dx8ks0fbas6pfbc6k6e7du0hdx5ru6erblmhflllpuf19sfoe7kruo&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-14.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Break apart the array to show 8 × 3 = (4 × 3) + (4 × 3) by drawing a line in the array."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q09-d1.png"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Your answer"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

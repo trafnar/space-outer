@@ -1,0 +1,88 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-27.143MI1M&qtxt=x4cn0w8e10cj00&qres=zzbdlbmehdxl8aoerlerk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-27.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are 309 fiction books in the class library. The number of nonfiction books is 37 less than the number of fiction books."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "About how many nonfiction books are there in the class library? Round to the nearest ten."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are about "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " nonfiction books in the class library."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many fiction and nonfiction books are there in the class library altogether?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " fiction and nonfiction books altogether."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "270",
+      "b2": "581"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "272",
+      "b2": "581"
+    }
+  }
+}

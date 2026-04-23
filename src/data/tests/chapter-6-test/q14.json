@@ -1,0 +1,60 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-23.1AJSU4E&qtxt=x3bwtwre10cj00&qres=zz7dttef1f9do1s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-23.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The coach separated the 28 players at lacrosse practice into 4 different groups."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many players were in each group?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There were "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " players in each group."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "7"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "7"
+    }
+  }
+}

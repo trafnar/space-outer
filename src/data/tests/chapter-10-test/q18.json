@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Lucy fills a bathroom sink with water. Is the amount of water more than 1 liter, about 1 liter, or less than 1 liter? Complete the explanation. A liter is only about the amount in a medium bottle of water. That amount would "
+          "text": "Lucy fills a bathroom sink with water."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Is the amount of water more than 1 liter, about 1 liter, or less than 1 liter? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A liter is only about the amount in a medium bottle of water. That amount would "
         },
         {
           "type": "blank",

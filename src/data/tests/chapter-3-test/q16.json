@@ -1,0 +1,62 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-21.02V7Q9T&qtxt=x3dln9he10cj00&qres=zzdngokfldniwj5epeha8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-21.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A unicycle has only 1 wheel."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the multiplication sentence which shows how many wheels there are on 15 unicycles."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " × 1 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "15",
+      "b2": "15"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "15",
+      "b2": "15"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-11-15.32HIVHG&qtxt=x5c3wlve10cj00&qres=zzvcrp4fbddypfkdbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-11-15.32HIVHG",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Zach walked his dog once a day, for 3 days. Moira walked her dog twice a day for 9 days."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Whose dog was walked more times? How many more?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " was walked "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " more time(s) than "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Moira's dog"
+        },
+        {
+          "id": "B",
+          "text": "Zach's dog"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "Zach's dog"
+        },
+        {
+          "id": "B",
+          "text": "Moira's dog"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "15",
+      "b3": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "6",
+      "b3": "A"
+    }
+  }
+}

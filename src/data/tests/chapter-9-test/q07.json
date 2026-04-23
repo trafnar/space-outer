@@ -16,7 +16,43 @@
       "content": [
         {
           "type": "text",
-          "text": "Mrs. Reed baked four pans of lasagna for a family party. Part 1 Select the model that represents how Mrs. Reed could cut one pan of lasagna into thirds, one into fourths, one into sixths, and one into eighths. Part 2 At the end of the party, equivalent amounts of lasagna were left in two sets of pans. Use the models to find equivalent amounts of lasagna that might have been left over. Then complete the two pairs of equivalent fractions."
+          "text": "Mrs. Reed baked four pans of lasagna for a family party."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the model that represents how Mrs. Reed could cut one pan of lasagna into thirds, one into fourths, one into sixths, and one into eighths."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "At the end of the party, equivalent amounts of lasagna were left in two sets of pans. Use the models to find equivalent amounts of lasagna that might have been left over. Then complete the two pairs of equivalent fractions."
         }
       ]
     },
@@ -53,7 +89,16 @@
         },
         {
           "type": "text",
-          "text": "6 24 = "
+          "text": "6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "24 = "
         },
         {
           "type": "blank",

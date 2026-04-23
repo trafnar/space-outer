@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Mrs. Park takes the 9:33 A.M. train to the city. The trip takes 3 hours and 10 minutes. What time does Mrs. Park arrive in the city? Mrs. Park arrives in the city at "
+          "text": "Mrs. Park takes the 9:33 A.M. train to the city. The trip takes 3 hours and 10 minutes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What time does Mrs. Park arrive in the city?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mrs. Park arrives in the city at "
         },
         {
           "type": "blank",

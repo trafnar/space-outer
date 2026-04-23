@@ -1,0 +1,60 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-24.143MI1M&qtxt=x3bq7epe10cj00&qres=zz7i04zfvfbkbuo&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-24.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Daniel has 307 pieces in a building set. He uses 139 pieces to build a house."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many pieces does he have left?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Daniel has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pieces left."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "168"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "78"
+    }
+  }
+}

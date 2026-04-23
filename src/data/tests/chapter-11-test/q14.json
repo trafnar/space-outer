@@ -30,7 +30,43 @@
       "content": [
         {
           "type": "text",
-          "text": "Part 1 Each unit square is 1 square foot. Select another possible flowerbed that has an area of 24 square feet. Part 2 Which of the flowerbeds will take more wood to frame? Complete the explanation. Flowerbed 1 has a perimeter of "
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Each unit square is 1 square foot. Select another possible flowerbed that has an area of 24 square feet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which of the flowerbeds will take more wood to frame? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Flowerbed 1 has a perimeter of "
         },
         {
           "type": "blank",
@@ -38,7 +74,16 @@
         },
         {
           "type": "text",
-          "text": " feet. Flowerbed 2 has a perimeter of "
+          "text": " feet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Flowerbed 2 has a perimeter of "
         },
         {
           "type": "blank",
@@ -46,7 +91,16 @@
         },
         {
           "type": "text",
-          "text": " feet. So, Flowerbed "
+          "text": " feet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "So, Flowerbed "
         },
         {
           "type": "blank",

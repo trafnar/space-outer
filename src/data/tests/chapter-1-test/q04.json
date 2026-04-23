@@ -1,0 +1,76 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-7.143MI1M&qtxt=x4dsg1pe10cj00&qres=zzxmng5fbehx3k0dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-7.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are 485 books in the classroom library."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the chart to show 485 rounded to the nearest 10."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hundreds Tens Ones "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4",
+      "b2": "9",
+      "b3": "0"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4",
+      "b2": "9",
+      "b3": "0"
+    }
+  }
+}

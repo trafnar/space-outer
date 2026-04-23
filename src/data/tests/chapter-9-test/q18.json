@@ -30,7 +30,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Use the model to complete the number sentence. 12 = "
+          "text": "Use the model to complete the number sentence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "12 = "
         },
         {
           "type": "blank",

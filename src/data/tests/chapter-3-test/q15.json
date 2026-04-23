@@ -1,0 +1,183 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-19.02V7Q9T&qtxt=x5cqjoae10s300&qres=zzxe8mrdndnkb3nhtifjmehx1yuht8j7kehiqkg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-19.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Landon collects trading cards."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Yesterday, Landon sorted his trading cards into 2 groups. Each group had 8 cards."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many cards does he have?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Landon has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " trading cards."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Landon buys 3 more packs of trading cards today. Each pack has 9 cards."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter a multiplication sentence to show how many cards Landon buys today. Then find how many cards Landon has now."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Landon bought "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " × "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " trading cards today."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Landon now has "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " + "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": " trading cards."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "16",
+      "b2": "3",
+      "b3": "9",
+      "b4": "27",
+      "b5": "16",
+      "b6": "27",
+      "b7": "43"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "16",
+      "b2": "3",
+      "b3": "9",
+      "b4": "24",
+      "b5": "16",
+      "b6": "24",
+      "b7": "46"
+    }
+  }
+}

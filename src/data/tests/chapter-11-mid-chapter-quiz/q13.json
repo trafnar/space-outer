@@ -16,15 +16,45 @@
       "content": [
         {
           "type": "text",
-          "text": "(no response body found)"
+          "text": "A rectangle has two side lengths of 9 inches and two side lengths of 11 inches."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the perimeter of the rectangle?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The perimeter of the rectangle is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " inches."
         }
       ]
     }
   ],
   "correct": {
-    "values": {}
+    "values": {
+      "b1": "40"
+    }
   },
   "userResponse": {
-    "values": {}
+    "values": {
+      "b1": "40"
+    }
   }
 }

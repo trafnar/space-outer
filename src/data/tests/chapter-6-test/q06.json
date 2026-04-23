@@ -1,0 +1,128 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-9.1AJSU4E&qtxt=x2cr9hqe10cj00&qres=zznbtbrfvf1w8xght8j7kf1w9q8ehx25whtdv5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-9.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the equations that represent the array."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "4 × "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " ÷ 4 = "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " × "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " = 24"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": " ÷ "
+        },
+        {
+          "type": "blank",
+          "id": "b8"
+        },
+        {
+          "type": "text",
+          "text": " = 4"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "6",
+      "b2": "24",
+      "b3": "24",
+      "b4": "6",
+      "b5": "6",
+      "b6": "4",
+      "b7": "24",
+      "b8": "6"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "6",
+      "b2": "24",
+      "b3": "24",
+      "b4": "6",
+      "b5": "6",
+      "b6": "4",
+      "b7": "24",
+      "b8": "6"
+    }
+  }
+}

@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Use an inch ruler to measure. What is the length of the leaf to the nearest fourth-inch?"
+          "text": "Use an inch ruler to measure."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the length of the leaf to the nearest fourth-inch?"
         }
       ]
     },
@@ -35,7 +44,25 @@
       "content": [
         {
           "type": "text",
-          "text": "The length of the leaf is AP 1 inch(es). What happens if you line up the left side of the object with the 1 on the ruler. Complete the explanation. You will get the wrong answer. The leaf will measure 1 inch "
+          "text": "The length of the leaf is AP 1 inch(es)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What happens if you line up the left side of the object with the 1 on the ruler. Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "You will get the wrong answer. The leaf will measure 1 inch "
         },
         {
           "type": "blank",

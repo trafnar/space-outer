@@ -1,0 +1,79 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-9.3KJRODF&qtxt=x3cgftre10cj00&qres=zz7i050ddfvv1h1&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-9.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the starting time."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Elapsed time: 40 minutes"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "End: 9:05 A.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The starting time was "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " A.M."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8",
+      "b2": "25"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "9",
+      "b2": "45"
+    }
+  }
+}

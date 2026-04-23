@@ -1,0 +1,78 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-20.39QK2H0&qtxt=x4cv4wscv3jd00&qres=zzdougldndvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-20.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find a rule for this table."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Tanks56789 Fish250300350400450"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The rule is multiply by "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "55"
+        },
+        {
+          "id": "C",
+          "text": "50"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "C"
+    }
+  }
+}

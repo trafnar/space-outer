@@ -16,23 +16,51 @@
       "content": [
         {
           "type": "text",
-          "text": "Cora measures the heights of three plants. For each height, select the word that describes its place in the order of heights. 26foot"
+          "text": "Cora measures the heights of three plants."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "For each height, select the word that describes its place in the order of heights."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "26foot"
         },
         {
           "type": "blank",
           "id": "b1"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " 22foot"
+          "text": "22foot"
         },
         {
           "type": "blank",
           "id": "b2"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " 24foot"
+          "text": "24foot"
         },
         {
           "type": "blank",

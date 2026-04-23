@@ -1,0 +1,62 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-8-10.3C1OJK8&qtxt=x3c847ce10cj00&qres=zzvjsc2dxfbvuid&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-8-10.3C1OJK8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Beth's mother cut some melons into equal slices. She put 7 slices on each of 5 plates."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter a multiplication sentence you can use to find the total number of melon slices she put on the plates."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " × 5 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "7",
+      "b2": "35"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "7",
+      "b2": "35"
+    }
+  }
+}

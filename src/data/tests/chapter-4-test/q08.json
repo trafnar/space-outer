@@ -1,0 +1,60 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-13.19PNQ22&qtxt=x3c0pple10cj00&qres=zz7jfozfbe7aps0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-13.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "José buys 6 bags of flour. Each bag weighs 5 pounds."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many pounds of flour did José buy?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "José bought "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " pounds of flour."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "30"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "30"
+    }
+  }
+}

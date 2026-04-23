@@ -1,0 +1,144 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-25.1AJSU4E&qtxt=x4cq1p3e10cj00&qres=zzxjubdflerwo5cdxihwyerwo5cerwni8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-25.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the related facts for the array. Complete the explanation of why there are not more equations."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The related facts for the array are:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " × "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " ÷ "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are only two equations because "
+        },
+        {
+          "type": "blank",
+          "id": "b7"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b7",
+      "options": [
+        {
+          "id": "A",
+          "text": "the quotient and one of the factors are the same"
+        },
+        {
+          "id": "B",
+          "text": "the product and the dividend are the same"
+        },
+        {
+          "id": "C",
+          "text": "both factors are the same"
+        },
+        {
+          "id": "D",
+          "text": "the divisor and the dividend are the same"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5",
+      "b2": "5",
+      "b3": "25",
+      "b4": "25",
+      "b5": "5",
+      "b6": "5",
+      "b7": "C"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5",
+      "b2": "5",
+      "b3": "25",
+      "b4": "25",
+      "b5": "5",
+      "b6": "5",
+      "b7": "C"
+    }
+  }
+}

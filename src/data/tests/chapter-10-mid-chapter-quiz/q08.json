@@ -1,0 +1,65 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-8.3KJRODF&qtxt=x3c9tjme10cj00&qres=zz1jm0mfbfblqf4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-8.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the elapsed time."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Start: 5:30 P.M. End: 5:49 P.M."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q08-d1.png",
+      "alt": "clock2530"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The elapsed time is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " minutes."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "19"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "79"
+    }
+  }
+}

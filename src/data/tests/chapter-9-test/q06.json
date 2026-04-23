@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Chun lives 48 mile from school. Gail lives 68 mile from school. Which comparison correctly shows who lives farther from school?"
+          "text": "Chun lives 48 mile from school. Gail lives 68 mile from school."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which comparison correctly shows who lives farther from school?"
         }
       ]
     },
@@ -26,19 +35,19 @@
       "options": [
         {
           "id": "A",
-          "text": "6 8 = 4 8"
+          "text": "68 = 48"
         },
         {
           "id": "B",
-          "text": "4 8 < 6 8"
+          "text": "48 < 68"
         },
         {
           "id": "C",
-          "text": "4 8 > 6 8"
+          "text": "48 > 68"
         },
         {
           "id": "D",
-          "text": "8 4 < 8 6"
+          "text": "84 < 86"
         }
       ]
     }

@@ -1,0 +1,53 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-13.3GRM7GT&qtxt=x4d6r5oe10cj00&qres=zzv9y5xdddxxv7kdxxveodlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-13.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.3c"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Each shape is 1 whole."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select Yes or No for each number to show the number(s) that name(s) the parts that are shaded."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q13-d1.png",
+      "alt": "6"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "NumberYesNo 122 ✔ ✔ 12 ✔ ✔ 6 ✔ ✔ 124 ✔ ✔ 212 ✔ ✔"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-11.02V7Q9T&qtxt=x4ecpr5e10cj00&qres=zzhde0ifldnec5c&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-11.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A waiter carried 2 baskets with 6 dinner rolls in each basket."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many dinner rolls did he carry?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "He carried "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " dinner rolls."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "12"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "12"
+    }
+  }
+}

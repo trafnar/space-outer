@@ -1,0 +1,130 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-12.24D3NPR&qtxt=x5cjti5e10cj00&qres=zzxbepjf1efevwg&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-12.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the bar model to help solve."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lillian bought 20 cans of cat food. There were 5 cans in each pack."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many packs of cat food did Lillian buy?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.jpg"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.jpg"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.jpg"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.jpg"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "20 cans, total"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lillian bought "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " packs of cat food."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "4"
+    }
+  }
+}

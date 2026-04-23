@@ -1,0 +1,44 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-10-10.0U59ED8&qtxt=x5d2mlpe10cj00&qres=zzvflfdfv2a9mpqgrb96cg5dtm7sda04vub6txc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-10-10.0U59ED8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.2b"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the fraction that names the point."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q10-d1.png",
+      "alt": "a1b"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The fraction of AP 1 names point B."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

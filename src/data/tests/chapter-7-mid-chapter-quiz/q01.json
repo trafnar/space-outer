@@ -1,0 +1,71 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-1.11OQ34U&qtxt=x3d0wake10cj00&qres=zzld5x0e7e7xhz4fjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-1.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation of how to find 32 ÷ 4 by making an array."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Draw 1 tile in each of "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " rows until all 32 tiles are drawn. Then count the number of tiles in each row. There are "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " tiles in each row, so 32 ÷ 4 = "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4",
+      "b2": "8",
+      "b3": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3",
+      "b2": "8",
+      "b3": "8"
+    }
+  }
+}

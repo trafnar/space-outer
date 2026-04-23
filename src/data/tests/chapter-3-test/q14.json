@@ -1,0 +1,60 @@
+{
+  "n": 14,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-18.02V7Q9T&qtxt=x5crqwqe10cj00&qres=zzxfn06f1dxb4e8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-18.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Julio has a collection of coins. He puts the coins in 2 equal groups. There are 10 coins in each group."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many coins does Julio have? It may be helpful to use a number line to find the answer."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Julio has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " coins."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "20"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "20"
+    }
+  }
+}

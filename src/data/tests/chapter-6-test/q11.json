@@ -1,0 +1,75 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-18.1AJSU4E&qtxt=x4cup3de10cj00&qres=zznemnmdndniwj7&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-18.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Debbie made this array to model a division equation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the equation that Debbie modeled."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "531"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Debbie modeled the equation "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " ÷ 5 = "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "15",
+      "b2": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "15",
+      "b2": "3"
+    }
+  }
+}

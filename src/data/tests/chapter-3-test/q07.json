@@ -1,0 +1,61 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-10.02V7Q9T&qtxt=x3dmfdce10cj00&qres=zzra7n6fbdx5se8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-10.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the number sentences that show the Commutative Property of Multiplication. Select all that apply."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "4 × 0 = 0"
+        },
+        {
+          "id": "B",
+          "text": "6 × 7 = 6 × 7"
+        },
+        {
+          "id": "C",
+          "text": "1 × 8 = 8 × 1"
+        },
+        {
+          "id": "D",
+          "text": "9 × 2 = 18 × 1"
+        },
+        {
+          "id": "E",
+          "text": "6 × 5 = 5 × 6"
+        }
+      ],
+      "multiple": true
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "C,E"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "C,E"
+    }
+  }
+}

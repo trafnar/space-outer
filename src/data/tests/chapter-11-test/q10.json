@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Shawn drew a rectangle that was 2 units wide and 6 units long. Select a different rectangle that has the same perimeter but different area."
+          "text": "Shawn drew a rectangle that was 2 units wide and 6 units long."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select a different rectangle that has the same perimeter but different area."
         }
       ]
     },

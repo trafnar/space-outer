@@ -1,0 +1,59 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-19.39QK2H0&qtxt=x2bwf7qe10cj00&qres=zzve78wereriomufbezw4ehg7r4erfitc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-19.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "This shows a part of a multiplication table. Find the missing numbers."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "354240"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "48",
+      "b2": "45",
+      "b3": "54"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "56",
+      "b2": "67444444",
+      "b3": "54"
+    }
+  }
+}

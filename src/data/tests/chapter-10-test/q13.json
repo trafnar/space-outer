@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Amy has 26 grams of flour. She puts 3 grams of flour in each pot of chowder that she makes. She puts 5 grams of flour in each pot of potato soup that she makes. She makes 4 pots of chowder. Does Amy have enough flour left over to make 3 pots of potato soup? Complete the explanation. First, you found how much flour she used, "
+          "text": "Amy has 26 grams of flour. She puts 3 grams of flour in each pot of chowder that she makes. She puts 5 grams of flour in each pot of potato soup that she makes. She makes 4 pots of chowder."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Does Amy have enough flour left over to make 3 pots of potato soup? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "First, you found how much flour she used, "
         },
         {
           "type": "blank",
@@ -40,7 +58,16 @@
         },
         {
           "type": "text",
-          "text": " grams. Amy "
+          "text": " grams."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Amy "
         },
         {
           "type": "blank",

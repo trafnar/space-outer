@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Find the unknown side lengths. Perimeter = 36 feet"
+          "text": "Find the unknown side lengths."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Perimeter = 36 feet"
         }
       ]
     },

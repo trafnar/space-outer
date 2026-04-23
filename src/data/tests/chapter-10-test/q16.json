@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Hector buys two bags of gravel for his driveway. He buys a total of 31 kilograms of gravel. Select the bags he buys."
+          "text": "Hector buys two bags of gravel for his driveway. He buys a total of 31 kilograms of gravel."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the bags he buys."
         }
       ]
     },

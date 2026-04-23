@@ -1,0 +1,104 @@
+{
+  "n": 16,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-11-16.32HIVHG&qtxt=x5btu2re10cj00&qres=zzxe78zerddyomsht6ubk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-11-16.32HIVHG",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Annette buys 4 boxes of pencils. There are 6 pencils in each box. Jordan buys 5 boxes of pencils with 8 pencils in each box."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who buys more pencils? How many more?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " buys "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " more pencils than "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jordan"
+        },
+        {
+          "id": "B",
+          "text": "Annette"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jordan"
+        },
+        {
+          "id": "B",
+          "text": "Annette"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "16",
+      "b3": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "24",
+      "b3": "B"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-10-3.0U59ED8&qtxt=x3d1ghse10cj00&qres=zz1mg53fle7xgjk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-10-3.0U59ED8",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the number of equal parts. Then select the name for the parts."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "trapthirds1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "There are "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " equal parts."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The name for the parts is "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "halves"
+        },
+        {
+          "id": "B",
+          "text": "thirds"
+        },
+        {
+          "id": "C",
+          "text": "fourths"
+        },
+        {
+          "id": "D",
+          "text": "sixths"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3",
+      "b2": "B"
+    }
+  }
+}

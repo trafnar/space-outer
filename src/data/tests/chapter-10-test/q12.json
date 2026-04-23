@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Samir made a list of what he did on Tuesday. Select the letter for each activity next to the time he did it. A.Get out of bed. "
+          "text": "Samir made a list of what he did on Tuesday."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the letter for each activity next to the time he did it."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "A.Get out of bed. "
         },
         {
           "type": "blank",
@@ -24,7 +42,16 @@
         },
         {
           "type": "text",
-          "text": "8:05 A.M.B.Walk to school. "
+          "text": "8:05 A.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "B.Walk to school. "
         },
         {
           "type": "blank",
@@ -32,7 +59,16 @@
         },
         {
           "type": "text",
-          "text": "6:45 P.M.C.Eat lunch. "
+          "text": "6:45 P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "C.Eat lunch. "
         },
         {
           "type": "blank",
@@ -40,7 +76,16 @@
         },
         {
           "type": "text",
-          "text": "3:50 P.M.D.Go to guitar lesson after school. "
+          "text": "3:50 P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "D.Go to guitar lesson after school. "
         },
         {
           "type": "blank",
@@ -48,7 +93,16 @@
         },
         {
           "type": "text",
-          "text": "11:43 A.M.E.Eat dinner at home. "
+          "text": "11:43 A.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "E.Eat dinner at home. "
         },
         {
           "type": "blank",

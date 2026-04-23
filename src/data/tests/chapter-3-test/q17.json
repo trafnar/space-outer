@@ -1,0 +1,66 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-22.02V7Q9T&qtxt=x5c230ae10cj00&qres=zzv8kkwf1dny9tsddyo74&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-22.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Carlos spent 3 minutes working on each of 6 math problems. He can use 6 × 3 to find the total amount of time he spent on the problems."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Choose Yes or No to show which are equal to 6 × 3."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "6 + 3 3 + 3 + 3 Yes No 6 + 6 + 6 Yes No 3 + 3 + 3 + 3 + 3 + 3 Yes No"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B"
+    }
+  }
+}

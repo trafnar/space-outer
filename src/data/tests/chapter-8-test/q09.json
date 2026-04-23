@@ -1,0 +1,109 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-9.3GRM7GT&qtxt=x3caefoe10cj00&qres=zz1clkjfberwo5cerwo5cdxi58g&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-9.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Marcus baked a loaf of banana bread for a party. He cut the loaf into equal size pieces. At the end of the party, there were 6 pieces left."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "If Marcus told you that 15 of the loaf was left, how can you find the number of pieces that were in the whole loaf?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The denominator in 15 is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ", so I will draw "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " circles to show the equal parts. Since "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " pieces are 15 of the loaf, I will draw "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " counters in each circle. By multiplying the number of equal parts by the number of counters in each equal part, I know that there were "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " equal size pieces in the whole loaf."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5",
+      "b2": "5",
+      "b3": "6",
+      "b4": "6",
+      "b5": "30"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5",
+      "b2": "5",
+      "b3": "5",
+      "b4": "5",
+      "b5": "25"
+    }
+  }
+}

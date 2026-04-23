@@ -1,0 +1,84 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-10.3KJRODF&qtxt=x3cdnc7e10cj00&qres=zznd7i1dddxxw6u&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-10.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the ending time."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Starting time: 2:51 P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Elapsed time: 15 minutes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The ending time was "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": ":"
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " P.M."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q10-d1.png",
+      "alt": "clock2251"
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3",
+      "b2": "06"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2",
+      "b2": "66"
+    }
+  }
+}

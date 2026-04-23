@@ -1,0 +1,125 @@
+{
+  "n": 15,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-19.3GRM7GT&qtxt=x4d3dl1e10s300&qres=zzdf19xdxehx1xc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-19.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 1"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Janeen and Nicole each made a fruit salad for a school event. Janeen used 16 pieces of fruit to make her salad."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "If 34 of the fruits were peaches, how many peaches did she use?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Use the model."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q15-d1.png",
+      "alt": "341"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Janeen used "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " peaches."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Part 2"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Nicole used 24 pieces of fruit. If 16 of them were peaches, how many peaches in all did Janeen and Nicole use to make their fruit salads? Select the correct explanation."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "Janeen used 12 peaches because 34 of 16 is 12. Nicole used 8 peaches because 16 of 24 is 8. Then I added the peaches to equal 20 peaches used to make the two fruit salads."
+        },
+        {
+          "id": "B",
+          "text": "Janeen used 12 peaches because 34 of 16 is 12. Nicole used 4 peaches because 16 of 24 is 4. Then I added the peaches to equal 16 peaches used to make the two fruit salads."
+        },
+        {
+          "id": "C",
+          "text": "Janeen used 1 peach because 34 of 16 is 1. Nicole used 1 peach because 16 of 24 is 1. Then I added the peaches to equal 2 peaches used to make the two fruit salads."
+        },
+        {
+          "id": "D",
+          "text": "Janeen used 12 peaches because 34 of 16 is 12. Nicole used 4 peaches because 16 of 24 is 6. Then I added the peaches to equal 18 peaches used to make the two fruit salads."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "B",
+      "b1": "12"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "B",
+      "b1": "4"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-4.24D3NPR&qtxt=x4ebvb8e10cj00&qres=zzniud1fbe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-4.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Make equal groups. Complete the table."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "CountersNumber of Equal GroupsNumber in Each Group 1234 3056 155"
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "n": 13,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-100-10-13.3KJRODF&qtxt=x3ctv4ne10cj00&qres=zz7jfozfber9wjk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-100-10-13.3KJRODF",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Matt went to his friend's house. He arrived at 5:10 P.M. He left at 5:40 P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How long was Matt at his friend's house?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Matt was at his friend's house for "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " minutes."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "30"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "50"
+    }
+  }
+}

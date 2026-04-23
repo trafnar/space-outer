@@ -16,31 +16,64 @@
       "content": [
         {
           "type": "text",
-          "text": "Elizabeth has two gardens in her yard. The first garden is 6 feet long and 4 feet wide. The second garden is double the width of the first garden. The area of the second garden is double the area of the first garden. Select True or False for each sentence. The area of the first garden is 24 square feet. "
+          "text": "Elizabeth has two gardens in her yard. The first garden is 6 feet long and 4 feet wide. The second garden is double the width of the first garden. The area of the second garden is double the area of the first garden."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select True or False for each sentence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the first garden is 24 square feet. "
         },
         {
           "type": "blank",
           "id": "b1"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " The area of the second garden is 48 square feet. "
+          "text": "The area of the second garden is 48 square feet. "
         },
         {
           "type": "blank",
           "id": "b2"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " The length of the second garden is 12 feet. "
+          "text": "The length of the second garden is 12 feet. "
         },
         {
           "type": "blank",
           "id": "b3"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " The length of the second garden is 6 feet. "
+          "text": "The length of the second garden is 6 feet. "
         },
         {
           "type": "blank",

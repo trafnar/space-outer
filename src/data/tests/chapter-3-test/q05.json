@@ -1,0 +1,66 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-5.02V7Q9T&qtxt=x1cndwje10cj00&qres=zzxfmm0fbddyo8wdny9s0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-5.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alondra makes 6 necklaces. She uses 3 beads on each necklace."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "For each number sentence, choose Yes or No to tell if the number sentence could be used to find the number of beads Alondra uses."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3 + 3 + 3 + 3 + 3 + 3 = 6 × 3 = A YesB No 3 + 6 = A YesB No 6 + 6 + 6 + 6 + 6 + 6 = A YesB No"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yes"
+        },
+        {
+          "id": "B",
+          "text": "No"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "A"
+    }
+  }
+}

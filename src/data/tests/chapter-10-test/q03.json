@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Dina started swimming at 3:35 P.M. She swam until 4:11 P.M. How long did Dina swim? Dina swam for "
+          "text": "Dina started swimming at 3:35 P.M. She swam until 4:11 P.M."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How long did Dina swim?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dina swam for "
         },
         {
           "type": "blank",

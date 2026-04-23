@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Tomas drew two rectangles on grid paper. Select the words that make the sentence true."
+          "text": "Tomas drew two rectangles on grid paper."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the words that make the sentence true."
         }
       ]
     },

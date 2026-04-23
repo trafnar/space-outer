@@ -16,39 +16,77 @@
       "content": [
         {
           "type": "text",
-          "text": "A large bottle of water holds about 2 liters. Select Yes or No to tell whether the container will hold all of the water. kitchen trashcan"
+          "text": "A large bottle of water holds about 2 liters."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select Yes or No to tell whether the container will hold all of the water."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "kitchen trashcan"
         },
         {
           "type": "blank",
           "id": "b1"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " tea cup"
+          "text": "tea cup"
         },
         {
           "type": "blank",
           "id": "b2"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " juice box"
+          "text": "juice box"
         },
         {
           "type": "blank",
           "id": "b3"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " large mixing bowl"
+          "text": "large mixing bowl"
         },
         {
           "type": "blank",
           "id": "b4"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " perfume bottle"
+          "text": "perfume bottle"
         },
         {
           "type": "blank",

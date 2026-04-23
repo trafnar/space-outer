@@ -1,0 +1,56 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-80-11-6.3GRM7GT&qtxt=x4e3ueue10cj00&qres=zzniud1fbftcutc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-80-11-6.3GRM7GT",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NF.1"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Caleb took 12 photos at the zoo. One fourth of his photos are of giraffes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter the number of Caleb's photos that are of giraffes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " of Caleb's photos are of giraffes."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "9"
+    }
+  }
+}

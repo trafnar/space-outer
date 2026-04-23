@@ -1,0 +1,86 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-9.02V7Q9T&qtxt=x5c77h0e10cj00&qres=zz7f702dnfvv2gwdxlb1uf9do1s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-9.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "John sold 3 baskets of apples at the market. Each basket contained 9 apples."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many apples did John sell? Complete the bar model."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "xxx || x = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "3 × "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " = "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " apples"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "9",
+      "b2": "9",
+      "b3": "27",
+      "b4": "27"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "9",
+      "b2": "9",
+      "b3": "27",
+      "b4": "27"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "n": 8,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-12.2F65APB&qtxt=x4bpi0te10cj00&qres=zz7m910e7dny9tsdnybeofvv0n4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-12.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alicia says that 6 ÷ 3 + 7 is the same as 7 + 6 ÷ 3."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Is Alicia correct or incorrect? Complete the explanation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alicia is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "According to the order of operations, you "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " before you "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": ". So,"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "6 ÷ 3 + 7 = "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " and 7 + 6 ÷ 3 = "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": ". The two values "
+        },
+        {
+          "type": "blank",
+          "id": "b6"
+        },
+        {
+          "type": "text",
+          "text": " the same."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "incorrect"
+        },
+        {
+          "id": "B",
+          "text": "correct"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b2",
+      "options": [
+        {
+          "id": "A",
+          "text": "add"
+        },
+        {
+          "id": "B",
+          "text": "divide"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b3",
+      "options": [
+        {
+          "id": "A",
+          "text": "divide"
+        },
+        {
+          "id": "B",
+          "text": "add"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b6",
+      "options": [
+        {
+          "id": "A",
+          "text": "are"
+        },
+        {
+          "id": "B",
+          "text": "are not"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "B",
+      "b2": "B",
+      "b3": "B",
+      "b4": "9",
+      "b5": "9",
+      "b6": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B",
+      "b2": "B",
+      "b3": "B",
+      "b4": "9",
+      "b5": "9",
+      "b6": "A"
+    }
+  }
+}

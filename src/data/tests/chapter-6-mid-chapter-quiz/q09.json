@@ -1,0 +1,60 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-10-9.24D3NPR&qtxt=x3dwiaie10cj00&qres=zzdougldnepeha8&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-10-9.24D3NPR",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Victor plants 10 seeds in some flowerpots."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "If he puts 5 seeds in each pot, how many flowerpots does he use?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "He uses "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " flowerpots."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "5"
+    }
+  }
+}

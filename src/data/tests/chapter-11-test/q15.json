@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Keisha draws a sketch of her living room on grid paper. Each unit square is 1 square meter. Enter a multiplication equation that can be used to find the area of the living room in square meters."
+          "text": "Keisha draws a sketch of her living room on grid paper. Each unit square is 1 square meter."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Enter a multiplication equation that can be used to find the area of the living room in square meters."
         }
       ]
     },
@@ -47,10 +56,15 @@
         {
           "type": "blank",
           "id": "b3"
-        },
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "text",
-          "text": " So, the area of the living room is "
+          "text": "So, the area of the living room is "
         },
         {
           "type": "blank",

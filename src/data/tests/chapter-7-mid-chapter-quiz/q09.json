@@ -1,0 +1,47 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-9.11OQ34U&qtxt=x3dnjlne10cj00&qres=zzhkgfne7dbgidc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-9.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.7"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the quotient."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = 0 ÷ 8"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "0"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "0"
+    }
+  }
+}

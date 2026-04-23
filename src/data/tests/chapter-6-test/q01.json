@@ -1,0 +1,39 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-60-11-1.1AJSU4E&qtxt=x3dtk94e10cj00&qres=zzxifjsdddxxv7kdxxv5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-60-11-1.1AJSU4E",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.5"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select True or False for each equation."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "EquationTrueFalse 5 ÷ 1 = 1 ✔ ✔ 0 ÷ 4 = 0 ✔ ✔ 8 ÷ 8 = 1 ✔ ✔ 7 ÷ 1 = 7 ✔ ✔"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {}
+  },
+  "userResponse": {
+    "values": {}
+  }
+}

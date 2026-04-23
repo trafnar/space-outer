@@ -1,0 +1,60 @@
+{
+  "n": 18,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-18.11OQ34U&qtxt=x3brb3fe10cj00&qres=zzdougldndvfp4w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-18.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alyssa has 4 cupcakes. She gives 2 cupcakes to each of her cousins."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many cousins does Alyssa have?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alyssa has "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " cousins."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2"
+    }
+  }
+}

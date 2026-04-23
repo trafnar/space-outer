@@ -16,8 +16,22 @@
       "content": [
         {
           "type": "text",
-          "text": "There are 12 people having lunch. Each person wants 13 of a sub sandwich. How many whole sub sandwiches are needed? Use the model below to help answer the question. "
-        },
+          "text": "There are 12 people having lunch. Each person wants 13 of a sub sandwich."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many whole sub sandwiches are needed? Use the model below to help answer the question."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
         {
           "type": "blank",
           "id": "b1"

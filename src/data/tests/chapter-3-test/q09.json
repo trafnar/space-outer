@@ -1,0 +1,65 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-30-9-12.02V7Q9T&qtxt=x5dge4se10cj00&qres=zzbge9fdddnmrk0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-30-9-12.02V7Q9T",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sonya needs 3 equal lengths of wire to make 3 bracelets. The jump on the number line shows the length of one wire in inches."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many inches of wire will Sonya need to make the 3 bracelets?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q09-d1.png",
+      "alt": "303090036"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sonya will need "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " inches."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "18"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "18"
+    }
+  }
+}

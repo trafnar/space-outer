@@ -1,0 +1,61 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-12-3.11OQ34U&qtxt=x3bv782e10cj00&qres=zzlem9gdndxxvcw&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-12-3.11OQ34U",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.6"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the unknown factor and quotient."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "10 × "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " = 20 "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " = 20 ÷ 10"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "2",
+      "b2": "2"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "2",
+      "b2": "2"
+    }
+  }
+}

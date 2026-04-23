@@ -1,0 +1,65 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-50-7-17.39QK2H0&qtxt=x5dvkb0e10cj00&qres=zzniud1fbe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-50-7-17.39QK2H0",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.9"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Heather’s puppy weighs 21 pounds. He has been gaining 5 pounds every month as he grows."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "If this pattern continues, how much will the puppy weigh 7 months from now?"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "answer",
+      "options": [
+        {
+          "id": "A",
+          "text": "35 pounds"
+        },
+        {
+          "id": "B",
+          "text": "21 pounds"
+        },
+        {
+          "id": "C",
+          "text": "61 pounds"
+        },
+        {
+          "id": "D",
+          "text": "56 pounds"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "answer": "D"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "answer": "D"
+    }
+  }
+}

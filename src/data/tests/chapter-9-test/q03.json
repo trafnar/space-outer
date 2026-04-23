@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Dan and Miguel are working on the same homework assignment. Dan has finished 18 of the assignment. Miguel has finished 78 of the assignment. Which statements are correct? Mark all that apply."
+          "text": "Dan and Miguel are working on the same homework assignment. Dan has finished 18 of the assignment. Miguel has finished 78 of the assignment."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Which statements are correct? Mark all that apply."
         }
       ]
     },

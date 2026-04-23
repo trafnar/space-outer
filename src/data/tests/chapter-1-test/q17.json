@@ -1,0 +1,60 @@
+{
+  "n": 17,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-26.143MI1M&qtxt=x3ea4upe10cj00&qres=zz7dsmqehfl8y68&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-26.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sunnyday Elementary School is having its annual Read-a-thon. The third graders have read 486 books so far. Their goal is to read more than 800 books."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is the least number of books they need to read to reach their goal?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "They need to read at least "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " more books."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "315"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "800"
+    }
+  }
+}

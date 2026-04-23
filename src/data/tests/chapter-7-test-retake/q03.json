@@ -1,0 +1,81 @@
+{
+  "n": 3,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-70-13-3.2F65APB&qtxt=x5e7598e10cj00&qres=zzniud1fbe5faio&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-70-13-3.2F65APB",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Fifteen boys are going camping. They brought 5 tents. An equal number of boys sleep in each tent."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many boys will sleep in each tent?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "tent"
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "tent"
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "tent"
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "tent"
+    },
+    {
+      "type": "diagram",
+      "file": "q03-d1.png",
+      "alt": "tent"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " boys will sleep in each tent."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "3"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "3"
+    }
+  }
+}

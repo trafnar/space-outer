@@ -1,0 +1,213 @@
+{
+  "n": 20,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-10-14-30.143MI1M&qtxt=x3dh3ppe10cj00&qres=zz19stxehddyomsfbvub9ddyon4dxcu0w&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-10-14-30.143MI1M",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 1,
+    "possible": 2
+  },
+  "standards": [
+    "3.NBT.2"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alex and Erika collected shells. The tables show the kinds of shells they collected."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alex's Shells Shell Number of Shells Scallop38 Jingle96 Clam113 Erika's Shells Shell Number of Shells Scallop79 Clam105 Whelk24"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who collected more shells?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " collected more shells."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many did she collect?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "She collected "
+        },
+        {
+          "type": "blank",
+          "id": "b2"
+        },
+        {
+          "type": "text",
+          "text": " shells."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "About how many more is that? Round to the nearest ten."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "She collected about "
+        },
+        {
+          "type": "blank",
+          "id": "b3"
+        },
+        {
+          "type": "text",
+          "text": " more shells."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Alex and Erika have the greatest number of what kind of shell?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "They collected the greatest number of the "
+        },
+        {
+          "type": "blank",
+          "id": "b4"
+        },
+        {
+          "type": "text",
+          "text": " kind of shell."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many shells of this kind did they collect?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "They collected "
+        },
+        {
+          "type": "blank",
+          "id": "b5"
+        },
+        {
+          "type": "text",
+          "text": " shells of this kind."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "Alex"
+        },
+        {
+          "id": "B",
+          "text": "Erika"
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b4",
+      "options": [
+        {
+          "id": "A",
+          "text": "scallop"
+        },
+        {
+          "id": "B",
+          "text": "jingle"
+        },
+        {
+          "id": "C",
+          "text": "clam"
+        },
+        {
+          "id": "D",
+          "text": "whelk"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A",
+      "b2": "247",
+      "b3": "40",
+      "b4": "C",
+      "b5": "218"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "A",
+      "b2": "247",
+      "b3": "250",
+      "b4": "C",
+      "b5": "218"
+    }
+  }
+}

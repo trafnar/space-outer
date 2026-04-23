@@ -16,7 +16,16 @@
       "content": [
         {
           "type": "text",
-          "text": "Julio measured an object that he found. It was about 34 inch wide. Select Yes or No to tell whether each of the following objects could be the one Julio measured."
+          "text": "Julio measured an object that he found. It was about 34 inch wide."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select Yes or No to tell whether each of the following objects could be the one Julio measured."
         }
       ]
     },

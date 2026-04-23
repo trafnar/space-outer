@@ -1,0 +1,65 @@
+{
+  "n": 7,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-40-12-12.19PNQ22&qtxt=x2e3n29e10cj00&qres=zzxmo1gfvehab5s&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-40-12-12.19PNQ22",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.OA.3"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Kate drew 5 separate octagons. An octagon has 8 sides."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many sides did Kate draw?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q07-d1.png",
+      "alt": "octagon"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Kate drew "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " sides."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "40"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "40"
+    }
+  }
+}

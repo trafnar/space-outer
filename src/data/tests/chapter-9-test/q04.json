@@ -16,7 +16,25 @@
       "content": [
         {
           "type": "text",
-          "text": "Bryan cut two peaches that were the same size for lunch. He cut one peach into thirds and the other into sixths. Bryan ate 23 of the first peach. His brother ate 56 of the second peach. Who ate more peach? Complete the explanation of a strategy you could use to solve the problem. The problem could be solved using the "
+          "text": "Bryan cut two peaches that were the same size for lunch. He cut one peach into thirds and the other into sixths. Bryan ate 23 of the first peach. His brother ate 56 of the second peach."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Who ate more peach? Complete the explanation of a strategy you could use to solve the problem."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The problem could be solved using the "
         },
         {
           "type": "blank",
