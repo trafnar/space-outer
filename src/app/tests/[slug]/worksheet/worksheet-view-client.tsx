@@ -20,7 +20,6 @@ import {
   IconEyeClosed,
   IconPrinter,
 } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
 import {
   Empty,
   EmptyContent,
@@ -41,17 +40,10 @@ export function WorksheetViewClient({
   questions: Question[];
   slug: string;
 }) {
-  const [worksheetIds] = useWorksheet(slug);
+  const [worksheetIds, , hydrated] = useWorksheet(slug);
   const worksheetQuestions = questions.filter((q) => worksheetIds.has(q.n));
   const [showTitle, setShowTitle] = useShowWorksheetTitle();
   const visibility = useScopedAnswerVisibility(`worksheet:${slug}`, false);
-
-  // The worksheet lives in localStorage, which is only available
-  // after the client hydrates. Don't commit to the "empty" state until
-  // we're sure — otherwise the Empty component flashes before the
-  // questions load.
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
 
   return (
     <AnswerVisibilityProvider value={visibility}>

@@ -39,9 +39,13 @@ function parse(raw: string | null): Set<number> {
 
 type Updater = (prev: Set<number>) => Set<number>;
 
+const subscribeHydrated = () => () => {};
+const getHydratedSnapshot = () => true;
+const getHydratedServerSnapshot = () => false;
+
 export function useWorksheet(
   slug: string,
-): [Set<number>, (updater: Updater | Set<number>) => void] {
+): [Set<number>, (updater: Updater | Set<number>) => void, boolean] {
   const key = worksheetKey(slug);
 
   const getSnapshot = useCallback(() => {
@@ -52,6 +56,12 @@ export function useWorksheet(
   const getServerSnapshot = useCallback(() => null, []);
 
   const raw = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  const hydrated = useSyncExternalStore(
+    subscribeHydrated,
+    getHydratedSnapshot,
+    getHydratedServerSnapshot,
+  );
 
   const value = useMemo(() => parse(raw), [raw]);
 
@@ -66,5 +76,5 @@ export function useWorksheet(
     [key],
   );
 
-  return [value, setValue];
+  return [value, setValue, hydrated];
 }
