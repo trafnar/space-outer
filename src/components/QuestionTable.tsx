@@ -31,7 +31,7 @@ import {
   IconClipboardCheckFilled,
   IconClipboardPlus,
 } from "@tabler/icons-react";
-import { openDebugDialog } from "./DebugDialog";
+import { SettingsDialog } from "./SettingsDialog";
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
@@ -72,6 +72,7 @@ export function QuestionTable({
   // nav keeps working after closing.
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // const { scrollY } = useScroll();
   // const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
@@ -248,9 +249,9 @@ export function QuestionTable({
             />
             <AnswerVisibilityToggle />
             <button
-              onClick={openDebugDialog}
+              onClick={() => setSettingsOpen(true)}
               className="h-full px-1 group/pad bg-debug-red"
-              aria-label="Open debug settings"
+              aria-label="Open settings"
             >
               <Button
                 variant="outline"
@@ -265,6 +266,7 @@ export function QuestionTable({
           </div>
         }
       />
+      <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
       <Table>
         {showHeaderRow && (
           <motion.thead

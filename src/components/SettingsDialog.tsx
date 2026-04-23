@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -18,11 +18,6 @@ import {
 } from "@/lib/settings";
 import { Separator } from "./ui/separator";
 
-export function openDebugDialog() {
-  if (typeof window === "undefined") return;
-  window.dispatchEvent(new Event("debug:open"));
-}
-
 const ROW_ACTIONS: { value: RowAction; label: string }[] = [
   { value: "expand", label: "Expand" },
   { value: "pop", label: "Pop" },
@@ -30,8 +25,13 @@ const ROW_ACTIONS: { value: RowAction; label: string }[] = [
   { value: "none", label: "None" },
 ];
 
-export function DebugDialog() {
-  const [open, setOpen] = useState(false);
+export function SettingsDialog({
+  open,
+  onOpenChange,
+}: {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}) {
   const [rowAction, setRowAction] = useRowAction();
   const [showHeaderRow, setShowHeaderRow] = useShowHeaderRow();
   const [showDebugRegions, setShowDebugRegions] = useShowDebugRegions();
@@ -43,34 +43,13 @@ export function DebugDialog() {
       : "false";
   }, [showDebugRegions]);
 
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (
-        (e.ctrlKey || e.metaKey) &&
-        e.shiftKey &&
-        e.key.toLowerCase() === "d"
-      ) {
-        e.preventDefault();
-        setOpen((prev) => !prev);
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, []);
-
-  useEffect(() => {
-    const handler = () => setOpen(true);
-    window.addEventListener("debug:open", handler);
-    return () => window.removeEventListener("debug:open", handler);
-  }, []);
-
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Settings</DialogTitle>
           <DialogDescription>
-            These are mostly for testing purposes, not user-facing.
+            Customize how questions, answers, and worksheet controls appear.
           </DialogDescription>
         </DialogHeader>
 
