@@ -111,6 +111,7 @@ function BlockView({
       <ChoicesView
         id={block.id}
         options={block.options}
+        multiple={block.multiple}
         response={response}
         correct={correct}
         label={labelById.get(block.id)}
@@ -206,9 +207,20 @@ function BlankView({
   );
 }
 
+function splitIds(v: string | undefined): Set<string> {
+  if (!v) return new Set();
+  return new Set(
+    v
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean),
+  );
+}
+
 function ChoicesView({
   id,
   options,
+  multiple,
   response,
   correct,
   label,
@@ -217,22 +229,27 @@ function ChoicesView({
 }: {
   id: string;
   options: Choice[];
+  multiple?: boolean;
   response: Response;
   correct: Response;
   label?: string;
   showUserAnswer: boolean;
   showCorrectAnswer: boolean;
 }) {
-  const userId = response.values[id];
-  const correctId = correct.values[id];
+  const userIds = multiple
+    ? splitIds(response.values[id])
+    : new Set([response.values[id]].filter(Boolean) as string[]);
+  const correctIds = multiple
+    ? splitIds(correct.values[id])
+    : new Set([correct.values[id]].filter(Boolean) as string[]);
 
   return (
     <div className="flex flex-col gap-1">
       {label && <div className={blankLabelClassName}>{label}</div>}
-      <ul className="flex flex-col gap-1">
+      <ul className="flex flex-col gap-2">
         {options.map((opt) => {
-          const picked = opt.id === userId;
-          const isCorrect = opt.id === correctId;
+          const picked = userIds.has(opt.id);
+          const isCorrect = correctIds.has(opt.id);
           const showPicked = showUserAnswer && picked;
           return (
             <li
@@ -250,7 +267,16 @@ function ChoicesView({
               <span aria-hidden>
                 {showPicked ? <IconCircleCheck /> : <IconCircle />}
               </span>
-              <span>{opt.text}</span>
+              {opt.imageSrc ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={opt.imageSrc}
+                  alt={opt.text || `Option ${opt.id}`}
+                  className="max-h-40"
+                />
+              ) : (
+                <span>{opt.text}</span>
+              )}
             </li>
           );
         })}

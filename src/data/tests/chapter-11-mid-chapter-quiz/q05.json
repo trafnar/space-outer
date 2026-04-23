@@ -1,0 +1,56 @@
+{
+  "n": 5,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-5.0H62CGA&qtxt=x5bpvkke10cj00&qres=zzxbepjf1dnlczk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-5.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the unknown side length. Perimeter = 38 centimeters"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q05-d1.png",
+      "alt": "romb21"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "g = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " centimeters"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "4"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "17"
+    }
+  }
+}

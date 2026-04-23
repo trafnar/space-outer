@@ -1,0 +1,56 @@
+{
+  "n": 9,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-9.0H62CGA&qtxt=x3dnknse10cj00&qres=zzb9e0jfbdxjjsw&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-9.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.7a"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Ramona is making a lid for her rectangular jewelry box. The jewelry box has side lengths of 9 centimeters and 4 centimeters. What is the area of the lid Ramona is making?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q09-d1.png",
+      "alt": "9cube4"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the lid is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " square centimeters."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "36"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "26"
+    }
+  }
+}

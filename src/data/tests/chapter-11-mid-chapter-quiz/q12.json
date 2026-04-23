@@ -1,0 +1,56 @@
+{
+  "n": 12,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-12.0H62CGA&qtxt=x3dbe3ie10cj00&qres=zzb9df9dddxgqo0&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-12.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Jeff is making a poster for a car wash for the Campout Club. What is the perimeter of the poster?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q12-d1.png",
+      "alt": "carwash3"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The perimeter of the poster is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " feet."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "24"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "24"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "n": 1,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-1.0H62CGA&qtxt=x3cdu93cv3jd00&qres=zzhkgfne7dlg3r4&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-1.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.5a"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Select the best term to complete the sentence. A square with a side length of one unit is the "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ]
+    },
+    {
+      "type": "choices",
+      "id": "b1",
+      "options": [
+        {
+          "id": "A",
+          "text": "square unit"
+        },
+        {
+          "id": "B",
+          "text": "perimeter"
+        },
+        {
+          "id": "C",
+          "text": "area"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "A"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "B"
+    }
+  }
+}

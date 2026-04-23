@@ -1,0 +1,56 @@
+{
+  "n": 11,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-11.0H62CGA&qtxt=x3bte1ke10cj00&qres=zzxo1fdf1dxmcxs&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-11.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.6"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Margo will sweep a room. A diagram of the floor that she needs to sweep is shown below. What is the area of the floor?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q11-d1.png",
+      "alt": "28"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The area of the floor is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " square units."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "28"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "28"
+    }
+  }
+}

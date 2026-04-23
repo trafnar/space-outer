@@ -1,0 +1,56 @@
+{
+  "n": 4,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-4.0H62CGA&qtxt=x4bsei4e10cj00&qres=zznemgkdndnec5c&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-4.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the perimeter of the figure. Each unit is 1 centimeter."
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q04-d1.png",
+      "alt": "cubik1"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The perimeter of the figure is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " centimeters."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "14"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "12"
+    }
+  }
+}
