@@ -2,6 +2,10 @@
 
 import { QuestionTable } from "@/components/QuestionTable";
 import type { Manifest, Question } from "@/data/types";
+import {
+  AnswerVisibilityProvider,
+  useScopedAnswerVisibility,
+} from "@/lib/settings";
 
 export function TestViewClient({
   manifest,
@@ -12,6 +16,7 @@ export function TestViewClient({
   questions: Question[];
   slug: string;
 }) {
+  const visibility = useScopedAnswerVisibility(`test:${slug}`, true);
   const { earned, possible, percent } = manifest.score;
   const subtitle = (
     <>
@@ -19,12 +24,14 @@ export function TestViewClient({
     </>
   );
   return (
-    <QuestionTable
-      questions={questions}
-      standards={manifest.standards}
-      title={manifest.title}
-      subtitle={subtitle}
-      slug={slug}
-    />
+    <AnswerVisibilityProvider value={visibility}>
+      <QuestionTable
+        questions={questions}
+        standards={manifest.standards}
+        title={manifest.title}
+        subtitle={subtitle}
+        slug={slug}
+      />
+    </AnswerVisibilityProvider>
   );
 }

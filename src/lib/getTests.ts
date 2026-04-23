@@ -24,7 +24,7 @@ async function listSlugs(): Promise<string[]> {
 
 export async function listTests(): Promise<TestSummary[]> {
   const slugs = await listSlugs();
-  return Promise.all(
+  const tests = await Promise.all(
     slugs.map(async (slug) => ({
       slug,
       manifest: await readJson<Manifest>(
@@ -32,6 +32,14 @@ export async function listTests(): Promise<TestSummary[]> {
       ),
     })),
   );
+  return tests.sort((a, b) => {
+    const ta = a.manifest.takenOn ? Date.parse(a.manifest.takenOn) : NaN;
+    const tb = b.manifest.takenOn ? Date.parse(b.manifest.takenOn) : NaN;
+    if (Number.isNaN(ta) && Number.isNaN(tb)) return 0;
+    if (Number.isNaN(ta)) return 1;
+    if (Number.isNaN(tb)) return -1;
+    return tb - ta;
+  });
 }
 
 export async function getTest(slug: string): Promise<Test | null> {

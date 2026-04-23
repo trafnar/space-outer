@@ -6,7 +6,11 @@ import { AnswerVisibilityToggle } from "@/components/AnswerVisibilityToggle";
 import { Button } from "@/components/ui/button";
 import { TypoH2 } from "@/components/ui/typo";
 import { useWorksheet } from "@/lib/worksheet";
-import { useShowWorksheetTitle } from "@/lib/settings";
+import {
+  AnswerVisibilityProvider,
+  useScopedAnswerVisibility,
+  useShowWorksheetTitle,
+} from "@/lib/settings";
 import { cn } from "@/lib/utils";
 import type { Manifest, Question } from "@/data/types";
 import {
@@ -40,6 +44,7 @@ export function WorksheetViewClient({
   const [worksheetIds] = useWorksheet(slug);
   const worksheetQuestions = questions.filter((q) => worksheetIds.has(q.n));
   const [showTitle, setShowTitle] = useShowWorksheetTitle();
+  const visibility = useScopedAnswerVisibility(`worksheet:${slug}`, false);
 
   // The worksheet lives in localStorage, which is only available
   // after the client hydrates. Don't commit to the "empty" state until
@@ -49,10 +54,18 @@ export function WorksheetViewClient({
   useEffect(() => setHydrated(true), []);
 
   return (
-    <>
+    <AnswerVisibilityProvider value={visibility}>
       <style>{`
         @page {
           margin: 0.5in;
+        }
+        [data-question-card] [role="img"] {
+          max-width: 50%;
+        }
+        [data-question-card] [role="img"] svg,
+        [data-question-card] [role="img"] img {
+          max-width: 100%;
+          height: auto;
         }
         @media print {
           * {
@@ -181,6 +194,6 @@ export function WorksheetViewClient({
           </div>
         )}
       </div>
-    </>
+    </AnswerVisibilityProvider>
   );
 }

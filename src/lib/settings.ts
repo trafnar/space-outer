@@ -1,4 +1,9 @@
-import { useCallback, useSyncExternalStore } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useSyncExternalStore,
+} from "react";
 
 const KEY_PREFIX = "spaceOuterSetting:";
 const ROW_ACTION_KEY = `${KEY_PREFIX}rowAction`;
@@ -82,14 +87,23 @@ export interface AnswerVisibility {
   setShowCorrectAnswer: (value: boolean) => void;
 }
 
-export function useAnswerVisibility(): AnswerVisibility {
+/**
+ * Scoped + defaulted answer visibility. Each scope (e.g. `test:foo`,
+ * `worksheet:foo`) is persisted independently and can default to
+ * shown or hidden.
+ */
+export function useScopedAnswerVisibility(
+  scope: string,
+  defaultShow: boolean,
+): AnswerVisibility {
+  const parse = defaultShow ? parseBoolTrueDefault : parseBoolFalseDefault;
   const [showUserAnswer, setShowUserAnswer] = useSetting(
-    SHOW_USER_ANSWER_KEY,
-    parseBoolTrueDefault,
+    `${SHOW_USER_ANSWER_KEY}:${scope}`,
+    parse,
   );
   const [showCorrectAnswer, setShowCorrectAnswer] = useSetting(
-    SHOW_CORRECT_ANSWER_KEY,
-    parseBoolTrueDefault,
+    `${SHOW_CORRECT_ANSWER_KEY}:${scope}`,
+    parse,
   );
   return {
     showUserAnswer,
@@ -97,6 +111,20 @@ export function useAnswerVisibility(): AnswerVisibility {
     setShowUserAnswer,
     setShowCorrectAnswer,
   };
+}
+
+const AnswerVisibilityContext = createContext<AnswerVisibility | null>(null);
+
+export const AnswerVisibilityProvider = AnswerVisibilityContext.Provider;
+
+export function useAnswerVisibility(): AnswerVisibility {
+  const ctx = useContext(AnswerVisibilityContext);
+  if (!ctx) {
+    throw new Error(
+      "useAnswerVisibility must be used inside an AnswerVisibilityProvider",
+    );
+  }
+  return ctx;
 }
 
 /* Show table header row (debug) */
