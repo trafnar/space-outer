@@ -112,11 +112,19 @@ export function QuestionTable({
     setWorksheet((prev) => new Set([...prev, ...incorrect.map((q) => q.n)]));
   };
 
+  const addAllToWorksheet = () => {
+    setWorksheet(new Set(questions.map((q) => q.n)));
+  };
+
   const clearWorksheet = () => setWorksheet(new Set());
 
-  const numberOfIncorrect = questions.filter(
+  const incorrectQuestions = questions.filter(
     (q) => q.points.earned < q.points.possible,
-  ).length;
+  );
+  const numberOfIncorrect = incorrectQuestions.length;
+  const allIncorrectInWorksheet =
+    numberOfIncorrect > 0 &&
+    incorrectQuestions.every((q) => worksheet.has(q.n));
 
   return (
     <div>
@@ -157,7 +165,10 @@ export function QuestionTable({
               slug={slug}
               worksheetSize={worksheet.size}
               numberOfIncorrect={numberOfIncorrect}
+              allIncorrectInWorksheet={allIncorrectInWorksheet}
+              totalQuestions={questions.length}
               onAddIncorrect={addIncorrectToWorksheet}
+              onAddAll={addAllToWorksheet}
               onClearWorksheet={clearWorksheet}
             />
             <AnswerVisibilityToggle />

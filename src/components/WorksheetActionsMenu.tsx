@@ -14,16 +14,23 @@ export function WorksheetActionsMenu({
   slug,
   worksheetSize,
   numberOfIncorrect,
+  allIncorrectInWorksheet,
+  totalQuestions,
   onAddIncorrect,
+  onAddAll,
   onClearWorksheet,
 }: {
   slug: string;
   worksheetSize: number;
   numberOfIncorrect: number;
+  allIncorrectInWorksheet: boolean;
+  totalQuestions: number;
   onAddIncorrect: () => void;
+  onAddAll: () => void;
   onClearWorksheet: () => void;
 }) {
   const worksheetEmpty = worksheetSize === 0;
+  const allInWorksheet = worksheetSize >= totalQuestions;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
@@ -44,7 +51,7 @@ export function WorksheetActionsMenu({
           <IconChevronDown data-icon="inline-end" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-64">
+      <DropdownMenuContent className="w-80">
         <DropdownMenuItem
           disabled={worksheetEmpty}
           render={<Link href={`/tests/${slug}/worksheet`} />}
@@ -53,15 +60,19 @@ export function WorksheetActionsMenu({
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={onAddIncorrect}
-          disabled={numberOfIncorrect === 0}
+          disabled={numberOfIncorrect === 0 || allIncorrectInWorksheet}
         >
-          Add {numberOfIncorrect} incorrect item
+          Add {numberOfIncorrect} incorrect question
           {numberOfIncorrect === 1 ? "" : "s"} to worksheet
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={onAddAll} disabled={allInWorksheet}>
+          Add all {totalQuestions} question{totalQuestions === 1 ? "" : "s"} to
+          worksheet
         </DropdownMenuItem>
         <DropdownMenuItem onClick={onClearWorksheet} disabled={worksheetEmpty}>
           {worksheetSize === 0
-            ? "Clear all worksheet items"
-            : `Clear all ${worksheetSize} worksheet item${worksheetSize === 1 ? "" : "s"}`}
+            ? "Clear all worksheet questions"
+            : `Clear all ${worksheetSize} worksheet question${worksheetSize === 1 ? "" : "s"}`}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
