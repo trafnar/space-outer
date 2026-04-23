@@ -1,0 +1,56 @@
+{
+  "n": 6,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-6.0H62CGA&qtxt=x5dtlc0e10cj00&qres=zzlisz4ehftcutc&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-6.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 0,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Find the unknown side lengths. Perimeter = 36 feet"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q06-d1.png",
+      "alt": "k21"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "k = "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " feet"
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "5"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "9"
+    }
+  }
+}

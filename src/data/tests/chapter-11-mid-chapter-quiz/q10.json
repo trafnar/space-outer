@@ -1,0 +1,56 @@
+{
+  "n": 10,
+  "url": "https://www-k6.thinkcentral.com/ePC/viewPmtResource.do?method=question&qid=K6CAGM15G3-110-11-10.0H62CGA&qtxt=x5e80toe10cj00&qres=zz7du0hfbfjd9fk&rver=qtarep%2Cqtrrep",
+  "qid": "K6CAGM15G3-110-11-10.0H62CGA",
+  "type": "Multiple Choice",
+  "points": {
+    "earned": 2,
+    "possible": 2
+  },
+  "standards": [
+    "3.MD.8"
+  ],
+  "prompt": [
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Adrienne is decorating a square picture frame. She glued 32 inches of ribbon around the edge of the frame. What is the length of each side of the picture frame?"
+        }
+      ]
+    },
+    {
+      "type": "diagram",
+      "file": "q10-d1.png",
+      "alt": "11011101"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Each side of the picture frame is "
+        },
+        {
+          "type": "blank",
+          "id": "b1"
+        },
+        {
+          "type": "text",
+          "text": " inches."
+        }
+      ]
+    }
+  ],
+  "correct": {
+    "values": {
+      "b1": "8"
+    }
+  },
+  "userResponse": {
+    "values": {
+      "b1": "8"
+    }
+  }
+}
