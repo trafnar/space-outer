@@ -1,86 +1,50 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 
-const isTextEntryTarget = (target: EventTarget | null) => {
-  if (!(target instanceof HTMLElement)) return false;
-  if (target.isContentEditable) return true;
-  const tag = target.tagName;
-  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
-};
-
 export function QuestionDialog({
   questions,
-  activeIndex,
-  onIndexChange,
+  selectedIndex,
+  onSelectedIndexChange,
+  open,
+  onOpenChange,
 }: {
   questions: Question[];
-  activeIndex: number | null;
-  onIndexChange: (index: number | null) => void;
+  selectedIndex: number | null;
+  onSelectedIndexChange: (index: number) => void;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }) {
   const activeQuestion =
-    activeIndex !== null ? (questions[activeIndex] ?? null) : null;
+    selectedIndex !== null ? (questions[selectedIndex] ?? null) : null;
 
+  // Cache the last-shown question so the dialog doesn't blank out while
+  // animating closed.
   type Displayed = { question: Question; index: number };
   const [displayed, setDisplayed] = useState<Displayed | null>(() =>
-    activeQuestion !== null && activeIndex !== null
-      ? { question: activeQuestion, index: activeIndex }
+    activeQuestion !== null && selectedIndex !== null
+      ? { question: activeQuestion, index: selectedIndex }
       : null,
   );
   if (
     activeQuestion !== null &&
-    activeIndex !== null &&
-    (displayed?.index !== activeIndex || displayed?.question !== activeQuestion)
+    selectedIndex !== null &&
+    (displayed?.index !== selectedIndex ||
+      displayed?.question !== activeQuestion)
   ) {
-    setDisplayed({ question: activeQuestion, index: activeIndex });
+    setDisplayed({ question: activeQuestion, index: selectedIndex });
   }
 
   const goToQuestion = (index: number) => {
-    if (index >= 0 && index < questions.length) onIndexChange(index);
+    if (index >= 0 && index < questions.length) onSelectedIndexChange(index);
   };
 
-  const stateRef = useRef({
-    activeIndex,
-    total: questions.length,
-    onIndexChange,
-  });
-  useEffect(() => {
-    stateRef.current = { activeIndex, total: questions.length, onIndexChange };
-  });
-
-  const isOpen = activeIndex !== null;
-  useEffect(() => {
-    if (!isOpen) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (isTextEntryTarget(e.target)) return;
-      const { activeIndex: idx, total, onIndexChange: cb } = stateRef.current;
-      if (idx === null) return;
-      if (e.key === "ArrowLeft" && idx > 0) {
-        e.preventDefault();
-        cb(idx - 1);
-      } else if (e.key === "ArrowRight" && idx < total - 1) {
-        e.preventDefault();
-        cb(idx + 1);
-      }
-    };
-    window.addEventListener("keydown", handler, { capture: true });
-    return () =>
-      window.removeEventListener("keydown", handler, { capture: true });
-  }, [isOpen]);
-
   return (
-    <Dialog
-      open={activeIndex !== null}
-      onOpenChange={(open) => {
-        if (!open) onIndexChange(null);
-      }}
-    >
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="top-[20%] translate-y-0 sm:max-w-2xl max-h-[calc(100vh-40%)] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <DialogHeader className="gap-0">
           <div className="flex items-center gap-0 -ml-1">

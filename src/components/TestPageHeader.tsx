@@ -25,13 +25,14 @@ export function TestPageHeader({
 }) {
   return (
     <div
+      data-test-page-header
       style={{ height }}
       className={cn(
         "sticky top-0 z-15 bg-background border-b",
         "flex flex-col justify-between",
       )}
     >
-      <div className="h-[52px] flex justify-between px-6 items-center">
+      <div className="h-[52px] flex justify-between px-6 items-center gap-4">
         <div className="flex items-center gap-2 min-w-0 grow">
           <BackHomeButton />
           <div className="relative min-w-0 grow">

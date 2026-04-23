@@ -14,7 +14,7 @@ export function QuestionPreview({ prompt }: { prompt: Block[] }) {
             ) : (
               <span
                 key={inlineIdx}
-                className="inline-block align-bottom h-[1.1lh] border-b border-muted-foreground/25 bg-accent-foreground w-8"
+                className="inline-block align-bottom h-[1.1lh] border-b border-muted-foreground/25 w-8"
               ></span>
             ),
           )}

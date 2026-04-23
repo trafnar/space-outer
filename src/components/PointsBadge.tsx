@@ -30,7 +30,7 @@ export function PointsBadge({
     <Badge
       variant={score === 2 ? "green" : score === 1 ? "yellow" : "red"}
       className={cn(
-        "flex tabular-nums pl-0 gap-0.5 bg-transparent border-none pointer-events-none",
+        "flex tabular-nums pl-0 gap-0.5 bg-transparent border-none ring-0 pointer-events-none",
       )}
     >
       <div className="pr-1">

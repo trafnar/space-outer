@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import type { Question } from "@/data/types";
 import { QuestionCard } from "./QuestionCard";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -59,10 +59,11 @@ export function QuestionTable({
     () => new Set(),
   );
   const [worksheet, setWorksheet] = useWorksheet(slug);
-  // SHARED-SELECTION: this is the source of truth for the "active" row.
-  // To lift it, replace this useState with `selectedIndex` / `onSelectedIndexChange`
-  // props (or a context/store hook) and remove this local state.
-  const [poppedIndex, setPoppedIndex] = useState<number | null>(null);
+  // Row "cursor": which row is selected. Drives the modal/sheet content
+  // when open, and persists independently of open/closed state so arrow-key
+  // nav keeps working after closing.
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // const { scrollY } = useScroll();
   // const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
@@ -90,11 +91,71 @@ export function QuestionTable({
   };
 
   const activateRow = (q: Question, index: number) => {
+    setSelectedIndex(index);
     if (isExpandMode) toggleRow(q.n);
-    // SHARED-SELECTION: when the selection is shared, swap `setPoppedIndex`
-    // for the lifted setter (e.g. `onSelectedIndexChange(index)`).
-    else if (isPopMode || isSheetMode) setPoppedIndex(index);
+    else if (isPopMode || isSheetMode) setIsModalOpen(true);
   };
+
+  // Global keyboard nav: Up/Down move the cursor, Enter opens / toggles.
+  // Active only in interactive modes (expand / pop / sheet). Works whether
+  // the modal is open or not — the modal's content is driven by selection.
+  useEffect(() => {
+    if (!isInteractive) return;
+    const isTextEntryTarget = (target: EventTarget | null) => {
+      if (!(target instanceof HTMLElement)) return false;
+      if (target.isContentEditable) return true;
+      const tag = target.tagName;
+      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+    };
+    const handler = (e: KeyboardEvent) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (isTextEntryTarget(e.target)) return;
+      const isDown = e.key === "ArrowDown" || e.key === "j";
+      const isUp = e.key === "ArrowUp" || e.key === "k";
+      if (isDown || isUp) {
+        e.preventDefault();
+        setSelectedIndex((prev) => {
+          if (prev === null) return 0;
+          const delta = isDown ? 1 : -1;
+          return Math.max(0, Math.min(questions.length - 1, prev + delta));
+        });
+      } else if (e.key === "Enter") {
+        if (selectedIndex === null) return;
+        e.preventDefault();
+        if (isExpandMode) toggleRow(questions[selectedIndex].n);
+        else if (isPopMode || isSheetMode) setIsModalOpen(true);
+      } else if (e.key === "x") {
+        if (selectedIndex === null) return;
+        e.preventDefault();
+        toggleInWorksheet(questions[selectedIndex].n);
+      }
+    };
+    window.addEventListener("keydown", handler, { capture: true });
+    return () =>
+      window.removeEventListener("keydown", handler, { capture: true });
+  }, [
+    isInteractive,
+    isExpandMode,
+    isPopMode,
+    isSheetMode,
+    questions,
+    selectedIndex,
+  ]);
+
+  // Keep focus + viewport aligned with the cursor. Moving the cursor
+  // moves DOM focus to the same row so "focused" and "selected" are
+  // always the same thing. Skip focus() while the modal is open so
+  // the modal's focus trap isn't fighting us (Sheet is non-modal but
+  // Dialog isn't).
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const el = document.querySelector<HTMLElement>(
+      `[data-row-index="${selectedIndex}"]`,
+    );
+    if (!el) return;
+    el.scrollIntoView({ block: "nearest" });
+    if (!isModalOpen) el.focus({ preventScroll: true });
+  }, [selectedIndex, isModalOpen]);
 
   const toggleAllWillCollapse = expandedRowIds.size > questions.length / 2;
   const toggleAllRows = () => {
@@ -126,8 +187,21 @@ export function QuestionTable({
     numberOfIncorrect > 0 &&
     incorrectQuestions.every((q) => worksheet.has(q.n));
 
+  // When the sheet is open, squeeze the table (and sticky header)
+  // leftward so the sheet sits beside it rather than over it. The sheet
+  // is `clamp(25rem, 50vw, 32rem)`: cap 32rem, floor 25rem, otherwise
+  // 50% of viewport. The padding normally matches the sheet's width,
+  // but is further clamped so the table never shrinks below ~33rem
+  // (~528px). Below that point the sheet just overlaps.
+  const sheetSqueezeOpen = isSheetMode && isModalOpen;
+
   return (
-    <div>
+    <div
+      className={cn(
+        sheetSqueezeOpen &&
+          "pr-[min(clamp(25rem,50vw,32rem),max(0px,calc(100vw_-_33rem)))]",
+      )}
+    >
       <TestPageHeader
         title={title}
         subtitle={subtitle}
@@ -209,67 +283,79 @@ export function QuestionTable({
           {questions.map((q, i) => (
             <QuestionTableRow
               key={q.n}
+              index={i}
               question={q}
               standards={standards}
               isExpanded={expandedRowIds.has(q.n)}
               isMarked={worksheet.has(q.n)}
+              isSelected={i === selectedIndex}
+              // Roving tabindex: only the selected row is tabbable.
+              // When nothing is selected, make the first row the Tab
+              // entry point — focusing it will set selection.
+              isTabbable={
+                isInteractive &&
+                (i === selectedIndex || (selectedIndex === null && i === 0))
+              }
               isExpandMode={isExpandMode}
               isPopMode={isPopMode}
               isInteractive={isInteractive}
               onToggleMark={() => toggleInWorksheet(q.n)}
-              // SHARED-SELECTION: pass `isSelected={i === poppedIndex}` here
-              // (and accept it on QuestionTableRow) to render a highlight on
-              // the row that's currently open in the sheet.
               onActivate={() => activateRow(q, i)}
+              onFocusRow={() => setSelectedIndex(i)}
             />
           ))}
         </TableBody>
       </Table>
       {isSheetMode && (
-        // SHARED-SELECTION: the sheet already takes the selection as props;
-        // when the state is lifted, just forward the lifted value/setter here
-        // (or pull them from the same context/store).
         <QuestionSheet
           questions={questions}
-          activeIndex={poppedIndex}
-          onIndexChange={setPoppedIndex}
+          selectedIndex={selectedIndex}
+          onSelectedIndexChange={setSelectedIndex}
+          open={isModalOpen}
+          onOpenChange={setIsModalOpen}
         />
       )}
       {isPopMode && (
         <QuestionDialog
           questions={questions}
-          activeIndex={poppedIndex}
-          onIndexChange={setPoppedIndex}
+          selectedIndex={selectedIndex}
+          onSelectedIndexChange={setSelectedIndex}
+          open={isModalOpen}
+          onOpenChange={setIsModalOpen}
         />
       )}
     </div>
   );
 }
 
-// SHARED-SELECTION: add an `isSelected: boolean` prop here and use it below
-// to apply a "selected" style on the row (e.g. a `data-selected` attribute or
-// extra classes on <TableRow>). Also consider setting `aria-current="true"`
-// on the selected row for a11y.
 function QuestionTableRow({
+  index,
   question: q,
   standards,
   isExpanded,
   isMarked,
+  isSelected,
+  isTabbable,
   isExpandMode,
   isPopMode,
   isInteractive,
   onToggleMark,
   onActivate,
+  onFocusRow,
 }: {
+  index: number;
   question: Question;
   standards?: Record<string, string>;
   isExpanded: boolean;
   isMarked: boolean;
+  isSelected: boolean;
+  isTabbable: boolean;
   isExpandMode: boolean;
   isPopMode: boolean;
   isInteractive: boolean;
   onToggleMark: () => void;
   onActivate: () => void;
+  onFocusRow: () => void;
 }) {
   const expanded = isExpandMode && isExpanded;
   const colCount = isExpandMode ? 5 : 4;
@@ -283,7 +369,12 @@ function QuestionTableRow({
   return (
     <React.Fragment>
       <TableRow
+        data-row-index={index}
+        data-state={isSelected ? "selected" : undefined}
+        aria-current={isSelected ? "true" : undefined}
+        style={{ scrollMarginTop: stickyHeaderHeight - 1 }}
         onClick={isInteractive ? onActivate : undefined}
+        onFocus={isInteractive ? onFocusRow : undefined}
         onKeyDown={
           isInteractive
             ? (e) => {
@@ -295,14 +386,13 @@ function QuestionTableRow({
             : undefined
         }
         role={isInteractive ? "button" : undefined}
-        tabIndex={isInteractive ? 0 : undefined}
+        tabIndex={isInteractive ? (isTabbable ? 0 : -1) : undefined}
         aria-expanded={isExpandMode ? expanded : undefined}
         aria-haspopup={isPopMode ? "dialog" : undefined}
         aria-controls={isExpandMode ? `question-${q.n}-details` : undefined}
         className={cn(
-          "hover:bg-transparent",
-          isInteractive &&
-            "cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          "hover:bg-transparent outline-none",
+          isInteractive && "cursor-pointer",
           isExpandMode && "border-b-0",
         )}
       >

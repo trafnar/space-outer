@@ -185,7 +185,7 @@ function BlankView({
     : userVal;
 
   return (
-    <>
+    <span className="whitespace-nowrap">
       {label && <span className={blankLabelClassName}>{label}</span>}
       <span
         className={cn("inline-block min-w-[3.5ch] mx-0.5 text-center relative")}
@@ -203,7 +203,7 @@ function BlankView({
           )}
         />
       </span>
-    </>
+    </span>
   );
 }
 
