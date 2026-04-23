@@ -6,19 +6,32 @@ import {
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
 
+export type PointsIndicator = "wrong" | "partial" | "correct";
+
 export function PointsBadge({
   earned,
   possible,
+  forceIndicator,
 }: {
   earned: number;
   possible: number;
+  forceIndicator?: PointsIndicator;
 }) {
+  const indicator: PointsIndicator =
+    forceIndicator ??
+    (earned === possible && possible > 0
+      ? "correct"
+      : earned > 0
+        ? "partial"
+        : "wrong");
   const score: 0 | 1 | 2 =
-    earned === possible && possible > 0 ? 2 : earned > 0 ? 1 : 0;
+    indicator === "correct" ? 2 : indicator === "partial" ? 1 : 0;
   return (
     <Badge
       variant={score === 2 ? "green" : score === 1 ? "yellow" : "red"}
-      className={cn("tabular-nums pl-0 gap-0.5 bg-transparent border-none")}
+      className={cn(
+        "flex tabular-nums pl-0 gap-0.5 bg-transparent border-none pointer-events-none",
+      )}
     >
       <div className="pr-1">
         {score === 2 ? (

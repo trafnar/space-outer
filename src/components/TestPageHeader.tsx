@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { TypoH2 } from "./ui/typo";
+import { ReviewButton } from "./ReviewButton";
 
 export function TestPageHeader({
   title,
@@ -42,7 +43,11 @@ export function TestPageHeader({
             )}
           </div>
         </div>
-        <ReviewButton slug={slug} reviewSize={reviewSize} />
+        <ReviewButton
+          slug={slug}
+          reviewSize={reviewSize}
+          className="h-full pl-2 -ml-2 pr-6 -mr-6"
+        />
       </div>
       {toolbar}
     </div>
@@ -65,46 +70,5 @@ function BackHomeButton() {
     >
       <IconArrowLeft />
     </Button>
-  );
-}
-
-function ReviewButton({
-  slug,
-  reviewSize,
-}: {
-  slug: string;
-  reviewSize: number;
-}) {
-  const reviewEmpty = reviewSize === 0;
-  return (
-    <Link
-      href={`/tests/${slug}/review`}
-      className={cn(
-        "h-full pl-2 -ml-2 pr-6 -mr-6 group/pad bg-debug-red flex items-center",
-        reviewEmpty && "opacity-50 pointer-events-none",
-      )}
-      aria-disabled={reviewEmpty || undefined}
-    >
-      <Button
-        variant="default"
-        size="sm"
-        nativeButton={false}
-        render={<div />}
-        className="group"
-      >
-        <div>
-          <div
-            data-icon="inline-start"
-            className={cn(
-              "tabular-nums truncate text-[10px] tracking-tighter font-bold bg-background size-4.5 rounded-full",
-              "text-primary group-hover:text-primary/90 flex items-center justify-center -translate-x-0.5",
-            )}
-          >
-            {reviewSize}
-          </div>
-        </div>
-        Review Worksheet
-      </Button>
-    </Link>
   );
 }
