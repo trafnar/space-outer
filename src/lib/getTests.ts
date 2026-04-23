@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { cache } from "react";
 import type {
   Manifest,
   Question,
@@ -22,6 +23,10 @@ async function listSlugs(): Promise<string[]> {
     .sort();
 }
 
+export async function listTestSlugs(): Promise<string[]> {
+  return listSlugs();
+}
+
 export async function listTests(): Promise<TestSummary[]> {
   const slugs = await listSlugs();
   const tests = await Promise.all(
@@ -42,7 +47,9 @@ export async function listTests(): Promise<TestSummary[]> {
   });
 }
 
-export async function getTest(slug: string): Promise<Test | null> {
+export const getTest = cache(async function getTest(
+  slug: string,
+): Promise<Test | null> {
   if (!SLUG_RE.test(slug)) return null;
   const dir = path.join(TESTS_ROOT, slug);
 
@@ -64,7 +71,7 @@ export async function getTest(slug: string): Promise<Test | null> {
   );
 
   return { slug, manifest, questions };
-}
+});
 
 async function inlineDiagrams(question: Question, dir: string): Promise<void> {
   await Promise.all(
