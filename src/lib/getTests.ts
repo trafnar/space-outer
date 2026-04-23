@@ -49,7 +49,8 @@ export async function getTest(slug: string): Promise<Test | null> {
     manifest.questions.map(async (q) => {
       const file = `q${String(q.n).padStart(2, "0")}.json`;
       const question = await readJson<Question>(path.join(dir, file));
-      await inlineDiagramSvgs(question, dir);
+      await inlineDiagrams(question, dir);
+      await inlineChoiceImages(question, dir);
       return question;
     }),
   );
@@ -57,17 +58,72 @@ export async function getTest(slug: string): Promise<Test | null> {
   return { slug, manifest, questions };
 }
 
-async function inlineDiagramSvgs(
+async function inlineDiagrams(question: Question, dir: string): Promise<void> {
+  await Promise.all(
+    question.prompt.map(async (block) => {
+      if (block.type !== "diagram") return;
+      block.svg = await loadInlineImageHtml(
+        path.join(dir, block.file),
+        block.alt,
+      );
+    }),
+  );
+}
+
+async function inlineChoiceImages(
   question: Question,
   dir: string,
 ): Promise<void> {
-  await Promise.all(
-    question.prompt.map(async (block) => {
-      if (block.type === "diagram") {
-        block.svg = await fs.readFile(path.join(dir, block.file), "utf8");
-      }
-    }),
-  );
+  const tasks: Promise<void>[] = [];
+  for (const block of question.prompt) {
+    if (block.type !== "choices") continue;
+    for (const opt of block.options) {
+      const match = opt.text.match(/^\[image:(.+)\]$/);
+      if (!match) continue;
+      const file = match[1];
+      tasks.push(
+        (async () => {
+          opt.imageSrc = await loadAsDataUrl(path.join(dir, file));
+          opt.text = "";
+        })(),
+      );
+    }
+  }
+  await Promise.all(tasks);
+}
+
+async function loadInlineImageHtml(
+  filePath: string,
+  alt?: string,
+): Promise<string> {
+  if (filePath.toLowerCase().endsWith(".svg")) {
+    return fs.readFile(filePath, "utf8");
+  }
+  const src = await loadAsDataUrl(filePath);
+  const altAttr = alt ? ` alt="${escapeAttr(alt)}"` : ' alt=""';
+  return `<img src="${src}"${altAttr} />`;
+}
+
+async function loadAsDataUrl(filePath: string): Promise<string> {
+  const ext = path.extname(filePath).toLowerCase();
+  const mime =
+    ext === ".svg"
+      ? "image/svg+xml"
+      : ext === ".jpg" || ext === ".jpeg"
+        ? "image/jpeg"
+        : ext === ".gif"
+          ? "image/gif"
+          : "image/png";
+  const buf = await fs.readFile(filePath);
+  return `data:${mime};base64,${buf.toString("base64")}`;
+}
+
+function escapeAttr(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 export async function getAllTests(): Promise<Test[]> {

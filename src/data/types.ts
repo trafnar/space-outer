@@ -28,7 +28,12 @@ export type Manifest = {
 export type Block =
   | { type: "paragraph"; content: Inline[] }
   | { type: "diagram"; file: string; alt?: string; svg?: string }
-  | { type: "choices"; id: string; options: Choice[] };
+  | {
+      type: "choices";
+      id: string;
+      options: Choice[];
+      multiple?: boolean;
+    };
 
 // Inline-level nodes: flow within a paragraph.
 export type Inline =
@@ -38,6 +43,7 @@ export type Inline =
 export type Choice = {
   id: string;
   text: string;
+  imageSrc?: string;
 };
 
 // Unified response. `values` maps a blank id or choices-block id to its
