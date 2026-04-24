@@ -189,6 +189,11 @@ function BlankView({
   const displayText = boundOptions
     ? (boundOptions.find((o) => o.id === userVal)?.text ?? userVal)
     : userVal;
+  const showInlineCorrection =
+    !boundOptions &&
+    showCorrectAnswer &&
+    correctVal !== undefined &&
+    !isRight;
 
   return (
     <span className="whitespace-nowrap">
@@ -204,14 +209,28 @@ function BlankView({
       >
         <span
           className={cn(
-            "text-foreground/75",
-            showIndicator &&
+            "inline-flex -translate-y-px items-baseline justify-center gap-1 text-foreground/75",
+            !showInlineCorrection &&
+              showIndicator &&
               (isRight
                 ? "text-correct-green"
                 : "text-wrong-red"),
           )}
         >
-        {showUserAnswer ? (displayText ?? " ") : " "}
+          {showInlineCorrection ? (
+            <>
+              {showUserAnswer && userVal !== undefined && (
+                <span className="text-wrong-red line-through decoration-foreground/60">
+                  {displayText}
+                </span>
+              )}
+              <span className="text-correct-green">{correctVal}</span>
+            </>
+          ) : showUserAnswer ? (
+            (displayText ?? " ")
+          ) : (
+            " "
+          )}
         </span>
         <div
           className={cn(
