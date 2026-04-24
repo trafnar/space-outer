@@ -1,6 +1,14 @@
 import { notFound } from "next/navigation";
-import { getTest } from "@/lib/getTests";
+import { getTest, listTestSlugs } from "@/lib/getTests";
+import { toTestViewData } from "@/lib/testViewData";
 import { TestViewClient } from "./test-view-client";
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const slugs = await listTestSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export default async function Page({ params }: PageProps<"/tests/[slug]">) {
   const { slug } = await params;
@@ -12,8 +20,7 @@ export default async function Page({ params }: PageProps<"/tests/[slug]">) {
   return (
     <div className="flex flex-col gap-6 pb-[50vh]">
       <TestViewClient
-        manifest={test.manifest}
-        questions={test.questions}
+        test={toTestViewData(test)}
         slug={slug}
       />
     </div>

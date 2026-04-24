@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Question } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
@@ -13,7 +13,7 @@ export function QuestionDialog({
   open,
   onOpenChange,
 }: {
-  questions: Question[];
+  questions: ViewQuestion[];
   selectedIndex: number | null;
   onSelectedIndexChange: (index: number) => void;
   open: boolean;
@@ -24,7 +24,7 @@ export function QuestionDialog({
 
   // Cache the last-shown question so the dialog doesn't blank out while
   // animating closed.
-  type Displayed = { question: Question; index: number };
+  type Displayed = { question: ViewQuestion; index: number };
   const [displayed, setDisplayed] = useState<Displayed | null>(() =>
     activeQuestion !== null && selectedIndex !== null
       ? { question: activeQuestion, index: selectedIndex }

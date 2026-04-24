@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Ingest a ThinkCentral archive (produced by think-central-archive.js) and
-// write a ready-to-use test folder under src/data/tests/<slug>/.
+// write ready-to-use test data and assets for the app.
 //
 // Parses the archive offline with linkedom — no browser needed. Iterate on
 // extractor logic here rather than re-running the view/extract browser dance.
@@ -13,8 +13,9 @@
 //     ~/Downloads/pmt-chapter-10-post-test-...archive.json \
 //     chapter-10-test
 //
-// Writes: src/data/tests/<target-slug>/{manifest.json, qNN.json, qNN-dN.png}.
-// Existing .json and q*.png in the target are removed first so stale files
+// Writes JSON to src/data/tests/<target-slug>/ and images to
+// public/test-assets/<target-slug>/.
+// Existing generated JSON and image assets are removed first so stale files
 // don't linger.
 
 import fs from "node:fs/promises";
@@ -50,6 +51,7 @@ const repoRoot = path.resolve(
   "..",
 );
 const dst = path.join(repoRoot, "src/data/tests", slug);
+const assetDst = path.join(repoRoot, "public/test-assets", slug);
 
 const archive = JSON.parse(await fs.readFile(archivePath, "utf8"));
 
@@ -478,11 +480,17 @@ const manifest = {
 // ---------- Write files ----------
 
 await fs.mkdir(dst, { recursive: true });
+await fs.mkdir(assetDst, { recursive: true });
 
 // Clear stale per-question JSON and diagrams so renames/removals apply.
 for (const entry of await fs.readdir(dst)) {
-  if (/^q\d+(-d\d+)?\.(json|png|jpg|jpeg|gif|svg)$/i.test(entry) || entry === "manifest.json") {
+  if (/^q\d+\.json$/i.test(entry) || entry === "manifest.json") {
     await fs.unlink(path.join(dst, entry));
+  }
+}
+for (const entry of await fs.readdir(assetDst)) {
+  if (/^q\d+(-d\d+)?\.(png|jpg|jpeg|gif|svg)$/i.test(entry)) {
+    await fs.unlink(path.join(assetDst, entry));
   }
 }
 
@@ -514,7 +522,7 @@ let fromCache = 0;
 let downloaded = 0;
 let failed = 0;
 for (const img of images) {
-  const out = path.join(dst, img.localName);
+  const out = path.join(assetDst, img.localName);
   const cachePath = path.join(IMAGE_CACHE_DIR, cacheKey(img.url));
   try {
     let buf;
@@ -547,7 +555,7 @@ const imgSummary =
           : `0 images`;
 
 console.log(
-  `wrote ${questions.length} questions, ${imgSummary} → ${path.relative(repoRoot, dst)}`,
+  `wrote ${questions.length} questions, ${imgSummary} → ${path.relative(repoRoot, dst)} (+ ${path.relative(repoRoot, assetDst)})`,
 );
 console.log(
   `  title: ${title}`,

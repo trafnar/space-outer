@@ -1,5 +1,7 @@
 "use client";
 
+import { getImageProps } from "next/image";
+import ReactDOM from "react-dom";
 import {
   Table,
   TableBody,
@@ -7,9 +9,9 @@ import {
   TableHead,
   TableRow,
 } from "@/components/ui/table";
-import type { Question } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useEffectEvent, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -31,11 +33,18 @@ import {
   IconClipboardCheckFilled,
   IconClipboardPlus,
 } from "@tabler/icons-react";
-import { openDebugDialog } from "./DebugDialog";
+import { SettingsDialog } from "./SettingsDialog";
 
 // Height of the sticky card-header wrapper. Used both as its fixed
 // height and as the top offset for the sticky thead so they line up.
 const stickyHeaderHeight = 108;
+
+function isTextEntryTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false;
+  if (target.isContentEditable) return true;
+  const tag = target.tagName;
+  return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+}
 
 export function QuestionTable({
   questions,
@@ -44,7 +53,7 @@ export function QuestionTable({
   subtitle,
   slug,
 }: {
-  questions: Question[];
+  questions: ViewQuestion[];
   standards?: Record<string, string>;
   title?: string;
   subtitle?: React.ReactNode;
@@ -65,6 +74,14 @@ export function QuestionTable({
   // nav keeps working after closing.
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // Tracks the row index the sheet/dialog is currently open for. Used
+  // by `activateRow` to detect a second activation on the same row
+  // (which should toggle the modal closed). We can't compare against
+  // `selectedIndex` for this because a row's `onFocus` fires before
+  // `onClick` and updates `selectedIndex` to the clicked row, so by the
+  // time the click handler runs the two always look equal.
+  const openForIndexRef = useRef<number | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // const { scrollY } = useScroll();
   // const shadowAlpha = useTransform(scrollY, [0, 10], [0, 0.08], {
@@ -98,51 +115,79 @@ export function QuestionTable({
     parseId: (el) => Number(el.dataset.questionN),
   });
 
-  const activateRow = (q: Question, index: number) => {
-    setSelectedIndex(index);
-    if (isExpandMode) toggleRow(q.n);
-    else if (isPopMode || isSheetMode) setIsModalOpen(true);
+  const activateRow = (q: ViewQuestion, index: number) => {
+    if (isExpandMode) {
+      setSelectedIndex(index);
+      toggleRow(q.n);
+    } else if (isPopMode || isSheetMode) {
+      const sameRow = index === openForIndexRef.current;
+      if (isModalOpen && sameRow) {
+        setIsModalOpen(false);
+        openForIndexRef.current = null;
+      } else {
+        setSelectedIndex(index);
+        setIsModalOpen(true);
+        openForIndexRef.current = index;
+      }
+    }
   };
 
   // Global keyboard nav: Up/Down move the cursor, x toggles worksheet.
   // Enter is handled at the row level so it always runs exactly once
   // through `activateRow` in whichever mode is current.
+  const handleGlobalKeyDown = useEffectEvent((e: KeyboardEvent) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (isTextEntryTarget(e.target)) return;
+    const isDown = e.key === "ArrowDown" || e.key === "j";
+    const isUp = e.key === "ArrowUp" || e.key === "k";
+    if (isDown || isUp) {
+      e.preventDefault();
+      setSelectedIndex((prev) => {
+        const next =
+          prev === null
+            ? 0
+            : Math.max(
+                0,
+                Math.min(questions.length - 1, prev + (isDown ? 1 : -1)),
+              );
+        // Keep the "currently-displayed-sheet-row" ref in sync so a
+        // subsequent click on the displayed row closes the sheet.
+        if (isModalOpen) openForIndexRef.current = next;
+        return next;
+      });
+    } else if (e.key === "x") {
+      if (selectedIndex === null) return;
+      e.preventDefault();
+      toggleInWorksheet(questions[selectedIndex].n);
+    } else if (e.key === "Escape") {
+      if (isModalOpen) return;
+      if (selectedIndex === null) return;
+      e.preventDefault();
+      const el = document.querySelector<HTMLElement>(
+        `[data-row-index="${selectedIndex}"]`,
+      );
+      el?.blur();
+      setSelectedIndex(null);
+    }
+  });
+
   useEffect(() => {
     if (!isInteractive) return;
-    const isTextEntryTarget = (target: EventTarget | null) => {
-      if (!(target instanceof HTMLElement)) return false;
-      if (target.isContentEditable) return true;
-      const tag = target.tagName;
-      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
-    };
     const handler = (e: KeyboardEvent) => {
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (isTextEntryTarget(e.target)) return;
-      const isDown = e.key === "ArrowDown" || e.key === "j";
-      const isUp = e.key === "ArrowUp" || e.key === "k";
-      if (isDown || isUp) {
-        e.preventDefault();
-        setSelectedIndex((prev) => {
-          if (prev === null) return 0;
-          const delta = isDown ? 1 : -1;
-          return Math.max(0, Math.min(questions.length - 1, prev + delta));
-        });
-      } else if (e.key === "x") {
-        if (selectedIndex === null) return;
-        e.preventDefault();
-        toggleInWorksheet(questions[selectedIndex].n);
-      }
+      handleGlobalKeyDown(e);
     };
     window.addEventListener("keydown", handler, { capture: true });
     return () =>
       window.removeEventListener("keydown", handler, { capture: true });
-  }, [isInteractive, questions, selectedIndex]);
+  }, [isInteractive]);
 
   // Keep focus + viewport aligned with the cursor. Moving the cursor
   // moves DOM focus to the same row so "focused" and "selected" are
-  // always the same thing. Skip focus() while the modal is open so
-  // the modal's focus trap isn't fighting us (Sheet is non-modal but
-  // Dialog isn't).
+  // always the same thing — this keeps Space/Enter activating the row
+  // the user just arrowed to rather than whichever row they last clicked.
+  // Skip focus() only when the modal Dialog (pop mode) is open, since
+  // its focus trap would yank focus back. Sheet is non-modal, so syncing
+  // focus while it's open is fine.
   useEffect(() => {
     if (selectedIndex === null) return;
     const el = document.querySelector<HTMLElement>(
@@ -150,8 +195,9 @@ export function QuestionTable({
     );
     if (!el) return;
     el.scrollIntoView({ block: "nearest" });
-    if (!isModalOpen) el.focus({ preventScroll: true });
-  }, [selectedIndex, isModalOpen]);
+    const dialogOpen = isPopMode && isModalOpen;
+    if (!dialogOpen) el.focus({ preventScroll: true });
+  }, [selectedIndex, isModalOpen, isPopMode]);
 
   const toggleAllWillCollapse = expandedRowIds.size > questions.length / 2;
   const toggleAllRows = () => {
@@ -243,9 +289,9 @@ export function QuestionTable({
             />
             <AnswerVisibilityToggle />
             <button
-              onClick={openDebugDialog}
+              onClick={() => setSettingsOpen(true)}
               className="h-full px-1 group/pad bg-debug-red"
-              aria-label="Open debug settings"
+              aria-label="Open settings"
             >
               <Button
                 variant="outline"
@@ -260,6 +306,7 @@ export function QuestionTable({
           </div>
         }
       />
+      <SettingsDialog open={settingsOpen} onOpenChange={setSettingsOpen} />
       <Table>
         {showHeaderRow && (
           <motion.thead
@@ -295,6 +342,7 @@ export function QuestionTable({
               isExpandMode={isExpandMode}
               isPopMode={isPopMode}
               isInteractive={isInteractive}
+              hideStandards={isSheetMode && isModalOpen}
               onToggleMark={() => toggleInWorksheet(q.n)}
               onMarkPointerDown={(e) =>
                 handleMarkPointerDown(e, q.n, worksheet.has(q.n))
@@ -323,8 +371,46 @@ export function QuestionTable({
           onOpenChange={setIsModalOpen}
         />
       )}
+      <ImagePreloader questions={questions} />
     </div>
   );
+}
+
+// Emits <link rel="preload" as="image"> into <head> for every question
+// image so the browser starts fetching them during initial HTML parse.
+// We derive src/srcSet/sizes via getImageProps so the preload hints match
+// exactly what next/image requests when the sheet/dialog later renders
+// the image — giving an HTTP cache hit and instant appearance.
+function ImagePreloader({ questions }: { questions: ViewQuestion[] }) {
+  for (const q of questions) {
+    for (const block of q.prompt) {
+      if (
+        block.type === "diagram" &&
+        block.imageSrc &&
+        block.imageWidth &&
+        block.imageHeight
+      ) {
+        preloadImage(block.imageSrc, block.imageWidth, block.imageHeight);
+      } else if (block.type === "choices") {
+        for (const opt of block.options) {
+          if (opt.imageSrc && opt.imageWidth && opt.imageHeight) {
+            preloadImage(opt.imageSrc, opt.imageWidth, opt.imageHeight);
+          }
+        }
+      }
+    }
+  }
+  return null;
+}
+
+function preloadImage(src: string, width: number, height: number) {
+  const { props } = getImageProps({ src, alt: "", width, height });
+  ReactDOM.preload(props.src, {
+    as: "image",
+    imageSrcSet: props.srcSet,
+    imageSizes: props.sizes,
+    fetchPriority: "low",
+  });
 }
 
 function QuestionTableRow({
@@ -338,13 +424,14 @@ function QuestionTableRow({
   isExpandMode,
   isPopMode,
   isInteractive,
+  hideStandards,
   onToggleMark,
   onMarkPointerDown,
   onActivate,
   onFocusRow,
 }: {
   index: number;
-  question: Question;
+  question: ViewQuestion;
   standards?: Record<string, string>;
   isExpanded: boolean;
   isMarked: boolean;
@@ -353,6 +440,7 @@ function QuestionTableRow({
   isExpandMode: boolean;
   isPopMode: boolean;
   isInteractive: boolean;
+  hideStandards: boolean;
   onToggleMark: () => void;
   onMarkPointerDown: (e: React.PointerEvent<HTMLElement>) => void;
   onActivate: () => void;
@@ -393,7 +481,26 @@ function QuestionTableRow({
         aria-haspopup={isPopMode ? "dialog" : undefined}
         aria-controls={isExpandMode ? `question-${q.n}-details` : undefined}
         className={cn(
-          "hover:bg-transparent outline-none",
+          "outline-none",
+          // Override TableRow's default full-row backgrounds so the
+          // inset rounded highlight below isn't stacked on top of a
+          // full-bleed muted bar.
+          "hover:bg-transparent has-aria-expanded:bg-transparent data-[state=selected]:bg-transparent",
+          // Paint hover/selected state as a rounded rectangle slightly
+          // inset from the row. `isolate` scopes the ::after's z-index
+          // to the row so it sits behind cell content without needing
+          // the cells themselves to be positioned.
+          "relative isolate",
+          "after:content-[''] after:pointer-events-none after:absolute after:-z-1",
+          // "hover:after:bg-muted/50",
+          // "has-aria-expanded:after:bg-muted/50",
+          "data-[state=selected]:after:bg-muted",
+
+          // "data-[state=selected]:after:border",
+          // "data-[state=selected]:after:border-muted",
+
+          "after:inset-y-0.75 after:inset-x-0.75",
+          "after:rounded-md",
           isInteractive && "cursor-pointer",
           isExpandMode && "border-b-0",
         )}
@@ -417,9 +524,7 @@ function QuestionTableRow({
             onClick={handleMarkClick}
             className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red touch-none select-none"
             aria-pressed={isMarked}
-            aria-label={
-              isMarked ? "Remove from worksheet" : "Add to worksheet"
-            }
+            aria-label={isMarked ? "Remove from worksheet" : "Add to worksheet"}
           >
             <Button
               variant={isMarked ? "default" : "outline"}
@@ -461,12 +566,14 @@ function QuestionTableRow({
             >
               <QuestionPreview prompt={q.prompt} />
             </div>
-            <div className="-mr-2.5">
-              <StandardsBadge
-                standards={q.standards}
-                descriptions={standards}
-              />
-            </div>
+            {!hideStandards && (
+              <div className="-mr-2.5">
+                <StandardsBadge
+                  standards={q.standards}
+                  descriptions={standards}
+                />
+              </div>
+            )}
           </div>
         </TableCell>
         <TableCell>

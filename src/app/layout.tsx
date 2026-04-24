@@ -3,7 +3,6 @@ import { Inter, Lora, Shantell_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { MotionProvider } from "@/components/motion-provider";
-import { DebugDialog } from "@/components/DebugDialog";
 
 const loraHeading = Lora({ subsets: ["latin"], variable: "--font-heading" });
 
@@ -45,7 +44,6 @@ export default function RootLayout({
         )}
       >
         <MotionProvider>{children}</MotionProvider>
-        <DebugDialog />
       </body>
     </html>
   );

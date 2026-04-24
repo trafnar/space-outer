@@ -12,7 +12,6 @@ import {
   useShowWorksheetTitle,
 } from "@/lib/settings";
 import { cn } from "@/lib/utils";
-import type { Manifest, Question } from "@/data/types";
 import {
   IconArrowLeft,
   IconClipboardX,
@@ -20,6 +19,8 @@ import {
   IconEyeClosed,
   IconPrinter,
 } from "@tabler/icons-react";
+import { useHasHydrated } from "@/lib/useLocalStorageStore";
+import type { WorksheetViewData } from "@/lib/testViewData";
 import {
   Empty,
   EmptyContent,
@@ -32,18 +33,20 @@ import {
 const stickyHeaderHeight = 108;
 
 export function WorksheetViewClient({
-  manifest,
-  questions,
+  worksheet,
   slug,
 }: {
-  manifest: Manifest;
-  questions: Question[];
+  worksheet: WorksheetViewData;
   slug: string;
 }) {
-  const [worksheetIds, , hydrated] = useWorksheet(slug);
-  const worksheetQuestions = questions.filter((q) => worksheetIds.has(q.n));
+  const [worksheetIds] = useWorksheet(slug);
+  const worksheetQuestions = worksheet.questions.filter((q) =>
+    worksheetIds.has(q.n),
+  );
   const [showTitle, setShowTitle] = useShowWorksheetTitle();
   const visibility = useScopedAnswerVisibility(`worksheet:${slug}`, false);
+  const hydrated = useHasHydrated();
+  const showHeader = !hydrated || worksheetQuestions.length > 0;
 
   return (
     <AnswerVisibilityProvider value={visibility}>
@@ -71,7 +74,7 @@ export function WorksheetViewClient({
         }
       `}</style>
 
-      {hydrated && worksheetQuestions.length > 0 && (
+      {showHeader && (
         <div
           style={{ height: stickyHeaderHeight }}
           className="sticky top-0 z-10 bg-background border-b border-dashed flex flex-col justify-between print:hidden"
@@ -95,7 +98,7 @@ export function WorksheetViewClient({
               <div className="relative min-w-0 grow">
                 <TypoH2 className="truncate">Worksheet</TypoH2>
                 <div className="absolute top-full left-0 right-0 -mt-[1px] text-xs text-muted-foreground truncate">
-                  {manifest.title}
+                  {worksheet.title}
                 </div>
               </div>
             </div>
@@ -115,7 +118,12 @@ export function WorksheetViewClient({
               </Button>
             </button>
           </div>
-          <div className={cn("px-6 flex items-center -ml-1", "h-11")}>
+          <div
+            className={cn(
+              "px-6 flex items-center -ml-1 border-t border-dashed",
+              "h-11",
+            )}
+          >
             <button
               onClick={() => setShowTitle(!showTitle)}
               className="h-full px-1 group/pad bg-debug-red"
@@ -142,7 +150,7 @@ export function WorksheetViewClient({
 
       <div className="mx-auto w-full max-w-[8.5in] flex flex-col gap-6 px-[0.5in] py-12 mt-8 border print:border-0 print:p-0 print:m-0">
         {showTitle && (
-          <h1 className="text-2xl font-heading font-bold">{manifest.title}</h1>
+          <h1 className="text-2xl font-heading font-bold">{worksheet.title}</h1>
         )}
 
         {!hydrated ? null : worksheetQuestions.length === 0 ? (

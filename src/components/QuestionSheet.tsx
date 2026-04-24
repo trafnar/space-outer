@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { Question } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
 import { Button } from "./ui/button";
 import {
@@ -19,7 +19,7 @@ export function QuestionSheet({
   open,
   onOpenChange,
 }: {
-  questions: Question[];
+  questions: ViewQuestion[];
   selectedIndex: number | null;
   onSelectedIndexChange: (index: number) => void;
   open: boolean;
@@ -30,7 +30,7 @@ export function QuestionSheet({
 
   // Cache the last-shown question so the sheet doesn't blank out while it
   // animates closed.
-  type Displayed = { question: Question; index: number };
+  type Displayed = { question: ViewQuestion; index: number };
   const [displayed, setDisplayed] = useState<Displayed | null>(() =>
     activeQuestion !== null && selectedIndex !== null
       ? { question: activeQuestion, index: selectedIndex }
@@ -89,6 +89,7 @@ export function QuestionSheet({
       modal={false}
     >
       <SheetContent
+        initialFocus={false}
         side="right"
         className="w-[clamp(25rem,50vw,32rem)] max-w-none data-[side=right]:w-[clamp(25rem,50vw,32rem)] data-[side=right]:max-w-none data-[side=right]:sm:max-w-none"
       >

@@ -1,6 +1,14 @@
 import { notFound } from "next/navigation";
-import { getTest } from "@/lib/getTests";
+import { getTest, listTestSlugs } from "@/lib/getTests";
+import { toWorksheetViewData } from "@/lib/testViewData";
 import { WorksheetViewClient } from "./worksheet-view-client";
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const slugs = await listTestSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export default async function Page({
   params,
@@ -13,8 +21,7 @@ export default async function Page({
 
   return (
     <WorksheetViewClient
-      manifest={test.manifest}
-      questions={test.questions}
+      worksheet={toWorksheetViewData(test)}
       slug={slug}
     />
   );

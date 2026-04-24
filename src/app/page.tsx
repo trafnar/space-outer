@@ -10,25 +10,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { PointsBadge, type PointsIndicator } from "@/components/PointsBadge";
+import { PointsBadge, indicatorForPercent } from "@/components/PointsBadge";
 import { HomeWorksheetButton } from "@/components/HomeWorksheetButton";
-
-function indicatorForPercent(percent: number): PointsIndicator {
-  if (percent >= 75) return "correct";
-  if (percent >= 50) return "partial";
-  return "wrong";
-}
-
-function formatDate(iso: string | null): string {
-  if (!iso) return "—";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
 
 export default async function Home() {
   const tests = await listTests();
@@ -50,16 +33,15 @@ export default async function Home() {
         </TypoMuted>
       </div>
 
-      <div className="mt-12 w-full max-w-[50rem] mx-auto overflow-x-auto overflow-y-clip">
+      <div className="mt-12 w-full max-w-[50rem] mx-auto">
         {tests.length === 0 ? (
           <TypoMuted className="text-center">No tests yet.</TypoMuted>
         ) : (
-          <Table className="min-w-[640px]">
-            <TableHeader>
+          <Table>
+            <TableHeader className="hidden">
               <TableRow className="hover:bg-transparent">
                 <TableHead className="w-full">Test</TableHead>
                 <TableHead>Score</TableHead>
-                <TableHead>Taken</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -82,24 +64,23 @@ export default async function Home() {
                     </div>
                   </TableCell>
                   <TableCell>
-                    <PointsBadge
-                      earned={manifest.score.earned}
-                      possible={manifest.score.possible}
-                      forceIndicator={indicatorForPercent(
-                        manifest.score.percent,
-                      )}
-                      customText={
-                        <span className="tabular-nums text-xs font-semibold">
-                          {manifest.score.percent}
-                          <span className="opacity-45 pointer-events-none">
-                            %
+                    <div className="flex">
+                      <PointsBadge
+                        earned={manifest.score.earned}
+                        possible={manifest.score.possible}
+                        forceIndicator={indicatorForPercent(
+                          manifest.score.percent,
+                        )}
+                        customText={
+                          <span className="tabular-nums text-xs font-semibold">
+                            {manifest.score.percent}
+                            <span className="opacity-45 pointer-events-none">
+                              %
+                            </span>
                           </span>
-                        </span>
-                      }
-                    />
-                  </TableCell>
-                  <TableCell className="text-xs text-muted-foreground">
-                    {formatDate(manifest.takenOn)}
+                        }
+                      />
+                    </div>
                   </TableCell>
                 </TableRow>
               ))}

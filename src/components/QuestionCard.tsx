@@ -1,12 +1,14 @@
 "use client";
 
-import type { Block, Choice, Inline, Question, Response } from "@/data/types";
+import Image from "next/image";
+import type { Block, Choice, Inline, Response } from "@/data/types";
+import type { ViewQuestion } from "@/lib/testViewData";
 import { TypoLarge } from "./ui/typo";
 import { IconCircle, IconCircleCheck } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { useAnswerVisibility } from "@/lib/settings";
 
-export function QuestionCard({ question }: { question: Question }) {
+export function QuestionCard({ question }: { question: ViewQuestion }) {
   const { showUserAnswer, showCorrectAnswer } = useAnswerVisibility();
 
   // Map of choices-block id -> options, so a blank with a matching id
@@ -94,14 +96,21 @@ function BlockView({
     );
   }
   if (block.type === "diagram") {
-    return block.svg ? (
-      <div
-        aria-label={block.alt}
-        role="img"
-        className="my-2"
-        dangerouslySetInnerHTML={{ __html: block.svg }}
-      />
-    ) : null;
+    if (!block.imageSrc || !block.imageWidth || !block.imageHeight) return null;
+    return (
+      <div role="img" aria-label={block.alt} className="my-2">
+        <Image
+          src={block.imageSrc}
+          alt={block.alt ?? ""}
+          width={block.imageWidth}
+          height={block.imageHeight}
+          // `h-auto` + `max-w-full` lets the image scale fluidly while
+          // preserving the aspect ratio next/image derives from
+          // width/height.
+          className="h-auto max-w-full"
+        />
+      </div>
+    );
   }
   if (block.type === "choices") {
     return (
@@ -274,12 +283,13 @@ function ChoicesView({
               <span aria-hidden>
                 {showPicked ? <IconCircleCheck /> : <IconCircle />}
               </span>
-              {opt.imageSrc ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+              {opt.imageSrc && opt.imageWidth && opt.imageHeight ? (
+                <Image
                   src={opt.imageSrc}
                   alt={opt.text || `Option ${opt.id}`}
-                  className="max-h-40"
+                  width={opt.imageWidth}
+                  height={opt.imageHeight}
+                  className="max-h-40 w-auto"
                 />
               ) : (
                 <span>{opt.text}</span>
