@@ -323,6 +323,7 @@ export function QuestionTable({
               isExpandMode={isExpandMode}
               isPopMode={isPopMode}
               isInteractive={isInteractive}
+              hideStandards={isSheetMode && isModalOpen}
               onToggleMark={() => toggleInWorksheet(q.n)}
               onMarkPointerDown={(e) =>
                 handleMarkPointerDown(e, q.n, worksheet.has(q.n))
@@ -366,6 +367,7 @@ function QuestionTableRow({
   isExpandMode,
   isPopMode,
   isInteractive,
+  hideStandards,
   onToggleMark,
   onMarkPointerDown,
   onActivate,
@@ -381,6 +383,7 @@ function QuestionTableRow({
   isExpandMode: boolean;
   isPopMode: boolean;
   isInteractive: boolean;
+  hideStandards: boolean;
   onToggleMark: () => void;
   onMarkPointerDown: (e: React.PointerEvent<HTMLElement>) => void;
   onActivate: () => void;
@@ -506,12 +509,14 @@ function QuestionTableRow({
             >
               <QuestionPreview prompt={q.prompt} />
             </div>
-            <div className="-mr-2.5">
-              <StandardsBadge
-                standards={q.standards}
-                descriptions={standards}
-              />
-            </div>
+            {!hideStandards && (
+              <div className="-mr-2.5">
+                <StandardsBadge
+                  standards={q.standards}
+                  descriptions={standards}
+                />
+              </div>
+            )}
           </div>
         </TableCell>
         <TableCell>
