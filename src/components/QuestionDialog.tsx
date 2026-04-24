@@ -47,7 +47,7 @@ export function QuestionDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="top-[20%] translate-y-0 sm:max-w-2xl max-h-[calc(100vh-40%)] overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <DialogHeader className="gap-0">
-          <div className="flex items-center gap-0 -ml-1">
+          <div className="flex items-center gap-0 -ml-2.5">
             <Button
               variant="link"
               size="xs"
