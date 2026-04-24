@@ -1,5 +1,7 @@
 "use client";
 
+import { getImageProps } from "next/image";
+import ReactDOM from "react-dom";
 import {
   Table,
   TableBody,
@@ -369,8 +371,46 @@ export function QuestionTable({
           onOpenChange={setIsModalOpen}
         />
       )}
+      <ImagePreloader questions={questions} />
     </div>
   );
+}
+
+// Emits <link rel="preload" as="image"> into <head> for every question
+// image so the browser starts fetching them during initial HTML parse.
+// We derive src/srcSet/sizes via getImageProps so the preload hints match
+// exactly what next/image requests when the sheet/dialog later renders
+// the image — giving an HTTP cache hit and instant appearance.
+function ImagePreloader({ questions }: { questions: ViewQuestion[] }) {
+  for (const q of questions) {
+    for (const block of q.prompt) {
+      if (
+        block.type === "diagram" &&
+        block.imageSrc &&
+        block.imageWidth &&
+        block.imageHeight
+      ) {
+        preloadImage(block.imageSrc, block.imageWidth, block.imageHeight);
+      } else if (block.type === "choices") {
+        for (const opt of block.options) {
+          if (opt.imageSrc && opt.imageWidth && opt.imageHeight) {
+            preloadImage(opt.imageSrc, opt.imageWidth, opt.imageHeight);
+          }
+        }
+      }
+    }
+  }
+  return null;
+}
+
+function preloadImage(src: string, width: number, height: number) {
+  const { props } = getImageProps({ src, alt: "", width, height });
+  ReactDOM.preload(props.src, {
+    as: "image",
+    imageSrcSet: props.srcSet,
+    imageSizes: props.sizes,
+    fetchPriority: "low",
+  });
 }
 
 function QuestionTableRow({
