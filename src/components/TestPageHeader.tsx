@@ -15,6 +15,8 @@ export function TestPageHeader({
   worksheetSize,
   height,
   toolbar,
+  onEmptyWorksheetClick,
+  onEmptyWorksheetHoverChange,
 }: {
   title?: string;
   subtitle?: React.ReactNode;
@@ -22,6 +24,8 @@ export function TestPageHeader({
   worksheetSize: number;
   height: number;
   toolbar?: React.ReactNode;
+  onEmptyWorksheetClick?: () => void;
+  onEmptyWorksheetHoverChange?: (hovered: boolean) => void;
 }) {
   return (
     <div
@@ -48,6 +52,8 @@ export function TestPageHeader({
           slug={slug}
           worksheetSize={worksheetSize}
           className="h-full pl-2 -ml-2 pr-6 -mr-6"
+          onEmptyClick={onEmptyWorksheetClick}
+          onEmptyHoverChange={onEmptyWorksheetHoverChange}
         />
       </div>
       {toolbar}

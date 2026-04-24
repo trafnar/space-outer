@@ -11,7 +11,13 @@ import {
 } from "@/components/ui/table";
 import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
-import React, { useEffect, useEffectEvent, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useEffectEvent,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -74,6 +80,8 @@ export function QuestionTable({
   // nav keeps working after closing.
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [previewEmptyWorksheetAdd, setPreviewEmptyWorksheetAdd] =
+    useState(false);
   // Tracks the row index the sheet/dialog is currently open for. Used
   // by `activateRow` to detect a second activation on the same row
   // (which should toggle the modal closed). We can't compare against
@@ -208,26 +216,36 @@ export function QuestionTable({
     }
   };
 
+  const incorrectQuestions = questions.filter(
+    (q) => q.points.earned < q.points.possible,
+  );
+  const numberOfIncorrect = incorrectQuestions.length;
+  const emptyWorksheetAddQuestions =
+    numberOfIncorrect > 0 ? incorrectQuestions : questions;
+  const emptyWorksheetAddQuestionNumbers = useMemo(
+    () => new Set(emptyWorksheetAddQuestions.map((q) => q.n)),
+    [emptyWorksheetAddQuestions],
+  );
+  const allIncorrectInWorksheet =
+    numberOfIncorrect > 0 &&
+    incorrectQuestions.every((q) => worksheet.has(q.n));
+
   const addIncorrectToWorksheet = () => {
-    const incorrect = questions.filter(
-      (q) => q.points.earned < q.points.possible,
+    setWorksheet(
+      (prev) => new Set([...prev, ...incorrectQuestions.map((q) => q.n)]),
     );
-    setWorksheet((prev) => new Set([...prev, ...incorrect.map((q) => q.n)]));
   };
 
   const addAllToWorksheet = () => {
     setWorksheet(new Set(questions.map((q) => q.n)));
   };
 
-  const clearWorksheet = () => setWorksheet(new Set());
+  const addEmptyWorksheetQuestions = () => {
+    setWorksheet(new Set(emptyWorksheetAddQuestionNumbers));
+    setPreviewEmptyWorksheetAdd(false);
+  };
 
-  const incorrectQuestions = questions.filter(
-    (q) => q.points.earned < q.points.possible,
-  );
-  const numberOfIncorrect = incorrectQuestions.length;
-  const allIncorrectInWorksheet =
-    numberOfIncorrect > 0 &&
-    incorrectQuestions.every((q) => worksheet.has(q.n));
+  const clearWorksheet = () => setWorksheet(new Set());
 
   // When the sheet is open, squeeze the table (and sticky header)
   // leftward so the sheet sits beside it rather than over it. The sheet
@@ -250,6 +268,8 @@ export function QuestionTable({
         slug={slug}
         worksheetSize={worksheet.size}
         height={stickyHeaderHeight}
+        onEmptyWorksheetClick={addEmptyWorksheetQuestions}
+        onEmptyWorksheetHoverChange={setPreviewEmptyWorksheetAdd}
         toolbar={
           <div className={cn("px-6 border-t flex items-center -ml-1", "h-11")}>
             {isExpandMode && (
@@ -331,6 +351,11 @@ export function QuestionTable({
               standards={standards}
               isExpanded={expandedRowIds.has(q.n)}
               isMarked={worksheet.has(q.n)}
+              isPreviewMarked={
+                previewEmptyWorksheetAdd &&
+                worksheet.size === 0 &&
+                emptyWorksheetAddQuestionNumbers.has(q.n)
+              }
               isSelected={i === selectedIndex}
               // Roving tabindex: only the selected row is tabbable.
               // When nothing is selected, make the first row the Tab
@@ -419,6 +444,7 @@ function QuestionTableRow({
   standards,
   isExpanded,
   isMarked,
+  isPreviewMarked,
   isSelected,
   isTabbable,
   isExpandMode,
@@ -435,6 +461,7 @@ function QuestionTableRow({
   standards?: Record<string, string>;
   isExpanded: boolean;
   isMarked: boolean;
+  isPreviewMarked: boolean;
   isSelected: boolean;
   isTabbable: boolean;
   isExpandMode: boolean;
@@ -448,6 +475,7 @@ function QuestionTableRow({
 }) {
   const expanded = isExpandMode && isExpanded;
   const colCount = isExpandMode ? 5 : 4;
+  const visuallyMarked = isMarked || isPreviewMarked;
 
   const handleMarkClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
@@ -527,17 +555,17 @@ function QuestionTableRow({
             aria-label={isMarked ? "Remove from worksheet" : "Add to worksheet"}
           >
             <Button
-              variant={isMarked ? "default" : "outline"}
+              variant={visuallyMarked ? "default" : "outline"}
               className={cn(
                 "text-muted-foreground hover:text-foreground group-hover/pad:text-foreground",
-                isMarked &&
+                visuallyMarked &&
                   "text-background bg-foreground hover:bg-foreground hover:text-background group-hover/pad:bg-foreground group-hover/pad:text-background",
               )}
               size="icon-sm"
               nativeButton={false}
               render={<div />}
             >
-              {isMarked ? (
+              {visuallyMarked ? (
                 <IconClipboardCheckFilled className="size-4.5" />
               ) : (
                 <IconClipboardPlus className="size-4.5" />
