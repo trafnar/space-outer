@@ -27,7 +27,14 @@ export type Manifest = {
 // Block-level nodes: stack vertically in a question prompt.
 export type Block =
   | { type: "paragraph"; content: Inline[] }
-  | { type: "diagram"; file: string; alt?: string; imageSrc?: string }
+  | {
+      type: "diagram";
+      file: string;
+      alt?: string;
+      imageSrc?: string;
+      imageWidth?: number;
+      imageHeight?: number;
+    }
   | {
       type: "choices";
       id: string;
@@ -44,6 +51,8 @@ export type Choice = {
   id: string;
   text: string;
   imageSrc?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 // Unified response. `values` maps a blank id or choices-block id to its

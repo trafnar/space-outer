@@ -98,7 +98,17 @@ function BlockView({
     return block.imageSrc ? (
       <div role="img" aria-label={block.alt} className="my-2">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={block.imageSrc} alt={block.alt ?? ""} />
+        <img
+          src={block.imageSrc}
+          alt={block.alt ?? ""}
+          width={block.imageWidth}
+          height={block.imageHeight}
+          // Width/height attrs give the browser an aspect ratio so it
+          // can reserve space before the image loads (no layout shift).
+          // `h-auto` + `max-w-full` lets the image scale fluidly while
+          // preserving that aspect ratio.
+          className="h-auto max-w-full"
+        />
       </div>
     ) : null;
   }
@@ -278,7 +288,9 @@ function ChoicesView({
                 <img
                   src={opt.imageSrc}
                   alt={opt.text || `Option ${opt.id}`}
-                  className="max-h-40"
+                  width={opt.imageWidth}
+                  height={opt.imageHeight}
+                  className="max-h-40 w-auto"
                 />
               ) : (
                 <span>{opt.text}</span>

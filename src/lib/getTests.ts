@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { cache } from "react";
+import { imageSize } from "image-size";
 import type {
   Manifest,
   Question,
@@ -9,10 +10,25 @@ import type {
 } from "@/data/types";
 
 const TESTS_ROOT = path.join(process.cwd(), "src/data/tests");
+const ASSETS_ROOT = path.join(process.cwd(), "public/test-assets");
 const SLUG_RE = /^[a-z0-9-]+$/;
 
 function testAssetSrc(slug: string, file: string): string {
   return `/test-assets/${encodeURIComponent(slug)}/${encodeURIComponent(file)}`;
+}
+
+async function readImageSize(
+  slug: string,
+  file: string,
+): Promise<{ width: number; height: number } | null> {
+  try {
+    const buffer = await fs.readFile(path.join(ASSETS_ROOT, slug, file));
+    const { width, height } = imageSize(buffer);
+    if (!width || !height) return null;
+    return { width, height };
+  } catch {
+    return null;
+  }
 }
 
 async function readJson<T>(filePath: string): Promise<T> {
@@ -68,8 +84,8 @@ export const getTest = cache(async function getTest(
     manifest.questions.map(async (q) => {
       const file = `q${String(q.n).padStart(2, "0")}.json`;
       const question = await readJson<Question>(path.join(dir, file));
-      inlineDiagrams(question, slug);
-      inlineChoiceImages(question, slug);
+      await inlineDiagrams(question, slug);
+      await inlineChoiceImages(question, slug);
       return question;
     }),
   );
@@ -77,17 +93,22 @@ export const getTest = cache(async function getTest(
   return { slug, manifest, questions };
 });
 
-function inlineDiagrams(question: Question, slug: string): void {
+async function inlineDiagrams(question: Question, slug: string): Promise<void> {
   for (const block of question.prompt) {
     if (block.type !== "diagram") continue;
     block.imageSrc = testAssetSrc(slug, block.file);
+    const size = await readImageSize(slug, block.file);
+    if (size) {
+      block.imageWidth = size.width;
+      block.imageHeight = size.height;
+    }
   }
 }
 
-function inlineChoiceImages(
+async function inlineChoiceImages(
   question: Question,
   slug: string,
-): void {
+): Promise<void> {
   for (const block of question.prompt) {
     if (block.type !== "choices") continue;
     for (const opt of block.options) {
@@ -96,6 +117,11 @@ function inlineChoiceImages(
       const file = match[1];
       opt.imageSrc = testAssetSrc(slug, file);
       opt.text = "";
+      const size = await readImageSize(slug, file);
+      if (size) {
+        opt.imageWidth = size.width;
+        opt.imageHeight = size.height;
+      }
     }
   }
 }
