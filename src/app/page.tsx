@@ -10,14 +10,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { PointsBadge, type PointsIndicator } from "@/components/PointsBadge";
+import { PointsBadge, indicatorForPercent } from "@/components/PointsBadge";
 import { HomeWorksheetButton } from "@/components/HomeWorksheetButton";
-
-function indicatorForPercent(percent: number): PointsIndicator {
-  if (percent >= 75) return "correct";
-  if (percent >= 50) return "partial";
-  return "wrong";
-}
 
 function formatDate(iso: string | null): string {
   if (!iso) return "—";

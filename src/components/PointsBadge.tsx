@@ -8,6 +8,12 @@ import { cn } from "@/lib/utils";
 
 export type PointsIndicator = "wrong" | "partial" | "correct";
 
+export function indicatorForPercent(percent: number): PointsIndicator {
+  if (percent >= 75) return "correct";
+  if (percent >= 50) return "partial";
+  return "wrong";
+}
+
 export function PointsBadge({
   earned,
   possible,
