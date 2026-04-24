@@ -435,6 +435,10 @@ function QuestionTableRow({
           // "hover:after:bg-muted/50",
           // "has-aria-expanded:after:bg-muted/50",
           "data-[state=selected]:after:bg-muted",
+
+          // "data-[state=selected]:after:border",
+          // "data-[state=selected]:after:border-muted",
+
           "after:inset-y-0.75 after:inset-x-0.75",
           "after:rounded-md",
           isInteractive && "cursor-pointer",
