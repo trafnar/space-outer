@@ -118,7 +118,12 @@ export function WorksheetViewClient({
               </Button>
             </button>
           </div>
-          <div className={cn("px-6 flex items-center -ml-1", "h-11")}>
+          <div
+            className={cn(
+              "px-6 flex items-center -ml-1 border-t border-dashed",
+              "h-11",
+            )}
+          >
             <button
               onClick={() => setShowTitle(!showTitle)}
               className="h-full px-1 group/pad bg-debug-red"
