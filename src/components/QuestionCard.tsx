@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { Block, Choice, Inline, Response } from "@/data/types";
 import type { ViewQuestion } from "@/lib/testViewData";
 import { TypoLarge } from "./ui/typo";
@@ -95,22 +96,21 @@ function BlockView({
     );
   }
   if (block.type === "diagram") {
-    return block.imageSrc ? (
+    if (!block.imageSrc || !block.imageWidth || !block.imageHeight) return null;
+    return (
       <div role="img" aria-label={block.alt} className="my-2">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={block.imageSrc}
           alt={block.alt ?? ""}
           width={block.imageWidth}
           height={block.imageHeight}
-          // Width/height attrs give the browser an aspect ratio so it
-          // can reserve space before the image loads (no layout shift).
           // `h-auto` + `max-w-full` lets the image scale fluidly while
-          // preserving that aspect ratio.
+          // preserving the aspect ratio next/image derives from
+          // width/height.
           className="h-auto max-w-full"
         />
       </div>
-    ) : null;
+    );
   }
   if (block.type === "choices") {
     return (
@@ -283,9 +283,8 @@ function ChoicesView({
               <span aria-hidden>
                 {showPicked ? <IconCircleCheck /> : <IconCircle />}
               </span>
-              {opt.imageSrc ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+              {opt.imageSrc && opt.imageWidth && opt.imageHeight ? (
+                <Image
                   src={opt.imageSrc}
                   alt={opt.text || `Option ${opt.id}`}
                   width={opt.imageWidth}
