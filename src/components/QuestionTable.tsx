@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/table";
 import type { ViewQuestion } from "@/lib/testViewData";
 import { QuestionCard } from "./QuestionCard";
-import React, { useEffect, useEffectEvent, useState } from "react";
+import React, { useEffect, useEffectEvent, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -72,6 +72,13 @@ export function QuestionTable({
   // nav keeps working after closing.
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // Tracks the row index the sheet/dialog is currently open for. Used
+  // by `activateRow` to detect a second activation on the same row
+  // (which should toggle the modal closed). We can't compare against
+  // `selectedIndex` for this because a row's `onFocus` fires before
+  // `onClick` and updates `selectedIndex` to the clicked row, so by the
+  // time the click handler runs the two always look equal.
+  const openForIndexRef = useRef<number | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   // const { scrollY } = useScroll();
@@ -111,12 +118,14 @@ export function QuestionTable({
       setSelectedIndex(index);
       toggleRow(q.n);
     } else if (isPopMode || isSheetMode) {
-      const sameRow = index === selectedIndex;
+      const sameRow = index === openForIndexRef.current;
       if (isModalOpen && sameRow) {
         setIsModalOpen(false);
+        openForIndexRef.current = null;
       } else {
         setSelectedIndex(index);
         setIsModalOpen(true);
+        openForIndexRef.current = index;
       }
     }
   };
@@ -132,9 +141,17 @@ export function QuestionTable({
     if (isDown || isUp) {
       e.preventDefault();
       setSelectedIndex((prev) => {
-        if (prev === null) return 0;
-        const delta = isDown ? 1 : -1;
-        return Math.max(0, Math.min(questions.length - 1, prev + delta));
+        const next =
+          prev === null
+            ? 0
+            : Math.max(
+                0,
+                Math.min(questions.length - 1, prev + (isDown ? 1 : -1)),
+              );
+        // Keep the "currently-displayed-sheet-row" ref in sync so a
+        // subsequent click on the displayed row closes the sheet.
+        if (isModalOpen) openForIndexRef.current = next;
+        return next;
       });
     } else if (e.key === "x") {
       if (selectedIndex === null) return;
