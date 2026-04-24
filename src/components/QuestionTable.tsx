@@ -421,7 +421,22 @@ function QuestionTableRow({
         aria-haspopup={isPopMode ? "dialog" : undefined}
         aria-controls={isExpandMode ? `question-${q.n}-details` : undefined}
         className={cn(
-          "hover:bg-transparent outline-none",
+          "outline-none",
+          // Override TableRow's default full-row backgrounds so the
+          // inset rounded highlight below isn't stacked on top of a
+          // full-bleed muted bar.
+          "hover:bg-transparent has-aria-expanded:bg-transparent data-[state=selected]:bg-transparent",
+          // Paint hover/selected state as a rounded rectangle slightly
+          // inset from the row. `isolate` scopes the ::after's z-index
+          // to the row so it sits behind cell content without needing
+          // the cells themselves to be positioned.
+          "relative isolate",
+          "after:content-[''] after:pointer-events-none after:absolute after:-z-1",
+          // "hover:after:bg-muted/50",
+          // "has-aria-expanded:after:bg-muted/50",
+          "data-[state=selected]:after:bg-muted",
+          "after:inset-y-0.75 after:inset-x-0.75",
+          "after:rounded-md",
           isInteractive && "cursor-pointer",
           isExpandMode && "border-b-0",
         )}
@@ -445,9 +460,7 @@ function QuestionTableRow({
             onClick={handleMarkClick}
             className="h-full px-1.5 -ml-1.5 -mr-1.5  group/pad bg-debug-red touch-none select-none"
             aria-pressed={isMarked}
-            aria-label={
-              isMarked ? "Remove from worksheet" : "Add to worksheet"
-            }
+            aria-label={isMarked ? "Remove from worksheet" : "Add to worksheet"}
           >
             <Button
               variant={isMarked ? "default" : "outline"}
