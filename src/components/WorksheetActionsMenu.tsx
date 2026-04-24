@@ -72,7 +72,9 @@ export function WorksheetActionsMenu({
         <DropdownMenuItem onClick={onClearWorksheet} disabled={worksheetEmpty}>
           {worksheetSize === 0
             ? "Clear all worksheet questions"
-            : `Clear all ${worksheetSize} worksheet question${worksheetSize === 1 ? "" : "s"}`}
+            : worksheetSize === 1
+              ? "Clear 1 worksheet question"
+              : `Clear all ${worksheetSize} worksheet questions`}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
