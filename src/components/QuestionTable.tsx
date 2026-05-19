@@ -271,7 +271,12 @@ export function QuestionTable({
         onEmptyWorksheetClick={addEmptyWorksheetQuestions}
         onEmptyWorksheetHoverChange={setPreviewEmptyWorksheetAdd}
         toolbar={
-          <div className={cn("px-6 border-t flex items-center -ml-1", "h-11")}>
+          <div
+            className={cn(
+              "px-6 border-t flex items-center -ml-1 h-11",
+              "overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+            )}
+          >
             {isExpandMode && (
               <button
                 onClick={toggleAllRows}
